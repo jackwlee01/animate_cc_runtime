@@ -1,0 +1,15 @@
+{
+  "name": "animate_cc_runtime",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --outfile=bin/bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild": "^0.14.5"
+  }
+}
