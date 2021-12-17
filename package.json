@@ -5,11 +5,14 @@
   "main": "index.ts",
   "scripts": {
     "build": "esbuild src/index.ts --bundle --outfile=bin/bundle.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-page": "esbuild src/test-page.ts --bundle --outfile=bin/test-page.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "live-server index.html"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "esbuild": "^0.14.5"
+    "esbuild": "^0.14.5",
+    "live-server": "^1.2.1"
   }
 }
