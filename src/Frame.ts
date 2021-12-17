@@ -8,19 +8,24 @@ import { SpriteInstance } from "./SpriteInstance";
 export class Frame extends Drawable{
 
     index:number;
-    duration:number;
+    duration:number
     labelName:string|null;
     layer:Layer;
     instances:Array<ClipInstance|SpriteInstance>;
 
 
-    constructor(props:{layer:Layer, library:Library, name:string, id:string, totalFrames:Int, index:number, duration:number, labelName:string|null}){
-        super(props);
+    constructor(props:{layer:Layer, library:Library, name:string, id:string, index:number, duration:number, labelName:string|null}){
+        super({...props, totalFrames:props.duration});
         this.instances = [];
         this.layer = props.layer;
         this.index = props.index;
         this.labelName = props.labelName;
         this.duration = props.duration;
+    }
+
+
+    public addInstance(instance:ClipInstance|SpriteInstance){
+        this.instances.push(instance);
     }
 
 }

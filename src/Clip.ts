@@ -1,4 +1,8 @@
 import { Drawable } from "./Drawable";
+import { Frame } from "./Frame";
+import { Layer } from "./Layer";
+import { Library } from "./Library";
+
 
 
 export class Clip extends Drawable{
@@ -8,8 +12,9 @@ export class Clip extends Drawable{
     layersByName:Record<string, Layer>;
     framesByName:Record<string, Frame>;
 
-    
-    constructor(){
+
+    constructor(props:{clip:Clip, library:Library, name:string, id:string}){
+        super({...props, totalFrames:0})
         this.layers = [];
         this.layersById = {};
         this.layersByName = {};
@@ -22,6 +27,11 @@ export class Clip extends Drawable{
         this.layersById[layer.id] = layer;
         this.layersByName[layer.name] = layer;
         if(layer.totalFrames > this.totalFrames) this.totalFrames = layer.totalFrames;
+    }
+
+
+    public addFrame(frame:Frame){
+        this.framesByName[frame.name] = frame;
     }
 
 }
