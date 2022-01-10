@@ -1,11 +1,14 @@
+import { Clip } from "./Clip";
 import { Drawable } from "./Drawable";
 import { Frame } from "./Frame";
-import { Matrix, Vec2, Vec3 } from "./geom";
+import { Vec2, Vec3 } from "./geom";
+import { Layer } from "./json/AnimationJson";
 import { Library } from "./Library";
 
 export class Instance<T extends Drawable> extends Drawable{
 
-    matrix:Matrix;
+    matrix3d:Array<number>;
+    //matrix2d:Array<number>;
     position:Vec3;
     scale:Vec3;
     rotation:Vec3;
@@ -23,7 +26,7 @@ export class Instance<T extends Drawable> extends Drawable{
         library:Library,
         
         item:T,
-        matrix:Matrix,
+        matrix3d:Array<number>,
         position:Vec3,
         scale:Vec3,
         rotation:Vec3,
@@ -33,7 +36,7 @@ export class Instance<T extends Drawable> extends Drawable{
     }){
         super(props);
         this.item = props.item;
-        this.matrix = props.matrix;
+        this.matrix3d = props.matrix3d;
         this.position = props.position;
         this.scale = props.scale;
         this.rotation = props.rotation;

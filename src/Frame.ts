@@ -1,26 +1,26 @@
+import { Clip } from "./Clip";
 import { ClipInstance } from "./ClipInstance";
 import { Drawable } from "./Drawable";
-import { Layer } from "./json/AnimationJson";
+import { Layer } from "./Layer";
 import { Library } from "./Library";
 import { SpriteInstance } from "./SpriteInstance";
 
 
 export class Frame extends Drawable{
 
-    index:number;
-    duration:number
+    index:number
     labelName:string|null;
     layer:Layer;
-    instances:Array<ClipInstance|SpriteInstance>;
+    clip:Clip;
+    instances:Array<ClipInstance|SpriteInstance> = [];
 
 
-    constructor(props:{layer:Layer, library:Library, name:string, id:string, index:number, duration:number, labelName:string|null}){
-        super({...props, totalFrames:props.duration});
-        this.instances = [];
+    constructor(props:{clip:Clip, layer:Layer, library:Library, name:string, id:string, index:number, labelName:string|undefined, totalFrames:number}){
+        super({...props});
+        this.clip = props.clip;
         this.layer = props.layer;
         this.index = props.index;
-        this.labelName = props.labelName;
-        this.duration = props.duration;
+        this.labelName = props.labelName || null;
     }
 
 

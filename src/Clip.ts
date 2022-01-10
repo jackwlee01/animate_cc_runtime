@@ -13,7 +13,7 @@ export class Clip extends Drawable{
     framesByName:Record<string, Frame>;
 
 
-    constructor(props:{clip:Clip, library:Library, name:string, id:string}){
+    constructor(props:{library:Library, name:string, id:string}){
         super({...props, totalFrames:0})
         this.layers = [];
         this.layersById = {};

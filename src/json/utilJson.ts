@@ -64,7 +64,7 @@ function normaliseKey(key:string){
 // AnimateCC exports wildy inconsistent JSON. Normalise the
 // fields to make it easier to work with
 export function normaliseJson(data:any):any{
-    if(typeof data == "string" || typeof data == "number")
+    if(typeof data == "string" || typeof data == "number") return data
     switch(typeof data){
         case "bigint": throw("Not supported");
         case "function": throw("Not supported");
@@ -81,5 +81,6 @@ export function normaliseJson(data:any):any{
                 Object.keys(data).forEach(key => result[normaliseKey(key)] = normaliseJson(data[key]));
                 return result;
             }
+        default: throw("Unsupported")
     }
 }

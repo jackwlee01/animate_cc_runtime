@@ -23,7 +23,7 @@ export class Vec3 extends Vec2{
 
 }
 
-
+/*
 export class Matrix{
     _00:Float;
     _10:Float;
@@ -48,3 +48,4 @@ export class Matrix{
     }
 
 }
+*/

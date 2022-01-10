@@ -98,7 +98,7 @@ export type ElementInstance = {
 }
 
 
-export type Frame = {
+export type Keyframe = {
     index:Int;
     duration:Int;
     elements:Array<ElementInstance>;
@@ -108,7 +108,7 @@ export type Frame = {
 
 export type Layer = {
     layerName:string;
-    frames:Array<Frame>;
+    frames:Array<Keyframe>;
 }
 
 
