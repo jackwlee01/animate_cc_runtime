@@ -1,29 +1,29 @@
 import { AnimationJson, AtlasSpriteInstance, Keyframe, Layer, LibrarySymbol, SymbolInstance } from "./json/AnimationJson";
 
-type Drawable = LibrarySymbol | Layer | Keyframe | SymbolInstance | AtlasSpriteInstance | Sprite;
+export type Drawable = LibrarySymbol | Layer | Keyframe | SymbolInstance | AtlasSpriteInstance | Sprite;
 
 
-function isSymbol(data:Drawable):data is LibrarySymbol{
+export function isSymbol(data:Drawable):data is LibrarySymbol{
     return "symbolName" in data;
 }
 
-function isLayer(data:Drawable):data is Layer{
+export function isLayer(data:Drawable):data is Layer{
     return "layerName" in data
 }
 
-function isKeyframe(data:Drawable):data is Keyframe{
+export function isKeyframe(data:Drawable):data is Keyframe{
     return "index" in data
 }
 
-function isSymbolInstance(data:Drawable):data is SymbolInstance{
+export function isSymbolInstance(data:Drawable):data is SymbolInstance{
     return "symbolName" in data
 }
 
-function isAtlasSpriteInstance(data:Drawable):data is AtlasSpriteInstance{
+export function isAtlasSpriteInstance(data:Drawable):data is AtlasSpriteInstance{
     return "name" in data && "matrix3D" in data
 }
 
-function isSprite(data:Drawable):data is Sprite{
+export function isSprite(data:Drawable):data is Sprite{
     return "name" in data && "w" in data
 }
 
@@ -96,7 +96,7 @@ export function visit(anims:AnimationJson, sprites:SpriteMapJson, drawable:Drawa
         }
         throw("Could not find sprite: " + drawable.name);
     }else if(isSprite(drawable)){
-        
+
     }
 }
 
