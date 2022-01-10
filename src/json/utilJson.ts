@@ -66,10 +66,6 @@ function normaliseKey(key:string){
 export function normaliseJson(data:any):any{
     if(typeof data == "string" || typeof data == "number") return data
     switch(typeof data){
-        case "bigint": throw("Not supported");
-        case "function": throw("Not supported");
-        case "symbol": throw("Not supported");
-        case "undefined": throw("Not supported");
         case "string": return data;
         case "number": return data;
         case "boolean": return data;
@@ -81,6 +77,10 @@ export function normaliseJson(data:any):any{
                 Object.keys(data).forEach(key => result[normaliseKey(key)] = normaliseJson(data[key]));
                 return result;
             }
+        case "bigint": throw("Not supported");
+        case "function": throw("Not supported");
+        case "symbol": throw("Not supported");
+        case "undefined": throw("Not supported");
         default: throw("Unsupported")
     }
 }

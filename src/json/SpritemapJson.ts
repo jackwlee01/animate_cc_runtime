@@ -3,24 +3,18 @@ type Int = number;
 
 
 type Sprite = {
-    sprite:{
-        name:string,
-        x:Float,
-        y:Float,
-        w:Float,
-        h:Float,
-        rotated:boolean
-    }
+    name:string,
+    x:Float,
+    y:Float,
+    w:Float,
+    h:Float,
+    rotated:boolean    
 }
 
-
-type SpriteType = {
-    sprite:Sprite;
-}
 
 
 type Atlas = {
-    Sprites:Array<Sprite>;
+    Sprites:Array<{sprite:Sprite}>;
 }
 
 

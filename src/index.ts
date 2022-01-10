@@ -1,6 +1,6 @@
 import { AnimationJson, AtlasSpriteInstance, Keyframe, Layer, LibrarySymbol, SymbolInstance } from "./json/AnimationJson";
 
-type Drawable = LibrarySymbol | Layer | Keyframe | SymbolInstance | AtlasSpriteInstance;
+type Drawable = LibrarySymbol | Layer | Keyframe | SymbolInstance | AtlasSpriteInstance | Sprite;
 
 
 function isSymbol(data:Drawable):data is LibrarySymbol{
@@ -21,6 +21,10 @@ function isSymbolInstance(data:Drawable):data is SymbolInstance{
 
 function isAtlasSpriteInstance(data:Drawable):data is AtlasSpriteInstance{
     return "name" in data && "matrix3D" in data
+}
+
+function isSprite(data:Drawable):data is Sprite{
+    return "name" in data && "w" in data
 }
 
 
@@ -62,11 +66,12 @@ export function visit(anims:AnimationJson, sprites:SpriteMapJson, drawable:Drawa
     if(isSymbol(drawable)){
         frame = modWrap(frame, totalFrames(drawable))
         for(const l in drawable.timeline.layers){
-            callback(anims, sprites, drawable, frame) 
+            const layer = drawable.timeline.layers[l]
+            callback(anims, sprites, layer, frame) 
         }
     }else if(isLayer(drawable)){
         const keyframe = keyframeAt(drawable, frame)
-        if(keyframe!=null) callback(anims, sprites, drawable, frame)
+        if(keyframe!=null) callback(anims, sprites, keyframe, frame)
     }else if(isKeyframe(drawable)){
         for(const e in drawable.elements){
             const elem = drawable.elements[e]
@@ -81,15 +86,17 @@ export function visit(anims:AnimationJson, sprites:SpriteMapJson, drawable:Drawa
     }else if(isSymbolInstance(drawable)){
         for(const s in anims.symbolDictionary.symbols){
             const symbol = anims.symbolDictionary.symbols[s]
-            if(symbol.symbolName == drawable.symbolName) return symbol;
+            if(symbol.symbolName == drawable.symbolName) callback(anims, sprites, symbol, frame);
         }
         throw("Could not find symbol: " + drawable.symbolName);
     }else if(isAtlasSpriteInstance(drawable)){
         for(const s in sprites.atlas.Sprites){
             const sprite = sprites.atlas.Sprites[s].sprite;
-            if(drawable.name == sprite.name) return sprite;
+            if(drawable.name == sprite.name) callback(anims, sprites, sprite, frame);
         }
         throw("Could not find sprite: " + drawable.name);
+    }else if(isSprite(drawable)){
+        
     }
 }
 
