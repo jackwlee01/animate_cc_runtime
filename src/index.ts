@@ -3,30 +3,6 @@ import { AnimationJson, AtlasSpriteInstance, Keyframe, Layer, LibrarySymbol, Sym
 export type Drawable = LibrarySymbol | Layer | Keyframe | SymbolInstance | AtlasSpriteInstance | Sprite;
 
 
-export function isSymbol(data:Drawable):data is LibrarySymbol{
-    return "symbolName" in data && "matrix3D" in data == false;
-}
-
-export function isLayer(data:Drawable):data is Layer{
-    return "layerName" in data
-}
-
-export function isKeyframe(data:Drawable):data is Keyframe{
-    return "index" in data
-}
-
-export function isSymbolInstance(data:Drawable):data is SymbolInstance{
-    return "symbolName" in data && "matrix3D" in data
-}
-
-export function isAtlasSpriteInstance(data:Drawable):data is AtlasSpriteInstance{
-    return "name" in data && "matrix3D" in data
-}
-
-export function isSprite(data:Drawable):data is Sprite{
-    return "name" in data && "w" in data
-}
-
 export function drawableType(data:Drawable){
     if(isSymbol(data)) return "symbol" as const
     if(isSprite(data)) return "sprite" as const
@@ -72,15 +48,20 @@ function modWrap(a:number, b:number){
 
 
 export function visit<T>(item:T, anims:AnimationJson, sprites:SpriteMapJson, drawable:Drawable, frame:number, callback:(item:T, drawable:Drawable, frame:number)=>void){
+    // Symbol
     if(isSymbol(drawable)){
         frame = modWrap(frame, totalFrames(drawable))
         for(let l=drawable.timeline.layers.length-1; l>=0; l--){
             const layer = drawable.timeline.layers[l]
             callback(item, layer, frame) 
         }
+
+    // Layer
     }else if(isLayer(drawable)){
         const keyframe = keyframeAt(drawable, frame)
         if(keyframe!=null) callback(item, keyframe, frame)
+
+    //Keyframe
     }else if(isKeyframe(drawable)){
         for(const e in drawable.elements){
             const elem = drawable.elements[e]
@@ -92,6 +73,8 @@ export function visit<T>(item:T, anims:AnimationJson, sprites:SpriteMapJson, dra
                 throw("Invalid instance type")
             }
         }
+    
+    // SymbolInstance
     }else if(isSymbolInstance(drawable)){
         for(const s in anims.symbolDictionary.symbols){
             const symbol = anims.symbolDictionary.symbols[s]
@@ -101,6 +84,8 @@ export function visit<T>(item:T, anims:AnimationJson, sprites:SpriteMapJson, dra
             }
         }
         throw("Could not find symbol: " + drawable.symbolName);
+
+    // AtlasSpriteInstance
     }else if(isAtlasSpriteInstance(drawable)){
         for(const s in sprites.atlas.sprites){
             const sprite = sprites.atlas.sprites[s].sprite;
@@ -110,8 +95,40 @@ export function visit<T>(item:T, anims:AnimationJson, sprites:SpriteMapJson, dra
             }
         }
         throw("Could not find sprite: " + drawable.name);
+
+    // Sprite
     }else if(isSprite(drawable)){
 
     }
 }
 
+
+
+export function isSymbol(data:Drawable):data is LibrarySymbol{
+    return "symbolName" in data && "matrix3D" in data == false;
+}
+
+
+export function isLayer(data:Drawable):data is Layer{
+    return "layerName" in data
+}
+
+
+export function isKeyframe(data:Drawable):data is Keyframe{
+    return "index" in data
+}
+
+
+export function isSymbolInstance(data:Drawable):data is SymbolInstance{
+    return "symbolName" in data && "matrix3D" in data
+}
+
+
+export function isAtlasSpriteInstance(data:Drawable):data is AtlasSpriteInstance{
+    return "name" in data && "matrix3D" in data
+}
+
+
+export function isSprite(data:Drawable):data is Sprite{
+    return "name" in data && "w" in data
+}
