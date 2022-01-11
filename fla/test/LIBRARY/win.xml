@@ -1,0 +1,1286 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="win" itemID="61dd06c0-0000053c" linkageExportForAS="true" linkageClassName="Win" lastModified="1641875187" lastUniqueIdentifier="5">
+  <timeline>
+    <DOMTimeline name="win" currentFrame="106" guides='&lt;guidelines&gt;&lt;guideline direction="h"&gt;313&lt;/guideline&gt;&lt;guideline direction="v"&gt;-134&lt;/guideline&gt;&lt;guideline direction="h"&gt;99&lt;/guideline&gt;&lt;/guidelines&gt;' layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="red_lip" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="68" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="68" duration="122" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/win_redlip">
+                  <matrix>
+                    <Matrix tx="-243" ty="121.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="174.45" y="98.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="red_tongue" color="#009999" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="74" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="74" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue">
+                  <matrix>
+                    <Matrix tx="-18.45" ty="129.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="75" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="19.4" centerPoint3DY="173.25">
+                  <matrix>
+                    <Matrix b="-0.0001220703125" c="0.0001220703125" tx="-18.5" ty="129"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="76" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="19.3" centerPoint3DY="172.55">
+                  <matrix>
+                    <Matrix a="0.999984741210938" b="-0.0004730224609375" c="0.0004730224609375" d="0.999984741210938" tx="-18.65" ty="128.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.95" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="77" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="19.1" centerPoint3DY="171.45">
+                  <matrix>
+                    <Matrix a="0.999984741210938" b="-0.00103759765625" c="0.00103759765625" d="0.999984741210938" tx="-18.85" ty="127.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="78" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="18.75" centerPoint3DY="169.95">
+                  <matrix>
+                    <Matrix a="0.999969482421875" b="-0.00506591796875" c="0.00506591796875" d="0.999969482421875" tx="-19.4" ty="125.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.95" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="79" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="18.35" centerPoint3DY="168.1">
+                  <matrix>
+                    <Matrix a="0.999923706054688" b="-0.0092926025390625" c="0.0092926025390625" d="0.999923706054688" tx="-19.95" ty="124.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="80" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="17.75" centerPoint3DY="165.9">
+                  <matrix>
+                    <Matrix a="0.999847412109375" b="-0.013702392578125" c="0.013702392578125" d="0.999847412109375" tx="-20.8" ty="122.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.95" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="81" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="17" centerPoint3DY="163.45">
+                  <matrix>
+                    <Matrix a="0.999755859375" b="-0.0182647705078125" c="0.0182647705078125" d="0.999755859375" tx="-21.7" ty="119.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="82" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="16.05" centerPoint3DY="160.7">
+                  <matrix>
+                    <Matrix a="0.999557495117188" b="-0.0262603759765625" c="0.0262603759765625" d="0.999557495117188" tx="-23" ty="117.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="83" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="14.9" centerPoint3DY="157.7">
+                  <matrix>
+                    <Matrix a="0.9993896484375" b="-0.0311279296875" c="0.0311279296875" d="0.9993896484375" tx="-24.4" ty="114.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.95" y="44.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="84" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="13.45" centerPoint3DY="154.55">
+                  <matrix>
+                    <Matrix a="0.99908447265625" b="-0.039398193359375" c="0.039398193359375" d="0.99908447265625" tx="-26.2" ty="111.85"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.95" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="85" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="11.7" centerPoint3DY="151.2">
+                  <matrix>
+                    <Matrix a="0.99884033203125" b="-0.044525146484375" c="0.044525146484375" d="0.99884033203125" tx="-28.2" ty="108.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.95" y="44.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="86" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="9.7" centerPoint3DY="147.8">
+                  <matrix>
+                    <Matrix a="0.9984130859375" b="-0.05303955078125" c="0.05303955078125" d="0.9984130859375" tx="-30.45" ty="105.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.85" y="44.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="87" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="7.35" centerPoint3DY="144.35">
+                  <matrix>
+                    <Matrix a="0.997894287109375" b="-0.0616455078125" c="0.0616455078125" d="0.997894287109375" tx="-33.2" ty="102.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="88" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="4.65" centerPoint3DY="140.85">
+                  <matrix>
+                    <Matrix a="0.997283935546875" b="-0.07037353515625" c="0.07037353515625" d="0.997283935546875" tx="-36.25" ty="99.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="89" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="1.6" centerPoint3DY="137.4">
+                  <matrix>
+                    <Matrix a="0.996566772460938" b="-0.0791778564453125" c="0.0791778564453125" d="0.996566772460938" tx="-39.7" ty="96.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.95" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="90" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-1.75" centerPoint3DY="134">
+                  <matrix>
+                    <Matrix a="0.995819091796875" b="-0.08807373046875" c="0.08807373046875" d="0.995819091796875" tx="-43.35" ty="93.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.85" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="91" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-5.4" centerPoint3DY="130.7">
+                  <matrix>
+                    <Matrix a="0.994613647460938" b="-0.10028076171875" c="0.10028076171875" d="0.994613647460938" tx="-47.55" ty="90.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="92" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-9.45" centerPoint3DY="127.6">
+                  <matrix>
+                    <Matrix a="0.993637084960938" b="-0.109344482421875" c="0.109344482421875" d="0.993637084960938" tx="-51.95" ty="87.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="93" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-13.85" centerPoint3DY="124.7">
+                  <matrix>
+                    <Matrix a="0.9925537109375" b="-0.118438720703125" c="0.118438720703125" d="0.9925537109375" tx="-56.7" ty="85.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="94" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-18.55" centerPoint3DY="122.05">
+                  <matrix>
+                    <Matrix a="0.990966796875" b="-0.130828857421875" c="0.130828857421875" d="0.990966796875" tx="-61.9" ty="83.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="95" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-23.5" centerPoint3DY="119.7">
+                  <matrix>
+                    <Matrix a="0.98968505859375" b="-0.1400146484375" c="0.1400146484375" d="0.98968505859375" tx="-67.2" ty="81.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="96" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-28.75" centerPoint3DY="117.75">
+                  <matrix>
+                    <Matrix a="0.987777709960938" b="-0.152511596679688" c="0.152511596679688" d="0.987777709960938" tx="-72.9" ty="79.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.85" y="44.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="97" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-34.2" centerPoint3DY="116.1">
+                  <matrix>
+                    <Matrix a="0.986297607421875" b="-0.161773681640625" c="0.161773681640625" d="0.986297607421875" tx="-78.75" ty="78.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="98" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-39.85" centerPoint3DY="114.8">
+                  <matrix>
+                    <Matrix a="0.984115600585938" b="-0.174301147460938" c="0.174301147460938" d="0.984115600585938" tx="-84.85" ty="77.85"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="99" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-45.65" centerPoint3DY="113.9">
+                  <matrix>
+                    <Matrix a="0.981781005859375" b="-0.18682861328125" c="0.18682861328125" d="0.981781005859375" tx="-91.1" ty="77.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="100" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-51.6" centerPoint3DY="113.4">
+                  <matrix>
+                    <Matrix a="0.97991943359375" b="-0.196151733398438" c="0.196151733398438" d="0.97991943359375" tx="-97.45" ty="77.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.95" y="44.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="101" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-57.6" centerPoint3DY="113.35">
+                  <matrix>
+                    <Matrix a="0.977294921875" b="-0.20867919921875" c="0.20867919921875" d="0.977294921875" tx="-103.9" ty="78"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="102" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-63.6" centerPoint3DY="113.75">
+                  <matrix>
+                    <Matrix a="0.9744873046875" b="-0.221221923828125" c="0.221221923828125" d="0.9744873046875" tx="-110.35" ty="79.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.95" y="44.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="103" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-69.65" centerPoint3DY="114.55">
+                  <matrix>
+                    <Matrix a="0.971527099609375" b="-0.23370361328125" c="0.23370361328125" d="0.971527099609375" tx="-116.8" ty="80.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="104" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-75.65" centerPoint3DY="115.55">
+                  <matrix>
+                    <Matrix a="0.9683837890625" b="-0.246200561523438" c="0.246200561523438" d="0.9683837890625" tx="-123.25" ty="82.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="105" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-81.65" centerPoint3DY="116.85">
+                  <matrix>
+                    <Matrix a="0.965972900390625" b="-0.2554931640625" c="0.2554931640625" d="0.965972900390625" tx="-129.6" ty="83.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="106" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-87.55" centerPoint3DY="118.45">
+                  <matrix>
+                    <Matrix a="0.962554931640625" b="-0.267913818359375" c="0.267913818359375" d="0.962554931640625" tx="-135.85" ty="86"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.85" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="107" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-93.4" centerPoint3DY="120.3">
+                  <matrix>
+                    <Matrix a="0.958984375" b="-0.2802734375" c="0.2802734375" d="0.958984375" tx="-142.15" ty="88.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="108" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-99.15" centerPoint3DY="122.4">
+                  <matrix>
+                    <Matrix a="0.95526123046875" b="-0.2926025390625" c="0.2926025390625" d="0.95526123046875" tx="-148.3" ty="91.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="109" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-104.75" centerPoint3DY="124.8">
+                  <matrix>
+                    <Matrix a="0.951385498046875" b="-0.30487060546875" c="0.30487060546875" d="0.951385498046875" tx="-154.3" ty="94.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="110" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-110.25" centerPoint3DY="127.35">
+                  <matrix>
+                    <Matrix a="0.948394775390625" b="-0.31396484375" c="0.31396484375" d="0.948394775390625" tx="-160.05" ty="97.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.85" y="44.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="111" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-115.65" centerPoint3DY="130">
+                  <matrix>
+                    <Matrix a="0.944259643554688" b="-0.32611083984375" c="0.32611083984375" d="0.944259643554688" tx="-165.85" ty="100.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.85" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="112" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-120.9" centerPoint3DY="132.75">
+                  <matrix>
+                    <Matrix a="0.939971923828125" b="-0.338165283203125" c="0.338165283203125" d="0.939971923828125" tx="-171.5" ty="104"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="113" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-126.1" centerPoint3DY="135.6">
+                  <matrix>
+                    <Matrix a="0.93670654296875" b="-0.3470458984375" c="0.3470458984375" d="0.93670654296875" tx="-176.95" ty="107.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="114" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-131.1" centerPoint3DY="138.5">
+                  <matrix>
+                    <Matrix a="0.932174682617188" b="-0.35894775390625" c="0.35894775390625" d="0.932174682617188" tx="-182.35" ty="110.85"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.95" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="115" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-136" centerPoint3DY="141.5">
+                  <matrix>
+                    <Matrix a="0.927490234375" b="-0.370758056640625" c="0.370758056640625" d="0.927490234375" tx="-187.6" ty="114.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.95" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="116" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-140.75" centerPoint3DY="144.5">
+                  <matrix>
+                    <Matrix a="0.923980712890625" b="-0.379425048828125" c="0.379425048828125" d="0.923980712890625" tx="-192.55" ty="118"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="117" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-145.3" centerPoint3DY="147.6">
+                  <matrix>
+                    <Matrix a="0.919097900390625" b="-0.3909912109375" c="0.3909912109375" d="0.919097900390625" tx="-197.45" ty="121.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="118" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-149.55" centerPoint3DY="150.9">
+                  <matrix>
+                    <Matrix a="0.9154052734375" b="-0.39947509765625" c="0.39947509765625" d="0.9154052734375" tx="-201.9" ty="125.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.85" y="44.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="119" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-153.6" centerPoint3DY="154.25">
+                  <matrix>
+                    <Matrix a="0.91033935546875" b="-0.410858154296875" c="0.410858154296875" d="0.91033935546875" tx="-206.3" ty="129.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="120" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-157.35" centerPoint3DY="157.7">
+                  <matrix>
+                    <Matrix a="0.90655517578125" b="-0.419113159179688" c="0.419113159179688" d="0.90655517578125" tx="-210.3" ty="133.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.95" y="44.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="121" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-160.85" centerPoint3DY="161.15">
+                  <matrix>
+                    <Matrix a="0.9027099609375" b="-0.42724609375" c="0.42724609375" d="0.9027099609375" tx="-214" ty="137.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.95" y="44.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="122" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-164.05" centerPoint3DY="164.65">
+                  <matrix>
+                    <Matrix a="0.898849487304688" b="-0.435302734375" c="0.435302734375" d="0.898849487304688" tx="-217.45" ty="141.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="38" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="123" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-166.95" centerPoint3DY="168.15">
+                  <matrix>
+                    <Matrix a="0.89495849609375" b="-0.443206787109375" c="0.443206787109375" d="0.89495849609375" tx="-220.45" ty="145.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.85" y="44.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="124" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-169.6" centerPoint3DY="171.55">
+                  <matrix>
+                    <Matrix a="0.89105224609375" b="-0.45098876953125" c="0.45098876953125" d="0.89105224609375" tx="-223.35" ty="149.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="125" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-171.9" centerPoint3DY="174.9">
+                  <matrix>
+                    <Matrix a="0.887130737304688" b="-0.4586181640625" c="0.4586181640625" d="0.887130737304688" tx="-225.75" ty="153"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.85" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="126" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-173.85" centerPoint3DY="178.2">
+                  <matrix>
+                    <Matrix a="0.8831787109375" b="-0.466110229492188" c="0.466110229492188" d="0.8831787109375" tx="-227.95" ty="156.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="127" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-175.5" centerPoint3DY="181.3">
+                  <matrix>
+                    <Matrix a="0.8792724609375" b="-0.47344970703125" c="0.47344970703125" d="0.8792724609375" tx="-229.75" ty="160.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="128" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-176.85" centerPoint3DY="184.25">
+                  <matrix>
+                    <Matrix a="0.876922607421875" b="-0.47772216796875" c="0.47772216796875" d="0.876922607421875" tx="-231.25" ty="163.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="129" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-177.95" centerPoint3DY="187">
+                  <matrix>
+                    <Matrix a="0.8746337890625" b="-0.48187255859375" c="0.48187255859375" d="0.8746337890625" tx="-232.4" ty="166.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="130" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-178.8" centerPoint3DY="189.4">
+                  <matrix>
+                    <Matrix a="0.870834350585938" b="-0.48870849609375" c="0.48870849609375" d="0.870834350585938" tx="-233.45" ty="169.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="131" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-179.45" centerPoint3DY="191.45">
+                  <matrix>
+                    <Matrix a="0.868682861328125" b="-0.492523193359375" c="0.492523193359375" d="0.868682861328125" tx="-234.2" ty="171.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.95" y="44.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="132" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-179.9" centerPoint3DY="193.15">
+                  <matrix>
+                    <Matrix a="0.868255615234375" b="-0.4932861328125" c="0.4932861328125" d="0.868255615234375" tx="-234.65" ty="173.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="133" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-180.25" centerPoint3DY="194.45">
+                  <matrix>
+                    <Matrix a="0.866302490234375" b="-0.496688842773438" c="0.496688842773438" d="0.866302490234375" tx="-235.1" ty="174.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="134" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" selected="true" centerPoint3DX="-180.45" centerPoint3DY="195.2">
+                  <matrix>
+                    <Matrix a="0.8660888671875" b="-0.497039794921875" c="0.497039794921875" d="0.8660888671875" tx="-235.3" ty="175.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="135" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tongue" centerPoint3DX="-180.5" centerPoint3DY="195.5">
+                  <matrix>
+                    <Matrix a="0.866012573242188" b="-0.5" c="0.5" d="0.866012573242188" tx="-235.45" ty="176.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.9" y="44.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="136" duration="27" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="163" duration="27" name="complete" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="red_eyelid" color="#808080" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="190" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_68" color="#FF4FFF">
+          <frames>
+            <DOMFrame index="0" duration="190" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/win_eyelid1">
+                  <matrix>
+                    <Matrix tx="-213.55" ty="-112.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="92.85" y="27.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="red_top_layers" color="#669900" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="190" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/win_red_top_layers">
+                  <matrix>
+                    <Matrix tx="-365.8" ty="-165"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="238.3" y="295.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_66" color="#9933CC">
+          <frames>
+            <DOMFrame index="0" duration="62" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="62" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/win_redMouth2">
+                  <matrix>
+                    <Matrix tx="-143.55" ty="83.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="116.5" y="118"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="63" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/win_redMouth3">
+                  <matrix>
+                    <Matrix tx="-128.55" ty="106.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="104.65" y="101"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="64" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/win_redMouth4">
+                  <matrix>
+                    <Matrix tx="-127.55" ty="108.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="103.75" y="99.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="65" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/win_redMouth5">
+                  <matrix>
+                    <Matrix tx="-128.55" ty="107.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="104.45" y="100"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="66" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/win_redMouth6">
+                  <matrix>
+                    <Matrix tx="-127.55" ty="107.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="103.95" y="101"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="67" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/win_redMouth7">
+                  <matrix>
+                    <Matrix tx="-128.55" ty="107.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="104.9" y="100.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="68" duration="122" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/win_redMouth8">
+                  <matrix>
+                    <Matrix tx="-130.55" ty="104.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="106.05" y="102.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="red_mouth" color="#FF4F4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="11" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="11" duration="32" name="BBQ_Fork_Shove_Food_Broccoli" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="43" duration="18" name="BBQ_Fork_Shove_Extended_Retracted" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="61" duration="129" name="BBQ_Monster_Gulp_Licking" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="red_mouth" color="#4F80FF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="190" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/win_redMouth1">
+                  <matrix>
+                    <Matrix tx="-365.7" ty="-180.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="238.25" y="303.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="red_tooth1" color="#4F80FF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="61" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tooth1">
+                  <matrix>
+                    <Matrix tx="-90.85" ty="99.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="25.6" y="33.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="61" duration="3" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tooth1">
+                  <matrix>
+                    <Matrix tx="-90.85" ty="99.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="25.6" y="33.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="64" duration="126" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tooth1">
+                  <matrix>
+                    <Matrix tx="-90.85" ty="103.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="25.6" y="33.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="red_tooth2" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="61" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tooth2">
+                  <matrix>
+                    <Matrix tx="1.55" ty="101.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="24.7" y="33.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="61" duration="3" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tooth2">
+                  <matrix>
+                    <Matrix tx="1.55" ty="101.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="24.7" y="33.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="64" duration="126" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tooth2" centerPoint3DX="26.25" centerPoint3DY="144.65">
+                  <matrix>
+                    <Matrix tx="1.55" ty="111.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="24.7" y="33.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="red_tooth3" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="61" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tooth3">
+                  <matrix>
+                    <Matrix tx="-100.35" ty="246.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="25.6" y="33.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="61" duration="3" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tooth3">
+                  <matrix>
+                    <Matrix tx="-100.35" ty="246.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="25.6" y="33.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="64" duration="126" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tooth3" centerPoint3DX="-74.9" centerPoint3DY="240.55">
+                  <matrix>
+                    <Matrix a="0.988494873046875" b="0.1512451171875" c="-0.1512451171875" d="0.988494873046875" tx="-94.95" ty="203.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="25.65" y="33.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="red_tooth4" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="61" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tooth4">
+                  <matrix>
+                    <Matrix tx="-8" ty="246.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="24.7" y="33.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="61" duration="3" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tooth4">
+                  <matrix>
+                    <Matrix tx="-8" ty="246.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="24.7" y="33.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="64" duration="126" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_tooth4" centerPoint3DX="16.7" centerPoint3DY="245.2">
+                  <matrix>
+                    <Matrix tx="-8" ty="212.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="24.7" y="33.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="red_bottom_layers" color="#009999" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="190" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/red_bottom_legless_layers2">
+                  <matrix>
+                    <Matrix tx="-493.15" ty="-227.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="356.2" y="146.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="red_chunder_blocker" color="#808080" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="190" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="red_chunder" color="#669900" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="190" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="red_shadow" color="#FF4F4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="190" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="foodH" color="#FF800A" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="11" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/food_placeholder" name="foodHolder" selected="true" centerPoint3DX="1245.25" centerPoint3DY="205.4">
+                  <matrix>
+                    <Matrix tx="1245.25" ty="205.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="11" duration="15" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/food_placeholder" name="foodHolder" centerPoint3DX="1245.25" centerPoint3DY="205.4">
+                  <matrix>
+                    <Matrix tx="1245.25" ty="205.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="26" duration="43" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/food_placeholder" name="foodHolder" centerPoint3DX="-86.9" centerPoint3DY="205.4">
+                  <matrix>
+                    <Matrix tx="-86.9" ty="205.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="69" duration="121" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="food_outcome" color="#669900" autoNamed="false" layerType="guide">
+          <frames>
+            <DOMFrame index="0" duration="11" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="11" duration="15" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="26" duration="43" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="69" duration="121" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="skewer" color="#FF4F4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="11" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="11" duration="15" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/levelOverSkewer" centerPoint3DX="1857.55" centerPoint3DY="201">
+                  <matrix>
+                    <Matrix a="1.69451904296875" d="1.69451904296875" tx="1233.95" ty="162.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="417.85" y="26"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="26" duration="17" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/levelOverSkewer" centerPoint3DX="524.55" centerPoint3DY="201">
+                  <matrix>
+                    <Matrix a="1.69451904296875" d="1.69451904296875" tx="-99.05" ty="162.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="417.85" y="26"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="43" duration="15" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/levelOverSkewer" centerPoint3DX="524.55" centerPoint3DY="201">
+                  <matrix>
+                    <Matrix a="1.69451904296875" d="1.69451904296875" tx="-99.05" ty="162.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="417.85" y="26"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="58" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="monsterz/levelOverSkewer" centerPoint3DX="1857.55" centerPoint3DY="201">
+                  <matrix>
+                    <Matrix a="1.69451904296875" d="1.69451904296875" tx="1233.95" ty="162.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="417.85" y="26"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="59" duration="131" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_12" color="#FF4FFF">
+          <frames>
+            <DOMFrame index="0" duration="190" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="background" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="190" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -39,7 +39,7 @@ export function setupCanvas(canvas:HTMLCanvasElement) {
 
 export function addExampleButtons(lib:Library, onClick:(symbolName:string)=>void){
     lib.anims.symbolDictionary.symbols.forEach(symbol => {
-        if(symbol.symbolName.indexOf("Symbol ")==0 || symbol.symbolName.indexOf("Tween ")==0 || symbol.symbolName.indexOf("/Symbol ")!=-1 || symbol.symbolName.indexOf("/Tween ")!=-1) return;
+        if(symbol.symbolName.indexOf("/")!=-1 || symbol.symbolName.indexOf("Symbol ")==0 || symbol.symbolName.indexOf("Tween ")==0 || symbol.symbolName.indexOf("/Symbol ")!=-1 || symbol.symbolName.indexOf("/Tween ")!=-1) return;
         var li = document.createElement("li")
         var button = document.createElement("button")
         button.innerHTML = symbol.symbolName

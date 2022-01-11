@@ -1,0 +1,41 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="monsterz/win_redMouth4" itemID="56b9333f-00000696" linkageExportForAS="true" linkageIdentifier="win_redMouth4" linkageBaseClass="flash.display.Sprite" linkageClassName="win_redMouth4" lastModified="1454977886" isSpriteSubclass="true">
+  <timeline>
+    <DOMTimeline name="win_redMouth4" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#EA2035"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!3641 2301S1[2710 2616 2296 2600!2296 2600[1557 2570 1075 2209!1075 2209[879 2062 760 1882!760 1882[651 1717 631 1566!631 1566[574 1121 894 850!894 850[1251 548 2057 478!2057 478[2415 448 2844 515!2844 515[3275 582 3560 713!3560 713[3667
+ 766 3777 713!3777 713[3870 668 3902 591!3902 591|4065 211!4065 211[4109 104 4151 0!4151 0|0 0!0 0|0 3980!0 3980|3739 3980!3739 3980[3768 3800 3777 3500!3777 3500[3784 3142 3790 3038!3790 3038[3798 2908 3860 2708!3860 2708[3920 2535 3920
+ 2533!3920 2533[3931 2416 3871 2342!3871 2342[3795 2249 3641 2301"/>
+                    <Edge cubics="!3641 2301(;3316,2411 2678,2615 2296,2600q3641 2301Q2710 2616q2296 2600);"/>
+                    <Edge cubics="!2296 2600(;1210,2556 681,1946 631,1566q2296 2600Q1557 2570q1075 2209Q879 2062q760 1882Q651 1717q631 1566);"/>
+                    <Edge cubics="!631 1566(;559,1009 930,576 2057,478q631 1566Q574 1121q894 850Q1251 548q2057 478);"/>
+                    <Edge cubics="!2057 478(;2533,438 3179,538 3560,713q2057 478Q2415 448q2844 515Q3275 582q3560 713);"/>
+                    <Edge cubics="!3560 713(;3718,791 3867,675 3902,591q3560 713Q3667 766q3777 713Q3870 668q3902 591);"/>
+                    <Edge cubics="!3902 591(;3908,576 4059,226 4065,211p3902 591 4065 211);"/>
+                    <Edge cubics="!4065 211(4065,211;4093,144 4121,76 4151,0q4065 211 4151 0)4151,0;"/>
+                    <Edge cubics="!3920 2533(;3931,2411 3870,2224 3641,2301q3920 2533Q3931 2416q3871 2342Q3795 2249q3641 2301);"/>
+                    <Edge cubics="!3739 3980(3739,3980;3787,3681 3778,3235 3790,3038q3739 3980Q3768 3800q3777 3500 3790 3038)3790,3038;"/>
+                    <Edge cubics="!3790 3038(;3803,2829 3920,2536 3920,2533q3790 3038Q3798 2908q3860 2708Q3920 2535q3920 2533);"/>
+                    <Edge cubics="!0 3980(0,3980;0,3980 0,0 0,0q0 3980 0 0)0,0;"/>
+                    <Edge cubics="!3739 3980(;3739,3980 0,3980 0,3980q3739 3980 0 3980);"/>
+                    <Edge cubics="!0 0(;0,0 4151,0 4151,0q0 0 4151 0);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

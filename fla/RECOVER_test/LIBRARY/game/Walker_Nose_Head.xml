@@ -1,0 +1,280 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="game/Walker_Nose_Head" itemID="61973aad-00000a76" symbolType="graphic" lastModified="1637301114" lastUniqueIdentifier="17">
+  <timeline>
+    <DOMTimeline name="Walker_Nose_Head" currentFrame="9" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Symbol_529" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="67" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="game/Walker_Nose_Nose" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-0.1" ty="-23.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.1" y="0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Symbol_550" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="67" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="game/Symbol 550" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-0.25" ty="-7.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Symbol_534" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="67" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="game/Symbol 534" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-30.05" ty="-56.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="13.35" y="24.9"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Symbol_534_copy" color="#009999" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="67" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="game/Symbol 534 copy" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="-1" tx="29.2" ty="-56.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="13.3" y="24.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Symbol_535" color="#FF0000" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="67" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="game/Symbol 535" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-6.6" ty="-34.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="6.1" y="0.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Symbol_549" color="#669900" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="67" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="game/Symbol 549" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-15.6" ty="-26.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Symbol_548" color="#FF4F4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="67" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="game/Symbol 548" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="0.15" ty="-26.85"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Symbol_547" color="#00FFFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="67" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="game/Symbol 547" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-14.6" ty="-64.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Symbol_546" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="67" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="game/Symbol 546" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-21.25" ty="-70.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Symbol_545" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="67" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="game/Symbol 545" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-16.3" ty="-73.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Symbol_544" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="67" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="game/Symbol 544" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-15.9" ty="-59.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Symbol_543" color="#009999" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="67" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="game/Symbol 543" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="22.35" ty="-60.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Symbol_536" color="#FF0000" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="67" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="game/Walker_Nose_Siren" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-17.95" ty="-88.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="17.6" y="15.65"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Symbol_531" color="#669900" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="67" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="game/Symbol 531" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="-1" tx="-28.2" ty="-27.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.4" y="0.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Symbol_531" color="#FF4F4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="67" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="game/Symbol 531" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="27.55" ty="-27.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.4" y="0.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Symbol_532" color="#00FFFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="67" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="game/Symbol 532" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="-1" tx="-36.9" ty="-33.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-5.95" y="7.65"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Symbol_532" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="67" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="game/Symbol 532" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="35.65" ty="-33.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-5.95" y="7.65"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

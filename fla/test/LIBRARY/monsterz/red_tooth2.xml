@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="monsterz/red_tooth2" itemID="563cd075-0000035d" linkageExportForAS="true" linkageIdentifier="red_tooth2" linkageBaseClass="flash.display.Sprite" linkageClassName="red_tooth2" lastModified="1454977185" isSpriteSubclass="true">
+  <timeline>
+    <DOMTimeline name="red_tooth2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMGroup selected="true">
+                      <members>
+                        <DOMShape isDrawingObject="true">
+                          <matrix>
+                            <Matrix a="1.95928955078125" d="1.9595947265625" tx="-611.5" ty="-732.2"/>
+                          </matrix>
+                          <fills>
+                            <FillStyle index="1">
+                              <SolidColor color="#FFFFFF"/>
+                            </FillStyle>
+                          </fills>
+                          <edges>
+                            <Edge fillStyle0="1" edges="!6434 8149[6593 8165 6686 7846!6686 7846[6715 7746 6734 7624!6734 7624|6747 7523!6747 7523|6252 7473!6252 7473|6244 7575!6244 7575[6239 7698 6247 7802!6247 7802[6274 8133 6434 8149"/>
+                            <Edge cubics="!6434 8149(;6689,8175 6747,7523 6747,7523q6434 8149Q6593 8165q6686 7846Q6715 7746q6734 7624Q6747 7523q6747 7523);"/>
+                            <Edge cubics="!6747 7523(;6747,7523 6252,7473 6252,7473q6747 7523 6252 7473);"/>
+                            <Edge cubics="!6252 7473(;6252,7473 6178,8124 6434,8149q6252 7473Q6252 7473q6244 7575Q6239 7698q6247 7802Q6274 8133q6434 8149);"/>
+                          </edges>
+                        </DOMShape>
+                      </members>
+                    </DOMGroup>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,52 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="monsterz/win_redlip" itemID="56b930e4-0000065d" linkageExportForAS="true" linkageBaseClass="flash.display.Sprite" linkageClassName="win_redlip" lastModified="1454977252" isSpriteSubclass="true">
+  <timeline>
+    <DOMTimeline name="win_redlip" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isDrawingObject="true">
+                  <matrix>
+                    <Matrix tx="-269" ty="-505.35"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#EA2035"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!5861 10966|6345 10754!6345 10754[6972 10509 7689 10351!7689 10351[9986 9845 12319 10388!12319 10388[12037 10619 11741 10929!11741 10929[11152 11550 11095 11950!11095 11950/7500 14100!7500 14100/5380 12580!5380 12580/5861 10966"/>
+                    <Edge cubics="!5861 10966(;5861,10966 8584,9520 12319,10388q5861 10966Q5861 10966q6345 10754Q6972 10509q7689 10351Q9986 9845q12319 10388);"/>
+                    <Edge cubics="!12319 10388(;12319,10388 11187,11311 11095,11950q12319 10388Q12037 10619q11741 10929Q11152 11550q11095 11950);"/>
+                    <Edge cubics="!11095 11950(;11095,11950 7500,14100 7500,14100p11095 11950q7500 14100);"/>
+                    <Edge cubics="!7500 14100(;7500,14100 5380,12580 5380,12580p7500 14100 5380 12580);"/>
+                    <Edge cubics="!5380 12580(;5380,12580 5861,10966 5861,10966p5380 12580 5861 10966);"/>
+                  </edges>
+                </DOMShape>
+                <DOMShape selected="true" isDrawingObject="true">
+                  <matrix>
+                    <Matrix a="1.95957946777344" d="1.95957946777344" tx="-367" ty="-752.05"/>
+                  </matrix>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" weight="3.9">
+                        <fill>
+                          <SolidColor color="#C2192B"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge strokeStyle="1" edges="!3991 8114|4238 8006!4238 8006[4558 7881 4924 7800!4924 7800[6096 7542 7287 7819"/>
+                    <Edge cubics="!3991 8114(3991,8114;3991,8114 5381,7376 7287,7819q3991 8114Q3991 8114q4238 8006Q4558 7881q4924 7800Q6096 7542q7287 7819)7287,7819;"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

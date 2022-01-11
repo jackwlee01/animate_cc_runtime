@@ -1,0 +1,63 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="game/Symbol 542" itemID="61933c8c-00001d6b" symbolType="graphic" lastModified="1637039244">
+  <timeline>
+    <DOMTimeline name="Symbol 542" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!71 44S2[48 62 37 91!37 91[19 134 28 181!28 181[35 218 57 240!57 240[82 264 123 269!123 269[170 277 256 261!256 261|851 161!851 161[872 157 881 151!881 151[897 137 888 123!888 123[883 116 864 112!864 112[393 47 193 26!193 26[152 22 129
+ 24!129 24[94 27 71 44!65 18[105 -5 190 1!190 1[269 7 379 23!379 23|722 67!722 67[830 81 882 96!882 96[903 102 909 111!909 111[914 118 914 136!914 136[914 157 907 167!907 167[898 180 866 186!866 186|248 288!248 288[174 301 131 297!131
+ 297[63 290 28 245!28 245[6 215 1 169!1 169[-4 124 12 83!12 83[29 40 65 18"/>
+                    <Edge cubics="!65 18(;102,-3 147,-2 190,1q65 18Q105 -5q190 1);"/>
+                    <Edge cubics="!190 1(;253,6 316,14 379,23q190 1Q269 7q379 23);"/>
+                    <Edge cubics="!379 23(;493,38 608,52 722,67q379 23 722 67);"/>
+                    <Edge cubics="!722 67(;776,74 830,81 882,96q722 67Q830 81q882 96);"/>
+                    <Edge cubics="!882 96(;893,99 903,102 909,111q882 96Q903 102q909 111);"/>
+                    <Edge cubics="!909 111(;914,118 914,127 914,136q909 111Q914 118q914 136);"/>
+                    <Edge cubics="!914 136(;914,147 913,158 907,167q914 136Q914 157q907 167);"/>
+                    <Edge cubics="!907 167(;898,180 881,183 866,186q907 167Q898 180q866 186);"/>
+                    <Edge cubics="!866 186(;660,220 454,254 248,288q866 186 248 288);"/>
+                    <Edge cubics="!248 288(;209,295 170,301 131,297q248 288Q174 301q131 297);"/>
+                    <Edge cubics="!131 297(;92,293 52,276 28,245q131 297Q63 290q28 245);"/>
+                    <Edge cubics="!28 245(;12,223 4,196 1,169q28 245Q6 215q1 169);"/>
+                    <Edge cubics="!1 169(;-5,112 15,48 65,18q1 169Q-4 124q12 83Q29 40q65 18);"/>
+                    <Edge cubics="!71 44(;56,56 44,73 37,91q71 44Q48 62q37 91);"/>
+                    <Edge cubics="!37 91(;25,119 22,151 28,181q37 91Q19 134q28 181);"/>
+                    <Edge cubics="!28 181(;32,203 41,224 57,240q28 181Q35 218q57 240);"/>
+                    <Edge cubics="!57 240(;75,257 99,266 123,269q57 240Q82 264q123 269);"/>
+                    <Edge cubics="!123 269(;167,276 212,269 256,261q123 269Q170 277q256 261);"/>
+                    <Edge cubics="!851 161(;861,159 872,157 881,151q851 161Q872 157q881 151);"/>
+                    <Edge cubics="!881 151(;889,144 894,132 888,123q881 151Q897 137q888 123);"/>
+                    <Edge cubics="!888 123(;883,116 873,114 864,112q888 123Q883 116q864 112);"/>
+                    <Edge cubics="!864 112(;641,81 417,49 193,26q864 112Q393 47q193 26);"/>
+                    <Edge cubics="!193 26(;151,22 105,19 71,44q193 26Q152 22q129 24Q94 27q71 44);"/>
+                    <Edge cubics="!256 261(;256,261 851,161 851,161q256 261 851 161);"/>
+                  </edges>
+                </DOMShape>
+                <DOMSymbolInstance libraryItemName="game/Symbol 530" selected="true">
+                  <matrix>
+                    <Matrix tx="0.45" ty="0.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="22.25" y="6.8"/>
+                  </transformationPoint>
+                  <filters>
+                    <AdjustColorFilter brightness="-17" contrast="18" saturation="100" hue="-163"/>
+                  </filters>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

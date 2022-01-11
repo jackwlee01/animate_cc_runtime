@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="monsterz/red_tooth4" itemID="563cd0cb-00000365" linkageExportForAS="true" linkageIdentifier="red_tooth4" linkageBaseClass="flash.display.Sprite" linkageClassName="red_tooth4" lastModified="1454977185" isSpriteSubclass="true">
+  <timeline>
+    <DOMTimeline name="red_tooth4" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMGroup>
+                      <members>
+                        <DOMShape isDrawingObject="true">
+                          <matrix>
+                            <Matrix a="1.95928955078125" d="1.9595947265625" tx="-601.95" ty="-876.75"/>
+                          </matrix>
+                          <fills>
+                            <FillStyle index="1">
+                              <SolidColor color="#FFFFFF"/>
+                            </FillStyle>
+                          </fills>
+                          <edges>
+                            <Edge fillStyle1="1" edges="!6336 8949[6496 8933 6589 9252!6589 9252[6635 9412 6649 9575!6649 9575|6155 9625!6155 9625[6137 9462 6150 9296!6150 9296[6177 8965 6336 8949"/>
+                            <Edge cubics="!6336 8949(;6592,8923 6649,9575 6649,9575q6336 8949Q6496 8933q6589 9252Q6635 9412q6649 9575);"/>
+                            <Edge cubics="!6649 9575(;6649,9575 6155,9625 6155,9625q6649 9575 6155 9625);"/>
+                            <Edge cubics="!6155 9625(;6155,9625 6081,8974 6336,8949q6155 9625Q6137 9462q6150 9296Q6177 8965q6336 8949);"/>
+                          </edges>
+                        </DOMShape>
+                      </members>
+                    </DOMGroup>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
