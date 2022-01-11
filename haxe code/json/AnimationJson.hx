@@ -65,7 +65,7 @@ typedef Color = {
 
 typedef AtlasSpriteInstance = {
     var name:String;
-    var matrix3D:Matrix3D;
+    var matrix3D?:Matrix3D;
     var decomposedMatrix:DecomposedMatrix;
     @:options var filters:Dynamic;
 }

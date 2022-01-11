@@ -1,6 +1,6 @@
 <DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Walker_Nose" itemID="6195a70a-00000a55" lastModified="1641874631" lastUniqueIdentifier="4">
   <timeline>
-    <DOMTimeline name="Walker_Nose" currentFrame="29" layerDepthEnabled="true">
+    <DOMTimeline name="Walker_Nose" layerDepthEnabled="true">
       <layers>
         <DOMLayer name="Layer_21" color="#009999">
           <frames>
@@ -9,14 +9,14 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer_2" color="#9933CC">
+        <DOMLayer name="Layer_2" color="#9933CC" current="true" isSelected="true">
           <frames>
             <DOMFrame index="0" duration="14" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
               <tweens>
                 <Ease target="all" intensity="100"/>
               </tweens>
               <elements>
-                <DOMSymbolInstance libraryItemName="game/Walker_Nose_Head" symbolType="graphic" firstFrame="49" centerPoint3DX="41.4" centerPoint3DY="38.2" loop="loop">
+                <DOMSymbolInstance libraryItemName="game/Walker_Nose_Head" selected="true" symbolType="graphic" firstFrame="49" centerPoint3DX="41.4" centerPoint3DY="38.2" loop="loop">
                   <matrix>
                     <Matrix tx="0.45" ty="-9.6"/>
                   </matrix>
@@ -55,7 +55,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer_20" color="#FF4FFF" current="true" isSelected="true">
+        <DOMLayer name="Layer_20" color="#FF4FFF">
           <frames>
             <DOMFrame index="0" duration="30" keyMode="9728">
               <elements>

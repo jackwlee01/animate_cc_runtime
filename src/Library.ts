@@ -40,7 +40,7 @@ export async function createLibrary(path:string){
             const m = drawable.matrix3D;
             buffer.save()
             if(isSymbolInstance(drawable) && drawable.color) buffer.globalAlpha *= drawable.color.alphaMultiplier;
-            buffer.transform(m.m00, m.m01, m.m10, m.m11, m.m30, m.m31);
+            if(m!=null) buffer.transform(m.m00, m.m01, m.m10, m.m11, m.m30, m.m31);
             visit(buffer, anims, spriteMap, drawable, frame, drawbase);
             buffer.restore();
         }else if(isSprite(drawable)){

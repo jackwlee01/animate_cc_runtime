@@ -1,0 +1,24 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="stardude_assets/StarGuyGun" itemID="61888525-00000979" lastModified="1641876549" lastUniqueIdentifier="9">
+  <timeline>
+    <DOMTimeline name="StarGuyGun" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_7" color="#669900" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="stardude_assets/Symbol 255" selected="true">
+                  <matrix>
+                    <Matrix tx="-72.9" ty="-17.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="62.2" y="29.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

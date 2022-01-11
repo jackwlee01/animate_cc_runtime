@@ -1,0 +1,24 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="stardude_assets/Symbol 245 copy 15" itemID="617bc59a-00000a40" lastModified="1636335919">
+  <timeline>
+    <DOMTimeline name="Symbol 245 copy 15" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="stardude_assets/Symbol 246" selected="true" symbolType="graphic" centerPoint3DX="27.45" centerPoint3DY="14.45" loop="loop">
+                  <matrix>
+                    <Matrix tx="7.25" ty="7.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="20.2" y="6.8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

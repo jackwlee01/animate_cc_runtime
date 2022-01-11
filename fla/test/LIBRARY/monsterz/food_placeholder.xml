@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="monsterz/food_placeholder" itemID="5bf62ccd-00000456" linkageExportForAS="true" linkageClassName="food_placeholder" lastModified="1641875198">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="monsterz/food_placeholder" itemID="5bf62ccd-00000456" linkageExportForAS="true" linkageClassName="food_placeholder" lastModified="1641876212">
   <timeline>
     <DOMTimeline name="food_placeholder" layerDepthEnabled="true">
       <layers>
@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="monsterz/donut1">
+                <DOMSymbolInstance libraryItemName="monsterz/donut1" selected="true">
                   <matrix>
                     <Matrix a="1.78152465820312" d="1.78152465820312" tx="-99.6" ty="-102.25"/>
                   </matrix>

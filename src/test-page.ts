@@ -17,7 +17,8 @@ async function init(){
     let frame = 0;
 
     function update(){
-        buffer.clearRect(0, 0, canvas.width, canvas.height);
+        buffer.fillStyle = '#cccccc'
+        buffer.fillRect(0, 0, canvas.width, canvas.height);
         buffer.save();
         buffer.translate(canvas.width/2, canvas.height/2)
         buffer.scale(dpr/2, dpr/2)

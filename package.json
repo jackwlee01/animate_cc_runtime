@@ -2,7 +2,7 @@
   "name": "animate_cc_runtime",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "test-page.ts",
   "scripts": {
     "build": "esbuild src/index.ts --bundle --outfile=bin/bundle.js",
     "build-page": "esbuild src/test-page.ts --bundle --outfile=bin/test-page.js --sourcemap",

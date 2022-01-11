@@ -1,14 +1,14 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="game/Walker_Nose_Head" itemID="61973aad-00000a76" symbolType="graphic" lastModified="1637301114" lastUniqueIdentifier="17">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="game/Walker_Nose_Head" itemID="61973aad-00000a76" symbolType="graphic" lastModified="1641876226" lastUniqueIdentifier="17">
   <timeline>
-    <DOMTimeline name="Walker_Nose_Head" currentFrame="9" layerDepthEnabled="true">
+    <DOMTimeline name="Walker_Nose_Head" currentFrame="49" layerDepthEnabled="true">
       <layers>
         <DOMLayer name="Symbol_529" color="#9933CC" current="true" isSelected="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" duration="67" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="game/Walker_Nose_Nose" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="game/Walker_Nose_Nose" selected="true" symbolType="graphic" loop="loop">
                   <matrix>
-                    <Matrix tx="-0.1" ty="-23.35"/>
+                    <Matrix a="-0.05743408203125" b="-0.998336791992188" c="0.998336791992188" d="-0.05743408203125" tx="-0.05" ty="-23.15"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="0.1" y="0.05"/>

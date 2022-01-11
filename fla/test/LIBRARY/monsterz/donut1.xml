@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMGroup selected="true">
+                <DOMGroup>
                   <members>
                     <DOMShape selected="true" isDrawingObject="true">
                       <matrix>
