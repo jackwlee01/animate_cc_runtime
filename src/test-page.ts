@@ -9,7 +9,7 @@ var dpr = setupCanvas(canvas)
 
 
 async function init(){
-    const lib = await createLibrary('test', dpr);
+    const lib = await createLibrary('test');
     
     let symbolName:string|null = lib.anims.symbolDictionary.symbols[0]?.symbolName;
     addExampleButtons(lib, (nextSymbolName) => symbolName = nextSymbolName); 

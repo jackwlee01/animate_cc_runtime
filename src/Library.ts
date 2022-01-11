@@ -1,4 +1,4 @@
-import { Drawable, isAtlasSpriteInstance, isKeyframe, isLayer, isSprite, isSymbol, isSymbolInstance, visit } from ".";
+import { Drawable, isAtlasSpriteInstance, isKeyframe, isLayer, isSprite, isSymbol, isSymbolInstance, visit } from "./core";
 import { AnimationJson } from "./json/AnimationJson";
 import { normaliseJson } from "./json/utilJson";
 
@@ -13,7 +13,7 @@ async function getJsonData(path:string){
 }
 
 
-export async function createLibrary(path:string, scaleFactor:number){
+export async function createLibrary(path:string){
     const rawAnim:AnimationJson = await getJsonData(`./${path}/Animation.json`)
     const spriteMapRaw:SpriteMapJson = await getJsonData(`./${path}/spritemap1.json`)
     const anims = normaliseJson(rawAnim) as AnimationJson
