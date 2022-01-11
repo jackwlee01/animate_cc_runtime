@@ -20,9 +20,11 @@ async function init(){
         buffer.clearRect(0, 0, canvas.width, canvas.height);
         buffer.save();
         buffer.translate(canvas.width/2, canvas.height/2)
-        buffer.scale(1/dpr, 1/dpr)
+        buffer.scale(dpr/2, dpr/2)
 
-        if(symbolName!=null) lib.draw(buffer, symbolName, frame);
+        if(symbolName!=null){
+            lib.draw(buffer, symbolName, frame);
+        }
         
         buffer.restore()
         
