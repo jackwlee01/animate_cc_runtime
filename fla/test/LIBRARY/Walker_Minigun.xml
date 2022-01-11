@@ -1,0 +1,160 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Walker_Minigun" itemID="6195a74c-00000a57" lastModified="1637640281" lastUniqueIdentifier="28">
+  <timeline>
+    <DOMTimeline name="Walker_Minigun" currentFrame="14" guides='&lt;guidelines&gt;&lt;guideline direction="v"&gt;402&lt;/guideline&gt;&lt;/guidelines&gt;' layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_17" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" duration="49" name="idle" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="49" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="50" duration="30" name="walk" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_15" color="#669900">
+          <frames>
+            <DOMFrame index="0" duration="24" tweenType="motion" motionTweenSnap="true" hasCustomEase="true" keyMode="22017">
+              <tweens>
+                <CustomEase target="all" name="My Ease 74">
+                  <Point/>
+                  <Point x="0.4167"/>
+                  <Point x="0.5976" y="1"/>
+                  <Point x="1" y="1"/>
+                </CustomEase>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Walker_Minigun_Head" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="1.3" ty="-21.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="24" duration="25" tweenType="motion" motionTweenSnap="true" hasCustomEase="true" keyMode="22017">
+              <tweens>
+                <CustomEase target="all" name="My Ease 74">
+                  <Point/>
+                  <Point x="0.4167"/>
+                  <Point x="0.5976" y="1"/>
+                  <Point x="1" y="1"/>
+                </CustomEase>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Walker_Minigun_Head" symbolType="graphic" centerPoint3DX="51.25" centerPoint3DY="29.25" loop="loop">
+                  <matrix>
+                    <Matrix tx="1.6" ty="-17.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="49" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Walker_Minigun_Head" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="1.3" ty="-21.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="50" duration="14" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Walker_Minigun_Head" symbolType="graphic" firstFrame="50" centerPoint3DX="52" centerPoint3DY="24.95" loop="loop">
+                  <matrix>
+                    <Matrix tx="2.35" ty="-21.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="64" duration="7" tweenType="motion" motionTweenSnap="true" hasCustomEase="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <CustomEase target="all">
+                  <Point/>
+                  <Point x="0.333333333333333" y="0.434782608695652"/>
+                  <Point x="0.666666666666667" y="0.768115942028985"/>
+                  <Point x="1" y="1"/>
+                </CustomEase>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Walker_Minigun_Head" selected="true" symbolType="graphic" firstFrame="64" centerPoint3DX="52" centerPoint3DY="29.45" loop="loop">
+                  <matrix>
+                    <Matrix tx="2.35" ty="-17.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="71" duration="8" tweenType="motion" motionTweenSnap="true" hasCustomEase="true" keyMode="22017">
+              <tweens>
+                <CustomEase target="all">
+                  <Point/>
+                  <Point x="0.333333333333333" y="0.666666666666667"/>
+                  <Point x="0.666666666666667" y="1"/>
+                  <Point x="1" y="1"/>
+                </CustomEase>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Walker_Minigun_Head" symbolType="graphic" firstFrame="71" centerPoint3DX="52" centerPoint3DY="26.25" loop="loop">
+                  <matrix>
+                    <Matrix tx="2.35" ty="-20.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="79" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Walker_Minigun_Head" selected="true" symbolType="graphic" firstFrame="79" centerPoint3DX="52" centerPoint3DY="24.95" loop="loop">
+                  <matrix>
+                    <Matrix tx="2.35" ty="-21.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_18" color="#9933CC">
+          <frames>
+            <DOMFrame index="0" duration="80" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Symbol 412 copy 2" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.835693359375" d="0.835693359375" tx="-1.85" ty="-8.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="1.4" y="10.45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

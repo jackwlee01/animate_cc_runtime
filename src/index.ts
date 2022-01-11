@@ -50,14 +50,18 @@ function modWrap(a:number, b:number){
 export function visit<T>(item:T, anims:AnimationJson, sprites:SpriteMapJson, drawable:Drawable, frame:number, callback:(item:T, drawable:Drawable, frame:number)=>void){
     // Symbol
     if(isSymbol(drawable)){
-        frame = modWrap(frame, totalFrames(drawable))
+        const fr = modWrap(frame, totalFrames(drawable))
         for(let l=drawable.timeline.layers.length-1; l>=0; l--){
             const layer = drawable.timeline.layers[l]
-            callback(item, layer, frame) 
+            const layerTf = totalFrames(layer);
+            if(fr<layerTf){
+                callback(item, layer, frame) 
+            }
         }
 
     // Layer
     }else if(isLayer(drawable)){
+        frame = modWrap(frame, totalFrames(drawable))
         const keyframe = keyframeAt(drawable, frame)
         if(keyframe!=null) callback(item, keyframe, frame)
 

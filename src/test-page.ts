@@ -9,7 +9,7 @@ var dpr = setupCanvas(canvas)
 
 
 async function init(){
-    const lib = await createLibrary('walkers', dpr);
+    const lib = await createLibrary('test', dpr);
     
     let symbolName:string|null = lib.anims.symbolDictionary.symbols[0]?.symbolName;
     addExampleButtons(lib, (nextSymbolName) => symbolName = nextSymbolName); 

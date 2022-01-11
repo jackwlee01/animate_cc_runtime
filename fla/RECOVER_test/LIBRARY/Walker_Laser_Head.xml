@@ -1,0 +1,168 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Walker_Laser_Head" itemID="6195cdae-00002b28" symbolType="graphic" lastModified="1641870615" lastUniqueIdentifier="25">
+  <timeline>
+    <DOMTimeline name="Walker_Laser_Head" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_3" color="#FF800A">
+          <frames>
+            <DOMFrame index="0" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 506" symbolType="graphic" centerPoint3DX="-2.45" centerPoint3DY="16.9" loop="loop">
+                  <matrix>
+                    <Matrix a="0.84747314453125" tx="-39" ty="0.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="36.6" y="16.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_15" color="#669900">
+          <frames>
+            <DOMFrame index="0" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 504" symbolType="graphic" centerPoint3DX="-24.25" centerPoint3DY="-16.1" loop="loop">
+                  <matrix>
+                    <Matrix a="0.851348876953125" tx="-39.05" ty="-29.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="14.75" y="13.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_4" color="#FF4FFF">
+          <frames>
+            <DOMFrame index="0" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 505" symbolType="graphic" centerPoint3DX="5.8" centerPoint3DY="-16.1" loop="loop">
+                  <matrix>
+                    <Matrix tx="-9" ty="-29.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="14.8" y="13.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_5" color="#009999">
+          <frames>
+            <DOMFrame index="0" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 425" symbolType="graphic" centerPoint3DX="-11.55" centerPoint3DY="-4.4" loop="loop">
+                  <matrix>
+                    <Matrix tx="-15.05" ty="-5.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3.5" y="0.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_16" color="#FF4F4F">
+          <frames>
+            <DOMFrame index="0" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 426" symbolType="graphic" centerPoint3DX="-32.5" centerPoint3DY="1.1" loop="loop">
+                  <matrix>
+                    <Matrix a="0.89520263671875" b="-0.00494384765625" c="0.005523681640625" d="0.999984741210938" tx="-39.6" ty="-8.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="7.85" y="9.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_6" color="#FF0000">
+          <frames>
+            <DOMFrame index="0" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 426" symbolType="graphic" centerPoint3DX="23.25" centerPoint3DY="1.1" loop="loop">
+                  <matrix>
+                    <Matrix a="-0.89520263671875" b="-0.00494384765625" c="-0.005523681640625" d="0.999984741210938" tx="30.35" ty="-8.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="7.85" y="9.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_7" color="#669900">
+          <frames>
+            <DOMFrame index="0" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 486" symbolType="graphic" centerPoint3DX="-0.75" centerPoint3DY="-0.35" loop="loop">
+                  <matrix>
+                    <Matrix tx="-39.45" ty="-39.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="38.7" y="38.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_14" color="#FF0000">
+          <frames>
+            <DOMFrame index="0" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Walker_Laser_Hat" symbolType="graphic" firstFrame="9" centerPoint3DX="13.75" centerPoint3DY="21.1" loop="loop">
+                  <matrix>
+                    <Matrix tx="-0.05" ty="-0.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.1" y="0.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Symbol_488" color="#FF4F4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 508" symbolType="graphic" centerPoint3DX="-37.1" centerPoint3DY="3.15" loop="loop">
+                  <matrix>
+                    <Matrix a="-1" tx="-19.3" ty="-12.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="17.75" y="15.6"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Symbol_488" color="#FF800A" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 508" symbolType="graphic" centerPoint3DX="42.65" centerPoint3DY="3.15" loop="loop">
+                  <matrix>
+                    <Matrix tx="24.9" ty="-12.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="17.75" y="15.6"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

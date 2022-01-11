@@ -1,0 +1,24 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Walker_Mine_Antenna" itemID="619b3b19-00003410" symbolType="graphic" lastModified="1637563161" lastUniqueIdentifier="1">
+  <timeline>
+    <DOMTimeline name="Walker_Mine_Antenna" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 3234">
+                  <matrix>
+                    <Matrix tx="0.6" ty="2.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-18.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
