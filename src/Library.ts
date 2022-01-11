@@ -1,119 +1,58 @@
-import { AnimationJson, Matrix3D } from "./json/AnimationJson";
-import { Clip } from "./Clip";
-import { Frame } from "./Frame";
-import { Layer } from "./Layer";
-import { Instance } from "./Instance";
-import { ClipInstance } from "./ClipInstance";
-import { SpriteInstance } from "./SpriteInstance";
-import { Vec2, Vec3 } from "./geom";
+import { Drawable, isAtlasSpriteInstance, isKeyframe, isLayer, isSprite, isSymbol, isSymbolInstance, visit } from ".";
+import { AnimationJson } from "./json/AnimationJson";
+import { normaliseJson } from "./json/utilJson";
+
+type Awaited<T> = T extends PromiseLike<infer U> ? U : T
+
+export type Library = Awaited<ReturnType<typeof createLibrary>>;
 
 
-export class Library{
-
-    name:string;
-    path:string;
-    atlases:Array<Atlas> = [];
-    clips:Array<Clip> = [];
-    clipsByName:Record<string, Clip> = {};
-
-
-    constructor(name:string, path:string){
-        this.name = name;
-        this.path = path;
-        this.atlases = [];
-    }
-
-
-
-    private async getAtlasFor(spriteName:string){
-
-    }
-
-
-    public async loadData(){
-        var animJsonPath = this.path + "/Animation.json";
-        var animFetchResult = await fetch(animJsonPath);
-        var data:AnimationJson = await animFetchResult.json();
-
-        // Symbol
-        data.symbolDictionary.symbols.forEach(symbolData => {
-            const clip = new Clip({
-                library:this,
-                name: `${this.name}.${ symbolData.symbolName}`,
-                id: symbolData.symbolName,
-            })
-
-            // Layer
-            symbolData.timeline.layers.forEach(layerData => {
-                const layer = new Layer({
-                    library:this,
-                    clip,
-                    name: layerData.layerName,
-                    id: `${this.name}.${clip.name}.${layerData.layerName}`,
-                })
-
-                // Frame
-                layerData.frames.forEach(frameData => {
-                    const frame = new Frame({
-                        library:this,
-                        clip,
-                        layer,
-                        id: `${this.name}.${clip.name}.${layerData.layerName}.${frameData.index}`,
-                        name: ""+frameData.index,
-                        index: frameData.index,
-                        totalFrames: frameData.duration,
-                        labelName: frameData.name,
-                    })
-
-                    // Element
-                    frameData.elements.forEach(elemInstanceData => {
-                        const commonProps = {
-                            name: frame.name,
-                            id: `${this.name}.${clip.name}.${layerData.layerName}.${frameData.index}.${frame.instances.length}`,
-                            totalFrames: frame.totalFrames,
-                            library:this,
-                            frame,
-                        }
-
-                        if("symbolInstance" in elemInstanceData){
-                            const elemData = elemInstanceData.symbolInstance;
-                            const instance = new ClipInstance({
-                                ...commonProps,
-                                //item: null//
-                                matrix3d: elemData.matrix3D,
-                                position: new Vec3(elemData.decomposedMatrix.position),
-                                scale: new Vec3(elemData.decomposedMatrix.scaling),
-                                rotation: new Vec3(elemData.decomposedMatrix.rotation),
-                                transformationPoint: new Vec2(elemData.transformationPoint),
-                                
-                            })
-                            frame.addInstance(instance);
-                        }else{
-                            const elemData = elemInstanceData.atlasSpriteInstance;
-                            const instance = new SpriteInstance({
-                                ...commonProps,
-                                item: //
-                            })
-                            frame.addInstance(instance);
-                        }
-                    })
-
-                    layer.addFrame(frame);
-                })
-                clip.addLayer(layer)
-            })
-        });
-    }
-
-
+async function getJsonData(path:string){
+    const res = await fetch(path)
+    return await res.json();
 }
 
 
-function getMatrix3dArray(m:Matrix3D){
+export async function createLibrary(path:string, scaleFactor:number){
+    const rawAnim:AnimationJson = await getJsonData(`./${path}/Animation.json`)
+    const spriteMapRaw:SpriteMapJson = await getJsonData(`./${path}/spritemap1.json`)
+    const anims = normaliseJson(rawAnim) as AnimationJson
+    const spriteMap = normaliseJson(spriteMapRaw) as SpriteMapJson
 
-    ];
-}
+    const atlas = new Image();
+    atlas.src = `./${path}/spritemap1.png`
 
-function getMatrix2dArray(m:Matrix3D){
-    ];
+
+    function draw(buffer:CanvasRenderingContext2D, symbolName:string, frame:number){
+        if(symbolName==null) return;
+        var symbol = anims.symbolDictionary.symbols.find(symbol => symbol.symbolName==symbolName)!
+        visit(buffer, anims, spriteMap, symbol, frame, drawbase);
+    }
+
+    function drawbase(buffer:CanvasRenderingContext2D, drawable:Drawable, frame:number):void{
+        if(isSymbol(drawable)){
+            visit(buffer, anims, spriteMap, drawable, frame, drawbase);
+        }else if(isLayer(drawable)){
+            visit(buffer, anims, spriteMap, drawable, frame, drawbase);
+        }else if(isKeyframe(drawable)){
+            visit(buffer, anims, spriteMap, drawable, frame, drawbase);
+        }else if(isSymbolInstance(drawable) || isAtlasSpriteInstance(drawable)){
+            const m = drawable.matrix3D;
+            buffer.save()
+            if(isSymbolInstance(drawable) && drawable.color) buffer.globalAlpha *= drawable.color.alphaMultiplier;
+            buffer.transform(m.m00, m.m01, m.m10, m.m11, m.m30, m.m31);
+            visit(buffer, anims, spriteMap, drawable, frame, drawbase);
+            buffer.restore();
+        }else if(isSprite(drawable)){
+            buffer.drawImage(atlas, drawable.x, drawable.y, drawable.w, drawable.h, 0, 0, drawable.w, drawable.h)
+        }
+    }
+
+    return {
+        path,
+        anims,
+        spriteMap,
+        atlas,
+        draw,
+    }
 }

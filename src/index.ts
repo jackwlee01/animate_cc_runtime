@@ -71,23 +71,23 @@ function modWrap(a:number, b:number){
 }
 
 
-export function visit(anims:AnimationJson, sprites:SpriteMapJson, drawable:Drawable, frame:number, callback:(anims:AnimationJson, sprites:SpriteMapJson, drawable:Drawable, frame:number)=>void){
+export function visit<T>(item:T, anims:AnimationJson, sprites:SpriteMapJson, drawable:Drawable, frame:number, callback:(item:T, drawable:Drawable, frame:number)=>void){
     if(isSymbol(drawable)){
         frame = modWrap(frame, totalFrames(drawable))
         for(let l=drawable.timeline.layers.length-1; l>=0; l--){
             const layer = drawable.timeline.layers[l]
-            callback(anims, sprites, layer, frame) 
+            callback(item, layer, frame) 
         }
     }else if(isLayer(drawable)){
         const keyframe = keyframeAt(drawable, frame)
-        if(keyframe!=null) callback(anims, sprites, keyframe, frame)
+        if(keyframe!=null) callback(item, keyframe, frame)
     }else if(isKeyframe(drawable)){
         for(const e in drawable.elements){
             const elem = drawable.elements[e]
             if("atlasSpriteInstance" in elem){
-                callback(anims, sprites, elem.atlasSpriteInstance, frame)
+                callback(item, elem.atlasSpriteInstance, frame)
             }else if("symbolInstance" in elem){
-                callback(anims, sprites, elem.symbolInstance, frame)
+                callback(item, elem.symbolInstance, frame)
             }else{
                 throw("Invalid instance type")
             }
@@ -96,7 +96,7 @@ export function visit(anims:AnimationJson, sprites:SpriteMapJson, drawable:Drawa
         for(const s in anims.symbolDictionary.symbols){
             const symbol = anims.symbolDictionary.symbols[s]
             if(symbol.symbolName == drawable.symbolName){
-                callback(anims, sprites, symbol, frame);
+                callback(item, symbol, frame);
                 return;
             }
         }
@@ -105,7 +105,7 @@ export function visit(anims:AnimationJson, sprites:SpriteMapJson, drawable:Drawa
         for(const s in sprites.atlas.sprites){
             const sprite = sprites.atlas.sprites[s].sprite;
             if(drawable.name == sprite.name){
-                callback(anims, sprites, sprite, frame);
+                callback(item, sprite, frame);
                 return;
             }
         }
@@ -115,5 +115,3 @@ export function visit(anims:AnimationJson, sprites:SpriteMapJson, drawable:Drawa
     }
 }
 
-
-console.log("Yo!!")
