@@ -11,7 +11,7 @@ export function setupCanvas(canvas:HTMLCanvasElement) {
     
    var bodyRec = document.body.getBoundingClientRect();
 
-    canvas.width = Math.min(500, bodyRec.width - 8);
+    canvas.width = Math.min(1000, bodyRec.width - 8);
     canvas.height = canvas.width;
 
     var dpr = window.devicePixelRatio || 1;

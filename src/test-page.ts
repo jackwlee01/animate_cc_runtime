@@ -15,7 +15,6 @@ minusButton.innerHTML = '-'
 minusButton.onclick = () => { if(colsAndRows > 1) colsAndRows-- };
 document.getElementById("buttons")!.appendChild(minusButton);
 
-
 const plusButton = document.createElement('button')
 plusButton.innerHTML = '+'
 plusButton.onclick = () => colsAndRows++;
@@ -38,7 +37,7 @@ async function init(){
         buffer.save();
         
         buffer.translate(canvas.width/2, canvas.height/2)
-        buffer.scale(dpr/2, dpr/2)
+        buffer.scale(dpr, dpr)
 
         const num = colsAndRows+1;
         var xo = canvas.width/num/2;

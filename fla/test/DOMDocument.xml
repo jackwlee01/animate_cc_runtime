@@ -1,4 +1,4 @@
-<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" width="1280" height="720" frameRate="30" currentTimeline="1" xflVersion="22.02" creatorInfo="Adobe Animate" platform="Macintosh" versionInfo="Saved by Animate Macintosh 22.0 build 168" majorVersion="22" buildNumber="168" guidesSnapTo="false" rulerVisible="true" bitmapSnap="false" snapAlign="false" objectsSnapTo="false" viewAngle3D="100.925968316201" vanishingPoint3DX="640" vanishingPoint3DY="360" previewMode="full" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" filetypeGUID="DD0DDBBF-5BEF-45B2-9F24-A3048D2A676F" fileGUID="9F890D5CFE17B54EB52DB7547CE6E4E7">
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" width="1280" height="720" frameRate="60" currentTimeline="1" xflVersion="22.02" creatorInfo="Adobe Animate" platform="Macintosh" versionInfo="Saved by Animate Macintosh 22.0 build 168" majorVersion="22" buildNumber="168" guidesSnapTo="false" rulerVisible="true" bitmapSnap="false" snapAlign="false" objectsSnapTo="false" viewAngle3D="100.925968316201" vanishingPoint3DX="640" vanishingPoint3DY="360" previewMode="full" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" filetypeGUID="DD0DDBBF-5BEF-45B2-9F24-A3048D2A676F" fileGUID="9F890D5CFE17B54EB52DB7547CE6E4E7">
      <folders>
           <DOMFolderItem name="Duplicate Items Folder" itemID="61121a8f-00000054"/>
           <DOMFolderItem name="game" itemID="61dd04f1-00000436"/>
@@ -159,7 +159,7 @@
           <Include href="game/Walker_Nose_Nose.xml" itemIcon="1" loadImmediate="false" itemID="61973ec9-00001ae2" lastModified="1641876239"/>
           <Include href="game/Walker_Nose_Siren.xml" itemIcon="1" loadImmediate="false" itemID="61973de1-00001794" lastModified="1637301729"/>
           <Include href="monsterz/donut1.xml" itemID="56ca5162-0000028d" lastModified="1456099682"/>
-          <Include href="monsterz/food_placeholder.xml" itemID="5bf62ccd-00000456" lastModified="1641876212"/>
+          <Include href="monsterz/food_placeholder.xml" itemID="5bf62ccd-00000456" lastModified="1641879317"/>
           <Include href="monsterz/food_placeholder_backing.xml" itemID="5bf62cea-0000045a" lastModified="1542860010"/>
           <Include href="monsterz/levelOverSkewer.xml" itemID="56bd43f2-00000286" lastModified="1641875624"/>
           <Include href="monsterz/placeholders/win_background.xml" itemID="61dd06c0-0000053d" lastModified="1454974038"/>
@@ -207,7 +207,7 @@
           <Include href="stardude_assets/Symbol 251.xml" loadImmediate="false" itemID="617bc69b-0000142d" lastModified="1641876751"/>
           <Include href="stardude_assets/Symbol 252.xml" loadImmediate="false" itemID="617bc69c-00001432" lastModified="1636335919"/>
           <Include href="stardude_assets/Symbol 255.xml" loadImmediate="false" itemID="617bc6fb-00001441" lastModified="1641876741"/>
-          <Include href="stardude_assets/Symbol 256 copy.xml" loadImmediate="false" itemID="617bc9ae-000014f9" lastModified="1636519527"/>
+          <Include href="stardude_assets/Symbol 256 copy.xml" loadImmediate="false" itemID="617bc9ae-000014f9" lastModified="1641878390"/>
           <Include href="stardude_assets/Symbol 256 copy 3.xml" loadImmediate="false" itemID="617bc9e0-0000150b" lastModified="1636336308"/>
           <Include href="stardude_assets/Symbol 257.xml" loadImmediate="false" itemID="617bd583-00001522" lastModified="1636335919"/>
           <Include href="stardude_assets/Symbol 258.xml" loadImmediate="false" itemID="617bd585-00001527" lastModified="1636335919"/>
@@ -220,7 +220,7 @@
           <Include href="Walker_Minigun.xml" loadImmediate="false" itemID="6195a74c-00000a57" lastModified="1637640281"/>
           <Include href="Walker_Missile.xml" loadImmediate="false" itemID="6195a72c-00000a56" lastModified="1637639960"/>
           <Include href="Walker_Nose.xml" loadImmediate="false" itemID="6195a70a-00000a55" lastModified="1641874631"/>
-          <Include href="win.xml" itemID="61dd06c0-0000053c" lastModified="1641875187"/>
+          <Include href="win.xml" itemID="61dd06c0-0000053c" lastModified="1641879311"/>
      </symbols>
      <timelines>
           <DOMTimeline name="Scene 1" layerDepthEnabled="true">

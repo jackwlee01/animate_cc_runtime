@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="win" itemID="61dd06c0-0000053c" linkageExportForAS="true" linkageClassName="Win" lastModified="1641875187" lastUniqueIdentifier="5">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="win" itemID="61dd06c0-0000053c" linkageExportForAS="true" linkageClassName="Win" lastModified="1641879311" lastUniqueIdentifier="5">
   <timeline>
     <DOMTimeline name="win" guides='&lt;guidelines&gt;&lt;guideline direction="h"&gt;313&lt;/guideline&gt;&lt;guideline direction="v"&gt;-134&lt;/guideline&gt;&lt;guideline direction="h"&gt;99&lt;/guideline&gt;&lt;/guidelines&gt;' layerDepthEnabled="true">
       <layers>
@@ -1156,7 +1156,7 @@
                 <Ease target="all" intensity="-100"/>
               </tweens>
               <elements>
-                <DOMSymbolInstance libraryItemName="monsterz/food_placeholder" name="foodHolder" centerPoint3DX="1245.25" centerPoint3DY="205.4">
+                <DOMSymbolInstance libraryItemName="monsterz/food_placeholder" name="foodHolder" selected="true" centerPoint3DX="1245.25" centerPoint3DY="205.4">
                   <matrix>
                     <Matrix tx="1245.25" ty="205.4"/>
                   </matrix>
@@ -1168,7 +1168,7 @@
             </DOMFrame>
             <DOMFrame index="26" duration="43" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="monsterz/food_placeholder" name="foodHolder" selected="true" centerPoint3DX="-86.9" centerPoint3DY="205.4">
+                <DOMSymbolInstance libraryItemName="monsterz/food_placeholder" name="foodHolder" centerPoint3DX="-86.9" centerPoint3DY="205.4">
                   <matrix>
                     <Matrix tx="-86.9" ty="205.4"/>
                   </matrix>

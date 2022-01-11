@@ -2,7 +2,7 @@
   <timeline>
     <DOMTimeline name="__export__" layerDepthEnabled="true">
       <layers>
-        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+        <DOMLayer name="Layer_1" color="#00FFFF">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -38,7 +38,7 @@
                     <Point x="2.85" y="-55.25"/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="StarDude" selected="true">
+                <DOMSymbolInstance libraryItemName="StarDude">
                   <matrix>
                     <Matrix tx="210.45" ty="587.9"/>
                   </matrix>
@@ -50,11 +50,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer_2" color="#9933CC">
+        <DOMLayer name="Layer_2" color="#9933CC" current="true" isSelected="true">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="win">
+                <DOMSymbolInstance libraryItemName="win" selected="true">
                   <matrix>
                     <Matrix tx="1022.05" ty="251.85"/>
                   </matrix>

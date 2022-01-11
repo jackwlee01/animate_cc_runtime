@@ -8,7 +8,7 @@
               <elements>
                 <DOMGroup>
                   <members>
-                    <DOMShape selected="true" isDrawingObject="true">
+                    <DOMShape isDrawingObject="true">
                       <matrix>
                         <Matrix tx="-558.5" ty="-380.6"/>
                       </matrix>
@@ -38,7 +38,7 @@
                         <Edge cubics="!13047 9597(;13394,9255 13466,8698 13293,8255q13047 9597Q13301 9347q13365 8964Q13426 8597q13293 8255)13293,8255;"/>
                       </edges>
                     </DOMShape>
-                    <DOMShape selected="true" isDrawingObject="true">
+                    <DOMShape isDrawingObject="true">
                       <matrix>
                         <Matrix tx="-558.5" ty="-380.6"/>
                       </matrix>
@@ -58,7 +58,7 @@
                         <Edge cubics="!13047 9597(13047,9597;11874,10163 10700,8718 11840,7706q13047 9597Q12626 9800q12203 9683Q11812 9574q11576 9243Q11335 8906q11383 8508Q11435 8065q11840 7706)11840,7706;"/>
                       </edges>
                     </DOMShape>
-                    <DOMShape selected="true" isDrawingObject="true">
+                    <DOMShape isDrawingObject="true">
                       <matrix>
                         <Matrix tx="-558.5" ty="-380.6"/>
                       </matrix>
@@ -112,7 +112,7 @@
                         <Edge cubics="!13241 8773(13241,8773;13253,8711 13290,8633 13273,8563q13241 8773Q13259 8707q13268 8671Q13283 8606q13273 8563);"/>
                       </edges>
                     </DOMShape>
-                    <DOMShape selected="true" isDrawingObject="true">
+                    <DOMShape isDrawingObject="true">
                       <matrix>
                         <Matrix tx="-558.5" ty="-380.6"/>
                       </matrix>
@@ -131,7 +131,7 @@
                         <Edge cubics="!11464 8547(;11464,8547 11629,8553 11629,8553q11464 8547 11629 8553)11629,8553;"/>
                       </edges>
                     </DOMShape>
-                    <DOMShape selected="true" isDrawingObject="true">
+                    <DOMShape isDrawingObject="true">
                       <matrix>
                         <Matrix tx="-558.5" ty="-380.6"/>
                       </matrix>
@@ -150,7 +150,7 @@
                         <Edge cubics="!11516 8691(;11516,8691 11655,8782 11655,8782q11516 8691 11655 8782);"/>
                       </edges>
                     </DOMShape>
-                    <DOMShape selected="true" isDrawingObject="true">
+                    <DOMShape isDrawingObject="true">
                       <matrix>
                         <Matrix tx="-558.5" ty="-380.6"/>
                       </matrix>
@@ -169,7 +169,7 @@
                         <Edge cubics="!12742 8697(;12742,8697 12886,8615 12886,8615q12742 8697 12886 8615);"/>
                       </edges>
                     </DOMShape>
-                    <DOMShape selected="true" isDrawingObject="true">
+                    <DOMShape isDrawingObject="true">
                       <matrix>
                         <Matrix tx="-558.5" ty="-380.6"/>
                       </matrix>
@@ -188,7 +188,7 @@
                         <Edge cubics="!12957 8526(;12957,8526 13068,8649 13068,8649q12957 8526 13068 8649);"/>
                       </edges>
                     </DOMShape>
-                    <DOMShape selected="true" isDrawingObject="true">
+                    <DOMShape isDrawingObject="true">
                       <matrix>
                         <Matrix tx="-558.5" ty="-380.6"/>
                       </matrix>
@@ -207,7 +207,7 @@
                         <Edge cubics="!12794 8257(;12794,8257 12934,8167 12934,8167q12794 8257 12934 8167);"/>
                       </edges>
                     </DOMShape>
-                    <DOMShape selected="true" isDrawingObject="true">
+                    <DOMShape isDrawingObject="true">
                       <matrix>
                         <Matrix tx="-558.5" ty="-380.6"/>
                       </matrix>
@@ -226,7 +226,7 @@
                         <Edge cubics="!12462 7983(;12462,7983 12605,8067 12605,8067q12462 7983 12605 8067);"/>
                       </edges>
                     </DOMShape>
-                    <DOMShape selected="true" isDrawingObject="true">
+                    <DOMShape isDrawingObject="true">
                       <matrix>
                         <Matrix tx="-558.5" ty="-380.6"/>
                       </matrix>
@@ -245,7 +245,7 @@
                         <Edge cubics="!12409 8342(;12409,8342 12575,8348 12575,8348p12409 8342 12575 8348);"/>
                       </edges>
                     </DOMShape>
-                    <DOMShape selected="true" isDrawingObject="true">
+                    <DOMShape isDrawingObject="true">
                       <matrix>
                         <Matrix tx="-558.5" ty="-380.6"/>
                       </matrix>
@@ -264,7 +264,7 @@
                         <Edge cubics="!13015 8869(13015,8869;13015,8869 13173,8819 13173,8819p13015 8869 13173 8819)13173,8819;"/>
                       </edges>
                     </DOMShape>
-                    <DOMShape selected="true" isDrawingObject="true">
+                    <DOMShape isDrawingObject="true">
                       <matrix>
                         <Matrix tx="-558.5" ty="-380.6"/>
                       </matrix>
@@ -283,7 +283,7 @@
                         <Edge cubics="!12728 9000(;12728,9000 12854,9107 12854,9107p12728 9000q12854 9107);"/>
                       </edges>
                     </DOMShape>
-                    <DOMShape selected="true" isDrawingObject="true">
+                    <DOMShape isDrawingObject="true">
                       <matrix>
                         <Matrix tx="-558.5" ty="-380.6"/>
                       </matrix>
@@ -302,7 +302,7 @@
                         <Edge cubics="!12480 9292(;12480,9292 12607,9185 12607,9185q12480 9292 12607 9185);"/>
                       </edges>
                     </DOMShape>
-                    <DOMShape selected="true" isDrawingObject="true">
+                    <DOMShape isDrawingObject="true">
                       <matrix>
                         <Matrix tx="-558.5" ty="-380.6"/>
                       </matrix>
@@ -321,7 +321,7 @@
                         <Edge cubics="!12783 9406(;12783,9406 12931,9332 12931,9332q12783 9406 12931 9332);"/>
                       </edges>
                     </DOMShape>
-                    <DOMShape selected="true" isDrawingObject="true">
+                    <DOMShape isDrawingObject="true">
                       <matrix>
                         <Matrix tx="-558.5" ty="-380.6"/>
                       </matrix>
@@ -340,7 +340,7 @@
                         <Edge cubics="!12384 9502(;12384,9502 12547,9535 12547,9535p12384 9502 12547 9535);"/>
                       </edges>
                     </DOMShape>
-                    <DOMShape selected="true" isDrawingObject="true">
+                    <DOMShape isDrawingObject="true">
                       <matrix>
                         <Matrix tx="-558.5" ty="-380.6"/>
                       </matrix>
@@ -359,7 +359,7 @@
                         <Edge cubics="!12032 9346(;12032,9346 12147,9465 12147,9465p12032 9346 12147 9465);"/>
                       </edges>
                     </DOMShape>
-                    <DOMShape selected="true" isDrawingObject="true">
+                    <DOMShape isDrawingObject="true">
                       <matrix>
                         <Matrix tx="-558.5" ty="-380.6"/>
                       </matrix>
@@ -378,7 +378,7 @@
                         <Edge cubics="!11918 9215(;11918,9215 12011,9077 12011,9077p11918 9215 12011 9077);"/>
                       </edges>
                     </DOMShape>
-                    <DOMShape selected="true" isDrawingObject="true">
+                    <DOMShape isDrawingObject="true">
                       <matrix>
                         <Matrix tx="-558.5" ty="-380.6"/>
                       </matrix>
@@ -397,7 +397,7 @@
                         <Edge cubics="!11679 9129(;11679,9129 11693,9295 11693,9295p11679 9129 11693 9295);"/>
                       </edges>
                     </DOMShape>
-                    <DOMShape selected="true" isDrawingObject="true">
+                    <DOMShape isDrawingObject="true">
                       <matrix>
                         <Matrix tx="-558.5" ty="-380.6"/>
                       </matrix>
@@ -416,7 +416,7 @@
                         <Edge cubics="!11658 8909(;11658,8909 11819,8950 11819,8950q11658 8909 11819 8950);"/>
                       </edges>
                     </DOMShape>
-                    <DOMShape selected="true" isDrawingObject="true">
+                    <DOMShape isDrawingObject="true">
                       <matrix>
                         <Matrix tx="-558.5" ty="-380.6"/>
                       </matrix>
@@ -435,7 +435,7 @@
                         <Edge cubics="!11994 8213(;11994,8213 12117,8323 12117,8323p11994 8213 12117 8323);"/>
                       </edges>
                     </DOMShape>
-                    <DOMShape selected="true" isDrawingObject="true">
+                    <DOMShape isDrawingObject="true">
                       <matrix>
                         <Matrix tx="-558.5" ty="-380.6"/>
                       </matrix>
@@ -454,7 +454,7 @@
                         <Edge cubics="!11835 8388(;11835,8388 11811,8552 11811,8552q11835 8388 11811 8552);"/>
                       </edges>
                     </DOMShape>
-                    <DOMShape selected="true" isDrawingObject="true">
+                    <DOMShape isDrawingObject="true">
                       <matrix>
                         <Matrix tx="-558.5" ty="-380.6"/>
                       </matrix>
@@ -473,7 +473,7 @@
                         <Edge cubics="!12080 7991(;12080,7991 12136,8147 12136,8147p12080 7991 12136 8147);"/>
                       </edges>
                     </DOMShape>
-                    <DOMShape selected="true" isDrawingObject="true">
+                    <DOMShape isDrawingObject="true">
                       <matrix>
                         <Matrix tx="-558.5" ty="-380.6"/>
                       </matrix>
@@ -492,7 +492,7 @@
                         <Edge cubics="!11767 8240(11767,8240;11767,8240 11861,8103 11861,8103p11767 8240 11861 8103);"/>
                       </edges>
                     </DOMShape>
-                    <DOMShape selected="true" isDrawingObject="true">
+                    <DOMShape isDrawingObject="true">
                       <matrix>
                         <Matrix tx="-558.5" ty="-380.6"/>
                       </matrix>
