@@ -5,7 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "build": "esbuild src/index.ts --bundle --outfile=bin/bundle.js",
-    "build-page": "esbuild src/test-page.ts --bundle --outfile=bin/test-page.js",
+    "build-page": "esbuild src/test-page.ts --bundle --outfile=bin/test-page.js --sourcemap",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "live-server bin"
   },

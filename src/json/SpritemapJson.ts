@@ -14,7 +14,7 @@ type Sprite = {
 
 
 type Atlas = {
-    Sprites:Array<{sprite:Sprite}>;
+    sprites:Array<{sprite:Sprite}>;
 }
 
 

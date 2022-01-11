@@ -1,3 +1,5 @@
+import { AnimationJson } from "./AnimationJson";
+
 const keys:Record<string, string> = {
     // fix inconsistent names
     ANIMATION: "animation",
@@ -59,6 +61,7 @@ const keys:Record<string, string> = {
 function normaliseKey(key:string){
     return keys[key] || key;
 }
+
 
 
 // AnimateCC exports wildy inconsistent JSON. Normalise the
