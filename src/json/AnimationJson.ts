@@ -80,7 +80,6 @@ export type AtlasSpriteInstance = {
 export type SymbolInstance = {
     symbolName:string;
     instanceName:string;
-    symbolType:string;
     transformationPoint:Point2D;
     matrix3D:Matrix3D;
     decomposedMatrix:DecomposedMatrix;
@@ -88,7 +87,13 @@ export type SymbolInstance = {
     filters?:any;
     firstFrame?:Int;
     color?:Color;
-}
+} & ({
+    symbolType: "graphic",
+    firstFrame: number,
+    loop: "loop", // TODO: HANDLE OTHER LOOP TYPES
+} | {
+    symbolType: "movieclip",
+})
 
 
 export type ElementInstance = {

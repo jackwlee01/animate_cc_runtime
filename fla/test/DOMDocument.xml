@@ -155,13 +155,13 @@
           <Include href="Walker_Missile.xml" loadImmediate="false" itemID="6195a72c-00000a56" lastModified="1637639960"/>
           <Include href="Walker_Missile_Hat.xml" itemIcon="1" loadImmediate="false" itemID="619747e6-00000bc1" lastModified="1637306889"/>
           <Include href="Walker_Missile_Head.xml" itemIcon="1" loadImmediate="false" itemID="619747f7-00000bc2" lastModified="1637304955"/>
-          <Include href="Walker_Nose.xml" loadImmediate="false" itemID="6195a70a-00000a55" lastModified="1641870467"/>
+          <Include href="Walker_Nose.xml" loadImmediate="false" itemID="6195a70a-00000a55" lastModified="1641873378"/>
           <Include href="Walker_Nose_Head.xml" itemIcon="1" loadImmediate="false" itemID="61973aad-00000a76" lastModified="1637301114"/>
           <Include href="Walker_Nose_Nose.xml" itemIcon="1" loadImmediate="false" itemID="61973ec9-00001ae2" lastModified="1637301961"/>
           <Include href="Walker_Nose_Siren.xml" itemIcon="1" loadImmediate="false" itemID="61973de1-00001794" lastModified="1637301729"/>
      </symbols>
      <timelines>
-          <DOMTimeline name="Scene 1" currentFrame="21" layerDepthEnabled="true">
+          <DOMTimeline name="Scene 1" currentFrame="23" layerDepthEnabled="true">
                <layers>
                     <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
                          <frames>

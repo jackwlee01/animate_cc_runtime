@@ -82,6 +82,10 @@ export function visit<T>(item:T, anims:AnimationJson, sprites:SpriteMapJson, dra
     }else if(isSymbolInstance(drawable)){
         for(const s in anims.symbolDictionary.symbols){
             const symbol = anims.symbolDictionary.symbols[s]
+
+            if(drawable.symbolType=="graphic"){
+                frame = drawable.firstFrame+1;
+            }
             if(symbol.symbolName == drawable.symbolName){
                 callback(item, symbol, frame);
                 return;

@@ -13,7 +13,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="SkullGuy" selected="true">
+                <DOMSymbolInstance libraryItemName="SkullGuy">
                   <matrix>
                     <Matrix a="1.2171630859375" d="1.2171630859375" tx="404.4" ty="149.7"/>
                   </matrix>
@@ -21,7 +21,7 @@
                     <Point x="0.05" y="0.05"/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="Walker_Nose">
+                <DOMSymbolInstance libraryItemName="Walker_Nose" selected="true">
                   <matrix>
                     <Matrix tx="110.35" ty="344.3"/>
                   </matrix>
