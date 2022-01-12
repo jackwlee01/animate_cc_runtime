@@ -27,8 +27,13 @@ export abstract class Drawable{
     }
 
 
-    public visit(frame:Float, callback:(item:Drawable, frame:Float)=>void):void{
+    public visit(frame:Float, callback:(item:Drawable, frame:Float, ...args:any)=>void):void{
         // Override in base class
+    }
+
+
+    public draw(frame:Float, callback?:(item:Drawable, frame:Float)=>void){
+        this.library.context.draw(this, frame, callback);
     }
 
 }

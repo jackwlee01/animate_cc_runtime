@@ -6,10 +6,11 @@ import { Vec3 } from "./geom/Vec3";
 import { Vec2 } from "./geom/Vec2";
 import { Matrix2d } from "./geom/Matrix2d";
 import { InstanceProps } from "./Instance";
-import { DrawableProps } from "./Drawable";
+import { Drawable, DrawableProps } from "./Drawable";
 import { Sprite, SpriteProps } from "./Sprite";
 import { Atlas, AtlasProps } from "./Atlas";
 import { normaliseJson } from "../json/utilJson";
+import { AnimationContext } from "./AnimationContext";
 
 
 export class Library{
@@ -21,12 +22,21 @@ export class Library{
     spritesByName:Record<string, Sprite> = {};
     atlases:Array<Atlas> = [];
     atlasesBySpriteName:Record<string, Atlas> = {}
+    context:AnimationContext;
     
     
-    constructor(name:string, path:string){
+    constructor(name:string, path:string, context:AnimationContext){
         this.name = name;
         this.path = path;
         this.atlases = [];
+        this.context = context;
+    }
+
+
+    symbol(name:string){
+        if(this.clipsByName[name]) return this.clipsByName[name]
+        if(this.spritesByName[name]) return this.spritesByName[name]
+        throw("Cannot find symbol: " + name + " for library: " + this.path);
     }
 
 
@@ -85,7 +95,6 @@ export class Library{
 
                     // Element
                     for(const elemInstanceData of  frameData.elements){
-                        
                         if("symbolInstance" in elemInstanceData){
                             type _DrawableProps = Pick<DrawableProps, keyof DrawableProps & keyof ClipInstanceProps>;
                             type _InstanceProps = Omit<InstanceProps, keyof DrawableProps>

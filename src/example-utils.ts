@@ -1,4 +1,6 @@
-import { Library } from "./library";
+import { Clip } from "./core/Clip";
+import { Library } from "./core/Library";
+
 
 
 export function setupCanvas(canvas:HTMLCanvasElement) {
@@ -37,13 +39,14 @@ export function setupCanvas(canvas:HTMLCanvasElement) {
 
 
 
-export function addExampleButtons(lib:Library, onClick:(symbolName:string)=>void){
-    lib.anims.symbolDictionary.symbols.forEach(symbol => {
-        if(symbol.symbolName.indexOf("/")!=-1 || symbol.symbolName.indexOf("Symbol ")==0 || symbol.symbolName.indexOf("Tween ")==0 || symbol.symbolName.indexOf("/Symbol ")!=-1 || symbol.symbolName.indexOf("/Tween ")!=-1) return;
-        var li = document.createElement("li")
+export function addExampleButtons(lib:Library, onClick:(nextSymbol:Clip)=>void){
+    console.log(lib)
+    for(const clip of lib.clips){
+        console.log("yo")
+        if(clip.name.indexOf("/")!=-1 || clip.name.indexOf("Symbol ")==0 || clip.name.indexOf("Tween ")==0 || clip.name.indexOf("/Symbol ")!=-1 || clip.name.indexOf("/Tween ")!=-1) continue;
         var button = document.createElement("button")
-        button.innerHTML = symbol.symbolName
-        button.onclick = () => onClick(symbol.symbolName)
+        button.innerHTML = clip.name
+        button.onclick = () => onClick(clip)
         document.getElementById("buttons")!.appendChild(button)
-    })
+    }
 }

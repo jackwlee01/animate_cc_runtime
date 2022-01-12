@@ -63,7 +63,7 @@ export class Layer extends Drawable{
     }
 
 
-    public visit(frame:Float, callback:(item:Drawable, frame:Float)=>void):void{
+    public visit(frame:Float, callback:(item:Drawable, frame:Float, ...args:any)=>void):void{
         var keyframe = this.keyframeAt(frame)
         if(keyframe!=null) callback(keyframe, frame);
     }
