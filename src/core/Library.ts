@@ -152,7 +152,6 @@ export class Library{
         let pendingAtlasIndex = 1;
         for(const spriteName of spriteNames){
             if(this.atlasesBySpriteName[spriteName]==null){
-                console.log("Searching for: " + spriteName)
                 const spriteJsonPath = this.path + `/spritemap${pendingAtlasIndex}.json`;
                 const altasFetch = await fetch(spriteJsonPath);
                 const dataRaw:SpriteMapJson = await altasFetch.json();
