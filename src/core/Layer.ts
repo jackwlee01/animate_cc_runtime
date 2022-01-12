@@ -5,6 +5,7 @@ import { DrawableProps } from "./Drawable"
 import { modWrap } from "./util";
 
 
+type Int = number;
 type Float = number;
 
 
@@ -15,6 +16,7 @@ export type LayerProps = Omit<DrawableProps, 'totalFrames'|'id'|'library'> & {
 
 export class Layer extends Drawable{
 
+    public index:Int;
     public frames:Array<Frame>;
     public framesByName:Record<string, Frame>;
     public labels:Array<Frame>;
@@ -25,14 +27,15 @@ export class Layer extends Drawable{
         super({
             ...props,
             totalFrames:0,
-            id:`${props.clip.name}.${props.name}`,
+            id:`${props.clip.id}.${props.name}`,
             library: props.clip.library,
         });
         
+        this.clip = props.clip;
+        this.index = this.clip.layers.length;
         this.frames = [];
         this.framesByName = {};
         this.labels = [];
-        this.clip = props.clip;
     }
 
 

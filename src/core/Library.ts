@@ -16,11 +16,10 @@ export class Library{
 
     name:string;
     path:string;
-    atlases:Array<Atlas> = [];
     clips:Array<Clip> = [];
     clipsByName:Record<string, Clip> = {};
-    sprites:Array<Sprite> = [];
     spritesByName:Record<string, Sprite> = {};
+    atlases:Array<Atlas> = [];
     atlasesBySpriteName:Record<string, Atlas> = {}
     
     
@@ -33,13 +32,14 @@ export class Library{
 
     createAtlas(props:Omit<AtlasProps, 'library'>){
         const atlas = new Atlas({...props, library:this});
+        this.atlases.push(atlas);
         return atlas;
     }
 
 
     createSprite(atlas:Atlas, props:Omit<SpriteProps, 'atlas'>){
         const sprite = new Sprite({...props, atlas:atlas})
-        this.sprites.push(sprite);
+        atlas.sprites.push(sprite);
         this.spritesByName[sprite.name] = sprite;
         this.atlasesBySpriteName[sprite.name] = atlas;
         return sprite;

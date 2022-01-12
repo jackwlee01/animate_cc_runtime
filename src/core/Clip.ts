@@ -13,7 +13,7 @@ export class Clip extends Drawable{
     layers:Array<Layer>;
     layersById:Record<string, Layer>;
     layersByName:Record<string, Layer>;
-    framesByName:Record<string, Frame>;
+    framesById:Record<string, Frame>;
 
 
     constructor(props:ClipProps){
@@ -26,7 +26,7 @@ export class Clip extends Drawable{
         this.layers = [];
         this.layersById = {};
         this.layersByName = {};
-        this.framesByName = {};
+        this.framesById = {};
     }
 
 
@@ -42,7 +42,7 @@ export class Clip extends Drawable{
 
 
     public addFrame(frame:Frame){
-        this.framesByName[frame.name] = frame;
+        this.framesById[frame.id] = frame;
     }
 
 

@@ -17,7 +17,6 @@ export type AtlasProps = {
 export class Atlas{
     library:Library;
     sprites:Array<Sprite>;
-    spritesByName:Record<string, Sprite>;
     image:HTMLImageElement;
 
     app:string;
@@ -30,7 +29,6 @@ export class Atlas{
     
     constructor(props:AtlasProps){
         this.sprites = [];
-        this.spritesByName = {};
         this.library = props.library;
         this.image = props.image;
         this.app = props.app;

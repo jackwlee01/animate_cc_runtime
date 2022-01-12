@@ -29,7 +29,7 @@ export class Sprite extends Drawable{
             ...props,
             totalFrames:1,
             library:props.atlas.library,
-            id:`${props.atlas.library}.sprites.${props.name}`
+            id:`${props.atlas.library.name}.sprites.${props.name}`
         })
         this.x = props.x;
         this.y = props.y;

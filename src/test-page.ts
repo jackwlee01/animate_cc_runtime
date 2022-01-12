@@ -26,7 +26,10 @@ document.getElementById("buttons")!.appendChild(plusButton);
 async function init(){
     const lib = new Library('test', 'test');
     await lib.loadData();
+
     console.log("Loaded!")
+
+    console.log(lib)
 }
 
 init();
