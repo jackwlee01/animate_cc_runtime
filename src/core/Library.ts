@@ -62,19 +62,20 @@ export class Library{
         const spriteNames:Array<string> = [];
 
         // Clip
-        data.symbolDictionary.symbols.forEach(symbolData => {
+        for(const symbolData of data.symbolDictionary.symbols){
             const clip = this.createClip({
                 name: symbolData.symbolName,
             })
 
             // Layer
-            symbolData.timeline.layers.forEach(layerData => {
+            for(let l=symbolData.timeline.layers.length-1; l>=0; l--){
+                const layerData = symbolData.timeline.layers[l]
                 const layer = clip.createLayer({
                     name: layerData.layerName,
                 })
 
                 // Frame
-                layerData.frames.forEach(frameData => {
+                for(const frameData of layerData.frames){
                     const frame = layer.createFrame({
                         name: ""+frameData.index,
                         totalFrames: frameData.duration,
@@ -83,7 +84,7 @@ export class Library{
                     })
 
                     // Element
-                    frameData.elements.forEach(elemInstanceData => {
+                    for(const elemInstanceData of  frameData.elements){
                         
                         if("symbolInstance" in elemInstanceData){
                             type _DrawableProps = Pick<DrawableProps, keyof DrawableProps & keyof ClipInstanceProps>;
@@ -142,11 +143,10 @@ export class Library{
 
                             if(spriteNames.indexOf(spriteInstance.itemName)==-1) spriteNames.push(spriteInstance.itemName)
                         }
-                    })
-
-                })
-            })
-        });
+                    }
+                }
+            }
+        };
 
         // Sprites
         let pendingAtlasIndex = 1;
