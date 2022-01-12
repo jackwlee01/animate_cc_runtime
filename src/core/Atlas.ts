@@ -41,13 +41,7 @@ export class Atlas{
         this.resolution = props.resolution;
     }
 
-
-    public createSprite(props:Omit<SpriteProps, 'atlas'>){
-        const sprite = new Sprite({...props, atlas:this})
-        this.sprites.push(sprite);
-        this.spritesByName[sprite.name] = sprite;
-        return sprite;
-    }
+    
 
 }
 

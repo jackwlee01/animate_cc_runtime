@@ -1,5 +1,6 @@
 import { createLibrary } from "./library";
 import { addExampleButtons, setupCanvas } from "./example-utils";
+import { Library } from "./core/Library";
 
 const canvas = document.getElementById("canvas") as HTMLCanvasElement
 const buffer = canvas.getContext('2d')!
@@ -22,7 +23,15 @@ document.getElementById("buttons")!.appendChild(plusButton);
 
 
 
+async function init(){
+    const lib = new Library('test', 'test');
+    await lib.loadData();
+    console.log("Loaded!")
+}
 
+init();
+
+/*
 async function init(){
     const lib = await createLibrary('test');
     
@@ -62,3 +71,5 @@ async function init(){
 }
 
 init();
+
+*/

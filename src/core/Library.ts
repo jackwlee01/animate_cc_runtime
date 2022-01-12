@@ -9,6 +9,7 @@ import { Instance, InstanceProps } from "./Instance";
 import { DrawableProps } from "./Drawable";
 import { Sprite, SpriteProps } from "./Sprite";
 import { Atlas, AtlasProps } from "./Atlas";
+import { normaliseJson } from "../json/utilJson";
 
 
 export class Library{
@@ -21,8 +22,7 @@ export class Library{
     sprites:Array<Sprite> = [];
     spritesByName:Record<string, Sprite> = {};
     atlasesBySpriteName:Record<string, Atlas> = {}
-    imagesByAtlasName:Record<string, typeof Image> = {}
-
+    
     
     constructor(name:string, path:string){
         this.name = name;
@@ -31,10 +31,18 @@ export class Library{
     }
 
 
-
     createAtlas(props:Omit<AtlasProps, 'library'>){
         const atlas = new Atlas({...props, library:this});
         return atlas;
+    }
+
+
+    createSprite(atlas:Atlas, props:Omit<SpriteProps, 'atlas'>){
+        const sprite = new Sprite({...props, atlas:atlas})
+        this.sprites.push(sprite);
+        this.spritesByName[sprite.name] = sprite;
+        this.atlasesBySpriteName[sprite.name] = atlas;
+        return sprite;
     }
 
 
@@ -49,7 +57,8 @@ export class Library{
     public async loadData(){
         const animJsonPath = this.path + "/Animation.json";
         const animFetchResult = await fetch(animJsonPath);
-        const data:AnimationJson = await animFetchResult.json();
+        const dataRaw:AnimationJson = await animFetchResult.json();
+        const data = normaliseJson(dataRaw) as AnimationJson;
         const spriteNames:Array<string> = [];
 
         // Clip
@@ -143,13 +152,15 @@ export class Library{
         let pendingAtlasIndex = 1;
         for(const spriteName of spriteNames){
             if(this.atlasesBySpriteName[spriteName]==null){
+                console.log("Searching for: " + spriteName)
                 const spriteJsonPath = this.path + `/spritemap${pendingAtlasIndex}.json`;
-                const altasFetch = await fetch(animJsonPath);
-                const data:SpriteMapJson = await altasFetch.json();
-                pendingAtlasIndex++;
+                const altasFetch = await fetch(spriteJsonPath);
+                const dataRaw:SpriteMapJson = await altasFetch.json();
+                const data = normaliseJson(dataRaw) as SpriteMapJson;
 
                 const image = new Image(data.meta.size.w, data.meta.size.h);
                 image.src = this.path + `/spritemap${pendingAtlasIndex}.png`;
+
                 
                 const atlas = this.createAtlas({
                     image,
@@ -160,10 +171,9 @@ export class Library{
                     size: data.meta.size,
                     resolution: data.meta.resolution 
                 })
-
                 for(const spriteSpriteData of data.atlas.sprites){
                     const spriteData = spriteSpriteData.sprite;
-                    const sprite = atlas.createSprite({
+                    const sprite = this.createSprite(atlas, {
                         name: spriteData.name,
                         x: spriteData.x,
                         y: spriteData.y,
@@ -171,7 +181,11 @@ export class Library{
                         height: spriteData.h,
                         rotated: spriteData.rotated,
                     })
+                    this.atlasesBySpriteName[sprite.name] = atlas;
                 }
+
+
+                pendingAtlasIndex++;
             }
         }
 
