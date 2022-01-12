@@ -1,4 +1,3 @@
-import { Clip } from "./Clip";
 import { ClipInstance, ClipInstanceProps } from "./ClipInstance";
 import { Drawable } from "./Drawable";
 import { Layer } from "./Layer";
@@ -36,11 +35,6 @@ export class Frame extends Drawable{
         this.labelName = props.labelName || null;
     }
 
-    /*
-    public addInstance(instance:ClipInstance|SpriteInstance){
-        this.instances.push(instance);
-    }
-    */
 
     public createClipInstance(props:Omit<ClipInstanceProps, 'frame'>){
         const clipInstance = new ClipInstance({...props, frame:this})

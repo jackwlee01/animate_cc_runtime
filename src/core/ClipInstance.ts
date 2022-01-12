@@ -24,8 +24,8 @@ export class ClipInstance extends Instance{
 
     transformationPoint:Vec2
     behaviour:ClipInstanceBehavior
-
     //color:Null<Color>;
+    
     
     constructor(props:ClipInstanceProps){
         super(props);

@@ -1,11 +1,11 @@
 import { AnimationJson } from "../json/AnimationJson";
 import { Clip, ClipProps } from "./Clip";
 import { ClipInstanceProps } from "./ClipInstance";
-import { SpriteInstance, SpriteInstanceProps } from "./SpriteInstance";
+import { SpriteInstanceProps } from "./SpriteInstance";
 import { Vec3 } from "./geom/Vec3";
 import { Vec2 } from "./geom/Vec2";
 import { Matrix2d } from "./geom/Matrix2d";
-import { Instance, InstanceProps } from "./Instance";
+import { InstanceProps } from "./Instance";
 import { DrawableProps } from "./Drawable";
 import { Sprite, SpriteProps } from "./Sprite";
 import { Atlas, AtlasProps } from "./Atlas";

@@ -39,7 +39,6 @@ export class Instance extends Drawable{
         this.position = props.position;
         this.scale = props.scale;
         this.rotation = props.rotation;
-
         this.frame = props.frame;
         this.index = this.frame.instances.length;
     }
