@@ -31,14 +31,4 @@ export abstract class Drawable{
         // Override in base class
     }
 
-    /*
-    Implement draw in context
-    */
-
-    /*
-    #if kha
-    public function draw<T>(buffer:kha.Canvas, position:Float=0, item:T=null, callback:(buffer:kha.Canvas,position:Float,item:Dynamic,drawable:Drawable)->Void = null){}
-    public function visit<T>(buffer:kha.Canvas, position:Float, item:T, callback:(buffer:kha.Canvas, item:T, drawable:Drawable, position:Float)->Void){}
-    #end
-    */
 }
