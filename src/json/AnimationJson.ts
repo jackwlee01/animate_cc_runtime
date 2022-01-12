@@ -83,7 +83,6 @@ export type SymbolInstance = {
     transformationPoint:Point2D;
     matrix3D:Matrix3D;
     decomposedMatrix:DecomposedMatrix;
-    loop:string;
     filters?:any;
     firstFrame?:Int;
     color?:Color;

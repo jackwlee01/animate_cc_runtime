@@ -1,8 +1,10 @@
 import { Drawable } from "./Drawable";
 import { Frame } from "./Frame";
-import { Layer } from "./Layer";
-import { Library } from "./Library";
+import { Layer, LayerProps } from "./Layer";
+import { DrawableProps } from './Drawable'
 
+
+export type ClipProps = Omit<DrawableProps, 'totalFrames'|'id'>
 
 
 export class Clip extends Drawable{
@@ -13,8 +15,13 @@ export class Clip extends Drawable{
     framesByName:Record<string, Frame>;
 
 
-    constructor(props:{library:Library, name:string, id:string}){
-        super({...props, totalFrames:0})
+    constructor(props:ClipProps){
+        super({
+            ...props,
+            totalFrames:0,
+            id:`${props.library.name}.${props.name}`
+        })
+        
         this.layers = [];
         this.layersById = {};
         this.layersByName = {};
@@ -22,11 +29,14 @@ export class Clip extends Drawable{
     }
 
 
-    public addLayer(layer:Layer){
+    public createLayer(props:Omit<LayerProps, 'clip'>){
+        const layer = new Layer({...props, clip:this});
         this.layers.push(layer);
         this.layersById[layer.id] = layer;
         this.layersByName[layer.name] = layer;
         if(layer.totalFrames > this.totalFrames) this.totalFrames = layer.totalFrames;
+
+        return layer;
     }
 
 

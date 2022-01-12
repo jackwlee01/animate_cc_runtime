@@ -4,6 +4,14 @@ type Int = number;
 type Float = number;
 
 
+export type DrawableProps = {
+    name:string,
+    id:string,
+    totalFrames:Int,
+    library:Library;
+}
+
+
 export class Drawable{
     name:string;
     id:string;
@@ -11,12 +19,7 @@ export class Drawable{
     library:Library;
 
 
-    constructor(props:{
-        name:string,
-        id:string,
-        totalFrames:number,
-        library:Library;
-    }){
+    constructor(props:DrawableProps){
         this.name = props.name;
         this.id = props.id;
         this.totalFrames = props.totalFrames;

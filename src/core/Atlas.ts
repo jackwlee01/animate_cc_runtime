@@ -2,6 +2,18 @@ import { Library } from "./Library";
 import { Sprite } from "./Sprite";
 
 
+export type AtlasProps = {
+    library:Library,
+    image:HTMLImageElement,
+    app:string,
+    version:string,
+    imagePath:string,
+    format:string,
+    size:{w:Float, h:Float},
+    resolution:string
+}
+
+
 export class Atlas{
     library:Library;
     sprites:Array<Sprite>;
@@ -16,16 +28,7 @@ export class Atlas{
     resolution:string;
 
     
-    constructor(props:{
-        library:Library,
-        image:HTMLImageElement,
-        app:string,
-        version:string,
-        imagePath:string,
-        format:string,
-        size:{w:Float, h:Float},
-        resolution:string
-    }){
+    constructor(props:AtlasProps){
         this.sprites = [];
         this.spritesByName = {};
         this.library = props.library;

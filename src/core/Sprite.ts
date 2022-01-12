@@ -1,9 +1,19 @@
 import { Drawable } from "./Drawable";
-import { Library } from "./Library";
 import { Atlas } from "./Atlas";
+import { DrawableProps } from "./Drawable"
 
 type Int = number;
 type Float = number;
+
+
+type SpriteProps = Omit<DrawableProps, 'totalFrames'> & {
+    x:Float,
+    y:Float,
+    w:Float,
+    h:Float,
+    rotated:boolean,
+    atlas:Atlas,
+}
 
 
 export class Sprite extends Drawable{
@@ -14,8 +24,8 @@ export class Sprite extends Drawable{
     rotated:boolean;
     atlas:Atlas;
 
-    constructor(props:{library:Library, name:string, id:string, totalFrames:Int, x:Float, y:Float, w:Float, h:Float, rotated:boolean, atlas:Atlas}){
-        super(props)
+    constructor(props:SpriteProps){
+        super({...props, totalFrames:1 })
         this.x = props.x;
         this.y = props.y;
         this.w = props.w;
