@@ -1,6 +1,6 @@
 import { Drawable, isAtlasSpriteInstance, isKeyframe, isLayer, isSprite, isSymbol, isSymbolInstance, visit } from "./core";
-import { AnimationJson } from "./json/AnimationJson";
-import { normaliseJson } from "./json/utilJson";
+import { AnimationJson } from "./core/json/AnimationJson";
+import { normaliseJson } from "./core/json/utilJson";
 
 type Awaited<T> = T extends PromiseLike<infer U> ? U : T
 

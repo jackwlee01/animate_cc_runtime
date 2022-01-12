@@ -1,4 +1,4 @@
-import { AnimationJson } from "../json/AnimationJson";
+import { AnimationJson } from "./json/AnimationJson";
 import { Clip, ClipProps } from "./Clip";
 import { ClipInstanceProps } from "./ClipInstance";
 import { SpriteInstanceProps } from "./SpriteInstance";
@@ -9,7 +9,7 @@ import { InstanceProps } from "./Instance";
 import { Drawable, DrawableProps } from "./Drawable";
 import { Sprite, SpriteProps } from "./Sprite";
 import { Atlas, AtlasProps } from "./Atlas";
-import { normaliseJson } from "../json/utilJson";
+import { normaliseJson } from "./json/utilJson";
 import { AnimationContext } from "./AnimationContext";
 
 

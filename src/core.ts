@@ -1,4 +1,4 @@
-import { AnimationJson, AtlasSpriteInstance, Keyframe, Layer, LibrarySymbol, SymbolInstance } from "./json/AnimationJson";
+import { AnimationJson, AtlasSpriteInstance, Keyframe, Layer, LibrarySymbol, SymbolInstance } from "./core/json/AnimationJson";
 
 export type Drawable = LibrarySymbol | Layer | Keyframe | SymbolInstance | AtlasSpriteInstance | Sprite;
 

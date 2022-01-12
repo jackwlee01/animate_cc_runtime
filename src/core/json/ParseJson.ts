@@ -1,5 +1,5 @@
 import { Atlas } from "../Atlas";
-import { Library } from "../Library";
+import { Library } from "../../Library";
 import { Sprite } from "../Sprite";
 import { AnimationJson } from "./AnimationJson";
 
