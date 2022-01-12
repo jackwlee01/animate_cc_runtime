@@ -1,5 +1,5 @@
 import { Library } from "./Library";
-import { Sprite, SpriteProps } from "./Sprite";
+import { Sprite } from "./Sprite";
 
 
 export type AtlasProps = {

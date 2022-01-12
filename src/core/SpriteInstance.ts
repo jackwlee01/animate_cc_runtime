@@ -1,4 +1,3 @@
-import { Drawable } from "./Drawable";
 import { Instance, InstanceProps } from "./Instance";
 
 type Float = number;

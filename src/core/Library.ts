@@ -6,7 +6,7 @@ import { Vec3 } from "./geom/Vec3";
 import { Vec2 } from "./geom/Vec2";
 import { Matrix2d } from "./geom/Matrix2d";
 import { InstanceProps } from "./Instance";
-import { Drawable, DrawableProps } from "./Drawable";
+import { DrawableProps } from "./Drawable";
 import { Sprite, SpriteProps } from "./Sprite";
 import { Atlas, AtlasProps } from "./Atlas";
 import { normaliseJson } from "./json/utilJson";
