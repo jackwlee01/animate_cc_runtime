@@ -54,6 +54,7 @@ export class Layer extends Drawable{
 
 
     public keyframeAt(frame:Float){
+        // TODO: Binary search would be a good optimisation here
         frame = modWrap(frame, this.totalFrames);
         for(const keyframe of this.frames){
             if(keyframe.index<=frame && keyframe.index+keyframe.totalFrames > frame)
