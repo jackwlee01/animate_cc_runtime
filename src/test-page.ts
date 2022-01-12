@@ -1,6 +1,10 @@
 import { createLibrary } from "./library";
 import { addExampleButtons, setupCanvas } from "./example-utils";
 import { Library } from "./core/Library";
+import { Drawable } from "./core/Drawable";
+import { Clip } from "./core/Clip";
+import { Layer } from "./core/Layer";
+import { Instance } from "./core/Instance";
 
 const canvas = document.getElementById("canvas") as HTMLCanvasElement
 const buffer = canvas.getContext('2d')!
@@ -27,10 +31,23 @@ async function init(){
     const lib = new Library('test', 'test');
     await lib.loadData();
 
-    console.log("Loaded!")
+    let count = -1;
+    function traceOut(item:Drawable, frame:number){
+        const hasSiblings = item instanceof Layer || item instanceof Instance;
+        if(!hasSiblings) count++;
 
-    console.log(lib)
+        var prefix = "";
+        for(let i = 0; i < count; i++) prefix += "    "
+        console.log(prefix + item.constructor.name.toUpperCase() + ": " + item.name);
+        
+        item.visit(frame, traceOut);
+        
+        if(!hasSiblings) count--;
+    }
+
+    traceOut(lib.clips[0], 100);
 }
+
 
 init();
 

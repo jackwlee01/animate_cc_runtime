@@ -50,8 +50,8 @@ export class Instance extends Drawable{
     }
 
 
-    public visit(frame:Float, callback:(frame:Float, item:Drawable)=>void):void{
-        callback(frame, this.item);
+    public visit(frame:Float, callback:(item:Drawable, frame:Float)=>void):void{
+        callback(this.item, frame);
     }
 
 }

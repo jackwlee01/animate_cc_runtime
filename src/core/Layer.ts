@@ -41,9 +41,9 @@ export class Layer extends Drawable{
 
     public createFrame(props:Omit<FrameProps, 'layer'>){
         const frame = new Frame({...props, layer:this});
-
         this.frames.push(frame)
         this.framesByName[frame.name] = frame;
+        if(frame.index+frame.totalFrames > this.totalFrames) this.totalFrames = frame.index+frame.totalFrames
         if(frame.labelName){
             this.labels.push(frame);
         }
@@ -63,9 +63,9 @@ export class Layer extends Drawable{
     }
 
 
-    public visit(frame:Float, callback:(frame:Float, item:Drawable)=>void):void{
+    public visit(frame:Float, callback:(item:Drawable, frame:Float)=>void):void{
         var keyframe = this.keyframeAt(frame)
-        if(keyframe!=null) callback(frame, keyframe);
+        if(keyframe!=null) callback(keyframe, frame);
     }
 
 }

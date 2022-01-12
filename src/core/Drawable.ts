@@ -12,7 +12,7 @@ export type DrawableProps = {
 }
 
 
-export class Drawable{
+export abstract class Drawable{
     name:string;
     id:string;
     totalFrames:Int = 1;
@@ -27,7 +27,7 @@ export class Drawable{
     }
 
 
-    public visit(frame:Float, callback:(frame:Float, item:Drawable)=>void):void{
+    public visit(frame:Float, callback:(item:Drawable, frame:Float)=>void):void{
         // Override in base class
     }
 

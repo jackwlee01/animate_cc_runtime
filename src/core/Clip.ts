@@ -20,7 +20,7 @@ export class Clip extends Drawable{
         super({
             ...props,
             totalFrames:0,
-            id:`${props.library.name}.clips.${props.name}`
+            id:`${props.library.name}.clips.${props.name}`,
         })
         
         this.layers = [];
@@ -43,14 +43,15 @@ export class Clip extends Drawable{
 
     public addFrame(frame:Frame){
         this.framesById[frame.id] = frame;
+        if(frame.layer.totalFrames > this.totalFrames) this.totalFrames = frame.layer.totalFrames;
     }
 
 
-    public visit(frame:Float, callback:(frame:Float, item:Drawable)=>void):void{
+    public visit(frame:Float, callback:(item:Drawable, frame:Float)=>void):void{
         for(const layer of this.layers){
             if(layer.totalFrames==0) continue;
             var f = modWrap(frame, layer.totalFrames);
-            if(layer.totalFrames>=f) callback(frame, layer);
+            if(layer.totalFrames>=f) callback(layer, frame);
         }
     }
 
