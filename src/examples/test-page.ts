@@ -1,6 +1,5 @@
-import { createLibrary } from "./library";
 import { addExampleButtons, setupCanvas } from "./example-utils";
-import { Canvas2dAnimationContext } from "./Canvas2dAnimationContext";
+import { Canvas2dAnimationContext } from "../Canvas2dAnimationContext";
 
 const canvas = document.getElementById("canvas") as HTMLCanvasElement
 const ctx = canvas.getContext('2d')!

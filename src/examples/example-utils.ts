@@ -1,5 +1,5 @@
-import { Clip } from "./core/Clip";
-import { Library } from "./core/Library";
+import { Clip } from "../core/Clip";
+import { Library } from "../core/Library";
 
 
 
@@ -40,9 +40,7 @@ export function setupCanvas(canvas:HTMLCanvasElement) {
 
 
 export function addExampleButtons(lib:Library, onClick:(nextSymbol:Clip)=>void){
-    console.log(lib)
     for(const clip of lib.clips){
-        console.log("yo")
         if(clip.name.indexOf("/")!=-1 || clip.name.indexOf("Symbol ")==0 || clip.name.indexOf("Tween ")==0 || clip.name.indexOf("/Symbol ")!=-1 || clip.name.indexOf("/Tween ")!=-1) continue;
         var button = document.createElement("button")
         button.innerHTML = clip.name
