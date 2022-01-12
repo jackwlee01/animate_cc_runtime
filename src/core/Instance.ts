@@ -1,10 +1,7 @@
-import { Clip } from "./Clip";
 import { Drawable } from "./Drawable";
 import { Frame } from "./Frame";
 import { Matrix2d } from "./geom/Matrix2d";
-import { Vec2 } from "./geom/Vec2";
 import { Vec3 } from "./geom/Vec3";
-import { Sprite } from "./Sprite";
 import { DrawableProps } from './Drawable'
 
 

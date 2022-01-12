@@ -1,13 +1,11 @@
-import { AnimationJson, AtlasSpriteInstance, Matrix3D } from "../json/AnimationJson";
+import { AnimationJson } from "../json/AnimationJson";
 import { Clip, ClipProps } from "./Clip";
-import { Frame, FrameProps } from "./Frame";
-import { Layer, LayerProps } from "./Layer";
-import { ClipInstance, ClipInstanceProps } from "./ClipInstance";
-import { SpriteInstance, SpriteInstanceProps } from "./SpriteInstance";
+import { ClipInstanceProps } from "./ClipInstance";
+import { SpriteInstanceProps } from "./SpriteInstance";
 import { Vec3 } from "./geom/Vec3";
 import { Vec2 } from "./geom/Vec2";
 import { Matrix2d } from "./geom/Matrix2d";
-import { Instance, InstanceProps } from "./Instance";
+import { InstanceProps } from "./Instance";
 import { DrawableProps } from "./Drawable";
 
 
@@ -33,11 +31,6 @@ export class Library{
         return clip;
     }
 
-
-
-    private async getAtlasFor(spriteName:string){
-
-    }
 
 
     public async loadData(){
@@ -134,13 +127,4 @@ export class Library{
     }
 
 
-}
-
-
-function getMatrix3dArray(m:Matrix3D){
-
-}
-
-function getMatrix2dArray(m:Matrix3D){
-    
 }
