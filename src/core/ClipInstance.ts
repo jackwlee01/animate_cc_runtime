@@ -33,4 +33,9 @@ export class ClipInstance extends Instance{
         this.transformationPoint = props.transformationPoint;
     }
 
+
+    public get item(){
+        return this.library.clipsByName[this.itemName];
+    }
+
 }

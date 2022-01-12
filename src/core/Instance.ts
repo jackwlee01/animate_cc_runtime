@@ -44,4 +44,14 @@ export class Instance extends Drawable{
         this.index = this.frame.instances.length;
     }
 
+
+    public get item():Drawable{
+        throw("Override item getter in base class");
+    }
+
+
+    public visit(frame:Float, callback:(frame:Float, item:Drawable)=>void):void{
+        callback(frame, this.item);
+    }
+
 }

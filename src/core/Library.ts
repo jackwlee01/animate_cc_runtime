@@ -1,12 +1,14 @@
 import { AnimationJson } from "../json/AnimationJson";
 import { Clip, ClipProps } from "./Clip";
 import { ClipInstanceProps } from "./ClipInstance";
-import { SpriteInstanceProps } from "./SpriteInstance";
+import { SpriteInstance, SpriteInstanceProps } from "./SpriteInstance";
 import { Vec3 } from "./geom/Vec3";
 import { Vec2 } from "./geom/Vec2";
 import { Matrix2d } from "./geom/Matrix2d";
-import { InstanceProps } from "./Instance";
+import { Instance, InstanceProps } from "./Instance";
 import { DrawableProps } from "./Drawable";
+import { Sprite, SpriteProps } from "./Sprite";
+import { Atlas, AtlasProps } from "./Atlas";
 
 
 export class Library{
@@ -16,8 +18,12 @@ export class Library{
     atlases:Array<Atlas> = [];
     clips:Array<Clip> = [];
     clipsByName:Record<string, Clip> = {};
+    sprites:Array<Sprite> = [];
+    spritesByName:Record<string, Sprite> = {};
+    atlasesBySpriteName:Record<string, Atlas> = {}
+    imagesByAtlasName:Record<string, typeof Image> = {}
 
-
+    
     constructor(name:string, path:string){
         this.name = name;
         this.path = path;
@@ -25,20 +31,28 @@ export class Library{
     }
 
 
+
+    createAtlas(props:Omit<AtlasProps, 'library'>){
+        const atlas = new Atlas({...props, library:this});
+        return atlas;
+    }
+
+
     createClip(props:Omit<ClipProps, 'library'>){
         const clip = new Clip({...props, library:this});
-
+        this.clips.push(clip)
+        this.clipsByName[clip.name] = clip
         return clip;
     }
 
 
-
     public async loadData(){
-        var animJsonPath = this.path + "/Animation.json";
-        var animFetchResult = await fetch(animJsonPath);
-        var data:AnimationJson = await animFetchResult.json();
+        const animJsonPath = this.path + "/Animation.json";
+        const animFetchResult = await fetch(animJsonPath);
+        const data:AnimationJson = await animFetchResult.json();
+        const spriteNames:Array<string> = [];
 
-        // Symbol
+        // Clip
         data.symbolDictionary.symbols.forEach(symbolData => {
             const clip = this.createClip({
                 name: symbolData.symbolName,
@@ -91,7 +105,6 @@ export class Library{
                                          ? { type: 'graphic', loop: elemData.loop, firstFrame: elemData.firstFrame}
                                          : { type: 'movieclip' }
                             })
-
                         }else{
                             type _DrawableProps = Pick<DrawableProps, keyof DrawableProps & keyof SpriteInstanceProps>;
                             type _InstanceProps = Omit<InstanceProps, keyof DrawableProps>
@@ -118,12 +131,50 @@ export class Library{
                                 ...instanceProps,
                             })
 
+                            if(spriteNames.indexOf(spriteInstance.itemName)==-1) spriteNames.push(spriteInstance.itemName)
                         }
                     })
 
                 })
             })
         });
+
+        // Sprites
+        let pendingAtlasIndex = 1;
+        for(const spriteName of spriteNames){
+            if(this.atlasesBySpriteName[spriteName]==null){
+                const spriteJsonPath = this.path + `/spritemap${pendingAtlasIndex}.json`;
+                const altasFetch = await fetch(animJsonPath);
+                const data:SpriteMapJson = await altasFetch.json();
+                pendingAtlasIndex++;
+
+                const image = new Image(data.meta.size.w, data.meta.size.h);
+                image.src = this.path + `/spritemap${pendingAtlasIndex}.png`;
+                
+                const atlas = this.createAtlas({
+                    image,
+                    app: data.meta.app,
+                    version: data.meta.version,
+                    imagePath: data.meta.image,
+                    format: data.meta.format,
+                    size: data.meta.size,
+                    resolution: data.meta.resolution 
+                })
+
+                for(const spriteSpriteData of data.atlas.sprites){
+                    const spriteData = spriteSpriteData.sprite;
+                    const sprite = atlas.createSprite({
+                        name: spriteData.name,
+                        x: spriteData.x,
+                        y: spriteData.y,
+                        width: spriteData.w,
+                        height: spriteData.h,
+                        rotated: spriteData.rotated,
+                    })
+                }
+            }
+        }
+
     }
 
 

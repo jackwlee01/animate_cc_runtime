@@ -55,4 +55,11 @@ export class Frame extends Drawable{
         return spriteInstance
     }
 
+
+    public visit(frame:Float, callback:(frame:Float, item:Drawable)=>void):void{
+        for(const instance of this.instances){
+            callback(frame, instance);
+        }
+    }
+
 }

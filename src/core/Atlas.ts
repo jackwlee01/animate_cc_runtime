@@ -1,5 +1,5 @@
 import { Library } from "./Library";
-import { Sprite } from "./Sprite";
+import { Sprite, SpriteProps } from "./Sprite";
 
 
 export type AtlasProps = {
@@ -42,9 +42,11 @@ export class Atlas{
     }
 
 
-    public addSprite(sprite:Sprite){
+    public createSprite(props:Omit<SpriteProps, 'atlas'>){
+        const sprite = new Sprite({...props, atlas:this})
         this.sprites.push(sprite);
         this.spritesByName[sprite.name] = sprite;
+        return sprite;
     }
 
 }

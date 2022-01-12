@@ -2,6 +2,10 @@ import { Clip } from "./Clip";
 import { Drawable } from "./Drawable";
 import { Frame, FrameProps } from "./Frame";
 import { DrawableProps } from "./Drawable"
+import { modWrap } from "./util";
+
+
+type Float = number;
 
 
 export type LayerProps = Omit<DrawableProps, 'totalFrames'|'id'|'library'> & {
@@ -43,6 +47,22 @@ export class Layer extends Drawable{
         this.clip.addFrame(frame);
 
         return frame;
+    }
+
+
+    public keyframeAt(frame:Float){
+        frame = modWrap(frame, this.totalFrames);
+        for(const keyframe of this.frames){
+            if(keyframe.index<=frame && keyframe.index+keyframe.totalFrames > frame)
+            return keyframe;
+        }
+        return null;
+    }
+
+
+    public visit(frame:Float, callback:(frame:Float, item:Drawable)=>void):void{
+        var keyframe = this.keyframeAt(frame)
+        if(keyframe!=null) callback(frame, keyframe);
     }
 
 }

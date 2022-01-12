@@ -26,6 +26,15 @@ export class Drawable{
         this.library = props.library;
     }
 
+
+    public visit(frame:Float, callback:(frame:Float, item:Drawable)=>void):void{
+        // Override in base class
+    }
+
+    /*
+    Implement draw in context
+    */
+
     /*
     #if kha
     public function draw<T>(buffer:kha.Canvas, position:Float=0, item:T=null, callback:(buffer:kha.Canvas,position:Float,item:Dynamic,drawable:Drawable)->Void = null){}

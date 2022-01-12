@@ -2,8 +2,9 @@ import { Drawable } from "./Drawable";
 import { Frame } from "./Frame";
 import { Layer, LayerProps } from "./Layer";
 import { DrawableProps } from './Drawable'
+import { modWrap } from "./util";
 
-
+type Float = number;
 export type ClipProps = Omit<DrawableProps, 'totalFrames'|'id'>
 
 
@@ -19,7 +20,7 @@ export class Clip extends Drawable{
         super({
             ...props,
             totalFrames:0,
-            id:`${props.library.name}.${props.name}`
+            id:`${props.library.name}.clips.${props.name}`
         })
         
         this.layers = [];
@@ -42,6 +43,15 @@ export class Clip extends Drawable{
 
     public addFrame(frame:Frame){
         this.framesByName[frame.name] = frame;
+    }
+
+
+    public visit(frame:Float, callback:(frame:Float, item:Drawable)=>void):void{
+        for(const layer of this.layers){
+            if(layer.totalFrames==0) continue;
+            var f = modWrap(frame, layer.totalFrames);
+            if(layer.totalFrames>=f) callback(frame, layer);
+        }
     }
 
 }
