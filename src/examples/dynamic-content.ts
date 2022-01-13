@@ -29,6 +29,8 @@ let hatIndex = 3;
 let showSpriteBorders = false;
 let eyesFrame = 1;
 let noseRotation = 0;
+let reverse = false;
+let playSpeed = 1;
 
 document.onkeydown = e => {
     switch(e.key){
@@ -36,6 +38,9 @@ document.onkeydown = e => {
         case '2': hatIndex = 1; break;
         case '3': hatIndex = 2; break;
         case '4': hatIndex = 3; break;
+        case 'r': reverse = !reverse; break;
+        case '=': playSpeed *= 2; break;
+        case '-': playSpeed /= 2; break;
         case 'ArrowUp': eyesFrame++; break
         case 'ArrowDown': eyesFrame--; break
         case 'ArrowLeft': noseRotation+=0.2; break
@@ -113,6 +118,8 @@ function update(){
         ctx.fillText('Up/Down: Change eyes', 20, 100);
         ctx.fillText('Left/Right: Rotate nose', 20, 150);
         ctx.fillText('Spacebar: Toggle debug border', 20, 200);
+        ctx.fillText('+ and -: Change play speed', 20, 250);
+        ctx.fillText('r: Reverse play speed', 20, 300);
         
 
         ctx.translate(canvas.width/2, canvas.height/2)
@@ -130,7 +137,7 @@ function update(){
     
     ctx.restore()
     
-    frame++;
+    frame += reverse ? -playSpeed : playSpeed;
     requestAnimationFrame(update)
 }
 

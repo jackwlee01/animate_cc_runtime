@@ -605,29 +605,40 @@
     });
   }
   var frame = 0;
-  var hat = 3;
+  var hatIndex = 3;
   var showSpriteBorders = false;
-  var eyes = 1;
+  var eyesFrame = 1;
   var noseRotation = 0;
+  var reverse = false;
+  var playSpeed = 1;
   document.onkeydown = (e) => {
     switch (e.key) {
       case "1":
-        hat = 0;
+        hatIndex = 0;
         break;
       case "2":
-        hat = 1;
+        hatIndex = 1;
         break;
       case "3":
-        hat = 2;
+        hatIndex = 2;
         break;
       case "4":
-        hat = 3;
+        hatIndex = 3;
+        break;
+      case "r":
+        reverse = !reverse;
+        break;
+      case "=":
+        playSpeed *= 2;
+        break;
+      case "-":
+        playSpeed /= 2;
         break;
       case "ArrowUp":
-        eyes++;
+        eyesFrame++;
         break;
       case "ArrowDown":
-        eyes--;
+        eyesFrame--;
         break;
       case "ArrowLeft":
         noseRotation += 0.2;
@@ -639,8 +650,8 @@
         showSpriteBorders = !showSpriteBorders;
         break;
     }
-    hat = modWrap(hat, 4);
-    eyes = modWrap(eyes, 2);
+    hatIndex = modWrap(hatIndex, 4);
+    eyesFrame = modWrap(eyesFrame, 2);
   };
   function drawWithLogic(item, frame2) {
     if (item instanceof Clip) {
@@ -654,7 +665,7 @@
       }
     } else if (item instanceof Layer) {
       if (item.name == "layer_eye") {
-        item.draw(eyes, drawWithLogic);
+        item.draw(eyesFrame, drawWithLogic);
       } else {
         item.draw(frame2, drawWithLogic);
       }
@@ -662,7 +673,7 @@
       item.draw(frame2, drawWithLogic);
     } else if (item instanceof Instance) {
       if (item.frame.layer.name == "layer_hat") {
-        hatsLibrary.symbol("Hat_" + hat).draw(frame2, drawWithLogic);
+        hatsLibrary.symbol("Hat_" + hatIndex).draw(frame2, drawWithLogic);
       } else {
         item.draw(frame2, drawWithLogic);
       }
@@ -684,6 +695,8 @@
     ctx.fillText("Up/Down: Change eyes", 20, 100);
     ctx.fillText("Left/Right: Rotate nose", 20, 150);
     ctx.fillText("Spacebar: Toggle debug border", 20, 200);
+    ctx.fillText("+ and -: Change play speed", 20, 250);
+    ctx.fillText("r: Reverse play speed", 20, 300);
     ctx.translate(canvas.width / 2, canvas.height / 2);
     ctx.scale(dpr, dpr);
     ctx.save();
@@ -695,7 +708,7 @@
     hatsLibrary.symbol("Walker_Nose").draw(frame, drawWithLogic);
     ctx.restore();
     ctx.restore();
-    frame++;
+    frame += reverse ? -playSpeed : playSpeed;
     requestAnimationFrame(update);
   }
   init();
