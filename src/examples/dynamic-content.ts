@@ -51,45 +51,38 @@ async function init(){
     //              - Instance
     //                  - Sprite or Clip 
     //
+    // This function shows a few different ways you can dynamically manipulate
+    // the rendering:
+    //     - How you can dynamically set a frame on a layer (which you could also do on a clip)
+    //     - How you can dynamically swap out one clip for another
+    //     - How you can draw arbitrary stuff on the 2d context
+    //
     function drawWithLogic(item:Drawable, frame:number){
-        // Clip
         if(item instanceof Clip){
             item.draw(frame, drawWithLogic)
-
-        // Layer
         }else if(item instanceof Layer){
-            // This example shows how to dynamically choose a frame
             if(item.name=="layer_eye"){
                 item.draw(eyes, drawWithLogic)
             }else{
                 item.draw(frame, drawWithLogic)
             }
-        
-        // Frame
         }else if(item instanceof Frame){
             item.draw(frame, drawWithLogic)
-
-        // Instance
         }else if(item instanceof Instance){
-            // This example shows how to dynamically swap a symbol instance
             if(item.frame.layer.name=="layer_hat"){
                 hatsLibrary.symbol("Hat_"+hat).draw(frame, drawWithLogic)
             }else{
                 item.draw(frame, drawWithLogic)
             }
-            
-        // Sprite
         }else if(item instanceof Sprite){
-            // This example shows how draw extra stuff in a drawable item (Sprite in this scenario)
-            // Note: we are not passing drawWithLogic here as we want to just draw the Sprites (leaf nodes)
-            item.draw(frame)
+            item.draw(frame) // Note: leaf node, so don't supply drawWithLogic as an argument
             if(showSpriteBorders){
                 ctx.strokeStyle = '#CC0000'
                 ctx.strokeRect(0, 0, item.width, item.height)
             }
         }
     }
-   
+
     
     function update(){
         ctx.fillStyle = '#cccccc'

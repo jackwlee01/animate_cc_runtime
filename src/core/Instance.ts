@@ -58,11 +58,4 @@ export class Instance extends Drawable{
         callback(this, frame)
     }
 
-
-    /*
-    public visit(frame:Float, callback:(item:Drawable, frame:Float, ...args:any)=>void):void{
-        callback(this.item, frame);
-    }
-    */
-
 }

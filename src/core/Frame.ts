@@ -64,13 +64,4 @@ export class Frame extends Drawable{
         }
     }
 
-
-    /*
-    public visit(frame:Float, callback:(item:Drawable, frame:Float, ...args:any)=>void):void{
-        for(const instance of this.instances){
-            callback(instance, frame);
-        }
-    }
-    */
-
 }
