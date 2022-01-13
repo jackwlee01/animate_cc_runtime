@@ -700,12 +700,16 @@
     ctx.translate(canvas.width / 2, canvas.height / 2);
     ctx.scale(dpr, dpr);
     ctx.save();
-    ctx.translate(-100, 0);
+    ctx.translate(-200, 0);
     hatsLibrary.symbol("Walker_Laser").draw(frame, drawWithLogic);
     ctx.restore();
     ctx.save();
-    ctx.translate(100, 0);
+    ctx.translate(0, 0);
     hatsLibrary.symbol("Walker_Nose").draw(frame, drawWithLogic);
+    ctx.restore();
+    ctx.save();
+    ctx.translate(200, -50);
+    hatsLibrary.symbol("StarDude").draw(frame, drawWithLogic);
     ctx.restore();
     ctx.restore();
     frame += reverse ? -playSpeed : playSpeed;
