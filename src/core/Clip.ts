@@ -47,12 +47,28 @@ export class Clip extends Drawable{
     }
 
 
-    public visit(frame:Float, callback:(item:Drawable, frame:Float, ...args:any)=>void):void{
+    public draw(frame:Float, callback?:(item:Drawable, frame:Float)=>void){
         for(const layer of this.layers){
             if(layer.totalFrames==0) continue;
             var f = modWrap(frame, layer.totalFrames);
-            if(layer.totalFrames>=f) callback(layer, frame);
+            if(layer.totalFrames>=f){
+                this.library.context.draw(layer, frame, callback);
+            }
+        }
+
+    }
+
+
+
+    public visit(frame:Float, callback:(item:Drawable, frame:Float, ...args:any)=>void):void{
+        callback(this, frame)
+        for(const layer of this.layers){
+            if(layer.totalFrames==0) continue;
+            var f = modWrap(frame, layer.totalFrames);
+            if(layer.totalFrames>=f) layer.visit(frame, callback)
         }
     }
 
+
+   
 }

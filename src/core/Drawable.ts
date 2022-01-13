@@ -33,7 +33,7 @@ export abstract class Drawable{
 
 
     public draw(frame:Float, callback?:(item:Drawable, frame:Float)=>void){
-        this.library.context.draw(this, frame, callback);
+        // Override in base class
     }
 
 }

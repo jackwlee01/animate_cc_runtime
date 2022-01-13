@@ -50,10 +50,27 @@ export class Frame extends Drawable{
     }
 
 
+    public draw(frame:Float, callback?:(item:Drawable, frame:Float, ...args:any)=>void):void{
+        for(const instance of this.instances){
+            this.library.context.draw(instance, frame, callback)
+        }
+    }
+
+
+    public visit(frame:Float, callback:(item:Drawable, frame:Float, ...args:any)=>void):void{
+        callback(this, frame)
+        for(const instance of this.instances){
+            instance.visit(frame, callback)
+        }
+    }
+
+
+    /*
     public visit(frame:Float, callback:(item:Drawable, frame:Float, ...args:any)=>void):void{
         for(const instance of this.instances){
             callback(instance, frame);
         }
     }
+    */
 
 }

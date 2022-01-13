@@ -1,6 +1,6 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="game/Hat_1" itemID="61df877c-0000056c" lastModified="1642039310" lastUniqueIdentifier="7">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Hat_1" itemID="61df877c-0000056c" lastModified="1642039310" lastUniqueIdentifier="7">
   <timeline>
-    <DOMTimeline name="Hat_1" currentFrame="20" layerDepthEnabled="true">
+    <DOMTimeline name="Hat_1" currentFrame="16" layerDepthEnabled="true">
       <layers>
         <DOMLayer name="Layer_3" color="#FF800A" layerType="guide">
           <frames>
@@ -179,7 +179,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Symbol_493" color="#669900" autoNamed="false">
+        <DOMLayer name="Symbol_493" color="#669900" current="true" isSelected="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" duration="21" keyMode="9728">
               <elements>
@@ -234,7 +234,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer_2" color="#9933CC" current="true" isSelected="true">
+        <DOMLayer name="Layer_2" color="#9933CC">
           <frames>
             <DOMFrame index="0" duration="21" keyMode="9728">
               <elements>

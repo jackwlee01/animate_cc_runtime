@@ -39,4 +39,14 @@ export class Sprite extends Drawable{
         this.atlas = props.atlas;
     }
 
+
+    public draw(frame:Float, callback?:(item:Drawable, frame:Float)=>void){
+        // Override in base class
+    }
+
+
+    public visit(frame:Float, callback:(item:Drawable, frame:Float, ...args:any)=>void):void{
+        callback(this, frame)
+    }
+   
 }

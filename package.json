@@ -7,7 +7,8 @@
     "build": "esbuild src/index.ts --bundle --outfile=bin/bundle.js",
     "build-minimal": "esbuild src/examples/minimal.ts --bundle --outfile=bin/minimal.js --sourcemap",
     "build-symbol-explorer": "esbuild src/examples/symbol-explorer.ts --bundle --outfile=bin/symbol-explorer.js --sourcemap",
-    "build-page": "npm run build-symbol-explorer && npm run build-minimal",
+    "build-dynamic-content": "esbuild src/examples/dynamic-content.ts --bundle --outfile=bin/dynamic-content.js --sourcemap",
+    "build-page": "npm run build-symbol-explorer && npm run build-minimal && npm run build-dynamic-content",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "live-server bin"
   },

@@ -64,9 +64,28 @@ export class Layer extends Drawable{
     }
 
 
+    public draw(frame:Float, callback?:(item:Drawable, frame:Float, ...args:any)=>void):void{
+        var keyframe = this.keyframeAt(frame)
+        if(keyframe!=null){
+            this.library.context.draw(keyframe, frame, callback);
+        }
+    }
+
+
+    public visit(frame:Float, callback:(item:Drawable, frame:Float, ...args:any)=>void):void{
+        callback(this, frame);
+        var keyframe = this.keyframeAt(frame)
+        if(keyframe!=null){
+            keyframe.visit(frame, callback)
+        }
+    }
+
+
+    /*
     public visit(frame:Float, callback:(item:Drawable, frame:Float, ...args:any)=>void):void{
         var keyframe = this.keyframeAt(frame)
         if(keyframe!=null) callback(keyframe, frame);
     }
+    */
 
 }
