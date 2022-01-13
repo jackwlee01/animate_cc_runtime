@@ -76,8 +76,8 @@ function drawWithLogic(item:Drawable, frame:number){
     if(item instanceof Clip){
         if(item.name == "game/Walker_Nose_Nose"){
             ctx.save();
-            ctx.rotate(noseRotation)
-            item.draw(frame, drawWithLogic)
+                ctx.rotate(noseRotation)
+                item.draw(frame, drawWithLogic)
             ctx.restore();
         }else{
             item.draw(frame, drawWithLogic)
