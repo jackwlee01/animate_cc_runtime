@@ -1,0 +1,298 @@
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" width="1280" height="720" frameRate="60" currentTimeline="1" xflVersion="22.02" creatorInfo="Adobe Animate" platform="Macintosh" versionInfo="Saved by Animate Macintosh 22.0 build 168" majorVersion="22" buildNumber="168" guidesSnapTo="false" rulerVisible="true" bitmapSnap="false" snapAlign="false" objectsSnapTo="false" viewAngle3D="100.925968316201" vanishingPoint3DX="640" vanishingPoint3DY="360" previewMode="full" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" filetypeGUID="DD0DDBBF-5BEF-45B2-9F24-A3048D2A676F" fileGUID="9F890D5CFE17B54EB52DB7547CE6E4E7">
+     <folders>
+          <DOMFolderItem name="Duplicate Items Folder" itemID="61121a8f-00000054"/>
+          <DOMFolderItem name="game" itemID="61dd04f1-00000436"/>
+          <DOMFolderItem name="placeholders" itemID="5b232880-00000141"/>
+          <DOMFolderItem name="stardude_assets" itemID="61dd0c81-0000101b"/>
+     </folders>
+     <symbols>
+          <Include href="__export__.xml" loadImmediate="false" itemID="6195a546-00000910" lastModified="1642039415"/>
+          <Include href="Duplicate Items Folder/Symbol 1 copy 3.xml" itemIcon="1" loadImmediate="false" itemID="61923cdf-00001b5e" lastModified="1636973462"/>
+          <Include href="Duplicate Items Folder/Symbol 2 copy 3.xml" itemIcon="1" loadImmediate="false" itemID="61923cdf-00001b5c" lastModified="1636973507"/>
+          <Include href="Duplicate Items Folder/Symbol 3 copy 3.xml" itemIcon="1" loadImmediate="false" itemID="61923cdf-00001b60" lastModified="1636973562"/>
+          <Include href="Duplicate Items Folder/Symbol 4 copy 4.xml" itemIcon="1" loadImmediate="false" itemID="61923cdf-00001b64" lastModified="1636973585"/>
+          <Include href="Duplicate Items Folder/Symbol 4 copy 5.xml" itemIcon="1" loadImmediate="false" itemID="61923cdf-00001b65" lastModified="1636973576"/>
+          <Include href="Duplicate Items Folder/Symbol 412 copy.xml" itemIcon="1" loadImmediate="false" itemID="61923cdf-00001b70" lastModified="1636973332"/>
+          <Include href="Duplicate Items Folder/Symbol 412 copy 2.xml" itemIcon="1" loadImmediate="false" itemID="61933659-000011e2" lastModified="1637037855"/>
+          <Include href="Duplicate Items Folder/Symbol 413 copy.xml" itemIcon="1" loadImmediate="false" itemID="61923cdf-00001b72" lastModified="1636945384"/>
+          <Include href="Duplicate Items Folder/Symbol 413 copy 2.xml" itemIcon="1" loadImmediate="false" itemID="61933660-000011e8" lastModified="1637037718"/>
+          <Include href="Duplicate Items Folder/Symbol 414 copy.xml" itemIcon="1" loadImmediate="false" itemID="61923cdf-00001b71" lastModified="1636945398"/>
+          <Include href="Duplicate Items Folder/Symbol 414 copy 3.xml" itemIcon="1" loadImmediate="false" itemID="619336b1-000014ba" lastModified="1637037779"/>
+          <Include href="Duplicate Items Folder/Symbol 415 copy.xml" itemIcon="1" loadImmediate="false" itemID="61923cdf-00001b73" lastModified="1636945286"/>
+          <Include href="Duplicate Items Folder/Symbol 420 copy.xml" itemIcon="1" loadImmediate="false" itemID="61923cdf-00001b74" lastModified="1636969042"/>
+          <Include href="Duplicate Items Folder/Symbol 438 copy 2.xml" itemIcon="1" loadImmediate="false" itemID="61923cdf-00001b5b" lastModified="1637560612"/>
+          <Include href="Duplicate Items Folder/Symbol 438 copy 3.xml" itemIcon="1" loadImmediate="false" itemID="61923cdf-00001b5f" lastModified="1637560632"/>
+          <Include href="Duplicate Items Folder/Symbol 439 copy.xml" itemIcon="1" loadImmediate="false" itemID="61923cdf-00001b62" lastModified="1636968456"/>
+          <Include href="Duplicate Items Folder/Symbol 440 copy.xml" itemIcon="1" loadImmediate="false" itemID="61923cdf-00001b68" lastModified="1637025578"/>
+          <Include href="Duplicate Items Folder/Symbol 441 copy.xml" itemIcon="1" loadImmediate="false" itemID="61923cdf-00001b66" lastModified="1636968878"/>
+          <Include href="Duplicate Items Folder/Symbol 442 copy.xml" itemIcon="1" loadImmediate="false" itemID="61923cdf-00001b6e" lastModified="1636969944"/>
+          <Include href="Duplicate Items Folder/Symbol 443 copy.xml" itemIcon="1" loadImmediate="false" itemID="61923cdf-00001b6d" lastModified="1636968993"/>
+          <Include href="Duplicate Items Folder/Symbol 447 copy.xml" itemIcon="1" loadImmediate="false" itemID="61923cdf-00001b6b" lastModified="1636969518"/>
+          <Include href="Duplicate Items Folder/Symbol 448 copy.xml" itemIcon="1" loadImmediate="false" itemID="61923cdf-00001b6c" lastModified="1636969366"/>
+          <Include href="Duplicate Items Folder/Symbol 449 copy.xml" itemIcon="1" loadImmediate="false" itemID="61923cdf-00001b67" lastModified="1636969543"/>
+          <Include href="Duplicate Items Folder/Symbol 450 copy.xml" itemIcon="1" loadImmediate="false" itemID="61923cdf-00001b63" lastModified="1637560639"/>
+          <Include href="Duplicate Items Folder/Symbol 452 copy.xml" itemIcon="1" loadImmediate="false" itemID="61923cdf-00001b61" lastModified="1636973552"/>
+          <Include href="Duplicate Items Folder/Symbol 453 copy.xml" itemIcon="1" loadImmediate="false" itemID="61923cdf-00001b5d" lastModified="1636973488"/>
+          <Include href="Duplicate Items Folder/Tween 7 copy.xml" itemIcon="1" loadImmediate="false" itemID="61923cdf-00001b6a" lastModified="1636969452"/>
+          <Include href="game/Hat_0.xml" loadImmediate="false" itemID="61df8763-00000568" lastModified="1642039193"/>
+          <Include href="game/Hat_1.xml" loadImmediate="false" itemID="61df877c-0000056c" lastModified="1642039310"/>
+          <Include href="game/Hat_3.xml" loadImmediate="false" itemID="61df8785-0000056e" lastModified="1642039195"/>
+          <Include href="game/Symbol 1.xml" loadImmediate="false" itemID="6195b262-00001ab5" lastModified="1637200482"/>
+          <Include href="game/Symbol 412 copy 4.xml" itemIcon="1" loadImmediate="false" itemID="61930b35-000002c1" lastModified="1637039647"/>
+          <Include href="game/Symbol 412 copy 6.xml" itemIcon="1" loadImmediate="false" itemID="6193249b-000004cf" lastModified="1641870515"/>
+          <Include href="game/Symbol 412 copy 7.xml" itemIcon="1" loadImmediate="false" itemID="61933e28-00001dc6" lastModified="1637040013"/>
+          <Include href="game/Symbol 413.xml" itemIcon="1" loadImmediate="false" itemID="6191c7b7-00000235" lastModified="1636945384"/>
+          <Include href="game/Symbol 413 copy.xml" itemIcon="1" loadImmediate="false" itemID="6191cc14-0000025c" lastModified="1636945314"/>
+          <Include href="game/Symbol 413 copy 4.xml" itemIcon="1" loadImmediate="false" itemID="619324d7-000004da" lastModified="1637033262"/>
+          <Include href="game/Symbol 413 copy 5.xml" itemIcon="1" loadImmediate="false" itemID="61933ecb-00001dca" lastModified="1637039896"/>
+          <Include href="game/Symbol 414.xml" itemIcon="1" loadImmediate="false" itemID="6191c7c7-0000023a" lastModified="1636945398"/>
+          <Include href="game/Symbol 414 copy.xml" itemIcon="1" loadImmediate="false" itemID="6191cc1b-0000045e" lastModified="1636945326"/>
+          <Include href="game/Symbol 414 copy 4.xml" itemIcon="1" loadImmediate="false" itemID="619324e7-000004e2" lastModified="1637033199"/>
+          <Include href="game/Symbol 414 copy 5.xml" itemIcon="1" loadImmediate="false" itemID="61933eda-00001dd2" lastModified="1637039959"/>
+          <Include href="game/Symbol 415.xml" itemIcon="1" loadImmediate="false" itemID="6191c7ec-00000242" lastModified="1636945286"/>
+          <Include href="game/Symbol 417.xml" itemIcon="1" loadImmediate="false" itemID="6191c872-00000254" lastModified="1637026836"/>
+          <Include href="game/Symbol 418.xml" itemIcon="1" loadImmediate="false" itemID="6191c8be-0000025c" lastModified="1637305033"/>
+          <Include href="game/Symbol 419.xml" itemIcon="1" loadImmediate="false" itemID="6191c8bf-00000261" lastModified="1637305041"/>
+          <Include href="game/Symbol 420.xml" itemIcon="1" loadImmediate="false" itemID="6191cad0-0000020c" lastModified="1636969042"/>
+          <Include href="game/Symbol 420 copy.xml" itemIcon="1" loadImmediate="false" itemID="6191cd1c-00000878" lastModified="1636945268"/>
+          <Include href="game/Symbol 420 copy 2.xml" itemIcon="1" loadImmediate="false" itemID="619324b1-000004d3" lastModified="1637033144"/>
+          <Include href="game/Symbol 424.xml" itemIcon="1" loadImmediate="false" itemID="6191cf5b-00000a99" lastModified="1637032420"/>
+          <Include href="game/Symbol 424 copy.xml" itemIcon="1" loadImmediate="false" itemID="619321d9-00000434" lastModified="1637032415"/>
+          <Include href="game/Symbol 425.xml" itemIcon="1" loadImmediate="false" itemID="6191cf6a-00000aa1" lastModified="1636946098"/>
+          <Include href="game/Symbol 426.xml" itemIcon="1" loadImmediate="false" itemID="6191cfef-00000aa6" lastModified="1637032368"/>
+          <Include href="game/Symbol 433.xml" itemIcon="1" loadImmediate="false" itemID="6191d69d-00000aee" lastModified="1637029783"/>
+          <Include href="game/Symbol 434.xml" itemIcon="1" loadImmediate="false" itemID="6191d69e-00000af3" lastModified="1637030172"/>
+          <Include href="game/Symbol 456.xml" itemIcon="1" loadImmediate="false" itemID="619306fe-00000276" lastModified="1637025785"/>
+          <Include href="game/Symbol 457.xml" itemIcon="1" loadImmediate="false" itemID="6193088d-0000027d" lastModified="1637025933"/>
+          <Include href="game/Symbol 458.xml" itemIcon="1" loadImmediate="false" itemID="61930891-00000282" lastModified="1637025937"/>
+          <Include href="game/Symbol 459.xml" itemIcon="1" loadImmediate="false" itemID="61930960-00000288" lastModified="1637026211"/>
+          <Include href="game/Symbol 461.xml" itemIcon="1" loadImmediate="false" itemID="619309a1-00000296" lastModified="1637026209"/>
+          <Include href="game/Symbol 463.xml" itemIcon="1" loadImmediate="false" itemID="61930a3f-000002a0" lastModified="1637305057"/>
+          <Include href="game/Symbol 464.xml" itemIcon="1" loadImmediate="false" itemID="61930a41-000002a5" lastModified="1637026370"/>
+          <Include href="game/Symbol 465.xml" itemIcon="1" loadImmediate="false" itemID="61930a44-000002aa" lastModified="1637026456"/>
+          <Include href="game/Symbol 467.xml" itemIcon="1" loadImmediate="false" itemID="61930d7b-000002d2" lastModified="1637027195"/>
+          <Include href="game/Symbol 468.xml" itemIcon="1" loadImmediate="false" itemID="61930e48-000002d7" lastModified="1637030545"/>
+          <Include href="game/Symbol 469.xml" itemIcon="1" loadImmediate="false" itemID="619310a6-0000034a" lastModified="1637028860"/>
+          <Include href="game/Symbol 469 copy.xml" itemIcon="1" loadImmediate="false" itemID="619313f7-00000380" lastModified="1637028865"/>
+          <Include href="game/Symbol 470.xml" itemIcon="1" loadImmediate="false" itemID="619310ab-0000034f" lastModified="1637028011"/>
+          <Include href="game/Symbol 471.xml" itemIcon="1" loadImmediate="false" itemID="6193111c-0000035a" lastModified="1637028124"/>
+          <Include href="game/Symbol 472.xml" itemIcon="1" loadImmediate="false" itemID="61931193-00000374" lastModified="1637028243"/>
+          <Include href="game/Symbol 473 copy.xml" itemIcon="1" loadImmediate="false" itemID="619317d1-000003ee" lastModified="1637030352"/>
+          <Include href="game/Symbol 473 copy 3.xml" itemIcon="1" loadImmediate="false" itemID="619317ef-000003f6" lastModified="1637029876"/>
+          <Include href="game/Symbol 474.xml" itemIcon="1" loadImmediate="false" itemID="61931412-00000382" lastModified="1637028882"/>
+          <Include href="game/Symbol 479.xml" itemIcon="1" loadImmediate="false" itemID="61931439-0000039e" lastModified="1637028921"/>
+          <Include href="game/Symbol 480.xml" itemIcon="1" loadImmediate="false" itemID="6193144e-000003a3" lastModified="1637028942"/>
+          <Include href="game/Symbol 481.xml" itemIcon="1" loadImmediate="false" itemID="6193169e-000003dc" lastModified="1637030130"/>
+          <Include href="game/Symbol 482.xml" itemIcon="1" loadImmediate="false" itemID="6193169f-000003e1" lastModified="1637030147"/>
+          <Include href="game/Symbol 483.xml" itemIcon="1" loadImmediate="false" itemID="619319ba-000003fc" lastModified="1637030330"/>
+          <Include href="game/Symbol 484.xml" itemIcon="1" loadImmediate="false" itemID="619319d0-00000401" lastModified="1637030352"/>
+          <Include href="game/Symbol 486.xml" itemIcon="1" loadImmediate="false" itemID="61932055-0000040b" lastModified="1637032472"/>
+          <Include href="game/Symbol 488.xml" itemIcon="1" loadImmediate="false" itemID="6193214e-0000041e" lastModified="1637033719"/>
+          <Include href="game/Symbol 489.xml" itemIcon="1" loadImmediate="false" itemID="61932150-00000423" lastModified="1637032285"/>
+          <Include href="game/Symbol 490.xml" itemIcon="1" loadImmediate="false" itemID="61932152-00000428" lastModified="1637032290"/>
+          <Include href="game/Symbol 491.xml" itemIcon="1" loadImmediate="false" itemID="61932268-00000436" lastModified="1637200377"/>
+          <Include href="game/Symbol 492.xml" itemIcon="1" loadImmediate="false" itemID="61932314-0000043b" lastModified="1637032724"/>
+          <Include href="game/Symbol 493.xml" itemIcon="1" loadImmediate="false" itemID="61932315-00000440" lastModified="1637032726"/>
+          <Include href="game/Symbol 494.xml" itemIcon="1" loadImmediate="false" itemID="61932319-00000445" lastModified="1637032729"/>
+          <Include href="game/Symbol 495.xml" itemIcon="1" loadImmediate="false" itemID="6193231b-0000044a" lastModified="1637032731"/>
+          <Include href="game/Symbol 496.xml" itemIcon="1" loadImmediate="false" itemID="6193231e-0000044f" lastModified="1637032735"/>
+          <Include href="game/Symbol 497.xml" itemIcon="1" loadImmediate="false" itemID="6193232b-00000454" lastModified="1637032747"/>
+          <Include href="game/Symbol 498.xml" itemIcon="1" loadImmediate="false" itemID="619323a4-00000464" lastModified="1637032868"/>
+          <Include href="game/Symbol 499.xml" itemIcon="1" loadImmediate="false" itemID="619323a6-00000469" lastModified="1637032870"/>
+          <Include href="game/Symbol 500.xml" itemIcon="1" loadImmediate="false" itemID="619323aa-0000046e" lastModified="1637032874"/>
+          <Include href="game/Symbol 501.xml" itemIcon="1" loadImmediate="false" itemID="619323ac-00000473" lastModified="1637032876"/>
+          <Include href="game/Symbol 502.xml" itemIcon="1" loadImmediate="false" itemID="619323b0-00000478" lastModified="1637032880"/>
+          <Include href="game/Symbol 503.xml" itemIcon="1" loadImmediate="false" itemID="619323b2-0000047d" lastModified="1637032882"/>
+          <Include href="game/Symbol 504.xml" itemIcon="1" loadImmediate="false" itemID="61932698-00000fa6" lastModified="1642039616"/>
+          <Include href="game/Symbol 505.xml" itemIcon="1" loadImmediate="false" itemID="6193269a-00000fac" lastModified="1642039609"/>
+          <Include href="game/Symbol 506.xml" itemIcon="1" loadImmediate="false" itemID="619326a2-00000fb2" lastModified="1641869774"/>
+          <Include href="game/Symbol 508.xml" itemIcon="1" loadImmediate="false" itemID="6193277e-00000ff8" lastModified="1637033854"/>
+          <Include href="game/Symbol 509.xml" itemIcon="1" loadImmediate="false" itemID="61932937-00001062" lastModified="1637034295"/>
+          <Include href="game/Symbol 510.xml" itemIcon="1" loadImmediate="false" itemID="61932938-00001067" lastModified="1637034296"/>
+          <Include href="game/Symbol 511.xml" itemIcon="1" loadImmediate="false" itemID="61932954-00001070" lastModified="1637034324"/>
+          <Include href="game/Symbol 512.xml" itemIcon="1" loadImmediate="false" itemID="61932f34-0000109f" lastModified="1637040174"/>
+          <Include href="game/Symbol 514.xml" itemIcon="1" loadImmediate="false" itemID="61932f54-000010ae" lastModified="1637035879"/>
+          <Include href="game/Symbol 515.xml" itemIcon="1" loadImmediate="false" itemID="61932f7c-000010b6" lastModified="1637558857"/>
+          <Include href="game/Symbol 517.xml" itemIcon="1" loadImmediate="false" itemID="61932fb9-000010c8" lastModified="1637035961"/>
+          <Include href="game/Symbol 518.xml" itemIcon="1" loadImmediate="false" itemID="61932fcf-000010d0" lastModified="1637035983"/>
+          <Include href="game/Symbol 519.xml" itemIcon="1" loadImmediate="false" itemID="61932fda-000010d8" lastModified="1637035994"/>
+          <Include href="game/Symbol 520.xml" itemIcon="1" loadImmediate="false" itemID="61932fe5-000010dd" lastModified="1637040148"/>
+          <Include href="game/Symbol 522.xml" itemIcon="1" loadImmediate="false" itemID="6193310a-00001133" lastModified="1637036563"/>
+          <Include href="game/Symbol 523.xml" itemIcon="1" loadImmediate="false" itemID="6193310a-00001138" lastModified="1637036568"/>
+          <Include href="game/Symbol 524.xml" itemIcon="1" loadImmediate="false" itemID="619332f6-0000114c" lastModified="1637036790"/>
+          <Include href="game/Symbol 525.xml" itemIcon="1" loadImmediate="false" itemID="6193334f-00001151" lastModified="1637036982"/>
+          <Include href="game/Symbol 526.xml" itemIcon="1" loadImmediate="false" itemID="619335cb-000011c0" lastModified="1637037515"/>
+          <Include href="game/Symbol 527.xml" itemIcon="1" loadImmediate="false" itemID="619335cc-000011c5" lastModified="1637037517"/>
+          <Include href="game/Symbol 528.xml" itemIcon="1" loadImmediate="false" itemID="619335ce-000011ca" lastModified="1637037518"/>
+          <Include href="game/Symbol 530.xml" itemIcon="1" loadImmediate="false" itemID="6193388f-00001d12" lastModified="1637038223"/>
+          <Include href="game/Symbol 531.xml" itemIcon="1" loadImmediate="false" itemID="61933920-00001d17" lastModified="1637038433"/>
+          <Include href="game/Symbol 532.xml" itemIcon="1" loadImmediate="false" itemID="61933930-00001d1c" lastModified="1637038387"/>
+          <Include href="game/Symbol 533.xml" itemIcon="1" loadImmediate="false" itemID="6193395f-00001d27" lastModified="1637038431"/>
+          <Include href="game/Symbol 534.xml" itemIcon="1" loadImmediate="false" itemID="6193397b-00001d2c" lastModified="1642039590"/>
+          <Include href="game/Symbol 534 copy.xml" itemIcon="1" loadImmediate="false" itemID="619339ac-00001d45" lastModified="1642039598"/>
+          <Include href="game/Symbol 535.xml" itemIcon="1" loadImmediate="false" itemID="6193398c-00001d3e" lastModified="1637038476"/>
+          <Include href="game/Symbol 537.xml" itemIcon="1" loadImmediate="false" itemID="61933bd1-00001d4c" lastModified="1637039057"/>
+          <Include href="game/Symbol 538.xml" itemIcon="1" loadImmediate="false" itemID="61933bd2-00001d51" lastModified="1637039058"/>
+          <Include href="game/Symbol 539.xml" itemIcon="1" loadImmediate="false" itemID="61933bd3-00001d56" lastModified="1637039059"/>
+          <Include href="game/Symbol 540.xml" itemIcon="1" loadImmediate="false" itemID="61933c18-00001d5b" lastModified="1637039144"/>
+          <Include href="game/Symbol 541.xml" itemIcon="1" loadImmediate="false" itemID="61933c19-00001d60" lastModified="1637039129"/>
+          <Include href="game/Symbol 542.xml" itemIcon="1" loadImmediate="false" itemID="61933c8c-00001d6b" lastModified="1637039244"/>
+          <Include href="game/Symbol 543.xml" itemIcon="1" loadImmediate="false" itemID="61933cfb-00001d7b" lastModified="1637039355"/>
+          <Include href="game/Symbol 544.xml" itemIcon="1" loadImmediate="false" itemID="61933d00-00001d7f" lastModified="1637039360"/>
+          <Include href="game/Symbol 545.xml" itemIcon="1" loadImmediate="false" itemID="61933d06-00001d83" lastModified="1637039366"/>
+          <Include href="game/Symbol 546.xml" itemIcon="1" loadImmediate="false" itemID="61933d0a-00001d87" lastModified="1637039370"/>
+          <Include href="game/Symbol 547.xml" itemIcon="1" loadImmediate="false" itemID="61933d0e-00001d8b" lastModified="1637039374"/>
+          <Include href="game/Symbol 548.xml" itemIcon="1" loadImmediate="false" itemID="61933d13-00001d8f" lastModified="1637040106"/>
+          <Include href="game/Symbol 549.xml" itemIcon="1" loadImmediate="false" itemID="61933d1a-00001d93" lastModified="1637039386"/>
+          <Include href="game/Symbol 550.xml" itemIcon="1" loadImmediate="false" itemID="61933d29-00001d97" lastModified="1637039401"/>
+          <Include href="game/Symbol 3234.xml" loadImmediate="false" itemID="619b3b13-0000340c" lastModified="1637563155"/>
+          <Include href="game/Walker_Laser_Head.xml" itemIcon="1" loadImmediate="false" itemID="6195cdae-00002b28" lastModified="1642039383"/>
+          <Include href="game/Walker_Laser_idle.xml" loadImmediate="false" itemID="61dcf35f-00000d0a" lastModified="1641870608"/>
+          <Include href="game/Walker_Mine_Antenna.xml" itemIcon="1" loadImmediate="false" itemID="619b3b19-00003410" lastModified="1637563161"/>
+          <Include href="game/Walker_Mine_Head.xml" itemIcon="1" loadImmediate="false" itemID="619b3186-00001984" lastModified="1637562752"/>
+          <Include href="game/Walker_Minigun_Head.xml" itemIcon="1" loadImmediate="false" itemID="619b2537-0000027b" lastModified="1637558071"/>
+          <Include href="game/Walker_Missile_Head.xml" itemIcon="1" loadImmediate="false" itemID="619747f7-00000bc2" lastModified="1637304955"/>
+          <Include href="game/Walker_Nose_Head.xml" itemIcon="1" loadImmediate="false" itemID="61973aad-00000a76" lastModified="1642039406"/>
+          <Include href="game/Walker_Nose_Nose.xml" itemIcon="1" loadImmediate="false" itemID="61973ec9-00001ae2" lastModified="1641876239"/>
+          <Include href="game/Walker_Nose_Siren.xml" itemIcon="1" loadImmediate="false" itemID="61973de1-00001794" lastModified="1642038933"/>
+          <Include href="Hat_2.xml" loadImmediate="false" itemID="61df8780-0000056d" lastModified="1642039336"/>
+          <Include href="placeholders/win.xml" itemID="561338b4-00000144" lastModified="1641874656"/>
+          <Include href="placeholders/win_background.xml" itemID="56133bde-0000015a" lastModified="1529030890"/>
+          <Include href="SkullGuy.xml" loadImmediate="false" itemID="619b4a90-000000a1" lastModified="1641870734"/>
+          <Include href="StarDude.xml" loadImmediate="false" itemID="61dd0c1a-00000ff6" lastModified="1641876690"/>
+          <Include href="stardude_assets/StarGuyGun.xml" loadImmediate="false" itemID="61888525-00000979" lastModified="1641876549"/>
+          <Include href="stardude_assets/Symbol 1.xml" loadImmediate="false" itemID="61887d41-00001201" lastModified="1636335919"/>
+          <Include href="stardude_assets/Symbol 154.xml" loadImmediate="false" itemID="6179339e-0000039d" lastModified="1636335919"/>
+          <Include href="stardude_assets/Symbol 195.xml" loadImmediate="false" itemID="617a38f7-0000032d" lastModified="1636519817"/>
+          <Include href="stardude_assets/Symbol 195 copy.xml" loadImmediate="false" itemID="617bc284-0000087f" lastModified="1636335919"/>
+          <Include href="stardude_assets/Symbol 196 copy.xml" loadImmediate="false" itemID="617bc287-00000883" lastModified="1636335919"/>
+          <Include href="stardude_assets/Symbol 197.xml" loadImmediate="false" itemID="617a3969-00000335" lastModified="1636348680"/>
+          <Include href="stardude_assets/Symbol 198.xml" loadImmediate="false" itemID="617a3974-00000339" lastModified="1636348808"/>
+          <Include href="stardude_assets/Symbol 199.xml" loadImmediate="false" itemID="617a3996-0000033f" lastModified="1636348671"/>
+          <Include href="stardude_assets/Symbol 200.xml" loadImmediate="false" itemID="617a39c0-00000343" lastModified="1636348119"/>
+          <Include href="stardude_assets/Symbol 245 copy 13.xml" loadImmediate="false" itemID="617bc363-00000a07" lastModified="1636335919"/>
+          <Include href="stardude_assets/Symbol 245 copy 14.xml" loadImmediate="false" itemID="617bc589-00000a2f" lastModified="1636335919"/>
+          <Include href="stardude_assets/Symbol 245 copy 15.xml" loadImmediate="false" itemID="617bc59a-00000a40" lastModified="1636335919"/>
+          <Include href="stardude_assets/Symbol 245 copy 16.xml" loadImmediate="false" itemID="617bc5a8-00000a4b" lastModified="1641876539"/>
+          <Include href="stardude_assets/Symbol 245 copy 17.xml" loadImmediate="false" itemID="617bd748-00001554" lastModified="1636335919"/>
+          <Include href="stardude_assets/Symbol 245 copy 18.xml" loadImmediate="false" itemID="617bd754-00001559" lastModified="1636335919"/>
+          <Include href="stardude_assets/Symbol 246.xml" loadImmediate="false" itemID="617bc030-0000072a" lastModified="1636335919"/>
+          <Include href="stardude_assets/Symbol 248.xml" loadImmediate="false" itemID="617bc594-00000a35" lastModified="1636335919"/>
+          <Include href="stardude_assets/Symbol 249.xml" loadImmediate="false" itemID="617bc69a-00001422" lastModified="1636335919"/>
+          <Include href="stardude_assets/Symbol 250.xml" loadImmediate="false" itemID="617bc69b-00001428" lastModified="1636335919"/>
+          <Include href="stardude_assets/Symbol 251.xml" loadImmediate="false" itemID="617bc69b-0000142d" lastModified="1641876751"/>
+          <Include href="stardude_assets/Symbol 252.xml" loadImmediate="false" itemID="617bc69c-00001432" lastModified="1636335919"/>
+          <Include href="stardude_assets/Symbol 255.xml" loadImmediate="false" itemID="617bc6fb-00001441" lastModified="1641876741"/>
+          <Include href="stardude_assets/Symbol 256 copy.xml" loadImmediate="false" itemID="617bc9ae-000014f9" lastModified="1641878390"/>
+          <Include href="stardude_assets/Symbol 256 copy 3.xml" loadImmediate="false" itemID="617bc9e0-0000150b" lastModified="1636336308"/>
+          <Include href="stardude_assets/Symbol 257.xml" loadImmediate="false" itemID="617bd583-00001522" lastModified="1636335919"/>
+          <Include href="stardude_assets/Symbol 258.xml" loadImmediate="false" itemID="617bd585-00001527" lastModified="1636335919"/>
+          <Include href="stardude_assets/Symbol 259.xml" loadImmediate="false" itemID="617bd585-0000152c" lastModified="1636335919"/>
+          <Include href="stardude_assets/Symbol 260.xml" loadImmediate="false" itemID="617bd932-000017fe" lastModified="1636335919"/>
+          <Include href="stardude_assets/Tween 4.xml" loadImmediate="false" itemID="617bcb32-0000150d" lastModified="1636336187"/>
+          <Include href="stardude_assets/Tween 5.xml" loadImmediate="false" itemID="617bcb32-00001511" lastModified="1636336187"/>
+          <Include href="Walker_Laser.xml" loadImmediate="false" itemID="6195a6f3-00000a53" lastModified="1642039376"/>
+          <Include href="Walker_Mine.xml" loadImmediate="false" itemID="6195a93d-000010e3" lastModified="1637565475"/>
+          <Include href="Walker_Minigun.xml" loadImmediate="false" itemID="6195a74c-00000a57" lastModified="1637640281"/>
+          <Include href="Walker_Missile.xml" loadImmediate="false" itemID="6195a72c-00000a56" lastModified="1637639960"/>
+          <Include href="Walker_Nose.xml" loadImmediate="false" itemID="6195a70a-00000a55" lastModified="1641874631"/>
+          <Include href="win.xml" itemID="61dd06c0-0000053c" lastModified="1641879311"/>
+     </symbols>
+     <timelines>
+          <DOMTimeline name="Scene 1" layerDepthEnabled="true">
+               <layers>
+                    <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" duration="278" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="__export__" selected="true">
+                                             <matrix>
+                                                  <Matrix tx="-0.5" ty="-2.4"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="281.5" y="225.45"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timelines>
+     <scripts/>
+     <PrinterSettings/>
+     <publishHistory/>
+     <SaveCustomEase name="My Ease 13">
+          <Point/>
+          <Point x="0.6"/>
+          <Point x="0.4248" y="1"/>
+          <Point x="1" y="1"/>
+     </SaveCustomEase>
+     <SaveCustomEase name="My Ease 58">
+          <Point/>
+          <Point x="0.4048"/>
+          <Point x="0.6667" y="1"/>
+          <Point x="1" y="1"/>
+     </SaveCustomEase>
+     <SaveCustomEase name="My Ease 59">
+          <Point/>
+          <Point x="0.4167"/>
+          <Point x="0.625" y="1"/>
+          <Point x="1" y="1"/>
+     </SaveCustomEase>
+     <SaveCustomEase name="My Ease 68">
+          <Point/>
+          <Point x="0.1098" y="0.637"/>
+          <Point x="0.313" y="1"/>
+          <Point x="1" y="1"/>
+     </SaveCustomEase>
+     <SaveCustomEase name="My Ease 69">
+          <Point/>
+          <Point x="0.4695"/>
+          <Point x="0.8191" y="0.2705"/>
+          <Point x="1" y="1"/>
+     </SaveCustomEase>
+     <SaveCustomEase name="My Ease 70">
+          <Point/>
+          <Point x="0.2337" y="0.7"/>
+          <Point x="0.5417" y="1"/>
+          <Point x="1" y="1"/>
+     </SaveCustomEase>
+     <SaveCustomEase name="My Ease 71">
+          <Point/>
+          <Point x="0.4248"/>
+          <Point x="0.5772" y="1"/>
+          <Point x="1" y="1"/>
+     </SaveCustomEase>
+     <SaveCustomEase name="My Ease 72">
+          <Point/>
+          <Point x="0.4512"/>
+          <Point x="0.5417" y="1"/>
+          <Point x="1" y="1"/>
+     </SaveCustomEase>
+     <SaveCustomEase name="My Ease 73">
+          <Point/>
+          <Point x="0.1443" y="0.6"/>
+          <Point x="0.2764" y="1"/>
+          <Point x="1" y="1"/>
+     </SaveCustomEase>
+     <SaveCustomEase name="My Ease 74">
+          <Point/>
+          <Point x="0.4167"/>
+          <Point x="0.5976" y="1"/>
+          <Point x="1" y="1"/>
+     </SaveCustomEase>
+     <SaveCustomEase name="My Ease 75">
+          <Point/>
+          <Point x="0.1667" y="0.6473"/>
+          <Point x="0.3069" y="1"/>
+          <Point x="1" y="1"/>
+     </SaveCustomEase>
+     <SaveCustomEase name="My Ease 76">
+          <Point/>
+          <Point x="0.4654"/>
+          <Point x="0.5833" y="1"/>
+          <Point x="1" y="1"/>
+     </SaveCustomEase>
+</DOMDocument>

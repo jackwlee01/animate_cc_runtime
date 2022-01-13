@@ -1,0 +1,87 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="__export__" itemID="6195a546-00000910" lastModified="1642039415">
+  <timeline>
+    <DOMTimeline name="__export__" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="SkullGuy">
+                  <matrix>
+                    <Matrix a="1.2171630859375" d="1.2171630859375" tx="404.4" ty="149.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.05" y="0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Walker_Nose">
+                  <matrix>
+                    <Matrix tx="110.35" ty="344.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Walker_Laser" selected="true">
+                  <matrix>
+                    <Matrix tx="120.2" ty="181.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="StarDude">
+                  <matrix>
+                    <Matrix tx="210.45" ty="587.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-13.45" y="-1.9"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="game/Hat_0">
+                  <matrix>
+                    <Matrix tx="684.75" ty="245.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-9.55" y="1.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="game/Hat_1">
+                  <matrix>
+                    <Matrix tx="616.8" ty="298.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-1.55" y="-30.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Hat_2">
+                  <matrix>
+                    <Matrix tx="751.75" ty="299.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.85" y="-19.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="game/Hat_3">
+                  <matrix>
+                    <Matrix tx="679.75" ty="364.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.15" y="-25.65"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_2" color="#9933CC">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

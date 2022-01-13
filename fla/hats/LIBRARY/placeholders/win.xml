@@ -1,0 +1,376 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="placeholders/win" itemID="561338b4-00000144" linkageExportForAS="true" linkageClassName="Win" lastModified="1641874656" lastUniqueIdentifier="4">
+  <timeline>
+    <DOMTimeline name="win" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="sounds" color="#9933CC" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="10" name="BIG_Music_PositiveOutcome" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="10" duration="20" name="BIG_LilMonster_Jump" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="30" duration="20" name="BIG_LilMonster_Jump" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="50" duration="20" name="BIG_LilMonster_Jump" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="70" duration="20" name="BIG_LilMonster_Jump" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="90" duration="31" name="BIG_LilMonster_Jump" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="121" duration="35" name="complete" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="hapless_body" color="#9933CC" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="5" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="10" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="15" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="20" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="25" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="30" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="35" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="40" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="45" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="50" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="55" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="60" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="65" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="70" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="75" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="80" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="85" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="90" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="95" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="100" duration="56" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="hapless_legs" color="#FF800A" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="10" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="10" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="15" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="20" duration="10" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="30" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="35" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="40" duration="10" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="50" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="55" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="60" duration="10" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="70" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="75" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="80" duration="10" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="90" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="95" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="100" duration="56" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="hapless_shadow" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="5" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="10" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="15" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="20" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="25" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="30" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="35" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="40" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="45" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="50" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="55" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="60" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="65" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="70" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="75" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="80" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="85" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="90" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="95" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="100" duration="56" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="background" color="#FF4FFF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="156" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

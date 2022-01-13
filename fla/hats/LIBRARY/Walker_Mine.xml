@@ -1,0 +1,196 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Walker_Mine" itemID="6195a93d-000010e3" lastModified="1637565475" lastUniqueIdentifier="4">
+  <timeline>
+    <DOMTimeline name="Walker_Mine" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_11" color="#FF800A">
+          <frames>
+            <DOMFrame index="0" duration="50" name="idle" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="50" duration="30" name="walk" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="80" duration="4" name="attack" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_2" color="#9933CC" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" duration="84" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_10" color="#9933CC">
+          <frames>
+            <DOMFrame index="0" duration="24" tweenType="motion" motionTweenSnap="true" hasCustomEase="true" keyMode="22017">
+              <tweens>
+                <CustomEase target="all" name="My Ease 59">
+                  <Point/>
+                  <Point x="0.4167"/>
+                  <Point x="0.625" y="1"/>
+                  <Point x="1" y="1"/>
+                </CustomEase>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="game/Walker_Mine_Head" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="0.25" ty="-32.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.1" y="22.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="24" duration="25" tweenType="motion" motionTweenSnap="true" hasCustomEase="true" keyMode="22017">
+              <tweens>
+                <CustomEase target="all" name="My Ease 59">
+                  <Point/>
+                  <Point x="0.4167"/>
+                  <Point x="0.625" y="1"/>
+                  <Point x="1" y="1"/>
+                </CustomEase>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="game/Walker_Mine_Head" selected="true" symbolType="graphic" firstFrame="24" centerPoint3DX="-0.15" centerPoint3DY="-34" loop="loop">
+                  <matrix>
+                    <Matrix tx="0.25" ty="-26.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.1" y="22.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="49" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="game/Walker_Mine_Head" selected="true" symbolType="graphic" firstFrame="49" centerPoint3DX="-0.15" centerPoint3DY="-40" loop="loop">
+                  <matrix>
+                    <Matrix tx="0.25" ty="-32.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.1" y="22.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="50" duration="14" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="game/Walker_Mine_Head" selected="true" symbolType="graphic" firstFrame="50" centerPoint3DX="-0.15" centerPoint3DY="-40" loop="loop">
+                  <matrix>
+                    <Matrix tx="0.25" ty="-32.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.1" y="22.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="64" duration="15" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="game/Walker_Mine_Head" selected="true" symbolType="graphic" firstFrame="64" centerPoint3DX="-0.15" centerPoint3DY="-33.15" loop="loop">
+                  <matrix>
+                    <Matrix tx="0.25" ty="-25.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.1" y="22.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="79" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="game/Walker_Mine_Head" selected="true" symbolType="graphic" firstFrame="79" centerPoint3DX="-0.15" centerPoint3DY="-40" loop="loop">
+                  <matrix>
+                    <Matrix tx="0.25" ty="-32.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.1" y="22.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="80" duration="2" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-100">
+              <tweens>
+                <Ease target="all" intensity="-100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="game/Walker_Mine_Head" selected="true" symbolType="graphic" firstFrame="80" centerPoint3DX="-0.15" centerPoint3DY="-34.15" loop="loop">
+                  <matrix>
+                    <Matrix tx="0.25" ty="-26.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.1" y="22.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="82" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
+              <tweens>
+                <Ease target="all" intensity="100"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="game/Walker_Mine_Head" selected="true" symbolType="graphic" firstFrame="82" centerPoint3DX="-0.15" centerPoint3DY="-29.1" loop="loop">
+                  <matrix>
+                    <Matrix tx="0.25" ty="-21.85"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.1" y="22.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="83" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="game/Walker_Mine_Head" selected="true" symbolType="graphic" firstFrame="84" centerPoint3DX="-0.15" centerPoint3DY="-40.95" loop="loop">
+                  <matrix>
+                    <Matrix a="0.722640991210938" d="1.39097595214844" tx="0.3" ty="-43.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.05" y="21.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_1" color="#00FFFF">
+          <frames>
+            <DOMFrame index="0" duration="80" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Symbol 412 copy" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-0.75" ty="-12.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="17.15" y="17.65"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="80" duration="4" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Duplicate Items Folder/Symbol 412 copy" symbolType="graphic" firstFrame="80" centerPoint3DX="-1.2" centerPoint3DY="-2.4" loop="loop">
+                  <matrix>
+                    <Matrix tx="-0.75" ty="-12.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="17.15" y="17.65"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
