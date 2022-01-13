@@ -121,11 +121,8 @@ function update(){
         ctx.fillText('+ and -: Change play speed', 20, 250);
         ctx.fillText('r: Reverse play speed', 20, 300);
         
-
         ctx.translate(canvas.width/2, canvas.height/2)
         ctx.scale(dpr, dpr)
-
-        
 
         ctx.save();
             ctx.translate(-200, 0)
