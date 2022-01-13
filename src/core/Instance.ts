@@ -8,23 +8,23 @@ import { DrawableProps } from './Drawable'
 export type InstanceProps = Omit<DrawableProps, 'id' | 'library'> & {
     itemName:string,
     matrix2d:Matrix2d,
-    position:Vec3,
-    scale:Vec3,
-    rotation:Vec3,
     frame:Frame,
+    //position:Vec3,
+    //scale:Vec3,
+    //rotation:Vec3,
 }
 
 
 export class Instance extends Drawable{
 
     matrix2d:Matrix2d;
-    position:Vec3;
-    scale:Vec3;
-    rotation:Vec3;
     frame:Frame;
-    //filters = new Array<Filter>();
     index:number;
     itemName:string;
+    //position:Vec3;
+    //scale:Vec3;
+    //rotation:Vec3;
+    //filters = new Array<Filter>();
 
     
     constructor(props:InstanceProps){
@@ -36,9 +36,9 @@ export class Instance extends Drawable{
 
         this.itemName = props.itemName;
         this.matrix2d = props.matrix2d;
-        this.position = props.position;
-        this.scale = props.scale;
-        this.rotation = props.rotation;
+        //this.position = props.position;
+        //this.scale = props.scale;
+        //this.rotation = props.rotation;
         this.frame = props.frame;
         this.index = this.frame.instances.length;
     }

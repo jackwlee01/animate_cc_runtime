@@ -110,10 +110,10 @@ export class Library{
                             const instanceProps:_InstanceProps  = {
                                 frame,
                                 matrix2d: new Matrix2d(m.m00, m.m01, m.m10, m.m11, m.m30, m.m31),
-                                position: new Vec3(elemData.decomposedMatrix.position),
-                                scale: new Vec3(elemData.decomposedMatrix.scaling),
-                                rotation: new Vec3(elemData.decomposedMatrix.rotation),
                                 itemName: elemData.symbolName,
+                                //position: new Vec3(elemData.decomposedMatrix.position),
+                                //scale: new Vec3(elemData.decomposedMatrix.scaling),
+                                //rotation: new Vec3(elemData.decomposedMatrix.rotation),
                             }
 
                             const clipInstance = frame.createClipInstance({
@@ -139,10 +139,10 @@ export class Library{
                             const instanceProps:_InstanceProps  = {
                                 frame,
                                 matrix2d: new Matrix2d(m.m00, m.m01, m.m10, m.m11, m.m30, m.m31),
-                                position: new Vec3(elemData.decomposedMatrix.position),
-                                scale: new Vec3(elemData.decomposedMatrix.scaling),
-                                rotation: new Vec3(elemData.decomposedMatrix.rotation),
                                 itemName: elemData.name,
+                                //position: new Vec3(elemData.decomposedMatrix.position),
+                                //scale: new Vec3(elemData.decomposedMatrix.scaling),
+                                //rotation: new Vec3(elemData.decomposedMatrix.rotation),
                             }
 
                             const spriteInstance = frame.createSpriteInstance({
