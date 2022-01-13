@@ -52,8 +52,8 @@ testLibrary.symbol("Walker_Laser").draw(frame)
 monsterLibrary.symbol("win").draw(frame)
 ```
 
-### For dynamically rendered content
-See examples
+## Dynamically rendered content
+See the [dynamic-content.ts example](./src/examples/dynamic-content.ts)
 
 ## Not yet supported
 - The 'rotate' export option
