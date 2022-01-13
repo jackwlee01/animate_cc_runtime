@@ -81,9 +81,6 @@
       }));
       this.itemName = props.itemName;
       this.matrix2d = props.matrix2d;
-      this.position = props.position;
-      this.scale = props.scale;
-      this.rotation = props.rotation;
       this.frame = props.frame;
       this.index = this.frame.instances.length;
     }
@@ -257,16 +254,6 @@
     }
   };
 
-  // src/core/geom/Vec3.ts
-  var Vec3 = class {
-    constructor(props) {
-      this.x = props.x;
-      this.y = props.y;
-      this.z = props.z;
-      this.data = new Float32Array([this.x, this.y, this.z]);
-    }
-  };
-
   // src/core/geom/Vec2.ts
   var Vec2 = class {
     constructor(props) {
@@ -328,6 +315,9 @@
 
   // src/core/json/utilJson.ts
   var keys = {
+    SPRITE: "sprite",
+    SPRITES: "sprites",
+    ATLAS: "atlas",
     ANIMATION: "animation",
     ATLAS_SPRITE_instance: "atlasSpriteInstance",
     DecomposedMatrix: "decomposedMatrix",
@@ -345,9 +335,33 @@
     SYMBOL_name: "symbolName",
     Symbols: "symbols",
     TIMELINE: "timeline",
-    SPRITE: "sprite",
-    SPRITES: "sprites",
-    ATLAS: "atlas"
+    AN: "animation",
+    AM: "alphaMultiplier",
+    ASI: "atlasSpriteInstance",
+    BM: "bitmap",
+    C: "color",
+    DU: "duration",
+    E: "elements",
+    FF: "firstFrame",
+    FR: "frames",
+    FRT: "frameRate",
+    I: "index",
+    IN: "instanceName",
+    L: "layers",
+    LN: "layerName",
+    LP: "loop",
+    M3D: "matrix3D",
+    MD: "metadata",
+    M: "mode",
+    N: "name",
+    POS: "position",
+    S: "symbols",
+    SD: "symbolDictionary",
+    SI: "symbolInstance",
+    SN: "symbolName",
+    ST: "symbolType",
+    TL: "timeline",
+    TRP: "transformationPoint"
   };
   function normaliseKey(key) {
     return keys[key] || key;
@@ -454,10 +468,7 @@
                   };
                   const instanceProps = {
                     frame: frame2,
-                    matrix2d: new Matrix2d(m.m00, m.m01, m.m10, m.m11, m.m30, m.m31),
-                    position: new Vec3(elemData.decomposedMatrix.position),
-                    scale: new Vec3(elemData.decomposedMatrix.scaling),
-                    rotation: new Vec3(elemData.decomposedMatrix.rotation),
+                    matrix2d: "m00" in m ? new Matrix2d(m.m00, m.m01, m.m10, m.m11, m.m30, m.m31) : new Matrix2d(m[0], m[1], m[4], m[5], m[12], m[13]),
                     itemName: elemData.symbolName
                   };
                   const clipInstance = frame2.createClipInstance(__spreadProps(__spreadValues(__spreadValues({}, drawableProps), instanceProps), {
@@ -473,10 +484,7 @@
                   };
                   const instanceProps = {
                     frame: frame2,
-                    matrix2d: new Matrix2d(m.m00, m.m01, m.m10, m.m11, m.m30, m.m31),
-                    position: new Vec3(elemData.decomposedMatrix.position),
-                    scale: new Vec3(elemData.decomposedMatrix.scaling),
-                    rotation: new Vec3(elemData.decomposedMatrix.rotation),
+                    matrix2d: "m00" in m ? new Matrix2d(m.m00, m.m01, m.m10, m.m11, m.m30, m.m31) : new Matrix2d(m[0], m[1], m[4], m[5], m[12], m[13]),
                     itemName: elemData.name
                   };
                   const spriteInstance = frame2.createSpriteInstance(__spreadValues(__spreadValues({}, drawableProps), instanceProps));
@@ -573,6 +581,7 @@
   function init() {
     return __async(this, null, function* () {
       yield hatsLibrary.loadData();
+      console.log(hatsLibrary);
       update();
     });
   }

@@ -2,7 +2,7 @@ type Float = number;
 type Int = number;
 
 
-export type Matrix3D = {
+export type Matrix3D = Float[] | {
     m00:Float;
     m01:Float;
     m02:Float;

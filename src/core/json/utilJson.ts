@@ -2,6 +2,13 @@ import { AnimationJson } from "./AnimationJson";
 
 const keys:Record<string, string> = {
     // fix inconsistent names
+
+    // spritemap.json
+    SPRITE: "sprite",
+    SPRITES: "sprites",
+    ATLAS: "atlas",
+
+    // Animation.json
     ANIMATION: "animation",
     ATLAS_SPRITE_instance: "atlasSpriteInstance",
     DecomposedMatrix: "decomposedMatrix",
@@ -19,42 +26,35 @@ const keys:Record<string, string> = {
     SYMBOL_name: "symbolName",
     Symbols: "symbols",
     TIMELINE: "timeline",
-
-    SPRITE: "sprite",
-    SPRITES: "sprites",
-    ATLAS: "atlas",
-
-    /* Not yet supported
-    // fix shortened names
-
-    AN: "animation",
-    AM: "alphaMultiplier",
-    ASI: "atlasSpriteInstance",
-    BM: "bitmap",
-    C: "color",
-    DU: "duration",
-    E: "elements",
-    FF: "firstFrame",
-    FR: "frames",
-    FRT: "frameRate",
-    I: "index",
-    IN: "instanceName",
-    L: "layers",
-    LN: "layerName",
-    LP: "loop",
-    M3D: "matrix3D",
-    MD: "metadata",
-    M: "mode",
-    N: "name",
-    POS: "position",
-    S: "symbols",
-    SD: "symbolDictionary",
-    SI: "symbolInstance",
-    SN: "symbolName",
-    ST: "symbolType",
-    TL: "timeline",
-    TRP: "transformationPoint"
-    */
+ 
+     // Animation.json optimised
+     AN: "animation",
+     AM: "alphaMultiplier",
+     ASI: "atlasSpriteInstance",
+     BM: "bitmap",
+     C: "color",
+     DU: "duration",
+     E: "elements",
+     FF: "firstFrame",
+     FR: "frames",
+     FRT: "frameRate",
+     I: "index",
+     IN: "instanceName",
+     L: "layers",
+     LN: "layerName",
+     LP: "loop",
+     M3D: "matrix3D",
+     MD: "metadata",
+     M: "mode",
+     N: "name",
+     POS: "position",
+     S: "symbols",
+     SD: "symbolDictionary",
+     SI: "symbolInstance",
+     SN: "symbolName",
+     ST: "symbolType",
+     TL: "timeline",
+     TRP: "transformationPoint",
 };
 
 

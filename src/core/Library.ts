@@ -109,7 +109,7 @@ export class Library{
 
                             const instanceProps:_InstanceProps  = {
                                 frame,
-                                matrix2d: new Matrix2d(m.m00, m.m01, m.m10, m.m11, m.m30, m.m31),
+                                matrix2d: 'm00' in m ? new Matrix2d(m.m00, m.m01, m.m10, m.m11, m.m30, m.m31) : new Matrix2d(m[0], m[1], m[4], m[5], m[12], m[13]),
                                 itemName: elemData.symbolName,
                                 //position: new Vec3(elemData.decomposedMatrix.position),
                                 //scale: new Vec3(elemData.decomposedMatrix.scaling),
@@ -138,7 +138,7 @@ export class Library{
 
                             const instanceProps:_InstanceProps  = {
                                 frame,
-                                matrix2d: new Matrix2d(m.m00, m.m01, m.m10, m.m11, m.m30, m.m31),
+                                matrix2d: 'm00' in m ? new Matrix2d(m.m00, m.m01, m.m10, m.m11, m.m30, m.m31) : new Matrix2d(m[0], m[1], m[4], m[5], m[12], m[13]),
                                 itemName: elemData.name,
                                 //position: new Vec3(elemData.decomposedMatrix.position),
                                 //scale: new Vec3(elemData.decomposedMatrix.scaling),
