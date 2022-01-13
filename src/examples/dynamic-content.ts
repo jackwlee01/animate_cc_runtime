@@ -87,27 +87,28 @@ async function init(){
     function update(){
         ctx.fillStyle = '#cccccc'
         ctx.fillRect(0, 0, canvas.width, canvas.height);
-        ctx.save();
-
-        ctx.fillStyle = '#333333'
-        ctx.font = '36px sans-serif';
-        ctx.fillText('Up/Down: Change hat', 20, 50);
-        ctx.fillText('Left/Right: Change eyes', 20, 100);
-        ctx.fillText('Spacebar: Toggle debug border', 20, 150);
         
-
-        ctx.translate(canvas.width/2, canvas.height/2)
-        ctx.scale(dpr, dpr)
-
         ctx.save();
-        ctx.translate(-100, 0)
-        hatsLibrary.symbol("Walker_Laser").draw(frame, drawWithLogic)
-        ctx.restore()
 
-        ctx.save()
-        ctx.translate(100, 0)
-        hatsLibrary.symbol("Walker_Nose").draw(frame, drawWithLogic)
-        ctx.restore()
+            ctx.fillStyle = '#333333'
+            ctx.font = '36px sans-serif';
+            ctx.fillText('Up/Down: Change hat', 20, 50);
+            ctx.fillText('Left/Right: Change eyes', 20, 100);
+            ctx.fillText('Spacebar: Toggle debug border', 20, 150);
+            
+
+            ctx.translate(canvas.width/2, canvas.height/2)
+            ctx.scale(dpr, dpr)
+
+            ctx.save();
+                ctx.translate(-100, 0)
+                hatsLibrary.symbol("Walker_Laser").draw(frame, drawWithLogic)
+            ctx.restore()
+
+            ctx.save()
+                ctx.translate(100, 0)
+                hatsLibrary.symbol("Walker_Nose").draw(frame, drawWithLogic)
+            ctx.restore()
         
         ctx.restore()
         

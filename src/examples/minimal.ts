@@ -20,12 +20,13 @@ async function init(){
     function update(){
         ctx.fillStyle = '#cccccc'
         ctx.fillRect(0, 0, canvas.width, canvas.height);
+
         ctx.save();
         
-        ctx.translate(canvas.width/2, canvas.height/2)
-        ctx.scale(dpr, dpr)
+            ctx.translate(canvas.width/2, canvas.height/2)
+            ctx.scale(dpr, dpr)
 
-        testLibrary.symbol("StarDude").draw(frame)
+            testLibrary.symbol("StarDude").draw(frame)
         
         ctx.restore()
         
