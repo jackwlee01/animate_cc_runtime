@@ -40,7 +40,7 @@ export class Sprite extends Drawable{
     }
 
 
-    public draw(frame:Float, callback?:(item:Drawable, frame:Float)=>void){
+    public draw(frame:Float, callback?:(item:Drawable, frame:Float, lerp?:boolean)=>void){
         // Override in base class
     }
 

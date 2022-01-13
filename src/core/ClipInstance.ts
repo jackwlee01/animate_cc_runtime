@@ -40,11 +40,11 @@ export class ClipInstance extends Instance{
     }
 
 
-    public draw(frame:Float, callback?:(item:Drawable, frame:Float)=>void):void{
+    public draw(frame:Float, callback?:(item:Drawable, frame:Float)=>void, lerp?:boolean):void{
         if(this.behaviour.type == 'graphic'){
             frame = this.behaviour.firstFrame;
         }
-        this.library.context.draw(this.item, frame, callback)
+        this.library.context.draw(this.item, frame, callback, lerp)
     }
 
 

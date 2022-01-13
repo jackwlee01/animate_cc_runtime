@@ -47,17 +47,15 @@ export class Clip extends Drawable{
     }
 
 
-    public draw(frame:Float, callback?:(item:Drawable, frame:Float)=>void){
+    public draw(frame:Float, callback?:(item:Drawable, frame:Float)=>void, lerp?:boolean){
         for(const layer of this.layers){
             if(layer.totalFrames==0) continue;
             var f = modWrap(frame, layer.totalFrames);
             if(layer.totalFrames>=f){
-                this.library.context.draw(layer, frame, callback);
+                this.library.context.draw(layer, frame, callback, lerp);
             }
         }
-
     }
-
 
 
     public visit(frame:Float, callback:(item:Drawable, frame:Float)=>void):void{

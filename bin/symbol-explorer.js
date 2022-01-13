@@ -105,7 +105,7 @@
     }
     visit(frame2, callback) {
     }
-    draw(frame2, callback) {
+    draw(frame2, callback, lerp) {
     }
   };
 
@@ -124,8 +124,8 @@
     get item() {
       throw "Override item getter in base class";
     }
-    draw(frame2, callback) {
-      this.library.context.draw(this.item, frame2, callback);
+    draw(frame2, callback, lerp) {
+      this.library.context.draw(this.item, frame2, callback, lerp);
     }
     visit(frame2, callback) {
       callback(this, frame2);
@@ -142,11 +142,11 @@
     get item() {
       return this.library.clipsByName[this.itemName];
     }
-    draw(frame2, callback) {
+    draw(frame2, callback, lerp) {
       if (this.behaviour.type == "graphic") {
         frame2 = this.behaviour.firstFrame;
       }
-      this.library.context.draw(this.item, frame2, callback);
+      this.library.context.draw(this.item, frame2, callback, lerp);
     }
     visit(frame2, callback) {
       if (this.behaviour.type == "graphic") {
@@ -188,9 +188,9 @@
       this.instances.push(spriteInstance);
       return spriteInstance;
     }
-    draw(frame2, callback) {
+    draw(frame2, callback, lerp) {
       for (const instance of this.instances) {
-        this.library.context.draw(instance, frame2, callback);
+        this.library.context.draw(instance, frame2, callback, lerp);
       }
     }
     visit(frame2, callback) {
@@ -222,7 +222,6 @@
     }
     createFrame(props) {
       const frame2 = new Frame(__spreadProps(__spreadValues({}, props), { layer: this }));
-      this.frames.push(frame2);
       this.framesByName[frame2.name] = frame2;
       if (frame2.index + frame2.totalFrames > this.totalFrames)
         this.totalFrames = frame2.index + frame2.totalFrames;
@@ -230,7 +229,22 @@
         this.labels.push(frame2);
       }
       this.clip.addFrame(frame2);
+      if (this.firstFrame) {
+        this.firstFrame.prev = frame2;
+        frame2.next = this.firstFrame;
+      }
+      if (this.lastFrame) {
+        this.lastFrame.next = frame2;
+        frame2.prev = this.lastFrame;
+      }
+      this.frames.push(frame2);
       return frame2;
+    }
+    get lastFrame() {
+      return this.frames[this.frames.length - 1];
+    }
+    get firstFrame() {
+      return this.frames[0];
     }
     keyframeAt(frame2) {
       frame2 = modWrap(frame2, this.totalFrames);
@@ -240,10 +254,10 @@
       }
       return null;
     }
-    draw(frame2, callback) {
+    draw(frame2, callback, lerp) {
       var keyframe = this.keyframeAt(frame2);
       if (keyframe != null) {
-        this.library.context.draw(keyframe, frame2, callback);
+        this.library.context.draw(keyframe, frame2, callback, lerp);
       }
     }
     visit(frame2, callback) {
@@ -281,13 +295,13 @@
       if (frame2.layer.totalFrames > this.totalFrames)
         this.totalFrames = frame2.layer.totalFrames;
     }
-    draw(frame2, callback) {
+    draw(frame2, callback, lerp) {
       for (const layer of this.layers) {
         if (layer.totalFrames == 0)
           continue;
         var f = modWrap(frame2, layer.totalFrames);
         if (layer.totalFrames >= f) {
-          this.library.context.draw(layer, frame2, callback);
+          this.library.context.draw(layer, frame2, callback, lerp);
         }
       }
     }
@@ -597,7 +611,7 @@
   var Canvas2dAnimationContext = class extends AnimationContext {
     constructor(ctx2) {
       super();
-      this.draw = (item, frame2, callback) => {
+      this.draw = (item, frame2, callback, lerp) => {
         if (item instanceof SpriteInstance) {
           this.ctx.save();
           this.ctx.transform(item.matrix2d.a, item.matrix2d.b, item.matrix2d.c, item.matrix2d.d, item.matrix2d.e, item.matrix2d.f);

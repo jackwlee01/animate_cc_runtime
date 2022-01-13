@@ -21,6 +21,8 @@ export class Frame extends Drawable{
     labelName:string|null;
     layer:Layer;
     instances:Array<ClipInstance|SpriteInstance> = [];
+    prev?:Frame;
+    next?:Frame;
 
 
     constructor(props:FrameProps){
@@ -33,6 +35,7 @@ export class Frame extends Drawable{
         this.layer = props.layer;
         this.index = props.index;
         this.labelName = props.labelName || null;
+        
     }
 
 
@@ -50,9 +53,9 @@ export class Frame extends Drawable{
     }
 
 
-    public draw(frame:Float, callback?:(item:Drawable, frame:Float)=>void):void{
+    public draw(frame:Float, callback?:(item:Drawable, frame:Float)=>void, lerp?:boolean):void{
         for(const instance of this.instances){
-            this.library.context.draw(instance, frame, callback)
+            this.library.context.draw(instance, frame, callback, lerp)
         }
     }
 

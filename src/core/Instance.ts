@@ -49,8 +49,8 @@ export class Instance extends Drawable{
     }
 
 
-    public draw(frame:Float, callback?:(item:Drawable, frame:Float)=>void):void{
-        this.library.context.draw(this.item, frame, callback)
+    public draw(frame:Float, callback?:(item:Drawable, frame:Float)=>void, lerp?:boolean):void{
+        this.library.context.draw(this.item, frame, callback, lerp)
     }
 
 

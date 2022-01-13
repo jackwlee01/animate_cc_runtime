@@ -40,16 +40,34 @@ export class Layer extends Drawable{
 
 
     public createFrame(props:Omit<FrameProps, 'layer'>){
+        // TODO: Enforce that frames are added to the end, not inbetween.
         const frame = new Frame({...props, layer:this});
-        this.frames.push(frame)
         this.framesByName[frame.name] = frame;
         if(frame.index+frame.totalFrames > this.totalFrames) this.totalFrames = frame.index+frame.totalFrames
         if(frame.labelName){
             this.labels.push(frame);
         }
         this.clip.addFrame(frame);
-
+        if(this.firstFrame){
+            this.firstFrame.prev = frame
+            frame.next = this.firstFrame
+        }
+        if(this.lastFrame){
+            this.lastFrame.next = frame
+            frame.prev = this.lastFrame
+        }
+        this.frames.push(frame)
         return frame;
+    }
+
+
+    public get lastFrame(){
+        return this.frames[this.frames.length-1];
+    }
+
+
+    public get firstFrame(){
+        return this.frames[0];
     }
 
 
@@ -64,10 +82,10 @@ export class Layer extends Drawable{
     }
 
 
-    public draw(frame:Float, callback?:(item:Drawable, frame:Float)=>void):void{
+    public draw(frame:Float, callback?:(item:Drawable, frame:Float)=>void, lerp?:boolean):void{
         var keyframe = this.keyframeAt(frame)
         if(keyframe!=null){
-            this.library.context.draw(keyframe, frame, callback);
+            this.library.context.draw(keyframe, frame, callback, lerp);
         }
     }
 
