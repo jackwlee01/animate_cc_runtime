@@ -1,6 +1,6 @@
 <DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="game/Walker_Nose_Siren" itemID="61973de1-00001794" symbolType="graphic" lastModified="1642040643">
   <timeline>
-    <DOMTimeline name="Walker_Nose_Siren" currentFrame="1" layerDepthEnabled="true">
+    <DOMTimeline name="Walker_Nose_Siren" layerDepthEnabled="true">
       <layers>
         <DOMLayer name="Layer_4" color="#FF4FFF">
           <frames>
