@@ -1,4 +1,5 @@
 import { AnimationContext } from "./core/AnimationContext"
+import { ClipInstance } from "./core/ClipInstance";
 import { Drawable } from "./core/Drawable"
 import { Frame } from "./core/Frame";
 import { Instance } from "./core/Instance"
@@ -22,7 +23,13 @@ export class Canvas2dAnimationContext extends AnimationContext{
 
 
     draw = (item:Drawable, frame:Float, callback?:(item:Drawable, frame:Float)=>void) => {
-        if(item instanceof Instance){
+        if(item instanceof SpriteInstance){
+            this.ctx.save()
+            this.ctx.transform(item.matrix2d.a, item.matrix2d.b, item.matrix2d.c, item.matrix2d.d, item.matrix2d.e, item.matrix2d.f)
+            if(callback) callback(item, frame)
+            else item.draw(frame, callback)
+            this.ctx.restore()
+        }else if(item instanceof ClipInstance){
             this.ctx.save()
             this.ctx.transform(item.matrix2d.a, item.matrix2d.b, item.matrix2d.c, item.matrix2d.d, item.matrix2d.e, item.matrix2d.f)
             if(callback) callback(item, frame)
