@@ -106,6 +106,9 @@
       return this.library.clipsByName[this.itemName];
     }
     draw(frame2, callback) {
+      if (this.behaviour.type == "graphic") {
+        frame2 = this.behaviour.firstFrame;
+      }
       this.library.context.draw(this.item, frame2, callback);
     }
     visit(frame2, callback) {
