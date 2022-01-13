@@ -7,20 +7,25 @@
 
 ## Building examples
 
-```npm run build-page```
+```
+npm install
+npm run build-page
+```
 
 ## Dev
 Sets up a simple live server with
 
-```npm run dev```
+```
+npm install
+npm run dev
+```
 
 ## Instructions to export atlas
 1. Open any XLF file in the fla folder
 2. Put any symbols you wish to export into the \_\_export\_\_ symbol in the library
 3. Right click on \_\_export\_\_ and then Generate Texture Atlas
-4. The 'rotate' option is NOT YET SUPPORTED
-5. Select ../bin/${LIBRARY_NAME} as the path (just browse to the bin folder)
-6. Hit export
+4. Select ../bin/${LIBRARY_NAME} as the path (just browse to the bin folder)
+5. Hit export
 
 ## General library usage
 
@@ -49,3 +54,9 @@ monsterLibrary.symbol("win").draw(frame)
 
 ### For dynamically rendered content
 See examples
+
+## Not yet supported
+- The 'rotate' export option
+- Tints
+- Filters
+- Brightness
