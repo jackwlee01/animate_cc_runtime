@@ -74,6 +74,7 @@ document.onkeydown = e => {
 //
 function drawWithLogic(item:Drawable, frame:number){
     if(item instanceof Clip){
+        // Rotate any clip named game/Walker_Nose_Nose
         if(item.name == "game/Walker_Nose_Nose"){
             ctx.save();
                 ctx.rotate(noseRotation)
@@ -83,6 +84,7 @@ function drawWithLogic(item:Drawable, frame:number){
             item.draw(frame, drawWithLogic)
         }
     }else if(item instanceof Layer){
+        // If the layer name is "layer_eye", choose the frame
         if(item.name=="layer_eye"){
             item.draw(eyesFrame, drawWithLogic)
         }else{
@@ -91,6 +93,7 @@ function drawWithLogic(item:Drawable, frame:number){
     }else if(item instanceof Frame){
         item.draw(frame, drawWithLogic)
     }else if(item instanceof Instance){
+        // If the instance's layer name is "layer_hat", choose the hat clip
         if(item.frame.layer.name=="layer_hat"){
             hatsLibrary.symbol("Hat_"+hatIndex).draw(frame, drawWithLogic)
         }else{
@@ -98,6 +101,7 @@ function drawWithLogic(item:Drawable, frame:number){
         }
     }else if(item instanceof Sprite){
         item.draw(frame) // Note: leaf node, so don't supply drawWithLogic as an argument
+        // Draw a red border over any sprite
         if(showSpriteBorders){
             ctx.strokeStyle = '#CC0000'
             ctx.strokeRect(0, 0, item.width, item.height)
