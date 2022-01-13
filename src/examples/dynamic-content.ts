@@ -25,26 +25,26 @@ async function init(){
 
 
 let frame = 0;
-let hat = 3;
+let hatIndex = 3;
 let showSpriteBorders = false;
-let eyes = 1;
+let eyesFrame = 1;
 let noseRotation = 0;
 
 document.onkeydown = e => {
     switch(e.key){
-        case '1': hat = 0; break;
-        case '2': hat = 1; break;
-        case '3': hat = 2; break;
-        case '4': hat = 3; break;
-        case 'ArrowUp': eyes++; break
-        case 'ArrowDown': eyes--; break
+        case '1': hatIndex = 0; break;
+        case '2': hatIndex = 1; break;
+        case '3': hatIndex = 2; break;
+        case '4': hatIndex = 3; break;
+        case 'ArrowUp': eyesFrame++; break
+        case 'ArrowDown': eyesFrame--; break
         case 'ArrowLeft': noseRotation+=0.2; break
         case 'ArrowRight': noseRotation-=0.2; break
         case ' ': showSpriteBorders = !showSpriteBorders; break
     }
 
-    hat = modWrap(hat, 4)
-    eyes = modWrap(eyes, 2)
+    hatIndex = modWrap(hatIndex, 4)
+    eyesFrame = modWrap(eyesFrame, 2)
 }
 
 
@@ -79,7 +79,7 @@ function drawWithLogic(item:Drawable, frame:number){
         }
     }else if(item instanceof Layer){
         if(item.name=="layer_eye"){
-            item.draw(eyes, drawWithLogic)
+            item.draw(eyesFrame, drawWithLogic)
         }else{
             item.draw(frame, drawWithLogic)
         }
@@ -87,7 +87,7 @@ function drawWithLogic(item:Drawable, frame:number){
         item.draw(frame, drawWithLogic)
     }else if(item instanceof Instance){
         if(item.frame.layer.name=="layer_hat"){
-            hatsLibrary.symbol("Hat_"+hat).draw(frame, drawWithLogic)
+            hatsLibrary.symbol("Hat_"+hatIndex).draw(frame, drawWithLogic)
         }else{
             item.draw(frame, drawWithLogic)
         }
