@@ -1,7 +1,5 @@
 node_modules
-bin/*
-!bin/index.html
-fla/RECOVER_*.*
+fla/RECOVER_*
 
 # Local Netlify folder
 .netlify
