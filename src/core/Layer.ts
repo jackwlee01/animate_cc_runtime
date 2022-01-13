@@ -64,7 +64,7 @@ export class Layer extends Drawable{
     }
 
 
-    public draw(frame:Float, callback?:(item:Drawable, frame:Float, ...args:any)=>void):void{
+    public draw(frame:Float, callback?:(item:Drawable, frame:Float)=>void):void{
         var keyframe = this.keyframeAt(frame)
         if(keyframe!=null){
             this.library.context.draw(keyframe, frame, callback);
@@ -72,7 +72,7 @@ export class Layer extends Drawable{
     }
 
 
-    public visit(frame:Float, callback:(item:Drawable, frame:Float, ...args:any)=>void):void{
+    public visit(frame:Float, callback:(item:Drawable, frame:Float)=>void):void{
         callback(this, frame);
         var keyframe = this.keyframeAt(frame)
         if(keyframe!=null){

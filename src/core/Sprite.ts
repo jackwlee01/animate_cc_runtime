@@ -45,7 +45,7 @@ export class Sprite extends Drawable{
     }
 
 
-    public visit(frame:Float, callback:(item:Drawable, frame:Float, ...args:any)=>void):void{
+    public visit(frame:Float, callback:(item:Drawable, frame:Float)=>void):void{
         callback(this, frame)
     }
    

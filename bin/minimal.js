@@ -105,6 +105,12 @@
     get item() {
       return this.library.clipsByName[this.itemName];
     }
+    draw(frame2, callback) {
+      this.library.context.draw(this.item, frame2, callback);
+    }
+    visit(frame2, callback) {
+      callback(this, frame2);
+    }
   };
 
   // src/core/SpriteInstance.ts

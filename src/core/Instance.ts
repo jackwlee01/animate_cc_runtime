@@ -49,12 +49,12 @@ export class Instance extends Drawable{
     }
 
 
-    public draw(frame:Float, callback?:(item:Drawable, frame:Float, ...args:any)=>void):void{
+    public draw(frame:Float, callback?:(item:Drawable, frame:Float)=>void):void{
         this.library.context.draw(this.item, frame, callback)
     }
 
 
-    public visit(frame:Float, callback:(item:Drawable, frame:Float, ...args:any)=>void):void{
+    public visit(frame:Float, callback:(item:Drawable, frame:Float)=>void):void{
         callback(this, frame)
     }
 
