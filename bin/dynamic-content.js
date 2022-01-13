@@ -112,6 +112,9 @@
       this.library.context.draw(this.item, frame2, callback);
     }
     visit(frame2, callback) {
+      if (this.behaviour.type == "graphic") {
+        frame2 = this.behaviour.firstFrame;
+      }
       callback(this, frame2);
     }
   };

@@ -21,7 +21,6 @@ const hatsLibrary = animContext.createLibrary('hats', './hats')
 async function init(){
     await hatsLibrary.loadData();
     console.log(hatsLibrary)
-    update();
 }
 
 

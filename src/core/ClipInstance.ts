@@ -49,6 +49,9 @@ export class ClipInstance extends Instance{
 
 
     public visit(frame:Float, callback:(item:Drawable, frame:Float)=>void):void{
+        if(this.behaviour.type == 'graphic'){
+            frame = this.behaviour.firstFrame;
+        }
         callback(this, frame)
     }
 
