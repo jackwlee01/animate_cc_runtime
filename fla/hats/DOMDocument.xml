@@ -143,13 +143,13 @@
           <Include href="game/Symbol 549.xml" itemIcon="1" loadImmediate="false" itemID="61933d1a-00001d93" lastModified="1637039386"/>
           <Include href="game/Symbol 550.xml" itemIcon="1" loadImmediate="false" itemID="61933d29-00001d97" lastModified="1637039401"/>
           <Include href="game/Symbol 3234.xml" loadImmediate="false" itemID="619b3b13-0000340c" lastModified="1637563155"/>
-          <Include href="game/Walker_Laser_Head.xml" itemIcon="1" loadImmediate="false" itemID="6195cdae-00002b28" lastModified="1642045569"/>
+          <Include href="game/Walker_Laser_Head.xml" itemIcon="1" loadImmediate="false" itemID="6195cdae-00002b28" lastModified="1642052938"/>
           <Include href="game/Walker_Laser_idle.xml" loadImmediate="false" itemID="61dcf35f-00000d0a" lastModified="1641870608"/>
           <Include href="game/Walker_Mine_Antenna.xml" itemIcon="1" loadImmediate="false" itemID="619b3b19-00003410" lastModified="1637563161"/>
           <Include href="game/Walker_Mine_Head.xml" itemIcon="1" loadImmediate="false" itemID="619b3186-00001984" lastModified="1637562752"/>
           <Include href="game/Walker_Minigun_Head.xml" itemIcon="1" loadImmediate="false" itemID="619b2537-0000027b" lastModified="1637558071"/>
           <Include href="game/Walker_Missile_Head.xml" itemIcon="1" loadImmediate="false" itemID="619747f7-00000bc2" lastModified="1637304955"/>
-          <Include href="game/Walker_Nose_Head.xml" itemIcon="1" loadImmediate="false" itemID="61973aad-00000a76" lastModified="1642046286"/>
+          <Include href="game/Walker_Nose_Head.xml" itemIcon="1" loadImmediate="false" itemID="61973aad-00000a76" lastModified="1642052946"/>
           <Include href="game/Walker_Nose_Nose.xml" itemIcon="1" loadImmediate="false" itemID="61973ec9-00001ae2" lastModified="1641876239"/>
           <Include href="game/Walker_Nose_Siren.xml" itemIcon="1" loadImmediate="false" itemID="61973de1-00001794" lastModified="1642040643"/>
           <Include href="Hat_0.xml" loadImmediate="false" itemID="61df8763-00000568" lastModified="1642046235"/>
@@ -199,7 +199,7 @@
           <Include href="win.xml" itemID="61dd06c0-0000053c" lastModified="1641879311"/>
      </symbols>
      <timelines>
-          <DOMTimeline name="Scene 1" layerDepthEnabled="true">
+          <DOMTimeline name="Scene 1" currentFrame="12" layerDepthEnabled="true">
                <layers>
                     <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
                          <frames>

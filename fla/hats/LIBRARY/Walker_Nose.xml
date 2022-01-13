@@ -1,6 +1,6 @@
 <DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Walker_Nose" itemID="6195a70a-00000a55" lastModified="1641874631" lastUniqueIdentifier="4">
   <timeline>
-    <DOMTimeline name="Walker_Nose" layerDepthEnabled="true">
+    <DOMTimeline name="Walker_Nose" currentFrame="29" layerDepthEnabled="true">
       <layers>
         <DOMLayer name="Layer_21" color="#009999">
           <frames>
@@ -43,7 +43,7 @@
             </DOMFrame>
             <DOMFrame index="29" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="game/Walker_Nose_Head" symbolType="graphic" firstFrame="12" centerPoint3DX="41.4" centerPoint3DY="38.2" loop="loop">
+                <DOMSymbolInstance libraryItemName="game/Walker_Nose_Head" selected="true" symbolType="graphic" firstFrame="12" centerPoint3DX="41.4" centerPoint3DY="38.2" loop="loop">
                   <matrix>
                     <Matrix tx="0.45" ty="-9.6"/>
                   </matrix>
