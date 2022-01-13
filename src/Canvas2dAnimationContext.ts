@@ -25,6 +25,7 @@ export class Canvas2dAnimationContext extends AnimationContext{
     draw = (item:Drawable, frame:Float, callback?:(item:Drawable, frame:Float)=>void, lerp?:boolean) => {
         if(item instanceof SpriteInstance){
             this.ctx.save()
+            // TODO: Add lerp support here
             this.ctx.transform(item.matrix2d.a, item.matrix2d.b, item.matrix2d.c, item.matrix2d.d, item.matrix2d.e, item.matrix2d.f)
             if(callback) callback(item, frame)
             else item.draw(frame, callback)
