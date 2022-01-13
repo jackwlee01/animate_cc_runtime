@@ -149,8 +149,8 @@
           <Include href="game/Walker_Mine_Head.xml" itemIcon="1" loadImmediate="false" itemID="619b3186-00001984" lastModified="1637562752"/>
           <Include href="game/Walker_Minigun_Head.xml" itemIcon="1" loadImmediate="false" itemID="619b2537-0000027b" lastModified="1637558071"/>
           <Include href="game/Walker_Missile_Head.xml" itemIcon="1" loadImmediate="false" itemID="619747f7-00000bc2" lastModified="1637304955"/>
-          <Include href="game/Walker_Nose_Head.xml" itemIcon="1" loadImmediate="false" itemID="61973aad-00000a76" lastModified="1642053047"/>
-          <Include href="game/Walker_Nose_Nose.xml" itemIcon="1" loadImmediate="false" itemID="61973ec9-00001ae2" lastModified="1641876239"/>
+          <Include href="game/Walker_Nose_Head.xml" itemIcon="1" loadImmediate="false" itemID="61973aad-00000a76" lastModified="1642055620"/>
+          <Include href="game/Walker_Nose_Nose.xml" loadImmediate="false" itemID="61973ec9-00001ae2" lastModified="1642055641"/>
           <Include href="game/Walker_Nose_Siren.xml" itemIcon="1" loadImmediate="false" itemID="61973de1-00001794" lastModified="1642040643"/>
           <Include href="Hat_0.xml" loadImmediate="false" itemID="61df8763-00000568" lastModified="1642046235"/>
           <Include href="Hat_1.xml" loadImmediate="false" itemID="61df877c-0000056c" lastModified="1642039310"/>

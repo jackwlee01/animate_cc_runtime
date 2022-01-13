@@ -601,7 +601,6 @@
   function init() {
     return __async(this, null, function* () {
       yield hatsLibrary.loadData();
-      console.log(hatsLibrary);
       update();
     });
   }
@@ -609,19 +608,32 @@
   var hat = 3;
   var showSpriteBorders = false;
   var eyes = 1;
+  var noseRotation = 0;
   document.onkeydown = (e) => {
     switch (e.key) {
+      case "1":
+        hat = 0;
+        break;
+      case "2":
+        hat = 1;
+        break;
+      case "3":
+        hat = 2;
+        break;
+      case "4":
+        hat = 3;
+        break;
       case "ArrowUp":
-        hat++;
+        eyes++;
         break;
       case "ArrowDown":
-        hat--;
-        break;
-      case "ArrowLeft":
         eyes--;
         break;
+      case "ArrowLeft":
+        noseRotation += 0.2;
+        break;
       case "ArrowRight":
-        eyes++;
+        noseRotation -= 0.2;
         break;
       case " ":
         showSpriteBorders = !showSpriteBorders;
@@ -632,7 +644,14 @@
   };
   function drawWithLogic(item, frame2) {
     if (item instanceof Clip) {
-      item.draw(frame2, drawWithLogic);
+      if (item.name == "game/Walker_Nose_Nose") {
+        ctx.save();
+        ctx.rotate(noseRotation);
+        item.draw(frame2, drawWithLogic);
+        ctx.restore();
+      } else {
+        item.draw(frame2, drawWithLogic);
+      }
     } else if (item instanceof Layer) {
       if (item.name == "layer_eye") {
         item.draw(eyes, drawWithLogic);
@@ -661,9 +680,10 @@
     ctx.save();
     ctx.fillStyle = "#333333";
     ctx.font = "36px sans-serif";
-    ctx.fillText("Up/Down: Change hat", 20, 50);
-    ctx.fillText("Left/Right: Change eyes", 20, 100);
-    ctx.fillText("Spacebar: Toggle debug border", 20, 150);
+    ctx.fillText("1,2,3,4: Change hat", 20, 50);
+    ctx.fillText("Up/Down: Change eyes", 20, 100);
+    ctx.fillText("Left/Right: Rotate nose", 20, 150);
+    ctx.fillText("Spacebar: Toggle debug border", 20, 200);
     ctx.translate(canvas.width / 2, canvas.height / 2);
     ctx.scale(dpr, dpr);
     ctx.save();

@@ -24,19 +24,22 @@ async function init(){
 }
 
 
-
 let frame = 0;
 let hat = 3;
 let showSpriteBorders = false;
 let eyes = 1;
-
+let noseRotation = 0;
 
 document.onkeydown = e => {
     switch(e.key){
-        case 'ArrowUp': hat++; break
-        case 'ArrowDown': hat--; break
-        case 'ArrowLeft': eyes--; break
-        case 'ArrowRight': eyes++; break
+        case '1': hat = 0; break;
+        case '2': hat = 1; break;
+        case '3': hat = 2; break;
+        case '4': hat = 3; break;
+        case 'ArrowUp': eyes++; break
+        case 'ArrowDown': eyes--; break
+        case 'ArrowLeft': noseRotation+=0.2; break
+        case 'ArrowRight': noseRotation-=0.2; break
         case ' ': showSpriteBorders = !showSpriteBorders; break
     }
 
@@ -62,10 +65,18 @@ document.onkeydown = e => {
 //     - How you can dynamically set a frame on a layer (which you could also do on a clip)
 //     - How you can dynamically swap out one clip for another
 //     - How you can draw arbitrary stuff on the 2d context
+//     - How you can apply state base transformations
 //
 function drawWithLogic(item:Drawable, frame:number){
     if(item instanceof Clip){
-        item.draw(frame, drawWithLogic)
+        if(item.name == "game/Walker_Nose_Nose"){
+            ctx.save();
+            ctx.rotate(noseRotation)
+            item.draw(frame, drawWithLogic)
+            ctx.restore();
+        }else{
+            item.draw(frame, drawWithLogic)
+        }
     }else if(item instanceof Layer){
         if(item.name=="layer_eye"){
             item.draw(eyes, drawWithLogic)
@@ -98,9 +109,10 @@ function update(){
 
         ctx.fillStyle = '#333333'
         ctx.font = '36px sans-serif';
-        ctx.fillText('Up/Down: Change hat', 20, 50);
-        ctx.fillText('Left/Right: Change eyes', 20, 100);
-        ctx.fillText('Spacebar: Toggle debug border', 20, 150);
+        ctx.fillText('1,2,3,4: Change hat', 20, 50);
+        ctx.fillText('Up/Down: Change eyes', 20, 100);
+        ctx.fillText('Left/Right: Rotate nose', 20, 150);
+        ctx.fillText('Spacebar: Toggle debug border', 20, 200);
         
 
         ctx.translate(canvas.width/2, canvas.height/2)
