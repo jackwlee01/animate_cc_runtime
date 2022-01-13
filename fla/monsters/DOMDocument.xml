@@ -1,0 +1,53 @@
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" width="1920" height="1080" frameRate="60" currentTimeline="1" xflVersion="22.02" creatorInfo="Adobe Animate" platform="Macintosh" versionInfo="Saved by Animate Macintosh 22.0 build 168" majorVersion="22" buildNumber="168" gridSnapTo="true" viewAngle3D="122.353661987282" vanishingPoint3DX="960" vanishingPoint3DY="540" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" filetypeGUID="DD0DDBBF-5BEF-45B2-9F24-A3048D2A676F" fileGUID="A8E41C93053E4E029E75D37B301492A4">
+     <folders>
+          <DOMFolderItem name="monsterz" itemID="61dd06a9-0000051b"/>
+     </folders>
+     <symbols>
+          <Include href="__export__.xml" loadImmediate="false" itemID="61df7c47-000000fc" lastModified="1642036295"/>
+          <Include href="monsterz/food_placeholder.xml" itemID="5bf62ccd-00000456" lastModified="1641879317"/>
+          <Include href="monsterz/levelOverSkewer.xml" itemID="56bd43f2-00000286" lastModified="1641875624"/>
+          <Include href="monsterz/red_bottom_legless_layers2.xml" itemID="56b93446-000006ad" lastModified="1454978118"/>
+          <Include href="monsterz/red_tongue.xml" itemID="563c20e2-00000345" lastModified="1454977185"/>
+          <Include href="monsterz/red_tooth1.xml" itemID="563cd013-00000357" lastModified="1454977185"/>
+          <Include href="monsterz/red_tooth2.xml" itemID="563cd075-0000035d" lastModified="1454977185"/>
+          <Include href="monsterz/red_tooth3.xml" itemID="563cd0b4-00000361" lastModified="1454977185"/>
+          <Include href="monsterz/red_tooth4.xml" itemID="563cd0cb-00000365" lastModified="1454977185"/>
+          <Include href="monsterz/win_eyelid1.xml" itemID="56b93796-000006de" lastModified="1455239430"/>
+          <Include href="monsterz/win_red_top_layers.xml" itemID="56b9378b-000006da" lastModified="1641875918"/>
+          <Include href="monsterz/win_redlip.xml" itemID="56b930e4-0000065d" lastModified="1454977252"/>
+          <Include href="monsterz/win_redMouth1.xml" itemID="56b93332-0000068b" lastModified="1454977886"/>
+          <Include href="monsterz/win_redMouth2.xml" itemID="56b93337-0000068d" lastModified="1454977886"/>
+          <Include href="monsterz/win_redMouth3.xml" itemID="56b9333b-00000692" lastModified="1454977886"/>
+          <Include href="monsterz/win_redMouth4.xml" itemID="56b9333f-00000696" lastModified="1454977886"/>
+          <Include href="monsterz/win_redMouth5.xml" itemID="56b93343-0000069a" lastModified="1454977886"/>
+          <Include href="monsterz/win_redMouth6.xml" itemID="56b93347-0000069e" lastModified="1454977886"/>
+          <Include href="monsterz/win_redMouth7.xml" itemID="56b9334c-000006a2" lastModified="1454977886"/>
+          <Include href="monsterz/win_redMouth8.xml" itemID="56b93351-000006a6" lastModified="1454977886"/>
+          <Include href="win.xml" itemID="61dd06c0-0000053c" lastModified="1641879311"/>
+     </symbols>
+     <timelines>
+          <DOMTimeline name="Scene 1" layerDepthEnabled="true">
+               <layers>
+                    <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="__export__" selected="true">
+                                             <matrix>
+                                                  <Matrix tx="937" ty="502"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="-1.3"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timelines>
+     <scripts/>
+     <PrinterSettings platform="macintosh"/>
+     <publishHistory/>
+</DOMDocument>

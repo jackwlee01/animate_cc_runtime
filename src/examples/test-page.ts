@@ -1,6 +1,7 @@
 import { addExampleButtons, setupCanvas } from "./example-utils";
 import { Canvas2dAnimationContext } from "../Canvas2dAnimationContext";
 import { Clip } from "../core/Clip";
+import { Library } from "../core/Library";
 
 
 const canvas = document.getElementById("canvas") as HTMLCanvasElement
@@ -10,25 +11,32 @@ var dpr = setupCanvas(canvas) // Device pixel ratio
 // Set up animation context and libraries
 const animContext = new Canvas2dAnimationContext(ctx)
 const libraries = {
-    test: animContext.createLibrary('test', 'test')
+    test: animContext.createLibrary('test', './test'),
+    monsters: animContext.createLibrary('monsters', './monsters'),
 }
-
 
 
 async function init(){
     // Load the libraries
     await libraries.test.loadData();
+    await libraries.monsters.loadData();
 
     // Example state
     let frame = 0;
-    let symbol = libraries.test.clips[0]
+    let library = libraries[Object.keys(libraries)[0] as keyof typeof libraries]
+    let symbol =library.clips[0]
     var colsAndRows = 1;
 
     // Set up example ui
     const onSymbolPicked = (nextSymbol:Clip) => symbol=nextSymbol
     const onMinus =  () => { if(colsAndRows > 1) colsAndRows-- }
     const onPlus =  () => colsAndRows++
-    addExampleButtons(libraries.test, onSymbolPicked, onMinus, onPlus)
+    const onLibrarySeleced = (nextLibrary:Library) => {
+        library = nextLibrary
+        symbol = library.clips[0]
+    }
+
+    addExampleButtons(Object.keys(libraries)[0], libraries, onLibrarySeleced, onSymbolPicked, onMinus, onPlus)
     
     
     function update(){

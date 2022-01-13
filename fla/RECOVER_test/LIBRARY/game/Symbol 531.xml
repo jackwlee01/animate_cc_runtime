@@ -1,0 +1,27 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="game/Symbol 531" itemID="61933920-00001d17" symbolType="graphic" lastModified="1637038433">
+  <timeline>
+    <DOMTimeline name="Symbol 531" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="game/Symbol 533" selected="true" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-8.75" ty="-16.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="7.55" y="17.15"/>
+                  </transformationPoint>
+                  <color>
+                    <Color tintMultiplier="0.31"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

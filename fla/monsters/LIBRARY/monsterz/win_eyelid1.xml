@@ -1,0 +1,33 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="monsterz/win_eyelid1" itemID="56b93796-000006de" linkageExportForAS="true" linkageBaseClass="flash.display.Sprite" linkageClassName="win_eyelid1" lastModified="1455239430" isSpriteSubclass="true">
+  <timeline>
+    <DOMTimeline name="win_eyelid1" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isDrawingObject="true">
+                  <matrix>
+                    <Matrix a="1.95957946777344" d="1.95957946777344" tx="-396.5" ty="-519.2"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#EA2035"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!4994 5640[5492 5640 5942 5862!5942 5862[5802 5606 5553 5455!5553 5455[5296 5299 4994 5299!4994 5299[4693 5299 4436 5455!4436 5455[4187 5606 4047 5862!4047 5862[4497 5640 4994 5640"/>
+                    <Edge cubics="!4994 5640(;5335,5640 5656,5721 5942,5862q4994 5640Q5492 5640q5942 5862);"/>
+                    <Edge cubics="!5942 5862(5942,5862;5759,5527 5403,5299 4994,5299q5942 5862Q5802 5606q5553 5455Q5296 5299q4994 5299);"/>
+                    <Edge cubics="!4994 5299(4994,5299;4586,5299 4230,5527 4047,5862q4994 5299Q4693 5299q4436 5455Q4187 5606q4047 5862);"/>
+                    <Edge cubics="!4047 5862(4047,5862;4333,5721 4654,5640 4994,5640q4047 5862Q4497 5640q4994 5640)4994,5640;"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

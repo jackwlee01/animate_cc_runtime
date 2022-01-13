@@ -1,0 +1,24 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="game/Symbol 505" itemID="6193269a-00000fac" symbolType="graphic" lastModified="1641869828">
+  <timeline>
+    <DOMTimeline name="Symbol 505" currentFrame="1" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="face" color="#00FFFF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="2" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="game/Symbol 424" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="-1" tx="29.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="14.8" y="13.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

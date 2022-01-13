@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="monsterz/red_tooth3" itemID="563cd0b4-00000361" linkageExportForAS="true" linkageIdentifier="red_tooth3" linkageBaseClass="flash.display.Sprite" linkageClassName="red_tooth3" lastModified="1454977185" isSpriteSubclass="true">
+  <timeline>
+    <DOMTimeline name="red_tooth3" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMGroup>
+                      <members>
+                        <DOMShape isDrawingObject="true">
+                          <matrix>
+                            <Matrix a="1.95928955078125" d="1.9595947265625" tx="-509.6" ty="-877.4"/>
+                          </matrix>
+                          <fills>
+                            <FillStyle index="1">
+                              <SolidColor color="#FFFFFF"/>
+                            </FillStyle>
+                          </fills>
+                          <edges>
+                            <Edge fillStyle1="1" edges="!5571 8958[5729 8989 5725 9321!5725 9321[5723 9488 5690 9648!5690 9648|5202 9553!5202 9553[5231 9392 5292 9237!5292 9237[5414 8927 5571 8958"/>
+                            <Edge cubics="!5571 8958(;5823,9007 5690,9648 5690,9648q5571 8958Q5729 8989q5725 9321Q5723 9488q5690 9648);"/>
+                            <Edge cubics="!5690 9648(;5690,9648 5202,9553 5202,9553q5690 9648 5202 9553);"/>
+                            <Edge cubics="!5202 9553(;5202,9553 5319,8909 5571,8958q5202 9553Q5231 9392q5292 9237Q5414 8927q5571 8958);"/>
+                          </edges>
+                        </DOMShape>
+                      </members>
+                    </DOMGroup>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

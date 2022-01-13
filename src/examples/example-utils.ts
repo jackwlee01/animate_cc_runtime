@@ -32,22 +32,42 @@ export function setupCanvas(canvas:HTMLCanvasElement) {
 
 
 
-export function addExampleButtons(lib:Library, onClick:(nextSymbol:Clip)=>void, onMinus:()=>void, onPlus:()=>void){
+export function addExampleButtons(libraryKey:string, libs:Record<string, Library>, onLibrarySelected:(nextLibrary:Library)=>void, onSymbolPicked:(nextSymbol:Clip)=>void, onMinus:()=>void, onPlus:()=>void){
+    const library = libs[libraryKey]
+    const buttons = document.getElementById("buttons")!
+
+    const selector = document.createElement('select')
+    selector.value = libraryKey
+    selector.onchange = (e) => {
+        const buttons = document.getElementById('buttons')!
+        while(buttons.childNodes.length > 0) buttons.childNodes[0].remove();
+        addExampleButtons(selector.value, libs, onLibrarySelected, onSymbolPicked, onMinus, onPlus)
+        onLibrarySelected(libs[selector.value])
+    }
+    buttons.appendChild(selector)
+    for(const libraryName of Object.keys(libs)){
+        const option = document.createElement('option')
+        option.value = libraryName
+        option.selected = libraryName == libraryKey
+        option.innerText = libraryName
+        selector.appendChild(option)
+    }
+
     const minusButton = document.createElement('button')
     minusButton.innerHTML = '-'
     minusButton.onclick = onMinus
-    document.getElementById("buttons")!.appendChild(minusButton);
+    buttons.appendChild(minusButton);
 
     const plusButton = document.createElement('button')
     plusButton.innerHTML = '+'
     plusButton.onclick = onPlus
-    document.getElementById("buttons")!.appendChild(plusButton);
+    buttons.appendChild(plusButton);
 
-    for(const clip of lib.clips){
+    for(const clip of library.clips){
         if(clip.name.indexOf("/")!=-1 || clip.name.indexOf("Symbol ")==0 || clip.name.indexOf("Tween ")==0 || clip.name.indexOf("/Symbol ")!=-1 || clip.name.indexOf("/Tween ")!=-1) continue;
         var button = document.createElement("button")
         button.innerHTML = clip.name
-        button.onclick = () => onClick(clip)
-        document.getElementById("buttons")!.appendChild(button)
+        button.onclick = () => onSymbolPicked(clip)
+        buttons.appendChild(button)
     }
 }
