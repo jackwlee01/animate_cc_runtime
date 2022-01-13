@@ -13,29 +13,27 @@ const testLibrary = animContext.createLibrary('test', './test')
 
 async function init(){
     await testLibrary.loadData();
-
-    let frame = 0;
-   
-    
-    function update(){
-        ctx.fillStyle = '#cccccc'
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-        ctx.save();
-        
-            ctx.translate(canvas.width/2, canvas.height/2)
-            ctx.scale(dpr, dpr)
-
-            testLibrary.symbol("StarDude").draw(frame)
-        
-        ctx.restore()
-        
-        frame++;
-        requestAnimationFrame(update)
-    }
     update();
+}
 
+
+let frame = 0;
+    
+function update(){
+    ctx.fillStyle = '#cccccc'
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.save();
+    
+        ctx.translate(canvas.width/2, canvas.height/2)
+        ctx.scale(dpr, dpr)
+
+        testLibrary.symbol("StarDude").draw(frame)
+    
+    ctx.restore()
+    
+    frame++;
+    requestAnimationFrame(update)
 }
 
 init();
-

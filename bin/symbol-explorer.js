@@ -56,8 +56,8 @@
     canvas2.height = rect.height * dpr2;
     return dpr2;
   }
-  function addExampleButtons(libraryKey, libs, onLibrarySelected, onSymbolPicked, onMinus, onPlus) {
-    const library = libs[libraryKey];
+  function addExampleButtons(libraryKey, libs, onLibrarySelected, onSymbolPicked2, onMinus2, onPlus2) {
+    const library2 = libs[libraryKey];
     const buttons = document.getElementById("buttons");
     const selector = document.createElement("select");
     selector.value = libraryKey;
@@ -65,7 +65,7 @@
       const buttons2 = document.getElementById("buttons");
       while (buttons2.childNodes.length > 0)
         buttons2.childNodes[0].remove();
-      addExampleButtons(selector.value, libs, onLibrarySelected, onSymbolPicked, onMinus, onPlus);
+      addExampleButtons(selector.value, libs, onLibrarySelected, onSymbolPicked2, onMinus2, onPlus2);
       onLibrarySelected(libs[selector.value]);
     };
     buttons.appendChild(selector);
@@ -78,18 +78,18 @@
     }
     const minusButton = document.createElement("button");
     minusButton.innerHTML = "-";
-    minusButton.onclick = onMinus;
+    minusButton.onclick = onMinus2;
     buttons.appendChild(minusButton);
     const plusButton = document.createElement("button");
     plusButton.innerHTML = "+";
-    plusButton.onclick = onPlus;
+    plusButton.onclick = onPlus2;
     buttons.appendChild(plusButton);
-    for (const clip of library.clips) {
+    for (const clip of library2.clips) {
       if (clip.name.indexOf("/") != -1 || clip.name.indexOf("Symbol ") == 0 || clip.name.indexOf("Tween ") == 0 || clip.name.indexOf("/Symbol ") != -1 || clip.name.indexOf("/Tween ") != -1)
         continue;
       var button = document.createElement("button");
       button.innerHTML = clip.name;
-      button.onclick = () => onSymbolPicked(clip);
+      button.onclick = () => onSymbolPicked2(clip);
       buttons.appendChild(button);
     }
   }
@@ -103,9 +103,9 @@
       this.totalFrames = props.totalFrames;
       this.library = props.library;
     }
-    visit(frame, callback) {
+    visit(frame2, callback) {
     }
-    draw(frame, callback) {
+    draw(frame2, callback) {
     }
   };
 
@@ -127,11 +127,11 @@
     get item() {
       throw "Override item getter in base class";
     }
-    draw(frame, callback) {
-      this.library.context.draw(this.item, frame, callback);
+    draw(frame2, callback) {
+      this.library.context.draw(this.item, frame2, callback);
     }
-    visit(frame, callback) {
-      callback(this, frame);
+    visit(frame2, callback) {
+      callback(this, frame2);
     }
   };
 
@@ -179,15 +179,15 @@
       this.instances.push(spriteInstance);
       return spriteInstance;
     }
-    draw(frame, callback) {
+    draw(frame2, callback) {
       for (const instance of this.instances) {
-        this.library.context.draw(instance, frame, callback);
+        this.library.context.draw(instance, frame2, callback);
       }
     }
-    visit(frame, callback) {
-      callback(this, frame);
+    visit(frame2, callback) {
+      callback(this, frame2);
       for (const instance of this.instances) {
-        instance.visit(frame, callback);
+        instance.visit(frame2, callback);
       }
     }
   };
@@ -212,36 +212,36 @@
       this.labels = [];
     }
     createFrame(props) {
-      const frame = new Frame(__spreadProps(__spreadValues({}, props), { layer: this }));
-      this.frames.push(frame);
-      this.framesByName[frame.name] = frame;
-      if (frame.index + frame.totalFrames > this.totalFrames)
-        this.totalFrames = frame.index + frame.totalFrames;
-      if (frame.labelName) {
-        this.labels.push(frame);
+      const frame2 = new Frame(__spreadProps(__spreadValues({}, props), { layer: this }));
+      this.frames.push(frame2);
+      this.framesByName[frame2.name] = frame2;
+      if (frame2.index + frame2.totalFrames > this.totalFrames)
+        this.totalFrames = frame2.index + frame2.totalFrames;
+      if (frame2.labelName) {
+        this.labels.push(frame2);
       }
-      this.clip.addFrame(frame);
-      return frame;
+      this.clip.addFrame(frame2);
+      return frame2;
     }
-    keyframeAt(frame) {
-      frame = modWrap(frame, this.totalFrames);
+    keyframeAt(frame2) {
+      frame2 = modWrap(frame2, this.totalFrames);
       for (const keyframe of this.frames) {
-        if (keyframe.index <= frame && keyframe.index + keyframe.totalFrames > frame)
+        if (keyframe.index <= frame2 && keyframe.index + keyframe.totalFrames > frame2)
           return keyframe;
       }
       return null;
     }
-    draw(frame, callback) {
-      var keyframe = this.keyframeAt(frame);
+    draw(frame2, callback) {
+      var keyframe = this.keyframeAt(frame2);
       if (keyframe != null) {
-        this.library.context.draw(keyframe, frame, callback);
+        this.library.context.draw(keyframe, frame2, callback);
       }
     }
-    visit(frame, callback) {
-      callback(this, frame);
-      var keyframe = this.keyframeAt(frame);
+    visit(frame2, callback) {
+      callback(this, frame2);
+      var keyframe = this.keyframeAt(frame2);
       if (keyframe != null) {
-        keyframe.visit(frame, callback);
+        keyframe.visit(frame2, callback);
       }
     }
   };
@@ -267,29 +267,29 @@
         this.totalFrames = layer.totalFrames;
       return layer;
     }
-    addFrame(frame) {
-      this.framesById[frame.id] = frame;
-      if (frame.layer.totalFrames > this.totalFrames)
-        this.totalFrames = frame.layer.totalFrames;
+    addFrame(frame2) {
+      this.framesById[frame2.id] = frame2;
+      if (frame2.layer.totalFrames > this.totalFrames)
+        this.totalFrames = frame2.layer.totalFrames;
     }
-    draw(frame, callback) {
+    draw(frame2, callback) {
       for (const layer of this.layers) {
         if (layer.totalFrames == 0)
           continue;
-        var f = modWrap(frame, layer.totalFrames);
+        var f = modWrap(frame2, layer.totalFrames);
         if (layer.totalFrames >= f) {
-          this.library.context.draw(layer, frame, callback);
+          this.library.context.draw(layer, frame2, callback);
         }
       }
     }
-    visit(frame, callback) {
-      callback(this, frame);
+    visit(frame2, callback) {
+      callback(this, frame2);
       for (const layer of this.layers) {
         if (layer.totalFrames == 0)
           continue;
-        var f = modWrap(frame, layer.totalFrames);
+        var f = modWrap(frame2, layer.totalFrames);
         if (layer.totalFrames >= f)
-          layer.visit(frame, callback);
+          layer.visit(frame2, callback);
       }
     }
   };
@@ -341,10 +341,10 @@
       this.rotated = props.rotated;
       this.atlas = props.atlas;
     }
-    draw(frame, callback) {
+    draw(frame2, callback) {
     }
-    visit(frame, callback) {
-      callback(this, frame);
+    visit(frame2, callback) {
+      callback(this, frame2);
     }
   };
 
@@ -475,7 +475,7 @@
               name: layerData.layerName
             });
             for (const frameData of layerData.frames) {
-              const frame = layer.createFrame({
+              const frame2 = layer.createFrame({
                 name: "" + frameData.index,
                 totalFrames: frameData.duration,
                 labelName: frameData.name,
@@ -486,18 +486,18 @@
                   const elemData = elemInstanceData.symbolInstance;
                   const m = elemData.matrix3D;
                   const drawableProps = {
-                    name: frame.name,
-                    totalFrames: frame.totalFrames
+                    name: frame2.name,
+                    totalFrames: frame2.totalFrames
                   };
                   const instanceProps = {
-                    frame,
+                    frame: frame2,
                     matrix2d: new Matrix2d(m.m00, m.m01, m.m10, m.m11, m.m30, m.m31),
                     position: new Vec3(elemData.decomposedMatrix.position),
                     scale: new Vec3(elemData.decomposedMatrix.scaling),
                     rotation: new Vec3(elemData.decomposedMatrix.rotation),
                     itemName: elemData.symbolName
                   };
-                  const clipInstance = frame.createClipInstance(__spreadProps(__spreadValues(__spreadValues({}, drawableProps), instanceProps), {
+                  const clipInstance = frame2.createClipInstance(__spreadProps(__spreadValues(__spreadValues({}, drawableProps), instanceProps), {
                     transformationPoint: new Vec2(elemData.transformationPoint),
                     behaviour: elemData.symbolType == "graphic" ? { type: "graphic", loop: elemData.loop, firstFrame: elemData.firstFrame } : { type: "movieclip" }
                   }));
@@ -505,18 +505,18 @@
                   const elemData = elemInstanceData.atlasSpriteInstance;
                   const m = elemData.matrix3D;
                   const drawableProps = {
-                    name: frame.name,
-                    totalFrames: frame.totalFrames
+                    name: frame2.name,
+                    totalFrames: frame2.totalFrames
                   };
                   const instanceProps = {
-                    frame,
+                    frame: frame2,
                     matrix2d: new Matrix2d(m.m00, m.m01, m.m10, m.m11, m.m30, m.m31),
                     position: new Vec3(elemData.decomposedMatrix.position),
                     scale: new Vec3(elemData.decomposedMatrix.scaling),
                     rotation: new Vec3(elemData.decomposedMatrix.rotation),
                     itemName: elemData.name
                   };
-                  const spriteInstance = frame.createSpriteInstance(__spreadValues(__spreadValues({}, drawableProps), instanceProps));
+                  const spriteInstance = frame2.createSpriteInstance(__spreadValues(__spreadValues({}, drawableProps), instanceProps));
                   if (spriteNames.indexOf(spriteInstance.itemName) == -1)
                     spriteNames.push(spriteInstance.itemName);
                 }
@@ -568,8 +568,8 @@
       this.draw = null;
     }
     createLibrary(name, path) {
-      const library = new Library(name, path, this);
-      return library;
+      const library2 = new Library(name, path, this);
+      return library2;
     }
   };
 
@@ -577,24 +577,24 @@
   var Canvas2dAnimationContext = class extends AnimationContext {
     constructor(ctx2) {
       super();
-      this.draw = (item, frame, callback) => {
+      this.draw = (item, frame2, callback) => {
         if (item instanceof Instance) {
           this.ctx.save();
           this.ctx.transform(item.matrix2d.a, item.matrix2d.b, item.matrix2d.c, item.matrix2d.d, item.matrix2d.e, item.matrix2d.f);
           if (callback)
-            callback(item, frame);
+            callback(item, frame2);
           else
-            item.draw(frame, callback);
+            item.draw(frame2, callback);
           this.ctx.restore();
         } else if (item instanceof Sprite) {
           if (callback)
-            callback(item, frame);
+            callback(item, frame2);
           this.ctx.drawImage(item.atlas.image, item.x, item.y, item.width, item.height, 0, 0, item.width, item.height);
         } else {
           if (callback)
-            callback(item, frame);
+            callback(item, frame2);
           else
-            item.draw(frame, callback);
+            item.draw(frame2, callback);
         }
       };
       this.ctx = ctx2;
@@ -614,44 +614,44 @@
     return __async(this, null, function* () {
       yield libraries.test.loadData();
       yield libraries.monsters.loadData();
-      let frame = 0;
-      let library = libraries[Object.keys(libraries)[0]];
-      let symbol = library.clips[0];
-      var colsAndRows = 1;
-      const onSymbolPicked = (nextSymbol) => symbol = nextSymbol;
-      const onMinus = () => {
-        if (colsAndRows > 1)
-          colsAndRows--;
-      };
-      const onPlus = () => colsAndRows++;
-      const onLibrarySeleced = (nextLibrary) => {
-        library = nextLibrary;
-        symbol = library.clips[0];
-      };
-      addExampleButtons(Object.keys(libraries)[0], libraries, onLibrarySeleced, onSymbolPicked, onMinus, onPlus);
-      function update() {
-        ctx.fillStyle = "#cccccc";
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        ctx.save();
-        ctx.translate(canvas.width / 2, canvas.height / 2);
-        ctx.scale(dpr, dpr);
-        const num = colsAndRows + 1;
-        var xo = canvas.width / num / 2;
-        var yo = canvas.height / num / 2;
-        for (var x = 1; x < num; x++) {
-          for (var y = 1; y < num; y++) {
-            ctx.save();
-            ctx.translate(-(num * xo / 2) + x * xo, -(num * yo / 2) + y * xo);
-            symbol.draw(frame);
-            ctx.restore();
-          }
-        }
-        ctx.restore();
-        frame++;
-        requestAnimationFrame(update);
-      }
       update();
     });
+  }
+  var frame = 0;
+  var library = libraries[Object.keys(libraries)[0]];
+  var symbol = library.clips[0];
+  var colsAndRows = 1;
+  var onSymbolPicked = (nextSymbol) => symbol = nextSymbol;
+  var onMinus = () => {
+    if (colsAndRows > 1)
+      colsAndRows--;
+  };
+  var onPlus = () => colsAndRows++;
+  var onLibrarySeleced = (nextLibrary) => {
+    library = nextLibrary;
+    symbol = library.clips[0];
+  };
+  addExampleButtons(Object.keys(libraries)[0], libraries, onLibrarySeleced, onSymbolPicked, onMinus, onPlus);
+  function update() {
+    ctx.fillStyle = "#cccccc";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.save();
+    ctx.translate(canvas.width / 2, canvas.height / 2);
+    ctx.scale(dpr, dpr);
+    const num = colsAndRows + 1;
+    var xo = canvas.width / num / 2;
+    var yo = canvas.height / num / 2;
+    for (var x = 1; x < num; x++) {
+      for (var y = 1; y < num; y++) {
+        ctx.save();
+        ctx.translate(-(num * xo / 2) + x * xo, -(num * yo / 2) + y * xo);
+        symbol.draw(frame);
+        ctx.restore();
+      }
+    }
+    ctx.restore();
+    frame++;
+    requestAnimationFrame(update);
   }
   init();
 })();
