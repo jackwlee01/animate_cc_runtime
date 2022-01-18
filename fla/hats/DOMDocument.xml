@@ -37,7 +37,7 @@
           <Include href="game/Symbol 1.xml" loadImmediate="false" itemID="6195b262-00001ab5" lastModified="1637200482"/>
           <Include href="game/Symbol 412 copy 4.xml" itemIcon="1" loadImmediate="false" itemID="61930b35-000002c1" lastModified="1637039647"/>
           <Include href="game/Symbol 412 copy 6.xml" itemIcon="1" loadImmediate="false" itemID="6193249b-000004cf" lastModified="1641870515"/>
-          <Include href="game/Symbol 412 copy 7.xml" itemIcon="1" loadImmediate="false" itemID="61933e28-00001dc6" lastModified="1637040013"/>
+          <Include href="game/Symbol 412 copy 7.xml" itemIcon="1" loadImmediate="false" itemID="61933e28-00001dc6" lastModified="1642488571"/>
           <Include href="game/Symbol 413.xml" itemIcon="1" loadImmediate="false" itemID="6191c7b7-00000235" lastModified="1636945384"/>
           <Include href="game/Symbol 413 copy.xml" itemIcon="1" loadImmediate="false" itemID="6191cc14-0000025c" lastModified="1636945314"/>
           <Include href="game/Symbol 413 copy 4.xml" itemIcon="1" loadImmediate="false" itemID="619324d7-000004da" lastModified="1637033262"/>
@@ -195,11 +195,11 @@
           <Include href="Walker_Mine.xml" loadImmediate="false" itemID="6195a93d-000010e3" lastModified="1637565475"/>
           <Include href="Walker_Minigun.xml" loadImmediate="false" itemID="6195a74c-00000a57" lastModified="1637640281"/>
           <Include href="Walker_Missile.xml" loadImmediate="false" itemID="6195a72c-00000a56" lastModified="1637639960"/>
-          <Include href="Walker_Nose.xml" loadImmediate="false" itemID="6195a70a-00000a55" lastModified="1641874631"/>
+          <Include href="Walker_Nose.xml" loadImmediate="false" itemID="6195a70a-00000a55" lastModified="1642488608"/>
           <Include href="win.xml" itemID="61dd06c0-0000053c" lastModified="1641879311"/>
      </symbols>
      <timelines>
-          <DOMTimeline name="Scene 1" currentFrame="12" layerDepthEnabled="true">
+          <DOMTimeline name="Scene 1" currentFrame="29" layerDepthEnabled="true">
                <layers>
                     <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
                          <frames>

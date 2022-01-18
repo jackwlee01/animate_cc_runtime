@@ -1,6 +1,6 @@
 <DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="StarDude" itemID="61dd0c1a-00000ff6" lastModified="1641876690">
   <timeline>
-    <DOMTimeline name="StarDude" currentFrame="116" layerDepthEnabled="true">
+    <DOMTimeline name="StarDude" currentFrame="70" layerDepthEnabled="true">
       <layers>
         <DOMLayer name="Layer_2" color="#9933CC">
           <frames>
@@ -212,7 +212,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="gun" color="#00FFFF" autoNamed="false">
+        <DOMLayer name="gun" color="#00FFFF" current="true" isSelected="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" duration="58" tweenType="motion" motionTweenSnap="true" hasCustomEase="true" keyMode="22017">
               <tweens>
@@ -224,7 +224,7 @@
                 </CustomEase>
               </tweens>
               <elements>
-                <DOMSymbolInstance libraryItemName="stardude_assets/StarGuyGun">
+                <DOMSymbolInstance libraryItemName="stardude_assets/StarGuyGun" selected="true">
                   <matrix>
                     <Matrix a="0.99957275390625" b="0.027374267578125" c="-0.027374267578125" d="0.99957275390625" tx="-2.4" ty="4.75"/>
                   </matrix>
@@ -507,7 +507,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="gun" color="#FF0000" current="true" isSelected="true" autoNamed="false">
+        <DOMLayer name="gun" color="#FF0000" autoNamed="false">
           <frames>
             <DOMFrame index="0" duration="116" keyMode="9728">
               <elements/>

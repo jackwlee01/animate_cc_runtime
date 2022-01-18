@@ -16,7 +16,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer_2" color="#9933CC" current="true" isSelected="true">
+        <DOMLayer name="Layer_2" color="#9933CC">
           <frames>
             <DOMFrame index="0" duration="9" tweenType="motion" motionTweenSnap="true" hasCustomEase="true" keyMode="22017" acceleration="100">
               <tweens>
@@ -87,7 +87,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer_6" color="#FF0000">
+        <DOMLayer name="Layer_6" color="#FF0000" current="true" isSelected="true">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -103,7 +103,7 @@
             </DOMFrame>
             <DOMFrame index="1" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="game/Symbol 413 copy 4" selected="true" symbolType="graphic" centerPoint3DX="29.75" centerPoint3DY="3.05" loop="loop">
+                <DOMSymbolInstance libraryItemName="game/Symbol 413 copy 4" symbolType="graphic" centerPoint3DX="29.75" centerPoint3DY="3.05" loop="loop">
                   <matrix>
                     <Matrix a="-0.951629638671875" b="0.306884765625" c="0.306884765625" d="0.951629638671875" tx="29.75" ty="3.35"/>
                   </matrix>
@@ -467,7 +467,7 @@
             </DOMFrame>
             <DOMFrame index="1" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="game/Symbol 415" selected="true" symbolType="graphic" centerPoint3DX="19.8" centerPoint3DY="-2.75" loop="loop">
+                <DOMSymbolInstance libraryItemName="game/Symbol 415" symbolType="graphic" centerPoint3DX="19.8" centerPoint3DY="-2.75" loop="loop">
                   <matrix>
                     <Matrix a="-0.934066772460938" b="-0.356842041015625" c="-0.356842041015625" d="0.934066772460938" tx="19.75" ty="-2.75"/>
                   </matrix>
@@ -831,7 +831,7 @@
             </DOMFrame>
             <DOMFrame index="1" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="game/Symbol 414 copy 4" selected="true" symbolType="graphic" centerPoint3DX="-3.45" centerPoint3DY="5" loop="loop">
+                <DOMSymbolInstance libraryItemName="game/Symbol 414 copy 4" symbolType="graphic" centerPoint3DX="-3.45" centerPoint3DY="5" loop="loop">
                   <matrix>
                     <Matrix a="0.8748779296875" b="0.484237670898438" c="-0.484237670898438" d="0.8748779296875" tx="-3.75" ty="5"/>
                   </matrix>
@@ -1195,7 +1195,7 @@
             </DOMFrame>
             <DOMFrame index="1" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="game/Symbol 415" selected="true" symbolType="graphic" centerPoint3DX="-2.75" centerPoint3DY="2.1" loop="loop">
+                <DOMSymbolInstance libraryItemName="game/Symbol 415" symbolType="graphic" centerPoint3DX="-2.75" centerPoint3DY="2.1" loop="loop">
                   <matrix>
                     <Matrix a="0.458251953125" b="-0.888671875" c="-0.888671875" d="-0.458251953125" tx="-2.7" ty="2.05"/>
                   </matrix>
@@ -1559,7 +1559,7 @@
             </DOMFrame>
             <DOMFrame index="1" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="game/Symbol 413 copy 4" selected="true" symbolType="graphic" centerPoint3DX="-22.9" centerPoint3DY="6.55" loop="loop">
+                <DOMSymbolInstance libraryItemName="game/Symbol 413 copy 4" symbolType="graphic" centerPoint3DX="-22.9" centerPoint3DY="6.55" loop="loop">
                   <matrix>
                     <Matrix a="0.914413452148438" b="-0.40460205078125" c="0.40460205078125" d="0.914413452148438" tx="-22.6" ty="6.85"/>
                   </matrix>
@@ -1923,7 +1923,7 @@
             </DOMFrame>
             <DOMFrame index="1" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="game/Symbol 415" selected="true" symbolType="graphic" centerPoint3DX="-18.25" centerPoint3DY="-2.2" loop="loop">
+                <DOMSymbolInstance libraryItemName="game/Symbol 415" symbolType="graphic" centerPoint3DX="-18.25" centerPoint3DY="-2.2" loop="loop">
                   <matrix>
                     <Matrix a="0.8697509765625" b="-0.493255615234375" c="0.493255615234375" d="0.8697509765625" tx="-18.25" ty="-2.2"/>
                   </matrix>
