@@ -84,6 +84,14 @@
       this.frame = props.frame;
       this.index = this.frame.instances.length;
     }
+    get prev() {
+      var _a;
+      return (_a = this.frame.prev) == null ? void 0 : _a.instances[this.index];
+    }
+    get next() {
+      var _a;
+      return (_a = this.frame.next) == null ? void 0 : _a.instances[this.index];
+    }
     get item() {
       throw "Override item getter in base class";
     }
@@ -185,6 +193,8 @@
     }
     createFrame(props) {
       const frame2 = new Frame(__spreadProps(__spreadValues({}, props), { layer: this }));
+      if (this.frames.length > 0 && this.lastFrame.index + this.lastFrame.totalFrames != frame2.index)
+        throw "Must add next frame at previous frame.index+frame.duration";
       this.framesByName[frame2.name] = frame2;
       if (frame2.index + frame2.totalFrames > this.totalFrames)
         this.totalFrames = frame2.index + frame2.totalFrames;
@@ -577,7 +587,7 @@
       this.draw = (item, frame2, callback, lerp) => {
         if (item instanceof SpriteInstance) {
           this.ctx.save();
-          this.ctx.transform(item.matrix2d.a, item.matrix2d.b, item.matrix2d.c, item.matrix2d.d, item.matrix2d.e, item.matrix2d.f);
+          this.drawInstance(item, frame2, lerp);
           if (callback)
             callback(item, frame2);
           else
@@ -585,7 +595,7 @@
           this.ctx.restore();
         } else if (item instanceof ClipInstance) {
           this.ctx.save();
-          this.ctx.transform(item.matrix2d.a, item.matrix2d.b, item.matrix2d.c, item.matrix2d.d, item.matrix2d.e, item.matrix2d.f);
+          this.drawInstance(item, frame2, lerp);
           if (callback)
             callback(item, frame2);
           else
@@ -603,6 +613,16 @@
         }
       };
       this.ctx = ctx2;
+    }
+    drawInstance(item, frame2, lerp) {
+      if (item.next) {
+        const t = (modWrap(frame2, item.totalFrames) - item.index) / item.frame.totalFrames;
+        const m1 = item.matrix2d;
+        const m2 = item.next.matrix2d;
+        this.ctx.transform(m1.a + (m2.a - m1.a) * t, m1.b + (m2.b - m1.b) * t, m1.c + (m2.c - m1.c) * t, m1.d + (m2.d - m1.d) * t, m1.e + (m2.e - m1.e) * t, m1.f + (m2.f - m1.f) * t);
+      } else {
+        this.ctx.transform(item.matrix2d.a, item.matrix2d.b, item.matrix2d.c, item.matrix2d.d, item.matrix2d.e, item.matrix2d.f);
+      }
     }
   };
 

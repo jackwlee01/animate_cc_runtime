@@ -2,9 +2,14 @@
   "name": "animate_cc_runtime",
   "version": "1.0.0",
   "description": "",
-  "main": "test-page.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files":[
+    "dist"
+  ],
   "scripts": {
-    "build": "esbuild src/index.ts --bundle --outfile=bin/bundle.js",
+    "prepare": "npm run build",
+    "build": "esbuild src/index.ts --bundle --outfile=dist/index.js",
     "build-minimal": "esbuild src/examples/minimal.ts --bundle --outfile=bin/minimal.js --sourcemap",
     "build-symbol-explorer": "esbuild src/examples/symbol-explorer.ts --bundle --outfile=bin/symbol-explorer.js --sourcemap",
     "build-dynamic-content": "esbuild src/examples/dynamic-content.ts --bundle --outfile=bin/dynamic-content.js --sourcemap",

@@ -3,6 +3,7 @@ import { Drawable } from "./Drawable";
 import { Layer } from "./Layer";
 import { SpriteInstance, SpriteInstanceProps } from "./SpriteInstance";
 import { DrawableProps } from "./Drawable";
+import { Instance } from "./Instance";
 
 
 type Int = number;
@@ -21,8 +22,8 @@ export class Frame extends Drawable{
     labelName:string|null;
     layer:Layer;
     instances:Array<ClipInstance|SpriteInstance> = [];
-    prev?:Frame;
-    next?:Frame;
+    prev:Frame|undefined;
+    next:Frame|undefined;
 
 
     constructor(props:FrameProps){
@@ -35,13 +36,12 @@ export class Frame extends Drawable{
         this.layer = props.layer;
         this.index = props.index;
         this.labelName = props.labelName || null;
-        
     }
 
 
     public createClipInstance(props:Omit<ClipInstanceProps, 'frame'>){
         const clipInstance = new ClipInstance({...props, frame:this})
-        this.instances.push(clipInstance);
+        this.instances.push(clipInstance)
         return clipInstance;
     }
 

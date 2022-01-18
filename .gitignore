@@ -1,5 +1,6 @@
 node_modules
 fla/RECOVER_*
+dist
 
 # Local Netlify folder
 .netlify

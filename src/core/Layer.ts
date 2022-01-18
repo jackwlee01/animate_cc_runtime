@@ -40,8 +40,11 @@ export class Layer extends Drawable{
 
 
     public createFrame(props:Omit<FrameProps, 'layer'>){
-        // TODO: Enforce that frames are added to the end, not inbetween.
         const frame = new Frame({...props, layer:this});
+
+        // TODO: Allow for more flexibility when adding frames
+        if(this.frames.length>0 && this.lastFrame.index+this.lastFrame.totalFrames != frame.index) throw("Must add next frame at previous frame.index+frame.duration")
+
         this.framesByName[frame.name] = frame;
         if(frame.index+frame.totalFrames > this.totalFrames) this.totalFrames = frame.index+frame.totalFrames
         if(frame.labelName){

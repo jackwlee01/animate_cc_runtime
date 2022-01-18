@@ -44,6 +44,16 @@ export class Instance extends Drawable{
     }
 
 
+    public get prev():Instance|undefined{
+        return this.frame.prev?.instances[this.index]
+    }
+
+
+    public get next():Instance|undefined{
+        return this.frame.next?.instances[this.index]
+    }
+
+
     public get item():Drawable{
         throw("Override item getter in base class");
     }
