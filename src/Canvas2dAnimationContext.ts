@@ -23,31 +23,31 @@ export class Canvas2dAnimationContext extends AnimationContext{
     }
 
 
-    draw = (item:Drawable, frame:Float, callback?:(item:Drawable, frame:Float)=>void, lerp?:boolean) => {
+    draw = (item:Drawable, frame:Float, callback?:(item:Drawable, frame:Float, lerp?:boolean)=>void, lerp?:boolean) => {
         if(item instanceof SpriteInstance){
             this.ctx.save()
-            this.drawInstance(item, frame, lerp)
-            if(callback) callback(item, frame)
-            else item.draw(frame, callback)
+            this.transformInstance(item, frame, lerp)
+            if(callback) callback(item, frame, lerp)
+            else item.draw(frame, callback, lerp)
             this.ctx.restore()
         }else if(item instanceof ClipInstance){
             this.ctx.save()
-            this.drawInstance(item, frame, lerp)
-            if(callback) callback(item, frame)
-            else item.draw(frame, callback)
+            this.transformInstance(item, frame, lerp)
+            if(callback) callback(item, frame, lerp)
+            else item.draw(frame, callback, lerp)
             this.ctx.restore()
         }else if(item instanceof Sprite){
-            if(callback) callback(item, frame)
+            if(callback) callback(item, frame, lerp)
             this.ctx.drawImage(item.atlas.image, item.x, item.y, item.width, item.height, 0, 0, item.width, item.height)
         }else{
-            if(callback) callback(item, frame)
-            else item.draw(frame, callback)
+            if(callback) callback(item, frame, lerp)
+            else item.draw(frame, callback, lerp)
         }
     }
 
 
-    drawInstance(item:Instance, frame:Float, lerp?:boolean){
-        if(item.next){
+    transformInstance(item:Instance, frame:Float, lerp?:boolean){
+        if(lerp && item.next){
             const t = (modWrap(frame, item.totalFrames)-item.index) / item.frame.totalFrames;
             const m1 = item.matrix2d
             const m2 = item.next.matrix2d 

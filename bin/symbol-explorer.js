@@ -364,7 +364,7 @@
       this.rotated = props.rotated;
       this.atlas = props.atlas;
     }
-    draw(frame2, callback) {
+    draw(frame2, callback, lerp) {
     }
     visit(frame2, callback) {
       callback(this, frame2);
@@ -624,35 +624,35 @@
       this.draw = (item, frame2, callback, lerp) => {
         if (item instanceof SpriteInstance) {
           this.ctx.save();
-          this.drawInstance(item, frame2, lerp);
+          this.transformInstance(item, frame2, lerp);
           if (callback)
-            callback(item, frame2);
+            callback(item, frame2, lerp);
           else
-            item.draw(frame2, callback);
+            item.draw(frame2, callback, lerp);
           this.ctx.restore();
         } else if (item instanceof ClipInstance) {
           this.ctx.save();
-          this.drawInstance(item, frame2, lerp);
+          this.transformInstance(item, frame2, lerp);
           if (callback)
-            callback(item, frame2);
+            callback(item, frame2, lerp);
           else
-            item.draw(frame2, callback);
+            item.draw(frame2, callback, lerp);
           this.ctx.restore();
         } else if (item instanceof Sprite) {
           if (callback)
-            callback(item, frame2);
+            callback(item, frame2, lerp);
           this.ctx.drawImage(item.atlas.image, item.x, item.y, item.width, item.height, 0, 0, item.width, item.height);
         } else {
           if (callback)
-            callback(item, frame2);
+            callback(item, frame2, lerp);
           else
-            item.draw(frame2, callback);
+            item.draw(frame2, callback, lerp);
         }
       };
       this.ctx = ctx2;
     }
-    drawInstance(item, frame2, lerp) {
-      if (item.next) {
+    transformInstance(item, frame2, lerp) {
+      if (lerp && item.next) {
         const t = (modWrap(frame2, item.totalFrames) - item.index) / item.frame.totalFrames;
         const m1 = item.matrix2d;
         const m2 = item.next.matrix2d;

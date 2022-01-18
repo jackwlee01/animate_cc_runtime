@@ -31,6 +31,7 @@ let eyesFrame = 1;
 let noseRotation = 0;
 let reverse = false;
 let playSpeed = 1;
+let lerp = false;
 
 document.onkeydown = e => {
     switch(e.key){
@@ -41,6 +42,7 @@ document.onkeydown = e => {
         case 'r': reverse = !reverse; break;
         case '=': playSpeed *= 2; break;
         case '-': playSpeed /= 2; break;
+        case 'l': lerp = !lerp; break;
         case 'ArrowUp': eyesFrame++; break
         case 'ArrowDown': eyesFrame--; break
         case 'ArrowLeft': noseRotation+=0.2; break
@@ -72,32 +74,32 @@ document.onkeydown = e => {
 //     - How you can draw arbitrary stuff on the 2d context
 //     - How you can apply state base transformations
 //
-function drawWithLogic(item:Drawable, frame:number){
+function drawWithLogic(item:Drawable, frame:number, lerp?:boolean){
     if(item instanceof Clip){
         // Rotate any clip named game/Walker_Nose_Nose
         if(item.name == "game/Walker_Nose_Nose"){
             ctx.save();
                 ctx.rotate(noseRotation)
-                item.draw(frame, drawWithLogic)
+                item.draw(frame, drawWithLogic, lerp)
             ctx.restore();
         }else{
-            item.draw(frame, drawWithLogic)
+            item.draw(frame, drawWithLogic, lerp)
         }
     }else if(item instanceof Layer){
         // If the layer name is "layer_eye", choose the frame
         if(item.name=="layer_eye"){
-            item.draw(eyesFrame, drawWithLogic)
+            item.draw(eyesFrame, drawWithLogic, lerp)
         }else{
-            item.draw(frame, drawWithLogic)
+            item.draw(frame, drawWithLogic, lerp)
         }
     }else if(item instanceof Frame){
-        item.draw(frame, drawWithLogic)
+        item.draw(frame, drawWithLogic, lerp)
     }else if(item instanceof Instance){
         // If the instance's layer name is "layer_hat", choose the hat clip
         if(item.frame.layer.name=="layer_hat"){
-            hatsLibrary.symbol("Hat_"+hatIndex).draw(frame, drawWithLogic)
+            hatsLibrary.symbol("Hat_"+hatIndex).draw(frame, drawWithLogic, lerp)
         }else{
-            item.draw(frame, drawWithLogic)
+            item.draw(frame, drawWithLogic, lerp)
         }
     }else if(item instanceof Sprite){
         item.draw(frame) // Note: leaf node, so don't supply drawWithLogic as an argument
@@ -122,25 +124,26 @@ function update(){
         ctx.fillText('Up/Down: Change eyes', 20, 100);
         ctx.fillText('Left/Right: Rotate nose', 20, 150);
         ctx.fillText('Spacebar: Toggle debug border', 20, 200);
-        ctx.fillText('+ and -: Change play speed', 20, 250);
+        ctx.fillText('l: Toggle lerp', 20, 250);
         ctx.fillText('r: Reverse play speed', 20, 300);
+        ctx.fillText('+ and -: Change play speed', 20, 350);
         
         ctx.translate(canvas.width/2, canvas.height/2)
         ctx.scale(dpr, dpr)
 
         ctx.save();
             ctx.translate(-200, 0)
-            hatsLibrary.symbol("Walker_Laser").draw(frame, drawWithLogic)
+            hatsLibrary.symbol("Walker_Laser").draw(frame, drawWithLogic, lerp)
         ctx.restore()
 
         ctx.save()
             ctx.translate(0, 0)
-            hatsLibrary.symbol("Walker_Nose").draw(frame, drawWithLogic)
+            hatsLibrary.symbol("Walker_Nose").draw(frame, drawWithLogic, lerp)
         ctx.restore()
 
         ctx.save();
             ctx.translate(200, -50)
-            hatsLibrary.symbol("StarDude").draw(frame, drawWithLogic)
+            hatsLibrary.symbol("StarDude").draw(frame, drawWithLogic, lerp)
         ctx.restore()
     
     ctx.restore()

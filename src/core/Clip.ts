@@ -47,7 +47,7 @@ export class Clip extends Drawable{
     }
 
 
-    public draw(frame:Float, callback?:(item:Drawable, frame:Float)=>void, lerp?:boolean){
+    public draw(frame:Float, callback?:(item:Drawable, frame:Float, lerp?:boolean)=>void, lerp?:boolean){
         for(const layer of this.layers){
             if(layer.totalFrames==0) continue;
             var f = modWrap(frame, layer.totalFrames);

@@ -32,7 +32,7 @@ export abstract class Drawable{
     }
 
 
-    public draw(frame:Float, callback?:(item:Drawable, frame:Float)=>void, lerp?:boolean){
+    public draw(frame:Float, callback?:(item:Drawable, frame:Float, lerp?:boolean)=>void, lerp?:boolean){
         // Override in base class
     }
 
