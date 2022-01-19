@@ -40,9 +40,20 @@ gunInput.style.left = '-100px'
 gunInput.style.width = '150px'
 gunInput.style.height = '30px'
 
+let shellInput = document.createElement('input')
+shellInput.type = 'checkbox'
+shellInput.id = "shell-input"
+shellInput.style.position = 'absolute'
+shellInput.style.width = '30px'
+shellInput.style.height = '30px'
+shellInput.style.transform = 'translate(-50%, -50%)'
+shellInput.checked = true;
+
 
 function drawWithLogic(item:Drawable, frame:number, lerp?:boolean){
-    if(swap && item.name=="stardude_assets/StarGuyGun"){
+    if(swap && item.name=="Shell"){
+        animContext.current.appendChild(shellInput)
+    }else if(swap && item.name=="stardude_assets/StarGuyGun"){
         animContext.current.appendChild(gunInput)
     }else{
         item.draw(frame, drawWithLogic, lerp)
