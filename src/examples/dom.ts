@@ -72,7 +72,7 @@ function update(){
         animContext.pop();
         animContext.pop();
 
-        frame++;
+        frame += 1;
     }
 
     requestAnimationFrame(update)

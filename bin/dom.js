@@ -573,21 +573,21 @@
         if (!this.container)
           return;
         if (item instanceof Layer2) {
-          this.pushElem("layer", item.name);
+          this.pushElem("layer", item.name, item.id);
           if (callback)
             callback(item, frame2, lerp);
           else
             item.draw(frame2, callback, lerp);
           this.pop();
         } else if (item instanceof Frame) {
-          this.pushElem("frame", item.name);
+          this.pushElem("frame", item.name, item.id);
           if (callback)
             callback(item, frame2, lerp);
           else
             item.draw(frame2, callback, lerp);
           this.pop();
         } else if (item instanceof SpriteInstance) {
-          this.pushElem("sprite", item.name);
+          this.pushElem("sprite", item.name, item.id);
           this.transformInstance(item, frame2, lerp);
           if (callback)
             callback(item, frame2, lerp);
@@ -595,7 +595,7 @@
             item.draw(frame2, callback, lerp);
           this.pop();
         } else if (item instanceof ClipInstance) {
-          this.pushElem("clip", item.name);
+          this.pushElem("clip", item.name, item.id);
           this.transformInstance(item, frame2, lerp);
           if (callback)
             callback(item, frame2, lerp);
@@ -617,12 +617,30 @@
       this.elemId = elemId;
       this.elems = [];
       this.stack = [this.container];
+      this.pool = {};
     }
     get current() {
       return this.stack[this.stack.length - 1];
     }
-    pushElem(type, name) {
-      const elem = document.createElement("div");
+    attain(tag, id) {
+      if (!this.pool[id])
+        this.pool[id] = [];
+      const collection = this.pool[id];
+      let elem;
+      if (collection.length == 0) {
+        elem = document.createElement(tag);
+        elem.__animId__ = id;
+      } else {
+        elem = collection.pop();
+      }
+      return elem;
+    }
+    release(elem) {
+      const id = elem.__animId__;
+      this.pool[id].push(elem);
+    }
+    pushElem(type, name, id) {
+      const elem = this.attain("div", id);
       elem.className = `anim anim-${type} anim-of-${name}`;
       elem.style.position = "absolute";
       elem.style.top = "0px";
@@ -643,18 +661,19 @@
       while (this.elems.length > 0) {
         const elem = this.elems.shift();
         elem.remove();
+        this.release(elem);
       }
     }
     pushTranslate(x, y) {
-      this.pushElem("transform", "translate");
+      this.pushElem("transform", "translate", "__transform__");
       this.current.style.transform = `translate(${x}, ${y})`;
     }
     pushScale(x, y) {
-      this.pushElem("transform", "scale");
+      this.pushElem("transform", "scale", "__scale__");
       this.current.style.transform = `scale(${x}, ${y})`;
     }
     pushRotation(z) {
-      this.pushElem("transform", "scale");
+      this.pushElem("transform", "rotation", "__rotation__");
       this.current.style.transform = `rotate(${z})`;
     }
     transformInstance(item, frame2, lerp) {
@@ -731,7 +750,7 @@
       animContext.pop();
       animContext.pop();
       animContext.pop();
-      frame++;
+      frame += 1;
     }
     requestAnimationFrame(update);
   }

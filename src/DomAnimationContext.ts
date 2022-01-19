@@ -14,13 +14,15 @@ export class DomAnimationContext extends AnimationContext{
     elemId:string
     elems:Array<HTMLElement>
     stack:Array<HTMLElement>
-
+    pool:Record<string, HTMLElement[]>
+    
 
     constructor(elemId:string){
         super();
         this.elemId = elemId
         this.elems = []
         this.stack = [this.container]
+        this.pool = {}
     }
 
 
@@ -29,8 +31,28 @@ export class DomAnimationContext extends AnimationContext{
     }
 
 
-    pushElem(type:string, name:string){
-        const elem = document.createElement('div')
+    private attain<K extends keyof HTMLElementTagNameMap>(tag:K, id:string){
+        if(!this.pool[id]) this.pool[id] = [];
+        const collection = this.pool[id];
+        let elem:HTMLElementTagNameMap[K];
+        if(collection.length==0){
+            elem = document.createElement(tag);
+            (elem as any).__animId__ = id; // Naughty casting
+        }else{
+            elem = collection.pop() as typeof elem;
+        }
+        return elem;
+    }
+
+
+    private release(elem:HTMLElement){
+        const id = (elem as any).__animId__ // Naughty casting
+        this.pool[id].push(elem);
+    }
+
+
+    pushElem(type:string, name:string, id:string){
+        const elem = this.attain('div', id)
         elem.className = `anim anim-${type} anim-of-${name}`
         elem.style.position = 'absolute'
         elem.style.top = '0px'
@@ -53,11 +75,11 @@ export class DomAnimationContext extends AnimationContext{
     }
 
 
-
     clear(){
         while(this.elems.length > 0){
-            const elem = this.elems.shift();
-            elem!.remove();
+            const elem = this.elems.shift()!;
+            elem.remove();
+            this.release(elem)
         }
     }
 
@@ -65,23 +87,23 @@ export class DomAnimationContext extends AnimationContext{
     draw = (item:Drawable, frame:Float, callback?:(item:Drawable, frame:Float, lerp?:boolean)=>void, lerp?:boolean) => {
         if(!this.container) return;
         if(item instanceof Layer){
-            this.pushElem('layer', item.name)
+            this.pushElem('layer', item.name, item.id)
             if(callback) callback(item, frame, lerp)
             else item.draw(frame, callback, lerp)
             this.pop()
         }else if(item instanceof Frame){
-            this.pushElem('frame', item.name)
+            this.pushElem('frame', item.name, item.id)
             if(callback) callback(item, frame, lerp)
             else item.draw(frame, callback, lerp)
             this.pop()
         }else if(item instanceof SpriteInstance){
-            this.pushElem('sprite', item.name)
+            this.pushElem('sprite', item.name, item.id)
             this.transformInstance(item, frame, lerp)
             if(callback) callback(item, frame, lerp)
             else item.draw(frame, callback, lerp)
             this.pop()
         }else if(item instanceof ClipInstance){
-            this.pushElem('clip', item.name)
+            this.pushElem('clip', item.name, item.id)
             this.transformInstance(item, frame, lerp)
             if(callback) callback(item, frame, lerp)
             else item.draw(frame, callback, lerp)
@@ -100,18 +122,18 @@ export class DomAnimationContext extends AnimationContext{
 
 
     pushTranslate(x:string, y:string){
-        this.pushElem('transform', 'translate')
+        this.pushElem('transform', 'translate', '__transform__')
         this.current.style.transform = `translate(${x}, ${y})`
     }
 
 
     pushScale(x:string, y:string){
-        this.pushElem('transform', 'scale')
+        this.pushElem('transform', 'scale', '__scale__')
         this.current.style.transform = `scale(${x}, ${y})`
     }
 
     pushRotation(z:string){
-        this.pushElem('transform', 'scale')
+        this.pushElem('transform', 'rotation', '__rotation__')
         this.current.style.transform = `rotate(${z})`
     }
     
