@@ -12,8 +12,8 @@ import { modWrap } from "./core/util";
 export class DomAnimationContext extends AnimationContext{
     
     elemId:string
-    elems:Array<HTMLDivElement>
-    stack:Array<HTMLDivElement>
+    elems:Array<HTMLElement>
+    stack:Array<HTMLElement>
 
 
     constructor(elemId:string){

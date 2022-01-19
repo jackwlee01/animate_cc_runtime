@@ -19,7 +19,6 @@
     "dev": "live-server bin"
   },
   "author": "",
-  "license": "ISC",
   "devDependencies": {
     "esbuild": "^0.14.5",
     "live-server": "^1.2.1"

@@ -673,24 +673,49 @@
     });
   }
   var frame = 0;
+  var play = true;
+  var swap = false;
+  var btnPause = document.getElementById("btn-pause");
+  var btnSwap = document.getElementById("btn-swap");
+  btnPause.onclick = () => {
+    play = !play;
+    btnPause.innerText = play ? "Pause" : "Play";
+    let gunInput2 = document.getElementById("gun-input");
+    if (gunInput2) {
+      gunInput2.focus();
+    }
+  };
+  btnSwap.onclick = () => {
+    swap = !swap;
+  };
   var gunInput = document.createElement("input");
+  gunInput.id = "gun-input";
+  gunInput.value = "GUN!!!!";
+  gunInput.style.boxShadow = "0px 3px 8px rgb(0 0 0 / 40%)";
+  gunInput.style.position = "absolute";
+  gunInput.style.top = "-10px";
+  gunInput.style.left = "-100px";
+  gunInput.style.width = "150px";
+  gunInput.style.height = "30px";
   function drawWithLogic(item, frame2, lerp) {
-    if (item instanceof Layer2 && item.name == "gun") {
-      item.draw(frame2, drawWithLogic, lerp);
+    if (swap && item.name == "stardude_assets/StarGuyGun") {
+      animContext.current.appendChild(gunInput);
     } else {
       item.draw(frame2, drawWithLogic, lerp);
     }
   }
   function update() {
-    animContext.clear();
-    animContext.pushTranslate("0px", "10px");
-    animContext.pushScale("1", "1");
-    animContext.pushRotation("0deg");
-    testLibrary.symbol("StarDude").draw(frame, drawWithLogic);
-    animContext.pop();
-    animContext.pop();
-    animContext.pop();
-    frame++;
+    if (play) {
+      animContext.clear();
+      animContext.pushTranslate("0px", "10px");
+      animContext.pushScale("1", "1");
+      animContext.pushRotation("0deg");
+      testLibrary.symbol("StarDude").draw(frame, drawWithLogic);
+      animContext.pop();
+      animContext.pop();
+      animContext.pop();
+      frame++;
+    }
     requestAnimationFrame(update);
   }
   init();
