@@ -2,6 +2,7 @@ import { Drawable } from "./Drawable";
 import { Vec2 } from "./geom/Vec2";
 import { Instance } from "./Instance";
 import { InstanceProps } from "./Instance"
+import { modWrap } from "./util";
 
 type LoopKind = 'loop' // TODO: HANDLE OTHER LOOP KINDS | 'PlayOnce' | 'SingleFrame' | 'PlayOnceReverse' | 'LoopReverse'
 
@@ -42,7 +43,7 @@ export class ClipInstance extends Instance{
 
     public draw(frame:Float, callback?:(item:Drawable, frame:Float, lerp?:boolean)=>void, lerp?:boolean):void{
         if(this.behaviour.type == 'graphic'){
-            frame = this.behaviour.firstFrame;
+            frame = this.behaviour.firstFrame + modWrap(frame, 1);
         }
         this.library.context.draw(this.item, frame, callback, lerp)
     }
@@ -50,7 +51,7 @@ export class ClipInstance extends Instance{
 
     public visit(frame:Float, callback:(item:Drawable, frame:Float)=>void):void{
         if(this.behaviour.type == 'graphic'){
-            frame = this.behaviour.firstFrame;
+            frame = this.behaviour.firstFrame + modWrap(frame, 1);
         }
         callback(this, frame)
     }
