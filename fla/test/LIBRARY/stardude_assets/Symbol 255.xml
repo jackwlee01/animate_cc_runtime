@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="stardude_assets/Symbol 256 copy" selected="true" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="stardude_assets/Symbol 256 copy" symbolType="graphic" loop="loop">
                   <transformationPoint>
                     <Point x="62.2" y="29.15"/>
                   </transformationPoint>

@@ -14,7 +14,7 @@
                     <Point x="62.2" y="29.1"/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="stardude_assets/Symbol 251" selected="true" symbolType="graphic" centerPoint3DX="62.4" centerPoint3DY="28.75" loop="loop">
+                <DOMSymbolInstance libraryItemName="stardude_assets/Symbol 251" symbolType="graphic" centerPoint3DX="62.4" centerPoint3DY="28.75" loop="loop">
                   <matrix>
                     <Matrix tx="0.75"/>
                   </matrix>
