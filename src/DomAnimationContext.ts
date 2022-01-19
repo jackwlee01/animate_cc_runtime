@@ -43,7 +43,7 @@ export class DomAnimationContext extends AnimationContext{
     }
 
 
-    popElem(){
+    pop(){
         this.stack.pop()
     }
 
@@ -66,22 +66,26 @@ export class DomAnimationContext extends AnimationContext{
         if(!this.container) return;
         if(item instanceof Layer){
             this.pushElem('layer', item.name)
-            item.draw(frame, callback, lerp)
-            this.popElem()
+            if(callback) callback(item, frame, lerp)
+            else item.draw(frame, callback, lerp)
+            this.pop()
         }else if(item instanceof Frame){
             this.pushElem('frame', item.name)
-            item.draw(frame, callback, lerp)
-            this.popElem()
+            if(callback) callback(item, frame, lerp)
+            else item.draw(frame, callback, lerp)
+            this.pop()
         }else if(item instanceof SpriteInstance){
             this.pushElem('sprite', item.name)
             this.transformInstance(item, frame, lerp)
-            item.draw(frame, callback, lerp)
-            this.popElem()
+            if(callback) callback(item, frame, lerp)
+            else item.draw(frame, callback, lerp)
+            this.pop()
         }else if(item instanceof ClipInstance){
             this.pushElem('clip', item.name)
             this.transformInstance(item, frame, lerp)
-            item.draw(frame, callback, lerp)
-            this.popElem()
+            if(callback) callback(item, frame, lerp)
+            else item.draw(frame, callback, lerp)
+            this.pop()
         }else if(item instanceof Sprite){
             this.current.style.width = item.width + 'px'
             this.current.style.height = item.height + 'px'
@@ -89,10 +93,28 @@ export class DomAnimationContext extends AnimationContext{
             this.current.style.backgroundPosition = `${-item.x}px ${-item.y}px`
             //this.current.style.border = '1px solid red'
         }else{
-            item.draw(frame, callback, lerp)
+            if(callback) callback(item, frame, lerp)
+            else item.draw(frame, callback, lerp)
         }
     }
 
+
+    pushTranslate(x:string, y:string){
+        this.pushElem('transform', 'translate')
+        this.current.style.transform = `translate(${x}, ${y})`
+    }
+
+
+    pushScale(x:string, y:string){
+        this.pushElem('transform', 'scale')
+        this.current.style.transform = `scale(${x}, ${y})`
+    }
+
+    pushRotation(z:string){
+        this.pushElem('transform', 'scale')
+        this.current.style.transform = `rotate(${z})`
+    }
+    
 
     transformInstance(item:Instance, frame:Float, lerp?:boolean){
         const m = item.matrix2d

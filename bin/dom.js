@@ -574,29 +574,44 @@
           return;
         if (item instanceof Layer2) {
           this.pushElem("layer", item.name);
-          item.draw(frame2, callback, lerp);
-          this.popElem();
+          if (callback)
+            callback(item, frame2, lerp);
+          else
+            item.draw(frame2, callback, lerp);
+          this.pop();
         } else if (item instanceof Frame) {
           this.pushElem("frame", item.name);
-          item.draw(frame2, callback, lerp);
-          this.popElem();
+          if (callback)
+            callback(item, frame2, lerp);
+          else
+            item.draw(frame2, callback, lerp);
+          this.pop();
         } else if (item instanceof SpriteInstance) {
           this.pushElem("sprite", item.name);
           this.transformInstance(item, frame2, lerp);
-          item.draw(frame2, callback, lerp);
-          this.popElem();
+          if (callback)
+            callback(item, frame2, lerp);
+          else
+            item.draw(frame2, callback, lerp);
+          this.pop();
         } else if (item instanceof ClipInstance) {
           this.pushElem("clip", item.name);
           this.transformInstance(item, frame2, lerp);
-          item.draw(frame2, callback, lerp);
-          this.popElem();
+          if (callback)
+            callback(item, frame2, lerp);
+          else
+            item.draw(frame2, callback, lerp);
+          this.pop();
         } else if (item instanceof Sprite) {
           this.current.style.width = item.width + "px";
           this.current.style.height = item.height + "px";
           this.current.style.backgroundImage = `url(${item.atlas.image.src})`;
           this.current.style.backgroundPosition = `${-item.x}px ${-item.y}px`;
         } else {
-          item.draw(frame2, callback, lerp);
+          if (callback)
+            callback(item, frame2, lerp);
+          else
+            item.draw(frame2, callback, lerp);
         }
       };
       this.elemId = elemId;
@@ -618,7 +633,7 @@
       this.elems.push(elem);
       this.stack.push(elem);
     }
-    popElem() {
+    pop() {
       this.stack.pop();
     }
     get container() {
@@ -629,6 +644,18 @@
         const elem = this.elems.shift();
         elem.remove();
       }
+    }
+    pushTranslate(x, y) {
+      this.pushElem("transform", "translate");
+      this.current.style.transform = `translate(${x}, ${y})`;
+    }
+    pushScale(x, y) {
+      this.pushElem("transform", "scale");
+      this.current.style.transform = `scale(${x}, ${y})`;
+    }
+    pushRotation(z) {
+      this.pushElem("transform", "scale");
+      this.current.style.transform = `rotate(${z})`;
     }
     transformInstance(item, frame2, lerp) {
       const m = item.matrix2d;
@@ -646,9 +673,23 @@
     });
   }
   var frame = 0;
+  var gunInput = document.createElement("input");
+  function drawWithLogic(item, frame2, lerp) {
+    if (item instanceof Layer2 && item.name == "gun") {
+      item.draw(frame2, drawWithLogic, lerp);
+    } else {
+      item.draw(frame2, drawWithLogic, lerp);
+    }
+  }
   function update() {
     animContext.clear();
-    testLibrary.symbol("StarDude").draw(frame);
+    animContext.pushTranslate("0px", "10px");
+    animContext.pushScale("1", "1");
+    animContext.pushRotation("0deg");
+    testLibrary.symbol("StarDude").draw(frame, drawWithLogic);
+    animContext.pop();
+    animContext.pop();
+    animContext.pop();
     frame++;
     requestAnimationFrame(update);
   }

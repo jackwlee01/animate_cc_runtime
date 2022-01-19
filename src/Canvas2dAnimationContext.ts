@@ -63,5 +63,5 @@ export class Canvas2dAnimationContext extends AnimationContext{
             this.ctx.transform(item.matrix2d.a, item.matrix2d.b, item.matrix2d.c, item.matrix2d.d, item.matrix2d.e, item.matrix2d.f)
         }
     }
-
+    
 }
