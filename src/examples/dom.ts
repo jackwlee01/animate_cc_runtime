@@ -67,7 +67,7 @@ function update(){
         animContext.pushTranslate('0px', '10px')
         animContext.pushScale('1', '1')
         animContext.pushRotation('0deg')
-        testLibrary.symbol("StarDude").draw(frame/8, drawWithLogic, true)
+        testLibrary.symbol("StarDude").draw(frame, drawWithLogic)
         animContext.pop();
         animContext.pop();
         animContext.pop();
