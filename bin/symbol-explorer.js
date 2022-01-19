@@ -140,6 +140,11 @@
     }
   };
 
+  // src/core/util.ts
+  function modWrap(a, b) {
+    return a - b * Math.floor(a / b);
+  }
+
   // src/core/ClipInstance.ts
   var ClipInstance = class extends Instance {
     constructor(props) {
@@ -152,13 +157,13 @@
     }
     draw(frame2, callback, lerp) {
       if (this.behaviour.type == "graphic") {
-        frame2 = this.behaviour.firstFrame;
+        frame2 = this.behaviour.firstFrame + modWrap(frame2, 1);
       }
       this.library.context.draw(this.item, frame2, callback, lerp);
     }
     visit(frame2, callback) {
       if (this.behaviour.type == "graphic") {
-        frame2 = this.behaviour.firstFrame;
+        frame2 = this.behaviour.firstFrame + modWrap(frame2, 1);
       }
       callback(this, frame2);
     }
@@ -208,11 +213,6 @@
       }
     }
   };
-
-  // src/core/util.ts
-  function modWrap(a, b) {
-    return a - b * Math.floor(a / b);
-  }
 
   // src/core/Layer.ts
   var Layer = class extends Drawable {

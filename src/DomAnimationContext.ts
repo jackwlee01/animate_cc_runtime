@@ -118,25 +118,15 @@ export class DomAnimationContext extends AnimationContext{
 
     transformInstance(item:Instance, frame:Float, lerp?:boolean){
         const m = item.matrix2d
-        this.current.style.transform = `matrix(${m.a}, ${m.b}, ${m.c}, ${m.d}, ${m.e}, ${m.f})`
-        /*
         if(lerp && item.next){
             const t = (modWrap(frame, item.totalFrames)-item.index) / item.frame.totalFrames;
             const m1 = item.matrix2d
             const m2 = item.next.matrix2d 
-          
-            this.ctx.transform(
-                m1.a + (m2.a-m1.a)*t,
-                m1.b + (m2.b-m1.b)*t,
-                m1.c + (m2.c-m1.c)*t,
-                m1.d + (m2.d-m1.d)*t,
-                m1.e + (m2.e-m1.e)*t,
-                m1.f + (m2.f-m1.f)*t,
-            )
+            this.current.style.transform = `matrix(${m1.a + (m2.a-m1.a)*t}, ${m1.b + (m2.b-m1.b)*t}, ${m1.c + (m2.c-m1.c)*t}, ${m1.d + (m2.d-m1.d)*t}, ${m1.e + (m2.e-m1.e)*t}, ${m1.f + (m2.f-m1.f)*t})`
         }else{
-            this.ctx.transform(item.matrix2d.a, item.matrix2d.b, item.matrix2d.c, item.matrix2d.d, item.matrix2d.e, item.matrix2d.f)
-        }
-        */
+            this.current.style.transform = `matrix(${m.a}, ${m.b}, ${m.c}, ${m.d}, ${m.e}, ${m.f})`
+       }
+        
     }
 
 }

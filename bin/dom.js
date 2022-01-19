@@ -85,6 +85,11 @@
     }
   };
 
+  // src/core/util.ts
+  function modWrap(a, b) {
+    return a - b * Math.floor(a / b);
+  }
+
   // src/core/ClipInstance.ts
   var ClipInstance = class extends Instance {
     constructor(props) {
@@ -97,13 +102,13 @@
     }
     draw(frame2, callback, lerp) {
       if (this.behaviour.type == "graphic") {
-        frame2 = this.behaviour.firstFrame;
+        frame2 = this.behaviour.firstFrame + modWrap(frame2, 1);
       }
       this.library.context.draw(this.item, frame2, callback, lerp);
     }
     visit(frame2, callback) {
       if (this.behaviour.type == "graphic") {
-        frame2 = this.behaviour.firstFrame;
+        frame2 = this.behaviour.firstFrame + modWrap(frame2, 1);
       }
       callback(this, frame2);
     }
@@ -153,11 +158,6 @@
       }
     }
   };
-
-  // src/core/util.ts
-  function modWrap(a, b) {
-    return a - b * Math.floor(a / b);
-  }
 
   // src/core/Layer.ts
   var Layer = class extends Drawable {
@@ -659,7 +659,14 @@
     }
     transformInstance(item, frame2, lerp) {
       const m = item.matrix2d;
-      this.current.style.transform = `matrix(${m.a}, ${m.b}, ${m.c}, ${m.d}, ${m.e}, ${m.f})`;
+      if (lerp && item.next) {
+        const t = (modWrap(frame2, item.totalFrames) - item.index) / item.frame.totalFrames;
+        const m1 = item.matrix2d;
+        const m2 = item.next.matrix2d;
+        this.current.style.transform = `matrix(${m1.a + (m2.a - m1.a) * t}, ${m1.b + (m2.b - m1.b) * t}, ${m1.c + (m2.c - m1.c) * t}, ${m1.d + (m2.d - m1.d) * t}, ${m1.e + (m2.e - m1.e) * t}, ${m1.f + (m2.f - m1.f) * t})`;
+      } else {
+        this.current.style.transform = `matrix(${m.a}, ${m.b}, ${m.c}, ${m.d}, ${m.e}, ${m.f})`;
+      }
     }
   };
 
@@ -720,7 +727,7 @@
       animContext.pushTranslate("0px", "10px");
       animContext.pushScale("1", "1");
       animContext.pushRotation("0deg");
-      testLibrary.symbol("StarDude").draw(frame, drawWithLogic);
+      testLibrary.symbol("StarDude").draw(frame / 8, drawWithLogic, true);
       animContext.pop();
       animContext.pop();
       animContext.pop();
