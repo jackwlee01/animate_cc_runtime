@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.8.0/mvp.css"/> 
+        <style>
+            body{
+                padding: 0;
+                margin: 0;
+            }
+            #container{
+                width:100vw;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+            #anim{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+            }
+            form{
+                background-color: rgba(255, 255, 255, 0.4);
+                box-shadow: none;
+            }
+            input, button{
+                width: 100%;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div id="container">
+            <form>
+                <label>Name</label>
+                <input type="text"/>
+                <label>Address</label>
+                <input type="text"/>
+                <button width="100%">Submit</button>
+            </form>
+            <div id="anim" />
+        </div>
+        <script src="./dom.js"></script>
+    </body>
+</html>
