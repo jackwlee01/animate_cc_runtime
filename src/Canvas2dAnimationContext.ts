@@ -85,13 +85,14 @@ export class Canvas2dAnimationContext extends AnimationContext{
         }
     }
 
-    handleColor(item:Instance, frame:Float, lerp?:boolean){
+    
+    private handleColor(item:Instance, frame:Float, lerp?:boolean){
         // TODO: Handle lerp on color
         if(item.color?.mode == 'CA' || item.color?.mode == 'Alpha' || item.color?.mode == 'Advanced' || item.color?.mode == 'AD') this.ctx.globalAlpha *= item.color.alphaMultiplier;
     }
 
 
-    handleFilters(item:Instance, frame:Float, lerp?:boolean){
+    private handleFilters(item:Instance, frame:Float, lerp?:boolean){
         // TODO: Handle lerp on filters
         if(item.filters){
             for(let k of Object.keys(item.filters)){
@@ -110,7 +111,7 @@ export class Canvas2dAnimationContext extends AnimationContext{
     }
 
 
-    transformInstance(item:Instance, frame:Float, lerp?:boolean){
+    private transformInstance(item:Instance, frame:Float, lerp?:boolean){
         if(lerp && item.next){
             const t = (modWrap(frame, item.totalFrames)-item.index) / item.frame.totalFrames;
             const m1 = item.matrix2d
