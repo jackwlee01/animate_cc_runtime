@@ -1,6 +1,6 @@
 type Float = number;
 type Int = number;
-type IntColor = number;
+type StringColor = string;
 
 
 export type Matrix3D = Float[] | {
@@ -65,8 +65,25 @@ export type TransformationPoint = {
 
 
 export type Color = {
-    mode:string;
-    alphaMultiplier:Float;
+    mode:'Alpha',
+    alphaMultiplier:Float,
+} | {
+    mode: 'Brightness',
+    brightness: Float,
+} | {
+    mode: 'Tint',
+    tintColor: StringColor,
+    tintMultiplier: Float,
+} | {
+    mode: 'Advanced',
+    redMultiplier: Float,
+    greenMultiplier: Float,
+    blueMultiplier: Float,
+    alphaMultiplier: Float,
+    redOffset: Float,
+    greenOffset: Float,
+    blueOffset: Float,
+    alphaOffset: Float
 }
 
 
@@ -76,7 +93,7 @@ export type FilterDropShadow = {
     angle: Float,
     blurX: Float,
     blurY: Float,
-    color: string,
+    color: StringColor,
     alpha: Float,
     distance: Float,
     hideObject: boolean,
@@ -93,7 +110,7 @@ export type FilterBlur = {
 export type FilterGlow = {
     blurX: Float,
     blurY: Float,
-    color: string,
+    color: StringColor,
     alpha: Float,
     quality: Int,
     strength: Float,

@@ -83,6 +83,7 @@
       this.matrix2d = props.matrix2d;
       this.matrix3d = props.matrix3d;
       this.filters = props.filters;
+      this.color = props.color;
       this.frame = props.frame;
       this.index = this.frame.instances.length;
     }
@@ -374,6 +375,8 @@
     Symbols: "symbols",
     TIMELINE: "timeline",
     GradientEntries: "gradientEntries",
+    RedMultiplier: "redMultiplier",
+    AlphaOffset: "alphaOffset",
     AN: "animation",
     AM: "alphaMultiplier",
     ASI: "atlasSpriteInstance",
@@ -547,10 +550,11 @@
                   };
                   const instanceProps = {
                     frame: frame2,
-                    filters: elemData.filters,
+                    filters: elemData.filters || null,
                     matrix2d: "m00" in m ? new Matrix2d(m.m00, m.m01, m.m10, m.m11, m.m30, m.m31) : new Matrix2d(m[0], m[1], m[4], m[5], m[12], m[13]),
                     matrix3d: "m00" in m ? new Matrix3d(m.m00, m.m01, m.m02, m.m03, m.m10, m.m11, m.m12, m.m13, m.m20, m.m21, m.m22, m.m23, m.m30, m.m31, m.m32, m.m33) : new Matrix3d(m[0], m[1], m[2], m[3], m[4], m[5], m[6], m[7], m[8], m[9], m[10], m[11], m[12], m[13], m[14], m[15]),
-                    itemName: elemData.symbolName
+                    itemName: elemData.symbolName,
+                    color: elemData.color || null
                   };
                   const clipInstance = frame2.createClipInstance(__spreadProps(__spreadValues(__spreadValues({}, drawableProps), instanceProps), {
                     transformationPoint: new Vec2(elemData.transformationPoint),
@@ -565,7 +569,8 @@
                   };
                   const instanceProps = {
                     frame: frame2,
-                    filters: elemData.filters,
+                    filters: elemData.filters || null,
+                    color: null,
                     matrix2d: "m00" in m ? new Matrix2d(m.m00, m.m01, m.m10, m.m11, m.m30, m.m31) : new Matrix2d(m[0], m[1], m[4], m[5], m[12], m[13]),
                     matrix3d: "m00" in m ? new Matrix3d(m.m00, m.m01, m.m02, m.m03, m.m10, m.m11, m.m12, m.m13, m.m20, m.m21, m.m22, m.m23, m.m30, m.m31, m.m32, m.m33) : new Matrix3d(m[0], m[1], m[2], m[3], m[4], m[5], m[6], m[7], m[8], m[9], m[10], m[11], m[12], m[13], m[14], m[15]),
                     itemName: elemData.name

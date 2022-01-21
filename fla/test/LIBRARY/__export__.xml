@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="__export__" itemID="6195a546-00000910" lastModified="1642739293" lastUniqueIdentifier="2">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="__export__" itemID="6195a546-00000910" lastModified="1642740125" lastUniqueIdentifier="2">
   <timeline>
     <DOMTimeline name="__export__" layerDepthEnabled="true">
       <layers>
@@ -62,13 +62,57 @@
                     <Point/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="PentagonAnim" selected="true">
+                <DOMSymbolInstance libraryItemName="PentagonAnim">
                   <matrix>
                     <Matrix tx="632.2" ty="177"/>
                   </matrix>
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="PentagonAnim">
+                  <matrix>
+                    <Matrix tx="620.2" ty="361.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="-0.31"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="PentagonAnim">
+                  <matrix>
+                    <Matrix tx="674.2" ty="568.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color tintMultiplier="0.34" tintColor="#FF0098"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="PentagonAnim">
+                  <matrix>
+                    <Matrix tx="894.2" ty="581.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color greenMultiplier="0.28125" alphaOffset="-40" redOffset="63" blueOffset="46" greenOffset="70"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="PentagonAnim">
+                  <matrix>
+                    <Matrix tx="1044.2" ty="568.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.1796875"/>
+                  </color>
                 </DOMSymbolInstance>
               </elements>
             </DOMFrame>

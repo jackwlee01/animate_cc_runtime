@@ -1,7 +1,7 @@
 import { AnimationJson } from "./AnimationJson";
 
 const keys:Record<string, string> = {
-    // fix inconsistent names
+    // Fix inconsistent names
 
     // spritemap.json
     SPRITE: "sprite",
@@ -29,6 +29,10 @@ const keys:Record<string, string> = {
 
     // Filter
     GradientEntries: "gradientEntries",
+
+    // Color
+    RedMultiplier: 'redMultiplier',
+    AlphaOffset: 'alphaOffset',
  
      // Animation.json optimised
      AN: "animation",

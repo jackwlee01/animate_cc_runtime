@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="PentagonAnim" itemID="61ea365d-000008b8" lastModified="1642739742" lastUniqueIdentifier="2">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="PentagonAnim" itemID="61ea365d-000008b8" lastModified="1642739870" lastUniqueIdentifier="2">
   <timeline>
     <DOMTimeline name="PentagonAnim" currentFrame="122" layerDepthEnabled="true">
       <layers>
@@ -31,6 +31,9 @@
                   <filters>
                     <DropShadowFilter blurX="48" blurY="48" distance="30" strength="0.57"/>
                   </filters>
+                  <color>
+                    <Color alphaMultiplier="0.1796875"/>
+                  </color>
                 </DOMSymbolInstance>
               </elements>
             </DOMFrame>
