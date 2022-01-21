@@ -99,15 +99,25 @@ export class Canvas2dAnimationContext extends AnimationContext{
                 const key = k as FilterType;
                 if(key=='DropShadowFilter'){
                     const filter = item.filters[key] as FilterDropShadow;
-                    this.ctx.shadowBlur = filter.blurX;
-                    this.ctx.shadowColor = filter.color + (Math.round(filter.strength*255)).toString(16);
-                    this.ctx.shadowOffsetX = Math.cos(filter.angle*Math.PI/180) * filter.distance
-                    this.ctx.shadowOffsetY = Math.sin(filter.angle*Math.PI/180) * filter.distance
-                    this.pushContext();
+                    this.pushDropShadow(
+                        filter.color + (Math.round(filter.strength*255)).toString(16),
+                        filter.blurX,
+                        Math.cos(filter.angle*Math.PI/180) * filter.distance,
+                        Math.sin(filter.angle*Math.PI/180) * filter.distance,
+                    )
                     return true;
                 }
             }
         }
+    }
+
+
+    pushDropShadow(color:string, blur:number, offsetX:Float=0, offsetY:Float=0){
+        this.ctx.shadowColor = color;
+        this.ctx.shadowBlur = blur;
+        this.ctx.shadowOffsetX = offsetX;
+        this.ctx.shadowOffsetY = offsetY;
+        this.pushContext();
     }
 
 

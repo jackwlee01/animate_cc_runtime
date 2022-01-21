@@ -756,15 +756,18 @@
           const key = k;
           if (key == "DropShadowFilter") {
             const filter = item.filters[key];
-            this.ctx.shadowBlur = filter.blurX;
-            this.ctx.shadowColor = filter.color + Math.round(filter.strength * 255).toString(16);
-            this.ctx.shadowOffsetX = Math.cos(filter.angle * Math.PI / 180) * filter.distance;
-            this.ctx.shadowOffsetY = Math.sin(filter.angle * Math.PI / 180) * filter.distance;
-            this.pushContext();
+            this.pushDropShadow(filter.color + Math.round(filter.strength * 255).toString(16), filter.blurX, Math.cos(filter.angle * Math.PI / 180) * filter.distance, Math.sin(filter.angle * Math.PI / 180) * filter.distance);
             return true;
           }
         }
       }
+    }
+    pushDropShadow(color, blur, offsetX = 0, offsetY = 0) {
+      this.ctx.shadowColor = color;
+      this.ctx.shadowBlur = blur;
+      this.ctx.shadowOffsetX = offsetX;
+      this.ctx.shadowOffsetY = offsetY;
+      this.pushContext();
     }
     transformInstance(item, frame2, lerp) {
       if (lerp && item.next) {
