@@ -1,6 +1,6 @@
 <DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="ShellBounce" itemID="61e7736c-00000703" symbolType="graphic" lastModified="1642558671" lastUniqueIdentifier="1">
   <timeline>
-    <DOMTimeline name="ShellBounce" currentFrame="145" guides='&lt;guidelines&gt;&lt;guideline direction="h"&gt;657&lt;/guideline&gt;&lt;/guidelines&gt;' layerDepthEnabled="true">
+    <DOMTimeline name="ShellBounce" guides='&lt;guidelines&gt;&lt;guideline direction="h"&gt;657&lt;/guideline&gt;&lt;/guidelines&gt;' layerDepthEnabled="true">
       <layers>
         <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
           <frames>

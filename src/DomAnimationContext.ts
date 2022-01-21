@@ -14,7 +14,6 @@ export class DomAnimationContext extends AnimationContext{
     elemId:string
     elems:Array<HTMLElement>
     stack:Array<HTMLElement>
-    pool:Record<string, HTMLElement[]>
     
 
     constructor(elemId:string){
@@ -22,7 +21,6 @@ export class DomAnimationContext extends AnimationContext{
         this.elemId = elemId
         this.elems = []
         this.stack = [this.container]
-        this.pool = {}
     }
 
 
@@ -31,28 +29,9 @@ export class DomAnimationContext extends AnimationContext{
     }
 
 
-    private attain<K extends keyof HTMLElementTagNameMap>(tag:K, id:string){
-        if(!this.pool[id]) this.pool[id] = [];
-        const collection = this.pool[id];
-        let elem:HTMLElementTagNameMap[K];
-        if(collection.length==0){
-            elem = document.createElement(tag);
-            (elem as any).__animId__ = id; // Naughty casting
-        }else{
-            elem = collection.pop() as typeof elem;
-        }
-        return elem;
-    }
-
-
-    private release(elem:HTMLElement){
-        const id = (elem as any).__animId__ // Naughty casting
-        this.pool[id].push(elem);
-    }
-
 
     pushElem(type:string, name:string, id:string){
-        const elem = this.attain('div', id)
+        const elem = document.createElement('div');
         elem.className = `anim anim-${type} anim-of-${name}`
         elem.style.position = 'absolute'
         elem.style.top = '0px'
@@ -79,7 +58,6 @@ export class DomAnimationContext extends AnimationContext{
         while(this.elems.length > 0){
             const elem = this.elems.shift()!;
             elem.remove();
-            this.release(elem)
         }
     }
 

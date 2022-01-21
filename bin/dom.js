@@ -617,30 +617,12 @@
       this.elemId = elemId;
       this.elems = [];
       this.stack = [this.container];
-      this.pool = {};
     }
     get current() {
       return this.stack[this.stack.length - 1];
     }
-    attain(tag, id) {
-      if (!this.pool[id])
-        this.pool[id] = [];
-      const collection = this.pool[id];
-      let elem;
-      if (collection.length == 0) {
-        elem = document.createElement(tag);
-        elem.__animId__ = id;
-      } else {
-        elem = collection.pop();
-      }
-      return elem;
-    }
-    release(elem) {
-      const id = elem.__animId__;
-      this.pool[id].push(elem);
-    }
     pushElem(type, name, id) {
-      const elem = this.attain("div", id);
+      const elem = document.createElement("div");
       elem.className = `anim anim-${type} anim-of-${name}`;
       elem.style.position = "absolute";
       elem.style.top = "0px";
@@ -661,7 +643,6 @@
       while (this.elems.length > 0) {
         const elem = this.elems.shift();
         elem.remove();
-        this.release(elem);
       }
     }
     pushTranslate(x, y) {

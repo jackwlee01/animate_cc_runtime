@@ -1,12 +1,12 @@
 <DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="ShellSpin" itemID="61e7734d-000006fe" symbolType="graphic" lastModified="1642558301" lastUniqueIdentifier="1">
   <timeline>
-    <DOMTimeline name="ShellSpin" currentFrame="39" layerDepthEnabled="true">
+    <DOMTimeline name="ShellSpin" layerDepthEnabled="true">
       <layers>
         <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
           <frames>
             <DOMFrame index="0" duration="39" tweenType="motion" motionTweenRotate="clockwise" motionTweenRotateTimes="1" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="Shell" selected="true">
+                <DOMSymbolInstance libraryItemName="Shell">
                   <matrix>
                     <Matrix a="0.195297241210938" b="-0.980743408203125" c="0.980743408203125" d="0.195297241210938"/>
                   </matrix>

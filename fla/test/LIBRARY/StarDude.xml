@@ -1,6 +1,6 @@
 <DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="StarDude" itemID="61dd0c1a-00000ff6" lastModified="1642558750" lastUniqueIdentifier="3">
   <timeline>
-    <DOMTimeline name="StarDude" currentFrame="52" layerDepthEnabled="true">
+    <DOMTimeline name="StarDude" currentFrame="95" layerDepthEnabled="true">
       <layers>
         <DOMLayer name="Layer_2" color="#9933CC">
           <frames>
@@ -199,7 +199,7 @@
           <frames>
             <DOMFrame index="0" duration="95" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="ShellBounce" symbolType="graphic" firstFrame="20" centerPoint3DX="43.85" centerPoint3DY="5.15" loop="loop">
+                <DOMSymbolInstance libraryItemName="ShellBounce" selected="true" symbolType="graphic" firstFrame="20" centerPoint3DX="43.85" centerPoint3DY="5.15" loop="loop">
                   <matrix>
                     <Matrix tx="43.85" ty="1.5"/>
                   </matrix>
@@ -211,7 +211,7 @@
             </DOMFrame>
             <DOMFrame index="95" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="ShellBounce" symbolType="graphic" firstFrame="115" centerPoint3DX="195.85" centerPoint3DY="5.15" loop="loop">
+                <DOMSymbolInstance libraryItemName="ShellBounce" selected="true" symbolType="graphic" firstFrame="115" centerPoint3DX="195.85" centerPoint3DY="5.15" loop="loop">
                   <matrix>
                     <Matrix tx="195.85" ty="1.5"/>
                   </matrix>
@@ -279,7 +279,7 @@
                 </CustomEase>
               </tweens>
               <elements>
-                <DOMSymbolInstance libraryItemName="stardude_assets/StarGuyGun" selected="true">
+                <DOMSymbolInstance libraryItemName="stardude_assets/StarGuyGun">
                   <matrix>
                     <Matrix a="0.99957275390625" b="0.027374267578125" c="-0.027374267578125" d="0.99957275390625" tx="-2.4" ty="4.75"/>
                   </matrix>
