@@ -1,6 +1,6 @@
 <DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="StarDude" itemID="61dd0c1a-00000ff6" lastModified="1642743391" lastUniqueIdentifier="5">
   <timeline>
-    <DOMTimeline name="StarDude" layerDepthEnabled="true">
+    <DOMTimeline name="StarDude" currentFrame="61" layerDepthEnabled="true">
       <layers>
         <DOMLayer name="Layer_2" color="#9933CC">
           <frames>

@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Scene" itemID="61ea53fb-00000652" lastModified="1642748658" lastUniqueIdentifier="2">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Scene" itemID="61ea53fb-00000652" lastModified="1642748931" lastUniqueIdentifier="2">
   <timeline>
     <DOMTimeline name="Scene" layerDepthEnabled="true">
       <layers>
@@ -6,17 +6,6 @@
           <frames>
             <DOMFrame index="0" duration="163" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="StarDude">
-                  <matrix>
-                    <Matrix tx="10.45" ty="7.25"/>
-                  </matrix>
-                  <transformationPoint>
-                    <Point x="5" y="2"/>
-                  </transformationPoint>
-                  <filters>
-                    <DropShadowFilter blurX="27" blurY="27" distance="15"/>
-                  </filters>
-                </DOMSymbolInstance>
                 <DOMSymbolInstance libraryItemName="Walker_Nose">
                   <matrix>
                     <Matrix tx="-147.65" ty="33.95"/>
@@ -32,6 +21,17 @@
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="StarDude">
+                  <matrix>
+                    <Matrix tx="10.45" ty="-20.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="5" y="2"/>
+                  </transformationPoint>
+                  <filters>
+                    <DropShadowFilter blurX="27" blurY="27" distance="15"/>
+                  </filters>
                 </DOMSymbolInstance>
               </elements>
             </DOMFrame>

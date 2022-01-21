@@ -1,12 +1,12 @@
 <DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Symbol 5" itemID="61ea54f9-000006c2" lastModified="1642748268">
   <timeline>
-    <DOMTimeline name="Symbol 5" currentFrame="627" layerDepthEnabled="true">
+    <DOMTimeline name="Symbol 5" layerDepthEnabled="true">
       <layers>
         <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
           <frames>
             <DOMFrame index="0" duration="680" tweenType="motion" motionTweenRotate="clockwise" motionTweenRotateTimes="1" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="Tween 7" selected="true" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="Tween 7" symbolType="graphic" loop="loop">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
