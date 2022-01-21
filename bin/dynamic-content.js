@@ -49,7 +49,6 @@
     canvas2.height = canvas2.width;
     let dpr2 = window.devicePixelRatio || 1;
     let rect = canvas2.getBoundingClientRect();
-    canvas2.style.border = "2px solid gray";
     canvas2.style.width = "" + canvas2.width + "px";
     canvas2.style.height = "" + canvas2.height + "px";
     canvas2.width = rect.width * dpr2;
@@ -652,19 +651,20 @@
             this.ctx.globalCompositeOperation = "source-in";
             item.draw(frame2, callback, lerp2);
             this.popContext();
-            this.ctx.rect(0, 0, 10, 10);
           } else {
             item.draw(frame2, callback, lerp2);
           }
         } else if (item instanceof Instance) {
           this.ctx.save();
           this.transformInstance(item, frame2, lerp2);
-          this.handleFilters(item, frame2, lerp2);
+          const didPushContext = this.handleFilters(item, frame2, lerp2);
           this.handleColor(item, frame2, lerp2);
           if (callback)
             callback(item, frame2, lerp2);
           else
             item.draw(frame2, callback, lerp2);
+          if (didPushContext)
+            this.popContext();
           this.ctx.restore();
         } else if (item instanceof Sprite) {
           if (callback)
@@ -684,6 +684,8 @@
       return this.stack[this.stack.length - 1];
     }
     pushContext() {
+      if (this.pool.length == 0)
+        console.log("Create");
       const ctx2 = this.pool.length == 0 ? document.createElement("canvas").getContext("2d") : this.pool.pop();
       ctx2.canvas.width = this.ctx.canvas.width;
       ctx2.canvas.height = this.ctx.canvas.height;
@@ -715,6 +717,8 @@
             this.ctx.shadowColor = filter.color + Math.round(filter.strength * 255).toString(16);
             this.ctx.shadowOffsetX = Math.cos(filter.angle * Math.PI / 180) * filter.distance;
             this.ctx.shadowOffsetY = Math.sin(filter.angle * Math.PI / 180) * filter.distance;
+            this.pushContext();
+            return true;
           }
         }
       }

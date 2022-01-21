@@ -16,7 +16,7 @@
                 <Ease target="all" intensity="100"/>
               </tweens>
               <elements>
-                <DOMSymbolInstance libraryItemName="game/Walker_Nose_Head" selected="true" symbolType="graphic" firstFrame="49" centerPoint3DX="41.4" centerPoint3DY="38.2" loop="loop">
+                <DOMSymbolInstance libraryItemName="game/Walker_Nose_Head" symbolType="graphic" firstFrame="49" centerPoint3DX="41.4" centerPoint3DY="38.2" loop="loop">
                   <matrix>
                     <Matrix tx="0.45" ty="-9.6"/>
                   </matrix>

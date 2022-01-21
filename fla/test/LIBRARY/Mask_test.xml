@@ -1,12 +1,12 @@
 <DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Mask_test" itemID="61ea105a-00000baa" lastModified="1642746784" lastUniqueIdentifier="3">
   <timeline>
-    <DOMTimeline name="Mask_test" currentFrame="32" layerDepthEnabled="true">
+    <DOMTimeline name="Mask_test" layerDepthEnabled="true">
       <layers>
         <DOMLayer name="Layer_2" color="#9933CC" locked="true" layerType="mask">
           <frames>
             <DOMFrame index="0" duration="48" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 4" selected="true">
+                <DOMSymbolInstance libraryItemName="Symbol 4">
                   <matrix>
                     <Matrix tx="-78.5" ty="-31.2"/>
                   </matrix>
@@ -83,7 +83,7 @@
             </DOMFrame>
             <DOMFrame index="48" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="Tween 1" selected="true" symbolType="graphic" centerPoint3DX="-96" centerPoint3DY="-10" loop="loop">
+                <DOMSymbolInstance libraryItemName="Tween 1" symbolType="graphic" centerPoint3DX="-96" centerPoint3DY="-10" loop="loop">
                   <matrix>
                     <Matrix tx="-96" ty="-10"/>
                   </matrix>

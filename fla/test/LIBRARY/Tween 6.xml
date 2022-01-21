@@ -1,0 +1,24 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Tween 6" itemID="61ea5927-0000120f" symbolType="graphic" lastModified="1642748199">
+  <timeline>
+    <DOMTimeline name="Tween 6" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="back.png">
+                  <matrix>
+                    <Matrix d="0.999984741210938" tx="-960" ty="-540"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="959.95" y="539.85"/>
+                  </transformationPoint>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

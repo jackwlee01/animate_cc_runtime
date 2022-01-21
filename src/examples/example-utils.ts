@@ -21,7 +21,7 @@ export function setupCanvas(canvas:HTMLCanvasElement) {
     
     // Give the canvas pixel dimensions of their CSS
     // size * the device pixel ratio.
-    canvas.style.border = "2px solid gray";
+    //canvas.style.border = "2px solid gray";
     canvas.style.width = "" + canvas.width + "px";
     canvas.style.height = "" + canvas.height + "px";
     canvas.width = rect.width * dpr;

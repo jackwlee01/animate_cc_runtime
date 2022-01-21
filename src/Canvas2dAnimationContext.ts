@@ -32,6 +32,7 @@ export class Canvas2dAnimationContext extends AnimationContext{
 
 
     pushContext(){
+        if(this.pool.length==0) console.log("Create")
         const ctx = this.pool.length==0 ? document.createElement('canvas').getContext('2d')! : this.pool.pop()!
         ctx.canvas.width = this.ctx.canvas.width
         ctx.canvas.height = this.ctx.canvas.height
@@ -61,18 +62,17 @@ export class Canvas2dAnimationContext extends AnimationContext{
                 this.ctx.globalCompositeOperation = 'source-in'
                 item.draw(frame, callback, lerp)
                 this.popContext()
-                //console.log("Draw masked")
-                this.ctx.rect(0, 0, 10, 10)
             }else{
                 item.draw(frame, callback, lerp)
             }
         }else if(item instanceof Instance){
             this.ctx.save()
             this.transformInstance(item, frame, lerp)
-            this.handleFilters(item, frame, lerp)
+            const didPushContext = this.handleFilters(item, frame, lerp)
             this.handleColor(item, frame, lerp)
             if(callback) callback(item, frame, lerp)
             else item.draw(frame, callback, lerp)
+            if(didPushContext) this.popContext()
             this.ctx.restore()
         }else if(item instanceof Sprite){
             if(callback) callback(item, frame, lerp)
@@ -100,6 +100,8 @@ export class Canvas2dAnimationContext extends AnimationContext{
                     this.ctx.shadowColor = filter.color + (Math.round(filter.strength*255)).toString(16);
                     this.ctx.shadowOffsetX = Math.cos(filter.angle*Math.PI/180) * filter.distance
                     this.ctx.shadowOffsetY = Math.sin(filter.angle*Math.PI/180) * filter.distance
+                    this.pushContext();
+                    return true;
                 }
             }
         }

@@ -44,7 +44,7 @@
               <elements>
                 <DOMSymbolInstance libraryItemName="Tween 2" symbolType="graphic" centerPoint3DX="-0.05" loop="loop">
                   <matrix>
-                    <Matrix a="0.991455078125" b="-0.130447387695312" c="0.130447387695312" d="0.991455078125"/>
+                    <Matrix a="0.991455078125" b="-0.13043212890625" c="0.13043212890625" d="0.991455078125"/>
                   </matrix>
                   <transformationPoint>
                     <Point/>

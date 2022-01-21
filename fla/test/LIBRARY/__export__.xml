@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="__export__" itemID="6195a546-00000910" lastModified="1642741490" lastUniqueIdentifier="2">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="__export__" itemID="6195a546-00000910" lastModified="1642747736" lastUniqueIdentifier="3">
   <timeline>
     <DOMTimeline name="__export__" layerDepthEnabled="true">
       <layers>
@@ -54,12 +54,20 @@
                     <Point/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="Mask_test" selected="true">
+                <DOMSymbolInstance libraryItemName="Scene" selected="true">
                   <matrix>
-                    <Matrix tx="809.2" ty="415"/>
+                    <Matrix tx="1018.95" ty="553.5"/>
                   </matrix>
                   <transformationPoint>
                     <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Mask_test">
+                  <matrix>
+                    <Matrix tx="782.45" ty="288.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-149.55" y="-79.65"/>
                   </transformationPoint>
                 </DOMSymbolInstance>
               </elements>
