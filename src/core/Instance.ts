@@ -3,11 +3,13 @@ import { Frame } from "./Frame";
 import { Matrix2d } from "./geom/Matrix2d";
 import { Vec3 } from "./geom/Vec3";
 import { DrawableProps } from './Drawable'
+import { Matrix3d } from "./geom/Matrix3d";
 
 
 export type InstanceProps = Omit<DrawableProps, 'id' | 'library'> & {
     itemName:string,
     matrix2d:Matrix2d,
+    matrix3d:Matrix3d,
     frame:Frame,
     //position:Vec3,
     //scale:Vec3,
@@ -18,6 +20,7 @@ export type InstanceProps = Omit<DrawableProps, 'id' | 'library'> & {
 export class Instance extends Drawable{
 
     matrix2d:Matrix2d;
+    matrix3d:Matrix3d;
     frame:Frame;
     index:number;
     itemName:string;
@@ -36,6 +39,7 @@ export class Instance extends Drawable{
 
         this.itemName = props.itemName;
         this.matrix2d = props.matrix2d;
+        this.matrix3d = props.matrix3d;
         //this.position = props.position;
         //this.scale = props.scale;
         //this.rotation = props.rotation;
