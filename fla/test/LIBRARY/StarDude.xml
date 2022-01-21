@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="StarDude" itemID="61dd0c1a-00000ff6" lastModified="1642737220" lastUniqueIdentifier="3">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="StarDude" itemID="61dd0c1a-00000ff6" lastModified="1642739175" lastUniqueIdentifier="3">
   <timeline>
     <DOMTimeline name="StarDude" layerDepthEnabled="true">
       <layers>
@@ -141,44 +141,10 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer_6" color="#FF0000" current="true" isSelected="true">
+        <DOMLayer name="Layer_6" color="#FF0000">
           <frames>
             <DOMFrame index="0" duration="123" keyMode="9728">
-              <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 1">
-                  <matrix>
-                    <Matrix tx="165.7" ty="-40.45"/>
-                  </matrix>
-                  <transformationPoint>
-                    <Point/>
-                  </transformationPoint>
-                  <filters>
-                    <DropShadowFilter angle="151.000001138365" blurX="2" blurY="2" color="#FF9900" distance="22"/>
-                  </filters>
-                </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="Symbol 1">
-                  <matrix>
-                    <Matrix tx="-49.3" ty="-7.45"/>
-                  </matrix>
-                  <transformationPoint>
-                    <Point/>
-                  </transformationPoint>
-                  <filters>
-                    <DropShadowFilter angle="0" blurX="41" blurY="41" distance="29"/>
-                  </filters>
-                </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="Symbol 1">
-                  <matrix>
-                    <Matrix tx="38.7" ty="47.55"/>
-                  </matrix>
-                  <transformationPoint>
-                    <Point/>
-                  </transformationPoint>
-                  <filters>
-                    <DropShadowFilter angle="309.999984062892" blurX="2" blurY="2" color="#00FF00" distance="39" strength="0.48"/>
-                  </filters>
-                </DOMSymbolInstance>
-              </elements>
+              <elements/>
             </DOMFrame>
             <DOMFrame index="123" duration="8" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="100">
               <tweens>
@@ -1087,7 +1053,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="left_leg" color="#009999" autoNamed="false">
+        <DOMLayer name="left_leg" color="#009999" current="true" isSelected="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" duration="58" tweenType="motion" motionTweenSnap="true" hasCustomEase="true" keyMode="22017">
               <tweens>

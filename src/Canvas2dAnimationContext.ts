@@ -28,7 +28,6 @@ export class Canvas2dAnimationContext extends AnimationContext{
     draw = (item:Drawable, frame:Float, callback?:(item:Drawable, frame:Float, lerp?:boolean)=>void, lerp?:boolean) => {
         if(item instanceof Instance){
             this.ctx.save()
-            
             this.transformInstance(item, frame, lerp)
             this.handleFilters(item, frame, lerp)
             if(callback) callback(item, frame, lerp)

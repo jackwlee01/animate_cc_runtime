@@ -2,7 +2,7 @@
   <timeline>
     <DOMTimeline name="Walker_Laser_idle" layerDepthEnabled="true">
       <layers>
-        <DOMLayer name="Layer_3" color="#FF800A">
+        <DOMLayer name="Layer_3" color="#FF800A" current="true" isSelected="true">
           <frames>
             <DOMFrame index="0" duration="24" tweenType="motion" motionTweenSnap="true" hasCustomEase="true" keyMode="22017">
               <tweens>
@@ -61,7 +61,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Symbol_413" color="#009999" current="true" isSelected="true" autoNamed="false">
+        <DOMLayer name="Symbol_413" color="#009999" autoNamed="false">
           <frames>
             <DOMFrame index="0" duration="24" tweenType="motion" motionTweenSync="true" motionTweenSnap="true" hasCustomEase="true" keyMode="24065">
               <tweens>
