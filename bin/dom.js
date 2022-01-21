@@ -85,7 +85,7 @@
     }
   };
 
-  // src/core/util.ts
+  // src/core/util/math.ts
   function modWrap(a, b) {
     return a - b * Math.floor(a / b);
   }

@@ -6,7 +6,7 @@ import { Frame } from "./core/Frame";
 import { Instance } from "./core/Instance"
 import { Sprite } from "./core/Sprite"
 import { SpriteInstance } from "./core/SpriteInstance";
-import { modWrap } from "./core/util";
+import { modWrap } from "./core/util/math";
 
 
 export class DomAnimationContext extends AnimationContext{

@@ -2,7 +2,7 @@ import { Drawable } from "./Drawable";
 import { Frame } from "./Frame";
 import { Layer, LayerProps } from "./Layer";
 import { DrawableProps } from './Drawable'
-import { modWrap } from "./util";
+import { modWrap } from "./util/math";
 
 type Float = number;
 export type ClipProps = Omit<DrawableProps, 'totalFrames'|'id'>

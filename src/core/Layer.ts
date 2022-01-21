@@ -2,7 +2,7 @@ import { Clip } from "./Clip";
 import { Drawable } from "./Drawable";
 import { Frame, FrameProps } from "./Frame";
 import { DrawableProps } from "./Drawable"
-import { modWrap } from "./util";
+import { modWrap } from "./util/math";
 
 
 type Int = number;

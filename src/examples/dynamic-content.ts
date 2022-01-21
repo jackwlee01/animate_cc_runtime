@@ -6,7 +6,7 @@ import { Layer } from "../core/Layer";
 import { Frame } from "../core/Frame";
 import { Instance } from "../core/Instance";
 import { Sprite } from "../core/Sprite";
-import { modWrap } from "../core/util";
+import { modWrap } from "../core/util/math";
 
 // Set up canvas
 const canvas = document.getElementById("canvas") as HTMLCanvasElement
