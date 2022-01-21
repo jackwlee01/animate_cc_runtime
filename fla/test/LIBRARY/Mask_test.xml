@@ -1,36 +1,64 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Mask_test" itemID="61ea105a-00000baa" lastModified="1642729621" lastUniqueIdentifier="1">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Mask_test" itemID="61ea105a-00000baa" lastModified="1642746784" lastUniqueIdentifier="3">
   <timeline>
-    <DOMTimeline name="Mask_test" currentFrame="29" layerDepthEnabled="true">
+    <DOMTimeline name="Mask_test" currentFrame="32" layerDepthEnabled="true">
       <layers>
-        <DOMLayer name="Layer_2" color="#9933CC" layerType="mask">
+        <DOMLayer name="Layer_2" color="#9933CC" locked="true" layerType="mask">
           <frames>
-            <DOMFrame index="0" duration="49" keyMode="9728">
+            <DOMFrame index="0" duration="48" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMShape>
-                  <fills>
-                    <FillStyle index="1">
-                      <SolidColor color="#CC9933"/>
-                    </FillStyle>
-                  </fills>
-                  <strokes>
-                    <StrokeStyle index="1">
-                      <SolidStroke scaleMode="normal">
-                        <fill>
-                          <SolidColor/>
-                        </fill>
-                      </SolidStroke>
-                    </StrokeStyle>
-                  </strokes>
-                  <edges>
-                    <Edge fillStyle1="1" strokeStyle="1" edges="!513 -624[513 239 -97 849!-97 849[-707 1459 -1570 1459!-1570 1459[-2433 1459 -3043 849!-3043 849[-3653 239 -3653 -624!-3653 -624[-3653 -1487 -3043 -2097!-3043 -2097[-2433 -2707 -1570 -2707!-1570 -2707[-707 -2707 -97 -2097!-97 -2097[513
- -1487 513 -624"/>
-                  </edges>
-                </DOMShape>
+                <DOMSymbolInstance libraryItemName="Symbol 4" selected="true">
+                  <matrix>
+                    <Matrix tx="-78.5" ty="-31.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="48" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 4" centerPoint3DX="-78.5" centerPoint3DY="-31.2">
+                  <matrix>
+                    <Matrix a="0.154693603515625" d="0.154693603515625" tx="-78.5" ty="-31.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
               </elements>
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer_1" color="#00FFFF" parentLayerIndex="0" current="true" isSelected="true">
+        <DOMLayer name="Layer_3" color="#FF800A" parentLayerIndex="0" locked="true">
+          <frames>
+            <DOMFrame index="0" duration="48" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 3">
+                  <matrix>
+                    <Matrix tx="-98" ty="48.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="48" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 3" centerPoint3DX="-88.05" centerPoint3DY="17.05">
+                  <matrix>
+                    <Matrix tx="-88" ty="48.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_1" color="#00FFFF" parentLayerIndex="0" locked="true" current="true" isSelected="true">
           <frames>
             <DOMFrame index="0" duration="23" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
@@ -55,9 +83,9 @@
             </DOMFrame>
             <DOMFrame index="48" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="Tween 1" symbolType="graphic" centerPoint3DX="-96" centerPoint3DY="80" loop="loop">
+                <DOMSymbolInstance libraryItemName="Tween 1" selected="true" symbolType="graphic" centerPoint3DX="-96" centerPoint3DY="-10" loop="loop">
                   <matrix>
-                    <Matrix tx="-96" ty="80"/>
+                    <Matrix tx="-96" ty="-10"/>
                   </matrix>
                   <transformationPoint>
                     <Point/>

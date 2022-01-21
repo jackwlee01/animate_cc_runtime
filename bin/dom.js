@@ -171,6 +171,8 @@
         library: props.clip.library
       }));
       this.clip = props.clip;
+      this.type = props.type;
+      this.clippedBy = props.clippedBy;
       this.index = this.clip.layers.length;
       this.frames = [];
       this.framesByName = {};
@@ -346,6 +348,8 @@
     framerate: "frameRate",
     Instance_Name: "instanceName",
     Layer_name: "layerName",
+    Layer_type: "layerType",
+    Clipped_by: "clippedBy",
     LAYERS: "layers",
     Matrix3D: "matrix3D",
     Position: "position",
@@ -513,7 +517,9 @@
           for (let l = symbolData.timeline.layers.length - 1; l >= 0; l--) {
             const layerData = symbolData.timeline.layers[l];
             const layer = clip.createLayer({
-              name: layerData.layerName
+              name: layerData.layerName,
+              type: layerData.layerType || "Normal",
+              clippedBy: layerData.clippedBy || null
             });
             for (const frameData of layerData.frames) {
               const frame2 = layer.createFrame({

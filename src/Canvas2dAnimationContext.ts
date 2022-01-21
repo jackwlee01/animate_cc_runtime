@@ -1,10 +1,10 @@
-import { Layer } from ".";
 import { AnimationContext } from "./core/AnimationContext"
 import { ClipInstance } from "./core/ClipInstance";
 import { Drawable } from "./core/Drawable"
 import { Frame } from "./core/Frame";
 import { Instance } from "./core/Instance"
 import { FilterDropShadow, FilterType } from "./core/json/AnimationJson";
+import { Layer } from "./core/Layer";
 import { Sprite } from "./core/Sprite"
 import { SpriteInstance } from "./core/SpriteInstance";
 import { modWrap } from "./core/util/math";
@@ -16,17 +16,57 @@ import { modWrap } from "./core/util/math";
 // with a few modification to faciliate mapping to a scene graph.
 export class Canvas2dAnimationContext extends AnimationContext{
     
-    ctx:CanvasRenderingContext2D;
-    
+    stack:CanvasRenderingContext2D[]
+    pool:CanvasRenderingContext2D[];
 
     constructor(ctx:CanvasRenderingContext2D){
         super();
-        this.ctx = ctx;
+        this.stack = [ctx]
+        this.pool = [];
+    }
+
+
+    get ctx(){
+        return this.stack[this.stack.length-1]
+    }
+
+
+    pushContext(){
+        const ctx = this.pool.length==0 ? document.createElement('canvas').getContext('2d')! : this.pool.pop()!
+        ctx.canvas.width = this.ctx.canvas.width
+        ctx.canvas.height = this.ctx.canvas.height
+        ctx.setTransform(this.ctx.getTransform())
+        this.stack.push(ctx)
+    }
+
+
+    popContext(){
+        if(this.stack.length<=1) throw("Cannot pop stack")
+        const ctx = this.stack.pop()!;
+        this.ctx.save();
+        this.ctx.resetTransform()
+        this.ctx.drawImage(ctx!.canvas, 0, 0);
+        this.ctx.restore();
+        this.pool.push(ctx)
     }
 
 
     draw = (item:Drawable, frame:Float, callback?:(item:Drawable, frame:Float, lerp?:boolean)=>void, lerp?:boolean) => {
-        if(item instanceof Instance){
+        if(item instanceof Layer){
+           if(item.type=='Clipper'){
+           }else if(item.clippedBy){
+                const clipLayer = item.clip.layersByName[item.clippedBy]
+                this.pushContext()
+                clipLayer.draw(frame, callback, lerp)
+                this.ctx.globalCompositeOperation = 'source-in'
+                item.draw(frame, callback, lerp)
+                this.popContext()
+                //console.log("Draw masked")
+                this.ctx.rect(0, 0, 10, 10)
+            }else{
+                item.draw(frame, callback, lerp)
+            }
+        }else if(item instanceof Instance){
             this.ctx.save()
             this.transformInstance(item, frame, lerp)
             this.handleFilters(item, frame, lerp)
@@ -45,9 +85,7 @@ export class Canvas2dAnimationContext extends AnimationContext{
 
     handleColor(item:Instance, frame:Float, lerp?:boolean){
         // TODO: Handle lerp on color
-
         if(item.color?.mode == 'CA' || item.color?.mode == 'Alpha' || item.color?.mode == 'Advanced' || item.color?.mode == 'AD') this.ctx.globalAlpha *= item.color.alphaMultiplier;
-
     }
 
 

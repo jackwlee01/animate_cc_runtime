@@ -189,6 +189,8 @@
         library: props.clip.library
       }));
       this.clip = props.clip;
+      this.type = props.type;
+      this.clippedBy = props.clippedBy;
       this.index = this.clip.layers.length;
       this.frames = [];
       this.framesByName = {};
@@ -364,6 +366,8 @@
     framerate: "frameRate",
     Instance_Name: "instanceName",
     Layer_name: "layerName",
+    Layer_type: "layerType",
+    Clipped_by: "clippedBy",
     LAYERS: "layers",
     Matrix3D: "matrix3D",
     Position: "position",
@@ -531,7 +535,9 @@
           for (let l = symbolData.timeline.layers.length - 1; l >= 0; l--) {
             const layerData = symbolData.timeline.layers[l];
             const layer = clip.createLayer({
-              name: layerData.layerName
+              name: layerData.layerName,
+              type: layerData.layerType || "Normal",
+              clippedBy: layerData.clippedBy || null
             });
             for (const frameData of layerData.frames) {
               const frame2 = layer.createFrame({
@@ -637,7 +643,20 @@
     constructor(ctx2) {
       super();
       this.draw = (item, frame2, callback, lerp) => {
-        if (item instanceof Instance) {
+        if (item instanceof Layer) {
+          if (item.type == "Clipper") {
+          } else if (item.clippedBy) {
+            const clipLayer = item.clip.layersByName[item.clippedBy];
+            this.pushContext();
+            clipLayer.draw(frame2, callback, lerp);
+            this.ctx.globalCompositeOperation = "source-in";
+            item.draw(frame2, callback, lerp);
+            this.popContext();
+            this.ctx.rect(0, 0, 10, 10);
+          } else {
+            item.draw(frame2, callback, lerp);
+          }
+        } else if (item instanceof Instance) {
           this.ctx.save();
           this.transformInstance(item, frame2, lerp);
           this.handleFilters(item, frame2, lerp);
@@ -658,7 +677,28 @@
             item.draw(frame2, callback, lerp);
         }
       };
-      this.ctx = ctx2;
+      this.stack = [ctx2];
+      this.pool = [];
+    }
+    get ctx() {
+      return this.stack[this.stack.length - 1];
+    }
+    pushContext() {
+      const ctx2 = this.pool.length == 0 ? document.createElement("canvas").getContext("2d") : this.pool.pop();
+      ctx2.canvas.width = this.ctx.canvas.width;
+      ctx2.canvas.height = this.ctx.canvas.height;
+      ctx2.setTransform(this.ctx.getTransform());
+      this.stack.push(ctx2);
+    }
+    popContext() {
+      if (this.stack.length <= 1)
+        throw "Cannot pop stack";
+      const ctx2 = this.stack.pop();
+      this.ctx.save();
+      this.ctx.resetTransform();
+      this.ctx.drawImage(ctx2.canvas, 0, 0);
+      this.ctx.restore();
+      this.pool.push(ctx2);
     }
     handleColor(item, frame2, lerp) {
       var _a, _b, _c, _d;
