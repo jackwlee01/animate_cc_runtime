@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="StarDude" itemID="61dd0c1a-00000ff6" lastModified="1642733921" lastUniqueIdentifier="3">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="StarDude" itemID="61dd0c1a-00000ff6" lastModified="1642737220" lastUniqueIdentifier="3">
   <timeline>
     <DOMTimeline name="StarDude" layerDepthEnabled="true">
       <layers>
@@ -134,90 +134,48 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
+        <DOMLayer name="Layer_9" color="#00FFFF">
+          <frames>
+            <DOMFrame index="0" duration="147" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
         <DOMLayer name="Layer_6" color="#FF0000" current="true" isSelected="true">
           <frames>
             <DOMFrame index="0" duration="123" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="overlay" blendMode="hardlight">
-                  <matrix>
-                    <Matrix tx="-62" ty="-25.25"/>
-                  </matrix>
-                  <transformationPoint>
-                    <Point/>
-                  </transformationPoint>
-                </DOMSymbolInstance>
                 <DOMSymbolInstance libraryItemName="Symbol 1">
                   <matrix>
-                    <Matrix tx="46.5" ty="6.4"/>
+                    <Matrix tx="165.7" ty="-40.45"/>
                   </matrix>
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
                   <filters>
-                    <DropShadowFilter blurX="12" blurY="12" color="#3366CC" distance="4"/>
+                    <DropShadowFilter angle="151.000001138365" blurX="2" blurY="2" color="#FF9900" distance="22"/>
                   </filters>
                 </DOMSymbolInstance>
                 <DOMSymbolInstance libraryItemName="Symbol 1">
                   <matrix>
-                    <Matrix tx="109" ty="-66.5"/>
+                    <Matrix tx="-49.3" ty="-7.45"/>
                   </matrix>
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
                   <filters>
-                    <BlurFilter blurX="4" blurY="4"/>
+                    <DropShadowFilter angle="0" blurX="41" blurY="41" distance="29"/>
                   </filters>
                 </DOMSymbolInstance>
                 <DOMSymbolInstance libraryItemName="Symbol 1">
                   <matrix>
-                    <Matrix tx="113" ty="20.05"/>
+                    <Matrix tx="38.7" ty="47.55"/>
                   </matrix>
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
                   <filters>
-                    <GlowFilter blurX="4" blurY="4"/>
-                  </filters>
-                </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="Symbol 1">
-                  <matrix>
-                    <Matrix tx="53.7" ty="91.35"/>
-                  </matrix>
-                  <transformationPoint>
-                    <Point/>
-                  </transformationPoint>
-                  <filters>
-                    <GradientGlowFilter blurX="4" blurY="4" distance="4" type="outer">
-                      <GradientEntry color="#FFFFFF" alpha="0" ratio="0"/>
-                      <GradientEntry ratio="1"/>
-                    </GradientGlowFilter>
-                  </filters>
-                </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="Symbol 1">
-                  <matrix>
-                    <Matrix tx="123.4" ty="91.35"/>
-                  </matrix>
-                  <transformationPoint>
-                    <Point/>
-                  </transformationPoint>
-                  <filters>
-                    <GradientBevelFilter blurX="4" blurY="4" distance="4">
-                      <GradientEntry color="#FFFFFF" ratio="0"/>
-                      <GradientEntry color="#FF0000" alpha="0" ratio="0.501960784313725"/>
-                      <GradientEntry ratio="1"/>
-                    </GradientBevelFilter>
-                  </filters>
-                </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="Symbol 1">
-                  <matrix>
-                    <Matrix tx="186.75" ty="22.4"/>
-                  </matrix>
-                  <transformationPoint>
-                    <Point/>
-                  </transformationPoint>
-                  <filters>
-                    <AdjustColorFilter/>
-                    <AdjustColorFilter/>
+                    <DropShadowFilter angle="309.999984062892" blurX="2" blurY="2" color="#00FF00" distance="39" strength="0.48"/>
                   </filters>
                 </DOMSymbolInstance>
               </elements>

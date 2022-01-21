@@ -4,6 +4,7 @@ import { ClipInstance } from "./core/ClipInstance";
 import { Drawable } from "./core/Drawable"
 import { Frame } from "./core/Frame";
 import { Instance } from "./core/Instance"
+import { FilterDropShadow, FilterType } from "./core/json/AnimationJson";
 import { Sprite } from "./core/Sprite"
 import { SpriteInstance } from "./core/SpriteInstance";
 import { modWrap } from "./core/util/math";
@@ -25,15 +26,11 @@ export class Canvas2dAnimationContext extends AnimationContext{
 
 
     draw = (item:Drawable, frame:Float, callback?:(item:Drawable, frame:Float, lerp?:boolean)=>void, lerp?:boolean) => {
-        if(item instanceof SpriteInstance){
+        if(item instanceof Instance){
             this.ctx.save()
+            
             this.transformInstance(item, frame, lerp)
-            if(callback) callback(item, frame, lerp)
-            else item.draw(frame, callback, lerp)
-            this.ctx.restore()
-        }else if(item instanceof ClipInstance){
-            this.ctx.save()
-            this.transformInstance(item, frame, lerp)
+            this.handleFilters(item, frame, lerp)
             if(callback) callback(item, frame, lerp)
             else item.draw(frame, callback, lerp)
             this.ctx.restore()
@@ -43,6 +40,22 @@ export class Canvas2dAnimationContext extends AnimationContext{
         }else{
             if(callback) callback(item, frame, lerp)
             else item.draw(frame, callback, lerp)
+        }
+    }
+
+
+    handleFilters(item:Instance, frame:Float, lerp?:boolean){
+        if(item.filters){
+            for(let k of Object.keys(item.filters)){
+                const key = k as FilterType;
+                if(key=='DropShadowFilter'){
+                    const filter = item.filters[key] as FilterDropShadow;
+                    this.ctx.shadowBlur = filter.blurX;
+                    this.ctx.shadowColor = filter.color + (Math.round(filter.strength*255)).toString(16);
+                    this.ctx.shadowOffsetX = Math.cos(filter.angle*Math.PI/180) * filter.distance
+                    this.ctx.shadowOffsetY = Math.sin(filter.angle*Math.PI/180) * filter.distance
+                }
+            }
         }
     }
 

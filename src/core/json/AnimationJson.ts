@@ -71,11 +71,12 @@ export type Color = {
 
 
 export type FilterType = 'DropShadowFilter' | 'BlurFilter' | 'GlowFilter' | 'GradientGlowFilter' | 'GradientBevelFilter' | 'AdjustColorFilter'
+export type Filter = FilterDropShadow|FilterBlur|FilterGlow|FilterGradientGlow|FilterGradientBevel;
 export type FilterDropShadow = {
     angle: Float,
     blurX: Float,
     blurY: Float,
-    color: IntColor,
+    color: string,
     alpha: Float,
     distance: Float,
     hideObject: boolean,
@@ -92,7 +93,7 @@ export type FilterBlur = {
 export type FilterGlow = {
     blurX: Float,
     blurY: Float,
-    color: IntColor,
+    color: string,
     alpha: Float,
     quality: Int,
     strength: Float,
@@ -110,7 +111,7 @@ export type FilterGradientGlow = {
     type: 'outer'|'inner'|'full',
     gradientEntries: Array<{
         ratio: Float,
-        color: IntColor,
+        color: string,
         alpha: Float,
     }>
 }
@@ -126,7 +127,7 @@ export type FilterGradientBevel = {
     type: 'outer'|'inner'|'full',
     gradientEntries: Array<{
         ratio: Float,
-        color: IntColor,
+        color: string,
         alpha: Float,
     }>
 }
