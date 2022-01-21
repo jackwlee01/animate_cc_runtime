@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="__export__" itemID="6195a546-00000910" lastModified="1642729562" lastUniqueIdentifier="1">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="__export__" itemID="6195a546-00000910" lastModified="1642739293" lastUniqueIdentifier="2">
   <timeline>
     <DOMTimeline name="__export__" layerDepthEnabled="true">
       <layers>
@@ -54,9 +54,17 @@
                     <Point/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="Mask_test" selected="true">
+                <DOMSymbolInstance libraryItemName="Mask_test">
                   <matrix>
                     <Matrix tx="809.2" ty="415"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="PentagonAnim" selected="true">
+                  <matrix>
+                    <Matrix tx="632.2" ty="177"/>
                   </matrix>
                   <transformationPoint>
                     <Point/>

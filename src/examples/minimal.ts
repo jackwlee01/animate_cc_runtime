@@ -29,6 +29,12 @@ function update(){
         ctx.scale(dpr, dpr)
 
         testLibrary.symbol("StarDude").draw(frame)
+
+        ctx.save()
+        ctx.translate(250, 0)
+        // NOTE: Filter support is limited to drop shadows
+        testLibrary.symbol("PentagonAnim").draw(frame)
+        ctx.restore()
     
     ctx.restore()
     

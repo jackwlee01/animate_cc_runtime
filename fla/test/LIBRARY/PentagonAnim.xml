@@ -1,0 +1,42 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="PentagonAnim" itemID="61ea365d-000008b8" lastModified="1642739742" lastUniqueIdentifier="2">
+  <timeline>
+    <DOMTimeline name="PentagonAnim" currentFrame="122" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" duration="122" tweenType="motion" motionTweenRotate="clockwise" motionTweenRotateTimes="1" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Pentagon">
+                  <matrix>
+                    <Matrix a="0.88336181640625" b="-0.46868896484375" c="0.46868896484375" d="0.88336181640625" tx="-14" ty="-14"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <filters>
+                    <DropShadowFilter blurX="48" blurY="48" distance="30" strength="0.57"/>
+                  </filters>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="122" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Pentagon" centerPoint3DX="-14" centerPoint3DY="-14">
+                  <matrix>
+                    <Matrix a="0.88336181640625" b="-0.46868896484375" c="0.46868896484375" d="0.88336181640625" tx="-14" ty="-14"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <filters>
+                    <DropShadowFilter blurX="48" blurY="48" distance="30" strength="0.57"/>
+                  </filters>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
