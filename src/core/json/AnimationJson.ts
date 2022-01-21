@@ -65,7 +65,7 @@ export type TransformationPoint = {
 
 
 export type Color = {
-    mode:'Alpha',
+    mode:'Alpha'|'CA',
     alphaMultiplier:Float,
 } | {
     mode: 'Brightness',
@@ -75,7 +75,7 @@ export type Color = {
     tintColor: StringColor,
     tintMultiplier: Float,
 } | {
-    mode: 'Advanced',
+    mode: 'Advanced'|'AD',
     redMultiplier: Float,
     greenMultiplier: Float,
     blueMultiplier: Float,

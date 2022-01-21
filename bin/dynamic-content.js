@@ -661,19 +661,9 @@
       this.ctx = ctx2;
     }
     handleColor(item, frame2, lerp2) {
-      var _a;
-      switch ((_a = item.color) == null ? void 0 : _a.mode) {
-        case "Alpha":
-          this.ctx.globalAlpha *= item.color.alphaMultiplier;
-          break;
-        case "Advanced":
-          this.ctx.globalAlpha *= item.color.alphaMultiplier;
-          break;
-        case "Brightness":
-          break;
-        case "Tint":
-          break;
-      }
+      var _a, _b, _c, _d;
+      if (((_a = item.color) == null ? void 0 : _a.mode) == "CA" || ((_b = item.color) == null ? void 0 : _b.mode) == "Alpha" || ((_c = item.color) == null ? void 0 : _c.mode) == "Advanced" || ((_d = item.color) == null ? void 0 : _d.mode) == "AD")
+        this.ctx.globalAlpha *= item.color.alphaMultiplier;
     }
     handleFilters(item, frame2, lerp2) {
       if (item.filters) {

@@ -33,7 +33,7 @@ const keys:Record<string, string> = {
     // Color
     RedMultiplier: 'redMultiplier',
     AlphaOffset: 'alphaOffset',
- 
+
      // Animation.json optimised
      AN: "animation",
      AM: "alphaMultiplier",

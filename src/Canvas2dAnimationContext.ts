@@ -45,12 +45,9 @@ export class Canvas2dAnimationContext extends AnimationContext{
 
     handleColor(item:Instance, frame:Float, lerp?:boolean){
         // TODO: Handle lerp on color
-        switch(item.color?.mode){
-            case 'Alpha': this.ctx.globalAlpha *= item.color.alphaMultiplier; break;
-            case 'Advanced': this.ctx.globalAlpha *= item.color.alphaMultiplier; break;
-            case 'Brightness': break;
-            case 'Tint': break;
-        }
+
+        if(item.color?.mode == 'CA' || item.color?.mode == 'Alpha' || item.color?.mode == 'Advanced' || item.color?.mode == 'AD') this.ctx.globalAlpha *= item.color.alphaMultiplier;
+
     }
 
 
