@@ -6,7 +6,7 @@
           <DOMFolderItem name="stardude_assets" itemID="61dd0c81-0000101b"/>
      </folders>
      <symbols>
-          <Include href="__export__.xml" loadImmediate="false" itemID="6195a546-00000910" lastModified="1642740125"/>
+          <Include href="__export__.xml" loadImmediate="false" itemID="6195a546-00000910" lastModified="1642741490"/>
           <Include href="Duplicate Items Folder/Symbol 1 copy 3.xml" itemIcon="1" loadImmediate="false" itemID="61923cdf-00001b5e" lastModified="1636973462"/>
           <Include href="Duplicate Items Folder/Symbol 2 copy 3.xml" itemIcon="1" loadImmediate="false" itemID="61923cdf-00001b5c" lastModified="1636973507"/>
           <Include href="Duplicate Items Folder/Symbol 3 copy 3.xml" itemIcon="1" loadImmediate="false" itemID="61923cdf-00001b60" lastModified="1636973562"/>
@@ -166,7 +166,7 @@
           <Include href="ShellBounce.xml" itemIcon="1" loadImmediate="false" itemID="61e7736c-00000703" lastModified="1642558671"/>
           <Include href="ShellSpin.xml" itemIcon="1" loadImmediate="false" itemID="61e7734d-000006fe" lastModified="1642558301"/>
           <Include href="SkullGuy.xml" loadImmediate="false" itemID="619b4a90-000000a1" lastModified="1641870734"/>
-          <Include href="StarDude.xml" loadImmediate="false" itemID="61dd0c1a-00000ff6" lastModified="1642739175"/>
+          <Include href="StarDude.xml" loadImmediate="false" itemID="61dd0c1a-00000ff6" lastModified="1642741558"/>
           <Include href="stardude_assets/StarGuyGun.xml" loadImmediate="false" itemID="61888525-00000979" lastModified="1642558173"/>
           <Include href="stardude_assets/Symbol 1.xml" loadImmediate="false" itemID="61887d41-00001201" lastModified="1636335919"/>
           <Include href="stardude_assets/Symbol 154.xml" loadImmediate="false" itemID="6179339e-0000039d" lastModified="1636335919"/>
@@ -199,6 +199,7 @@
           <Include href="stardude_assets/Tween 4.xml" loadImmediate="false" itemID="617bcb32-0000150d" lastModified="1636336187"/>
           <Include href="stardude_assets/Tween 5.xml" loadImmediate="false" itemID="617bcb32-00001511" lastModified="1636336187"/>
           <Include href="Symbol 1.xml" loadImmediate="false" itemID="61ea1bed-000020af" lastModified="1642732525"/>
+          <Include href="Symbol 2.xml" loadImmediate="false" itemID="61ea3f2a-00000e1e" lastModified="1642741546"/>
           <Include href="Tween 1.xml" itemIcon="1" loadImmediate="false" itemID="61ea1079-00000e44" lastModified="1642729593"/>
           <Include href="Walker_Laser.xml" loadImmediate="false" itemID="6195a6f3-00000a53" lastModified="1641870388"/>
           <Include href="Walker_Laser_Rotating.xml" itemIcon="1" loadImmediate="false" itemID="61ea079e-000000f2" lastModified="1642729499"/>
@@ -209,7 +210,7 @@
           <Include href="win.xml" itemID="61dd06c0-0000053c" lastModified="1641879311"/>
      </symbols>
      <timelines>
-          <DOMTimeline name="Scene 1" layerDepthEnabled="true">
+          <DOMTimeline name="Scene 1" currentFrame="36" layerDepthEnabled="true">
                <layers>
                     <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
                          <frames>

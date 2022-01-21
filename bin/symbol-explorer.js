@@ -678,6 +678,7 @@
           this.ctx.save();
           this.transformInstance(item, frame2, lerp);
           this.handleFilters(item, frame2, lerp);
+          this.handleColor(item, frame2, lerp);
           if (callback)
             callback(item, frame2, lerp);
           else
@@ -695,6 +696,21 @@
         }
       };
       this.ctx = ctx2;
+    }
+    handleColor(item, frame2, lerp) {
+      var _a;
+      switch ((_a = item.color) == null ? void 0 : _a.mode) {
+        case "Alpha":
+          this.ctx.globalAlpha *= item.color.alphaMultiplier;
+          break;
+        case "Advanced":
+          this.ctx.globalAlpha *= item.color.alphaMultiplier;
+          break;
+        case "Brightness":
+          break;
+        case "Tint":
+          break;
+      }
     }
     handleFilters(item, frame2, lerp) {
       if (item.filters) {

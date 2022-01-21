@@ -30,6 +30,7 @@ export class Canvas2dAnimationContext extends AnimationContext{
             this.ctx.save()
             this.transformInstance(item, frame, lerp)
             this.handleFilters(item, frame, lerp)
+            this.handleColor(item, frame, lerp)
             if(callback) callback(item, frame, lerp)
             else item.draw(frame, callback, lerp)
             this.ctx.restore()
@@ -42,8 +43,19 @@ export class Canvas2dAnimationContext extends AnimationContext{
         }
     }
 
+    handleColor(item:Instance, frame:Float, lerp?:boolean){
+        // TODO: Handle lerp on color
+        switch(item.color?.mode){
+            case 'Alpha': this.ctx.globalAlpha *= item.color.alphaMultiplier; break;
+            case 'Advanced': this.ctx.globalAlpha *= item.color.alphaMultiplier; break;
+            case 'Brightness': break;
+            case 'Tint': break;
+        }
+    }
+
 
     handleFilters(item:Instance, frame:Float, lerp?:boolean){
+        // TODO: Handle lerp on filters
         if(item.filters){
             for(let k of Object.keys(item.filters)){
                 const key = k as FilterType;

@@ -1,6 +1,6 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="StarDude" itemID="61dd0c1a-00000ff6" lastModified="1642739175" lastUniqueIdentifier="3">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="StarDude" itemID="61dd0c1a-00000ff6" lastModified="1642741558" lastUniqueIdentifier="5">
   <timeline>
-    <DOMTimeline name="StarDude" layerDepthEnabled="true">
+    <DOMTimeline name="StarDude" currentFrame="36" layerDepthEnabled="true">
       <layers>
         <DOMLayer name="Layer_2" color="#9933CC">
           <frames>
@@ -569,6 +569,37 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
+        <DOMLayer name="Layer_11" color="#FF800A" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" duration="36" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 2" selected="true">
+                  <matrix>
+                    <Matrix tx="141.55" ty="-28.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="36" duration="111" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 2" centerPoint3DX="141.55" centerPoint3DY="-28.5">
+                  <matrix>
+                    <Matrix tx="141.55" ty="-28.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.1796875"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
         <DOMLayer name="gun" color="#FF0000" autoNamed="false">
           <frames>
             <DOMFrame index="0" duration="116" keyMode="9728">
@@ -1053,7 +1084,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="left_leg" color="#009999" current="true" isSelected="true" autoNamed="false">
+        <DOMLayer name="left_leg" color="#009999" autoNamed="false">
           <frames>
             <DOMFrame index="0" duration="58" tweenType="motion" motionTweenSnap="true" hasCustomEase="true" keyMode="22017">
               <tweens>
