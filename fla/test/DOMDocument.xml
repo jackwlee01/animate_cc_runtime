@@ -6,7 +6,7 @@
           <DOMFolderItem name="stardude_assets" itemID="61dd0c81-0000101b"/>
      </folders>
      <symbols>
-          <Include href="__export__.xml" loadImmediate="false" itemID="6195a546-00000910" lastModified="1642036231"/>
+          <Include href="__export__.xml" loadImmediate="false" itemID="6195a546-00000910" lastModified="1642729562"/>
           <Include href="Duplicate Items Folder/Symbol 1 copy 3.xml" itemIcon="1" loadImmediate="false" itemID="61923cdf-00001b5e" lastModified="1636973462"/>
           <Include href="Duplicate Items Folder/Symbol 2 copy 3.xml" itemIcon="1" loadImmediate="false" itemID="61923cdf-00001b5c" lastModified="1636973507"/>
           <Include href="Duplicate Items Folder/Symbol 3 copy 3.xml" itemIcon="1" loadImmediate="false" itemID="61923cdf-00001b60" lastModified="1636973562"/>
@@ -156,13 +156,15 @@
           <Include href="game/Walker_Nose_Head.xml" itemIcon="1" loadImmediate="false" itemID="61973aad-00000a76" lastModified="1641876226"/>
           <Include href="game/Walker_Nose_Nose.xml" itemIcon="1" loadImmediate="false" itemID="61973ec9-00001ae2" lastModified="1641876239"/>
           <Include href="game/Walker_Nose_Siren.xml" itemIcon="1" loadImmediate="false" itemID="61973de1-00001794" lastModified="1637301729"/>
+          <Include href="Mask_test.xml" loadImmediate="false" itemID="61ea105a-00000baa" lastModified="1642729621"/>
+          <Include href="overlay.xml" loadImmediate="false" itemID="61ea19ec-0000161f" lastModified="1642732038"/>
           <Include href="placeholders/win.xml" itemID="561338b4-00000144" lastModified="1641874656"/>
           <Include href="placeholders/win_background.xml" itemID="56133bde-0000015a" lastModified="1529030890"/>
           <Include href="Shell.xml" loadImmediate="false" itemID="61e772d9-000006f6" lastModified="1642558169"/>
           <Include href="ShellBounce.xml" itemIcon="1" loadImmediate="false" itemID="61e7736c-00000703" lastModified="1642558671"/>
           <Include href="ShellSpin.xml" itemIcon="1" loadImmediate="false" itemID="61e7734d-000006fe" lastModified="1642558301"/>
           <Include href="SkullGuy.xml" loadImmediate="false" itemID="619b4a90-000000a1" lastModified="1641870734"/>
-          <Include href="StarDude.xml" loadImmediate="false" itemID="61dd0c1a-00000ff6" lastModified="1642558750"/>
+          <Include href="StarDude.xml" loadImmediate="false" itemID="61dd0c1a-00000ff6" lastModified="1642733921"/>
           <Include href="stardude_assets/StarGuyGun.xml" loadImmediate="false" itemID="61888525-00000979" lastModified="1642558173"/>
           <Include href="stardude_assets/Symbol 1.xml" loadImmediate="false" itemID="61887d41-00001201" lastModified="1636335919"/>
           <Include href="stardude_assets/Symbol 154.xml" loadImmediate="false" itemID="6179339e-0000039d" lastModified="1636335919"/>
@@ -194,7 +196,10 @@
           <Include href="stardude_assets/Symbol 260.xml" loadImmediate="false" itemID="617bd932-000017fe" lastModified="1636335919"/>
           <Include href="stardude_assets/Tween 4.xml" loadImmediate="false" itemID="617bcb32-0000150d" lastModified="1636336187"/>
           <Include href="stardude_assets/Tween 5.xml" loadImmediate="false" itemID="617bcb32-00001511" lastModified="1636336187"/>
+          <Include href="Symbol 1.xml" loadImmediate="false" itemID="61ea1bed-000020af" lastModified="1642732525"/>
+          <Include href="Tween 1.xml" itemIcon="1" loadImmediate="false" itemID="61ea1079-00000e44" lastModified="1642729593"/>
           <Include href="Walker_Laser.xml" loadImmediate="false" itemID="6195a6f3-00000a53" lastModified="1641870388"/>
+          <Include href="Walker_Laser_Rotating.xml" itemIcon="1" loadImmediate="false" itemID="61ea079e-000000f2" lastModified="1642729499"/>
           <Include href="Walker_Mine.xml" loadImmediate="false" itemID="6195a93d-000010e3" lastModified="1637565475"/>
           <Include href="Walker_Minigun.xml" loadImmediate="false" itemID="6195a74c-00000a57" lastModified="1637640281"/>
           <Include href="Walker_Missile.xml" loadImmediate="false" itemID="6195a72c-00000a56" lastModified="1637639960"/>

@@ -1,0 +1,32 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="overlay" itemID="61ea19ec-0000161f" lastModified="1642732038">
+  <timeline>
+    <DOMTimeline name="overlay" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <LinearGradient>
+                        <matrix>
+                          <Matrix a="0.057708740234375" d="0.0718994140625" tx="-1.25"/>
+                        </matrix>
+                        <GradientEntry color="#00FF2E" ratio="0"/>
+                        <GradientEntry color="#FFFFFF" ratio="1"/>
+                      </LinearGradient>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!1178 0[1178 488 833 833!833 833[488 1178 0 1178!0 1178[-488 1178 -833 833!-833 833[-1178 488 -1178 0!-1178 0[-1178 -488 -833 -833!-833 -833[-488 -1178 0 -1178!0 -1178[488 -1178 833 -833!833 -833[1178 -488 1178 0"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

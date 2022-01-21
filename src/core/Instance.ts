@@ -4,6 +4,7 @@ import { Matrix2d } from "./geom/Matrix2d";
 import { Vec3 } from "./geom/Vec3";
 import { DrawableProps } from './Drawable'
 import { Matrix3d } from "./geom/Matrix3d";
+import { Filters } from "./json/AnimationJson";
 
 
 export type InstanceProps = Omit<DrawableProps, 'id' | 'library'> & {
@@ -11,6 +12,7 @@ export type InstanceProps = Omit<DrawableProps, 'id' | 'library'> & {
     matrix2d:Matrix2d,
     matrix3d:Matrix3d,
     frame:Frame,
+    filters?:Filters,
     //position:Vec3,
     //scale:Vec3,
     //rotation:Vec3,
@@ -24,6 +26,7 @@ export class Instance extends Drawable{
     frame:Frame;
     index:number;
     itemName:string;
+    filters?:Filters;
     //position:Vec3;
     //scale:Vec3;
     //rotation:Vec3;
@@ -40,6 +43,7 @@ export class Instance extends Drawable{
         this.itemName = props.itemName;
         this.matrix2d = props.matrix2d;
         this.matrix3d = props.matrix3d;
+        this.filters = props.filters;
         //this.position = props.position;
         //this.scale = props.scale;
         //this.rotation = props.rotation;

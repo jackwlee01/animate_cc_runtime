@@ -63,6 +63,7 @@
       }));
       this.itemName = props.itemName;
       this.matrix2d = props.matrix2d;
+      this.matrix3d = props.matrix3d;
       this.frame = props.frame;
       this.index = this.frame.instances.length;
     }
@@ -415,6 +416,46 @@
     }
   }
 
+  // src/core/geom/Matrix3d.ts
+  var Matrix3d = class {
+    constructor(_00, _01, _02, _03, _10, _11, _12, _13, _20, _21, _22, _23, _30, _31, _32, _33) {
+      this._00 = _00;
+      this._01 = _01;
+      this._02 = _02;
+      this._03 = _03;
+      this._10 = _10;
+      this._11 = _11;
+      this._12 = _12;
+      this._13 = _13;
+      this._20 = _20;
+      this._21 = _21;
+      this._22 = _22;
+      this._23 = _23;
+      this._30 = _30;
+      this._31 = _31;
+      this._32 = _32;
+      this._33 = _33;
+      this.data = new Float32Array([
+        _00,
+        _01,
+        _02,
+        _03,
+        _10,
+        _11,
+        _12,
+        _13,
+        _20,
+        _21,
+        _22,
+        _23,
+        _30,
+        _31,
+        _32,
+        _33
+      ]);
+    }
+  };
+
   // src/core/Library.ts
   var Library = class {
     constructor(name, path, context) {
@@ -487,6 +528,7 @@
                   const instanceProps = {
                     frame: frame2,
                     matrix2d: "m00" in m ? new Matrix2d(m.m00, m.m01, m.m10, m.m11, m.m30, m.m31) : new Matrix2d(m[0], m[1], m[4], m[5], m[12], m[13]),
+                    matrix3d: "m00" in m ? new Matrix3d(m.m00, m.m01, m.m02, m.m03, m.m10, m.m11, m.m12, m.m13, m.m20, m.m21, m.m22, m.m23, m.m30, m.m31, m.m32, m.m33) : new Matrix3d(m[0], m[1], m[2], m[3], m[4], m[5], m[6], m[7], m[8], m[9], m[10], m[11], m[12], m[13], m[14], m[15]),
                     itemName: elemData.symbolName
                   };
                   const clipInstance = frame2.createClipInstance(__spreadProps(__spreadValues(__spreadValues({}, drawableProps), instanceProps), {
@@ -503,6 +545,7 @@
                   const instanceProps = {
                     frame: frame2,
                     matrix2d: "m00" in m ? new Matrix2d(m.m00, m.m01, m.m10, m.m11, m.m30, m.m31) : new Matrix2d(m[0], m[1], m[4], m[5], m[12], m[13]),
+                    matrix3d: "m00" in m ? new Matrix3d(m.m00, m.m01, m.m02, m.m03, m.m10, m.m11, m.m12, m.m13, m.m20, m.m21, m.m22, m.m23, m.m30, m.m31, m.m32, m.m33) : new Matrix3d(m[0], m[1], m[2], m[3], m[4], m[5], m[6], m[7], m[8], m[9], m[10], m[11], m[12], m[13], m[14], m[15]),
                     itemName: elemData.name
                   };
                   const spriteInstance = frame2.createSpriteInstance(__spreadValues(__spreadValues({}, drawableProps), instanceProps));
@@ -658,15 +701,8 @@
       this.current.style.transform = `rotate(${z})`;
     }
     transformInstance(item, frame2, lerp) {
-      const m = item.matrix2d;
-      if (lerp && item.next) {
-        const t = (modWrap(frame2, item.totalFrames) - item.index) / item.frame.totalFrames;
-        const m1 = item.matrix2d;
-        const m2 = item.next.matrix2d;
-        this.current.style.transform = `matrix(${m1.a + (m2.a - m1.a) * t}, ${m1.b + (m2.b - m1.b) * t}, ${m1.c + (m2.c - m1.c) * t}, ${m1.d + (m2.d - m1.d) * t}, ${m1.e + (m2.e - m1.e) * t}, ${m1.f + (m2.f - m1.f) * t})`;
-      } else {
-        this.current.style.transform = `matrix(${m.a}, ${m.b}, ${m.c}, ${m.d}, ${m.e}, ${m.f})`;
-      }
+      const m = item.matrix3d;
+      this.current.style.transform = `matrix3d(${m._00}, ${m._01}, ${m._02}, ${m._03}, ${m._10}, ${m._11}, ${m._12}, ${m._13}, ${m._20}, ${m._21}, ${m._22}, ${m._23}, ${m._30}, ${m._31}, ${m._32}, ${m._33})`;
     }
   };
 
@@ -728,6 +764,13 @@
       animContext.pushScale("1", "1");
       animContext.pushRotation("0deg");
       testLibrary.symbol("StarDude").draw(frame, drawWithLogic);
+      animContext.pop();
+      animContext.pop();
+      animContext.pop();
+      animContext.pushTranslate("100px", "10px");
+      animContext.pushScale("1", "1");
+      animContext.pushRotation("0deg");
+      testLibrary.symbol("Walker_Laser_Rotating").draw(frame, drawWithLogic);
       animContext.pop();
       animContext.pop();
       animContext.pop();

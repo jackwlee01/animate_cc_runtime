@@ -110,6 +110,7 @@ export class Library{
 
                             const instanceProps:_InstanceProps  = {
                                 frame,
+                                filters: elemData.filters,
                                 matrix2d: 'm00' in m ? new Matrix2d(m.m00, m.m01, m.m10, m.m11, m.m30, m.m31) : new Matrix2d(m[0], m[1], m[4], m[5], m[12], m[13]),
                                 matrix3d: 'm00' in m ? new Matrix3d(m.m00, m.m01, m.m02, m.m03,
                                                                     m.m10, m.m11, m.m12, m.m13,
@@ -147,6 +148,7 @@ export class Library{
 
                             const instanceProps:_InstanceProps  = {
                                 frame,
+                                filters: elemData.filters,
                                 matrix2d: 'm00' in m ? new Matrix2d(m.m00, m.m01, m.m10, m.m11, m.m30, m.m31) : new Matrix2d(m[0], m[1], m[4], m[5], m[12], m[13]),
                                 matrix3d: 'm00' in m ? new Matrix3d(m.m00, m.m01, m.m02, m.m03,
                                                                     m.m10, m.m11, m.m12, m.m13,

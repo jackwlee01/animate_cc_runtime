@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="__export__" itemID="6195a546-00000910" lastModified="1642036231">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="__export__" itemID="6195a546-00000910" lastModified="1642729562" lastUniqueIdentifier="1">
   <timeline>
     <DOMTimeline name="__export__" layerDepthEnabled="true">
       <layers>
@@ -46,14 +46,23 @@
                     <Point x="-13.45" y="-1.9"/>
                   </transformationPoint>
                 </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Walker_Laser_Rotating">
+                  <matrix>
+                    <Matrix tx="491" ty="560.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Mask_test">
+                  <matrix>
+                    <Matrix tx="809.2" ty="415"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
               </elements>
-            </DOMFrame>
-          </frames>
-        </DOMLayer>
-        <DOMLayer name="Layer_2" color="#9933CC">
-          <frames>
-            <DOMFrame index="0" keyMode="9728">
-              <elements/>
             </DOMFrame>
           </frames>
         </DOMLayer>

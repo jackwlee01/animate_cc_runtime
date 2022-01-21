@@ -1,0 +1,22 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Walker_Laser_Rotating" itemID="61ea079e-000000f2" symbolType="graphic" lastModified="1642729499" lastUniqueIdentifier="2">
+  <timeline>
+    <DOMTimeline name="Walker_Laser_Rotating" currentFrame="54" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_2" color="#9933CC" current="true" isSelected="true" animationType="motion object">
+          <frames>
+            <DOMFrame index="0" duration="110" tweenType="motion object" motionTweenRotate="none" motionTweenScale="false" isMotionObject="true" visibleAnimationKeyframes="4194303" keyMode="8195" propagateRotMap="[0]" propagateScaleXMap="[1]" propagateScaleYMap="[1]" propagateSkewXMap="[0]" propagateSkewYMap="[0]">
+              <motionObjectXML><AnimationCore TimeScale="60000" Version="1" duration="110000"><TimeMap strength="0" type="Quadratic"/><metadata><names><name langID="en_US" value=""/></names><Settings orientToPath="0" xformPtXOffsetPct="0.475282" xformPtYOffsetPct="0.867843" xformPtZOffsetPixels="0"/></metadata><PropertyContainer id="headContainer"><PropertyContainer id="Basic_Motion"><Property enabled="1" id="Motion_X" ignoreTimeMap="0" readonly="0" visible="1"><Keyframe anchor="0,0" next="0,0" previous="0,0" roving="0" timevalue="0"/><Keyframe anchor="0,541.6" next="0,541.6" previous="0,541.6" roving="0" timevalue="54000"/><Keyframe anchor="0,111.4" next="0,111.4" previous="0,111.4" roving="0" timevalue="109000"/></Property><Property enabled="1" id="Motion_Y" ignoreTimeMap="0" readonly="0" visible="1"><Keyframe anchor="0,0" next="0,0" previous="0,0" roving="0" timevalue="0"/><Keyframe anchor="0,113.8" next="0,113.8" previous="0,113.8" roving="0" timevalue="54000"/><Keyframe anchor="0,0" next="0,0" previous="0,0" roving="0" timevalue="109000"/></Property><Property enabled="1" id="Motion_Z" ignoreTimeMap="0" readonly="0" visible="1"><Keyframe anchor="0,0" next="0,0" previous="0,0" roving="0" timevalue="0"/><Keyframe anchor="0,382" next="0,382" previous="0,382" roving="0" timevalue="54000"/><Keyframe anchor="0,10" next="0,10" previous="0,10" roving="0" timevalue="109000"/></Property><Property enabled="1" id="Rotation_X" ignoreTimeMap="0" readonly="0" visible="1"><Keyframe anchor="0,0" next="0,0" previous="0,0" roving="0" timevalue="0"/></Property><Property enabled="1" id="Rotation_Y" ignoreTimeMap="0" readonly="0" visible="1"><Keyframe anchor="0,0" next="0,0" previous="0,0" roving="0" timevalue="0"/><Keyframe anchor="0,168" next="0,168" previous="0,168" roving="0" timevalue="54000"/><Keyframe anchor="0,351" next="0,351" previous="0,351" roving="0" timevalue="109000"/></Property><Property enabled="1" id="Rotation_Z" ignoreTimeMap="0" readonly="0" visible="1"><Keyframe anchor="0,0" next="0,0" previous="0,0" roving="0" timevalue="0"/></Property><Property enabled="1" id="Depth" ignoreTimeMap="0" readonly="0" visible="1"><Keyframe anchor="0,0" next="0,0" previous="0,0" roving="0" timevalue="0"/></Property></PropertyContainer><PropertyContainer id="Transformation"><Property enabled="1" id="Skew_X" ignoreTimeMap="0" readonly="0" visible="1"><Keyframe anchor="0,0" next="0,0" previous="0,0" roving="0" timevalue="0"/></Property><Property enabled="1" id="Skew_Y" ignoreTimeMap="0" readonly="0" visible="1"><Keyframe anchor="0,0" next="0,0" previous="0,0" roving="0" timevalue="0"/></Property><Property enabled="1" id="Scale_X" ignoreTimeMap="0" readonly="0" visible="1"><Keyframe anchor="0,100" next="0,100" previous="0,100" roving="0" timevalue="0"/></Property><Property enabled="1" id="Scale_Y" ignoreTimeMap="0" readonly="0" visible="1"><Keyframe anchor="0,100" next="0,100" previous="0,100" roving="0" timevalue="0"/></Property></PropertyContainer><PropertyContainer id="Colors"/><PropertyContainer id="Filters"/></PropertyContainer></AnimationCore></motionObjectXML>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Walker_Laser" matrix3D="1 0 0 0 0 1 0 0 0 0 1 0 176 1286 0 1" rotationY="351" centerPoint3DX="8.8" centerPoint3DY="64.3">
+                  <transformationPoint>
+                    <Point x="120.2" y="64.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

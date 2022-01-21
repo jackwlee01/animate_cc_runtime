@@ -26,6 +26,9 @@ const keys:Record<string, string> = {
     SYMBOL_name: "symbolName",
     Symbols: "symbols",
     TIMELINE: "timeline",
+
+    // Filter
+    GradientEntries: "gradientEntries",
  
      // Animation.json optimised
      AN: "animation",

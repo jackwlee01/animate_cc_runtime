@@ -72,6 +72,14 @@ function update(){
         animContext.pop();
         animContext.pop();
 
+        animContext.pushTranslate('100px', '10px')
+        animContext.pushScale('1', '1')
+        animContext.pushRotation('0deg')
+        testLibrary.symbol("Walker_Laser_Rotating").draw(frame, drawWithLogic)
+        animContext.pop();
+        animContext.pop();
+        animContext.pop();
+
         frame += 1;
     }
 

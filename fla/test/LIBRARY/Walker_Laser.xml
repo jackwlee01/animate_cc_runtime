@@ -1,6 +1,6 @@
 <DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Walker_Laser" itemID="6195a6f3-00000a53" lastModified="1641870388" lastUniqueIdentifier="2">
   <timeline>
-    <DOMTimeline name="Walker_Laser" currentFrame="12" layerDepthEnabled="true">
+    <DOMTimeline name="Walker_Laser" layerDepthEnabled="true">
       <layers>
         <DOMLayer name="Layer_4" color="#FF4FFF">
           <frames>

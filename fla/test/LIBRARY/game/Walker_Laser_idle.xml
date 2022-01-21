@@ -1,8 +1,8 @@
 <DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="game/Walker_Laser_idle" itemID="61dcf35f-00000d0a" lastModified="1641870608">
   <timeline>
-    <DOMTimeline name="Walker_Laser_idle" currentFrame="49" layerDepthEnabled="true">
+    <DOMTimeline name="Walker_Laser_idle" layerDepthEnabled="true">
       <layers>
-        <DOMLayer name="Layer_3" color="#FF800A" current="true" isSelected="true">
+        <DOMLayer name="Layer_3" color="#FF800A">
           <frames>
             <DOMFrame index="0" duration="24" tweenType="motion" motionTweenSnap="true" hasCustomEase="true" keyMode="22017">
               <tweens>
@@ -61,7 +61,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Symbol_413" color="#009999" autoNamed="false">
+        <DOMLayer name="Symbol_413" color="#009999" current="true" isSelected="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" duration="24" tweenType="motion" motionTweenSync="true" motionTweenSnap="true" hasCustomEase="true" keyMode="24065">
               <tweens>
@@ -73,7 +73,7 @@
                 </CustomEase>
               </tweens>
               <elements>
-                <DOMSymbolInstance libraryItemName="game/Symbol 413 copy 4" selected="true" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="game/Symbol 413 copy 4" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix a="-1" tx="26.9" ty="6.95"/>
                   </matrix>
@@ -129,7 +129,7 @@
                 </CustomEase>
               </tweens>
               <elements>
-                <DOMSymbolInstance libraryItemName="game/Symbol 414 copy 4" selected="true" symbolType="graphic" centerPoint3DX="0.75" centerPoint3DY="6.55" loop="loop">
+                <DOMSymbolInstance libraryItemName="game/Symbol 414 copy 4" symbolType="graphic" centerPoint3DX="0.75" centerPoint3DY="6.55" loop="loop">
                   <matrix>
                     <Matrix tx="0.5" ty="6.75"/>
                   </matrix>
@@ -185,7 +185,7 @@
                 </CustomEase>
               </tweens>
               <elements>
-                <DOMSymbolInstance libraryItemName="game/Symbol 413 copy 4" selected="true" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="game/Symbol 413 copy 4" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-25.1" ty="6.8"/>
                   </matrix>
@@ -241,7 +241,7 @@
                 </CustomEase>
               </tweens>
               <elements>
-                <DOMSymbolInstance libraryItemName="game/Symbol 415" selected="true" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="game/Symbol 415" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix a="0.012908935546875" b="-0.999862670898438" c="-0.999862670898438" d="-0.012908935546875" tx="0.8" ty="3.45"/>
                   </matrix>
@@ -297,7 +297,7 @@
                 </CustomEase>
               </tweens>
               <elements>
-                <DOMSymbolInstance libraryItemName="game/Symbol 415" selected="true" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="game/Symbol 415" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix a="-0.852294921875" b="-0.52301025390625" c="-0.52301025390625" d="0.852294921875" tx="19" ty="-1.65"/>
                   </matrix>
@@ -360,7 +360,7 @@
                 </CustomEase>
               </tweens>
               <elements>
-                <DOMSymbolInstance libraryItemName="game/Symbol 415" selected="true" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="game/Symbol 415" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix a="0.852294921875" b="-0.52301025390625" c="0.52301025390625" d="0.852294921875" tx="-18.15" ty="-2.05"/>
                   </matrix>
@@ -416,7 +416,7 @@
                 </CustomEase>
               </tweens>
               <elements>
-                <DOMSymbolInstance libraryItemName="game/Symbol 420 copy 2" selected="true" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="game/Symbol 420 copy 2" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-17.25" ty="-34.8"/>
                   </matrix>

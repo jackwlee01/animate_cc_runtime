@@ -1,3 +1,4 @@
+import { Layer } from ".";
 import { AnimationContext } from "./core/AnimationContext"
 import { ClipInstance } from "./core/ClipInstance";
 import { Drawable } from "./core/Drawable"

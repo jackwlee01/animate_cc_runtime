@@ -1,5 +1,6 @@
 type Float = number;
 type Int = number;
+type IntColor = number;
 
 
 export type Matrix3D = Float[] | {
@@ -69,11 +70,89 @@ export type Color = {
 }
 
 
+export type FilterType = 'DropShadowFilter' | 'BlurFilter' | 'GlowFilter' | 'GradientGlowFilter' | 'GradientBevelFilter' | 'AdjustColorFilter'
+export type FilterDropShadow = {
+    angle: Float,
+    blurX: Float,
+    blurY: Float,
+    color: IntColor,
+    alpha: Float,
+    distance: Float,
+    hideObject: boolean,
+    inner: boolean,
+    knockout: boolean,
+    quality: Int,
+    strength: Float,
+}
+export type FilterBlur = {
+    blurX: Float,
+    blurY: Float,
+    quality: Int,
+}
+export type FilterGlow = {
+    blurX: Float,
+    blurY: Float,
+    color: IntColor,
+    alpha: Float,
+    quality: Int,
+    strength: Float,
+    knockout: boolean,
+    inner: boolean,
+}
+export type FilterGradientGlow = {
+    angle: Float,
+    blurX: Float,
+    blurY: Float,
+    quality: Int,
+    distance: Float,
+    knockout: boolean,
+    strength: Float,
+    type: 'outer'|'inner'|'full',
+    gradientEntries: Array<{
+        ratio: Float,
+        color: IntColor,
+        alpha: Float,
+    }>
+}
+
+export type FilterGradientBevel = {
+    angle: Float,
+    blurX: Float,
+    blurY: Float,
+    quality: Int,
+    distance: Float,
+    knockout: boolean,
+    strength: Float,
+    type: 'outer'|'inner'|'full',
+    gradientEntries: Array<{
+        ratio: Float,
+        color: IntColor,
+        alpha: Float,
+    }>
+}
+
+export type FilterAdjustColor = {
+    brightness: Float,
+    contrast: Float,
+    saturation: Float,
+    hue: Float,
+}
+
+// WARNING: DUPLICATE KEYS MAY EXIST IN JSON!!!! WHY THE HECK ISN'T THIS AN ARRAY??!!
+export type Filters = {
+    DropShadowFilter?:FilterDropShadow,
+    BlurFilter?:FilterBlur,
+    GlowFilter?:FilterGlow,
+    GradientGlow?:FilterGradientGlow,
+    GradientBevel?:FilterGradientBevel,
+    AdjustColor?:FilterAdjustColor,
+}
+
 export type AtlasSpriteInstance = {
     name:string;
     matrix3D:Matrix3D;
     decomposedMatrix:DecomposedMatrix;
-    filters?:any;
+    filters?:Filters;
 }
 
 
@@ -83,7 +162,7 @@ export type SymbolInstance = {
     transformationPoint:Point2D;
     matrix3D:Matrix3D;
     decomposedMatrix:DecomposedMatrix;
-    filters?:any;
+    filters?:Filters;
     firstFrame?:Int;
     color?:Color;
 } & ({
