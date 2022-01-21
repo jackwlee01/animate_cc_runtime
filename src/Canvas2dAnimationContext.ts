@@ -60,10 +60,12 @@ export class Canvas2dAnimationContext extends AnimationContext{
                 this.pushContext()
                 clipLayer.draw(frame, callback, lerp)
                 this.ctx.globalCompositeOperation = 'source-in'
-                item.draw(frame, callback, lerp)
+                if(callback) callback(item, frame, lerp)
+                else item.draw(frame, callback, lerp)
                 this.popContext()
             }else{
-                item.draw(frame, callback, lerp)
+                if(callback) callback(item, frame, lerp)
+                else item.draw(frame, callback, lerp)
             }
         }else if(item instanceof Instance){
             this.ctx.save()

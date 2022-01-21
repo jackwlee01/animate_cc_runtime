@@ -649,10 +649,16 @@
             this.pushContext();
             clipLayer.draw(frame2, callback, lerp2);
             this.ctx.globalCompositeOperation = "source-in";
-            item.draw(frame2, callback, lerp2);
+            if (callback)
+              callback(item, frame2, lerp2);
+            else
+              item.draw(frame2, callback, lerp2);
             this.popContext();
           } else {
-            item.draw(frame2, callback, lerp2);
+            if (callback)
+              callback(item, frame2, lerp2);
+            else
+              item.draw(frame2, callback, lerp2);
           }
         } else if (item instanceof Instance) {
           this.ctx.save();
