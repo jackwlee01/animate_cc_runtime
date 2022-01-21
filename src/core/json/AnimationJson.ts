@@ -209,6 +209,8 @@ export type Keyframe = {
 
 export type Layer = {
     layerName:string;
+    layerType?: "Clipper";
+    clippedBy?: string;
     frames:Array<Keyframe>;
 }
 

@@ -166,7 +166,7 @@
           <Include href="ShellBounce.xml" itemIcon="1" loadImmediate="false" itemID="61e7736c-00000703" lastModified="1642558671"/>
           <Include href="ShellSpin.xml" itemIcon="1" loadImmediate="false" itemID="61e7734d-000006fe" lastModified="1642558301"/>
           <Include href="SkullGuy.xml" loadImmediate="false" itemID="619b4a90-000000a1" lastModified="1641870734"/>
-          <Include href="StarDude.xml" loadImmediate="false" itemID="61dd0c1a-00000ff6" lastModified="1642743245"/>
+          <Include href="StarDude.xml" loadImmediate="false" itemID="61dd0c1a-00000ff6" lastModified="1642743391"/>
           <Include href="stardude_assets/StarGuyGun.xml" loadImmediate="false" itemID="61888525-00000979" lastModified="1642558173"/>
           <Include href="stardude_assets/Symbol 1.xml" loadImmediate="false" itemID="61887d41-00001201" lastModified="1636335919"/>
           <Include href="stardude_assets/Symbol 154.xml" loadImmediate="false" itemID="6179339e-0000039d" lastModified="1636335919"/>
@@ -210,7 +210,7 @@
           <Include href="win.xml" itemID="61dd06c0-0000053c" lastModified="1641879311"/>
      </symbols>
      <timelines>
-          <DOMTimeline name="Scene 1" currentFrame="146" layerDepthEnabled="true">
+          <DOMTimeline name="Scene 1" currentFrame="29" layerDepthEnabled="true">
                <layers>
                     <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
                          <frames>

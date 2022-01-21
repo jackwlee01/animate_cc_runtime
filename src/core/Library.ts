@@ -83,6 +83,8 @@ export class Library{
                 const layerData = symbolData.timeline.layers[l]
                 const layer = clip.createLayer({
                     name: layerData.layerName,
+                    type: layerData.layerType || 'Normal',
+                    clippedBy: layerData.clippedBy || null,
                 })
 
                 // Frame

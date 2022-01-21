@@ -1,6 +1,6 @@
 <DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Mask_test" itemID="61ea105a-00000baa" lastModified="1642729621" lastUniqueIdentifier="1">
   <timeline>
-    <DOMTimeline name="Mask_test" currentFrame="48" layerDepthEnabled="true">
+    <DOMTimeline name="Mask_test" currentFrame="29" layerDepthEnabled="true">
       <layers>
         <DOMLayer name="Layer_2" color="#9933CC" layerType="mask">
           <frames>
@@ -34,7 +34,7 @@
           <frames>
             <DOMFrame index="0" duration="23" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="Tween 1" selected="true" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="Tween 1" symbolType="graphic" loop="loop">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>

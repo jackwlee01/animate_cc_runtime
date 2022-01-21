@@ -38,7 +38,7 @@
                     <Point x="2.85" y="-55.25"/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="StarDude" selected="true">
+                <DOMSymbolInstance libraryItemName="StarDude">
                   <matrix>
                     <Matrix tx="210.45" ty="587.9"/>
                   </matrix>
@@ -54,7 +54,7 @@
                     <Point/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="Mask_test">
+                <DOMSymbolInstance libraryItemName="Mask_test" selected="true">
                   <matrix>
                     <Matrix tx="809.2" ty="415"/>
                   </matrix>

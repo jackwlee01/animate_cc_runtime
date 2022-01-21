@@ -16,6 +16,8 @@ const keys:Record<string, string> = {
     framerate: "frameRate",
     Instance_Name: "instanceName",
     Layer_name: "layerName",
+    Layer_type: "layerType",
+    Clipped_by: "clippedBy",
     LAYERS: "layers",
     Matrix3D: "matrix3D",
     Position: "position",
@@ -26,6 +28,7 @@ const keys:Record<string, string> = {
     SYMBOL_name: "symbolName",
     Symbols: "symbols",
     TIMELINE: "timeline",
+
 
     // Filter
     GradientEntries: "gradientEntries",

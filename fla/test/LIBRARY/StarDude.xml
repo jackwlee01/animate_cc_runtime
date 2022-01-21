@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="StarDude" itemID="61dd0c1a-00000ff6" lastModified="1642743245" lastUniqueIdentifier="5">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="StarDude" itemID="61dd0c1a-00000ff6" lastModified="1642743391" lastUniqueIdentifier="5">
   <timeline>
     <DOMTimeline name="StarDude" currentFrame="146" layerDepthEnabled="true">
       <layers>
@@ -202,7 +202,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer_3" color="#FF800A" current="true" isSelected="true">
+        <DOMLayer name="Layer_3" color="#FF800A">
           <frames>
             <DOMFrame index="0" duration="95" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
@@ -257,7 +257,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer_7" color="#669900">
+        <DOMLayer name="Layer_7" color="#669900" current="true" isSelected="true">
           <frames>
             <DOMFrame index="0" duration="124" keyMode="9728">
               <elements/>

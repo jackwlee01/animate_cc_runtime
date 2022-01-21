@@ -11,12 +11,16 @@ type Float = number;
 
 export type LayerProps = Omit<DrawableProps, 'totalFrames'|'id'|'library'> & {
     clip:Clip
+    type: 'Normal'|'Clipper',
+    clippedBy:null|string
 }
 
 
 export class Layer extends Drawable{
 
     public index:Int;
+    public type: LayerProps['type'];
+    public clippedBy:string|null;
     public frames:Array<Frame>;
     public framesByName:Record<string, Frame>;
     public labels:Array<Frame>;
@@ -32,6 +36,8 @@ export class Layer extends Drawable{
         });
         
         this.clip = props.clip;
+        this.type = props.type;
+        this.clippedBy = props.clippedBy;
         this.index = this.clip.layers.length;
         this.frames = [];
         this.framesByName = {};
