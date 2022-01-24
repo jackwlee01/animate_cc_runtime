@@ -615,6 +615,12 @@
     constructor() {
       this.draw = null;
     }
+    get mouseX() {
+      throw "Override mouseX in base class";
+    }
+    get mouseY() {
+      throw "Override mouseY in base class";
+    }
     createLibrary(name, path) {
       const library = new Library(name, path, this);
       return library;

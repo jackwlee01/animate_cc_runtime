@@ -16,13 +16,43 @@ import { modWrap } from "./core/util/math";
 // with a few modification to faciliate mapping to a scene graph.
 export class Canvas2dScene extends Scene{
     
+    canvas:HTMLCanvasElement
     stack:CanvasRenderingContext2D[]
     pool:CanvasRenderingContext2D[];
 
+    private _mouseX:number;
+    private _mouseY:number;
+
+
     constructor(ctx:CanvasRenderingContext2D){
         super();
+        this.canvas = ctx.canvas
         this.stack = [ctx]
         this.pool = [];
+
+        this._mouseX = -1;
+        this._mouseY = -1;
+        ctx.canvas.addEventListener('mousemove', this.onMouseMove.bind(this))
+    }
+
+
+    onMouseMove(e:MouseEvent){
+        const rect = this.canvas.getBoundingClientRect()
+        const scaleX = this.canvas.width / rect.width
+        const scaleY = this.canvas.height / rect.height
+        this._mouseX = (e.clientX - rect.left) * scaleX
+        this._mouseY = (e.clientY - rect.top) * scaleY
+        console.log(this._mouseX, this._mouseY)
+    }
+
+
+    get mouseX(){
+        return 0
+    }
+
+
+    get mouseY(){
+        return 0
     }
 
 

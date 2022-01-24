@@ -6,8 +6,19 @@ export abstract class Scene{
 
     draw: (item:Drawable, frame:Float, lerp?:boolean, callback?:(item:Drawable, frame:Float, lerp?:boolean)=>void) => void
 
+
     constructor(){
         this.draw = null! // OVERRIDE THIS IN THE BASE CLASS!
+    }
+
+
+    get mouseX():number{
+        throw("Override mouseX in base class")
+    }
+
+
+    get mouseY():number{
+        throw("Override mouseY in base class")
     }
 
   

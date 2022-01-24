@@ -632,6 +632,12 @@
     constructor() {
       this.draw = null;
     }
+    get mouseX() {
+      throw "Override mouseX in base class";
+    }
+    get mouseY() {
+      throw "Override mouseY in base class";
+    }
     createLibrary(name, path) {
       const library = new Library(name, path, this);
       return library;
@@ -684,8 +690,26 @@
             item.draw(frame2, lerp, callback);
         }
       };
+      this.canvas = ctx.canvas;
       this.stack = [ctx];
       this.pool = [];
+      this._mouseX = -1;
+      this._mouseY = -1;
+      ctx.canvas.addEventListener("mousemove", this.onMouseMove.bind(this));
+    }
+    onMouseMove(e) {
+      const rect = this.canvas.getBoundingClientRect();
+      const scaleX = this.canvas.width / rect.width;
+      const scaleY = this.canvas.height / rect.height;
+      this._mouseX = (e.clientX - rect.left) * scaleX;
+      this._mouseY = (e.clientY - rect.top) * scaleY;
+      console.log(this._mouseX, this._mouseY);
+    }
+    get mouseX() {
+      return 0;
+    }
+    get mouseY() {
+      return 0;
     }
     get ctx() {
       return this.stack[this.stack.length - 1];
