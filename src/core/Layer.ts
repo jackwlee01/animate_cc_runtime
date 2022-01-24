@@ -93,10 +93,10 @@ export class Layer extends Drawable{
     }
 
 
-    public draw(frame:Float, callback?:(item:Drawable, frame:Float, lerp?:boolean)=>void, lerp?:boolean):void{
+    public draw(frame:Float, lerp?:boolean, callback?:(item:Drawable, frame:Float, lerp?:boolean)=>void):void{
         var keyframe = this.keyframeAt(frame)
         if(keyframe!=null){
-            this.library.context.draw(keyframe, frame, callback, lerp);
+            this.library.context.draw(keyframe, frame, lerp, callback);
         }
     }
 

@@ -104,7 +104,7 @@
     }
     visit(frame2, callback) {
     }
-    draw(frame2, callback, lerp) {
+    draw(frame2, lerp, callback) {
     }
   };
 
@@ -136,8 +136,8 @@
     get item() {
       throw "Override item getter in base class";
     }
-    draw(frame2, callback, lerp) {
-      this.library.context.draw(this.item, frame2, callback, lerp);
+    draw(frame2, lerp, callback) {
+      this.library.context.draw(this.item, frame2, lerp, callback);
     }
     visit(frame2, callback) {
       callback(this, frame2);
@@ -159,11 +159,11 @@
     get item() {
       return this.library.clipsByName[this.itemName];
     }
-    draw(frame2, callback, lerp) {
+    draw(frame2, lerp, callback) {
       if (this.behaviour.type == "graphic") {
         frame2 = this.behaviour.firstFrame + modWrap(frame2, 1);
       }
-      this.library.context.draw(this.item, frame2, callback, lerp);
+      this.library.context.draw(this.item, frame2, lerp, callback);
     }
     visit(frame2, callback) {
       if (this.behaviour.type == "graphic") {
@@ -205,9 +205,9 @@
       this.instances.push(spriteInstance);
       return spriteInstance;
     }
-    draw(frame2, callback, lerp) {
+    draw(frame2, lerp, callback) {
       for (const instance of this.instances) {
-        this.library.context.draw(instance, frame2, callback, lerp);
+        this.library.context.draw(instance, frame2, lerp, callback);
       }
     }
     visit(frame2, callback) {
@@ -266,10 +266,10 @@
       }
       return null;
     }
-    draw(frame2, callback, lerp) {
+    draw(frame2, lerp, callback) {
       var keyframe = this.keyframeAt(frame2);
       if (keyframe != null) {
-        this.library.context.draw(keyframe, frame2, callback, lerp);
+        this.library.context.draw(keyframe, frame2, lerp, callback);
       }
     }
     visit(frame2, callback) {
@@ -307,13 +307,13 @@
       if (frame2.layer.totalFrames > this.totalFrames)
         this.totalFrames = frame2.layer.totalFrames;
     }
-    draw(frame2, callback, lerp) {
+    draw(frame2, lerp, callback) {
       for (const layer of this.layers) {
         if (layer.totalFrames == 0)
           continue;
         var f = modWrap(frame2, layer.totalFrames);
         if (layer.totalFrames >= f) {
-          this.library.context.draw(layer, frame2, callback, lerp);
+          this.library.context.draw(layer, frame2, lerp, callback);
         }
       }
     }
@@ -366,7 +366,7 @@
       this.rotated = props.rotated;
       this.atlas = props.atlas;
     }
-    draw(frame2, callback, lerp) {
+    draw(frame2, lerp, callback) {
     }
     visit(frame2, callback) {
       callback(this, frame2);

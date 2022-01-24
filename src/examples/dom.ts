@@ -56,7 +56,7 @@ function drawWithLogic(item:Drawable, frame:number, lerp?:boolean){
     }else if(swap && item.name=="stardude_assets/StarGuyGun"){
         animContext.current.appendChild(gunInput)
     }else{
-        item.draw(frame, drawWithLogic, lerp)
+        item.draw(frame, lerp, drawWithLogic)
     }
 }
 
@@ -67,7 +67,7 @@ function update(){
         animContext.pushTranslate('0px', '10px')
         animContext.pushScale('1', '1')
         animContext.pushRotation('0deg')
-        testLibrary.symbol("StarDude").draw(frame, drawWithLogic)
+        testLibrary.symbol("StarDude").draw(frame, false, drawWithLogic)
         animContext.pop();
         animContext.pop();
         animContext.pop();
@@ -75,7 +75,7 @@ function update(){
         animContext.pushTranslate('100px', '10px')
         animContext.pushScale('1', '1')
         animContext.pushRotation('0deg')
-        testLibrary.symbol("Walker_Laser_Rotating").draw(frame, drawWithLogic)
+        testLibrary.symbol("Walker_Laser_Rotating").draw(frame, false, drawWithLogic)
         animContext.pop();
         animContext.pop();
         animContext.pop();

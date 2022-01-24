@@ -67,7 +67,7 @@
     }
     visit(frame2, callback) {
     }
-    draw(frame2, callback, lerp2) {
+    draw(frame2, lerp2, callback) {
     }
   };
 
@@ -99,8 +99,8 @@
     get item() {
       throw "Override item getter in base class";
     }
-    draw(frame2, callback, lerp2) {
-      this.library.context.draw(this.item, frame2, callback, lerp2);
+    draw(frame2, lerp2, callback) {
+      this.library.context.draw(this.item, frame2, lerp2, callback);
     }
     visit(frame2, callback) {
       callback(this, frame2);
@@ -122,11 +122,11 @@
     get item() {
       return this.library.clipsByName[this.itemName];
     }
-    draw(frame2, callback, lerp2) {
+    draw(frame2, lerp2, callback) {
       if (this.behaviour.type == "graphic") {
         frame2 = this.behaviour.firstFrame + modWrap(frame2, 1);
       }
-      this.library.context.draw(this.item, frame2, callback, lerp2);
+      this.library.context.draw(this.item, frame2, lerp2, callback);
     }
     visit(frame2, callback) {
       if (this.behaviour.type == "graphic") {
@@ -168,9 +168,9 @@
       this.instances.push(spriteInstance);
       return spriteInstance;
     }
-    draw(frame2, callback, lerp2) {
+    draw(frame2, lerp2, callback) {
       for (const instance of this.instances) {
-        this.library.context.draw(instance, frame2, callback, lerp2);
+        this.library.context.draw(instance, frame2, lerp2, callback);
       }
     }
     visit(frame2, callback) {
@@ -229,10 +229,10 @@
       }
       return null;
     }
-    draw(frame2, callback, lerp2) {
+    draw(frame2, lerp2, callback) {
       var keyframe = this.keyframeAt(frame2);
       if (keyframe != null) {
-        this.library.context.draw(keyframe, frame2, callback, lerp2);
+        this.library.context.draw(keyframe, frame2, lerp2, callback);
       }
     }
     visit(frame2, callback) {
@@ -270,13 +270,13 @@
       if (frame2.layer.totalFrames > this.totalFrames)
         this.totalFrames = frame2.layer.totalFrames;
     }
-    draw(frame2, callback, lerp2) {
+    draw(frame2, lerp2, callback) {
       for (const layer of this.layers) {
         if (layer.totalFrames == 0)
           continue;
         var f = modWrap(frame2, layer.totalFrames);
         if (layer.totalFrames >= f) {
-          this.library.context.draw(layer, frame2, callback, lerp2);
+          this.library.context.draw(layer, frame2, lerp2, callback);
         }
       }
     }
@@ -329,7 +329,7 @@
       this.rotated = props.rotated;
       this.atlas = props.atlas;
     }
-    draw(frame2, callback, lerp2) {
+    draw(frame2, lerp2, callback) {
     }
     visit(frame2, callback) {
       callback(this, frame2);
@@ -812,24 +812,24 @@
       if (item.name == "game/Walker_Nose_Nose") {
         ctx.save();
         ctx.rotate(noseRotation);
-        item.draw(frame2, drawWithLogic, lerp2);
+        item.draw(frame2, lerp2, drawWithLogic);
         ctx.restore();
       } else {
-        item.draw(frame2, drawWithLogic, lerp2);
+        item.draw(frame2, lerp2, drawWithLogic);
       }
     } else if (item instanceof Layer) {
       if (item.name == "layer_eye") {
-        item.draw(eyesFrame, drawWithLogic, lerp2);
+        item.draw(eyesFrame, lerp2, drawWithLogic);
       } else {
-        item.draw(frame2, drawWithLogic, lerp2);
+        item.draw(frame2, lerp2, drawWithLogic);
       }
     } else if (item instanceof Frame) {
-      item.draw(frame2, drawWithLogic, lerp2);
+      item.draw(frame2, lerp2, drawWithLogic);
     } else if (item instanceof Instance) {
       if (item.frame.layer.name == "layer_hat") {
-        hatsLibrary.symbol("Hat_" + hatIndex).draw(frame2, drawWithLogic, lerp2);
+        hatsLibrary.symbol("Hat_" + hatIndex).draw(frame2, lerp2, drawWithLogic);
       } else {
-        item.draw(frame2, drawWithLogic, lerp2);
+        item.draw(frame2, lerp2, drawWithLogic);
       }
     } else if (item instanceof Sprite) {
       item.draw(frame2);
@@ -856,15 +856,15 @@
     ctx.scale(dpr, dpr);
     ctx.save();
     ctx.translate(-200, 0);
-    hatsLibrary.symbol("Walker_Laser").draw(frame, drawWithLogic, lerp);
+    hatsLibrary.symbol("Walker_Laser").draw(frame, lerp, drawWithLogic);
     ctx.restore();
     ctx.save();
     ctx.translate(0, 0);
-    hatsLibrary.symbol("Walker_Nose").draw(frame, drawWithLogic, lerp);
+    hatsLibrary.symbol("Walker_Nose").draw(frame, lerp, drawWithLogic);
     ctx.restore();
     ctx.save();
     ctx.translate(200, -50);
-    hatsLibrary.symbol("StarDude").draw(frame, drawWithLogic, lerp);
+    hatsLibrary.symbol("StarDude").draw(frame, lerp, drawWithLogic);
     ctx.restore();
     ctx.restore();
     frame += reverse ? -playSpeed : playSpeed;

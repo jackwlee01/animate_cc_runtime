@@ -80,26 +80,26 @@ function drawWithLogic(item:Drawable, frame:number, lerp?:boolean){
         if(item.name == "game/Walker_Nose_Nose"){
             ctx.save();
                 ctx.rotate(noseRotation)
-                item.draw(frame, drawWithLogic, lerp)
+                item.draw(frame, lerp, drawWithLogic)
             ctx.restore();
         }else{
-            item.draw(frame, drawWithLogic, lerp)
+            item.draw(frame, lerp, drawWithLogic)
         }
     }else if(item instanceof Layer){
         // If the layer name is "layer_eye", choose the frame
         if(item.name=="layer_eye"){
-            item.draw(eyesFrame, drawWithLogic, lerp)
+            item.draw(eyesFrame, lerp, drawWithLogic)
         }else{
-            item.draw(frame, drawWithLogic, lerp)
+            item.draw(frame, lerp, drawWithLogic)
         }
     }else if(item instanceof Frame){
-        item.draw(frame, drawWithLogic, lerp)
+        item.draw(frame, lerp, drawWithLogic)
     }else if(item instanceof Instance){
         // If the instance's layer name is "layer_hat", choose the hat clip
         if(item.frame.layer.name=="layer_hat"){
-            hatsLibrary.symbol("Hat_"+hatIndex).draw(frame, drawWithLogic, lerp)
+            hatsLibrary.symbol("Hat_"+hatIndex).draw(frame, lerp, drawWithLogic)
         }else{
-            item.draw(frame, drawWithLogic, lerp)
+            item.draw(frame, lerp, drawWithLogic)
         }
     }else if(item instanceof Sprite){
         item.draw(frame) // Note: leaf node, so don't supply drawWithLogic as an argument
@@ -133,17 +133,17 @@ function update(){
 
         ctx.save();
             ctx.translate(-200, 0)
-            hatsLibrary.symbol("Walker_Laser").draw(frame, drawWithLogic, lerp)
+            hatsLibrary.symbol("Walker_Laser").draw(frame, lerp, drawWithLogic)
         ctx.restore()
 
         ctx.save()
             ctx.translate(0, 0)
-            hatsLibrary.symbol("Walker_Nose").draw(frame, drawWithLogic, lerp)
+            hatsLibrary.symbol("Walker_Nose").draw(frame, lerp, drawWithLogic)
         ctx.restore()
 
         ctx.save();
             ctx.translate(200, -50)
-            hatsLibrary.symbol("StarDude").draw(frame, drawWithLogic, lerp)
+            hatsLibrary.symbol("StarDude").draw(frame, lerp, drawWithLogic)
         ctx.restore()
     
     ctx.restore()

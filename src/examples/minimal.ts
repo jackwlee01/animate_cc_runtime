@@ -27,7 +27,7 @@ function update(){
         ctx.translate(canvas.width/2, canvas.height/2)
         ctx.scale(dpr, dpr)
 
-        testLibrary.symbol("Scene").draw(frame, undefined, false)
+        testLibrary.symbol("Scene").draw(frame)
 
     ctx.restore()
     

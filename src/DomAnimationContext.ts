@@ -62,29 +62,29 @@ export class DomAnimationContext extends AnimationContext{
     }
 
 
-    draw = (item:Drawable, frame:Float, callback?:(item:Drawable, frame:Float, lerp?:boolean)=>void, lerp?:boolean) => {
+    draw = (item:Drawable, frame:Float, lerp?:boolean, callback?:(item:Drawable, frame:Float, lerp?:boolean)=>void) => {
         if(!this.container) return;
         if(item instanceof Layer){
             this.pushElem('layer', item.name, item.id)
             if(callback) callback(item, frame, lerp)
-            else item.draw(frame, callback, lerp)
+            else item.draw(frame, lerp, callback)
             this.pop()
         }else if(item instanceof Frame){
             this.pushElem('frame', item.name, item.id)
             if(callback) callback(item, frame, lerp)
-            else item.draw(frame, callback, lerp)
+            else item.draw(frame, lerp, callback)
             this.pop()
         }else if(item instanceof SpriteInstance){
             this.pushElem('sprite', item.name, item.id)
             this.transformInstance(item, frame, lerp)
             if(callback) callback(item, frame, lerp)
-            else item.draw(frame, callback, lerp)
+            else item.draw(frame, lerp, callback)
             this.pop()
         }else if(item instanceof ClipInstance){
             this.pushElem('clip', item.name, item.id)
             this.transformInstance(item, frame, lerp)
             if(callback) callback(item, frame, lerp)
-            else item.draw(frame, callback, lerp)
+            else item.draw(frame, lerp, callback)
             this.pop()
         }else if(item instanceof Sprite){
             this.current.style.width = item.width + 'px'
@@ -94,7 +94,7 @@ export class DomAnimationContext extends AnimationContext{
             //this.current.style.border = '1px solid red'
         }else{
             if(callback) callback(item, frame, lerp)
-            else item.draw(frame, callback, lerp)
+            else item.draw(frame, lerp, callback)
         }
     }
 
