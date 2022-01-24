@@ -56,12 +56,14 @@ export class Instance extends Drawable{
 
 
     public get prev():Instance|undefined{
-        return this.frame.prev?.instances[this.index]
+        const item = this.frame.prev?.instances[this.index]
+        return item?.itemName==this.itemName ? item : undefined 
     }
 
 
     public get next():Instance|undefined{
-        return this.frame.next?.instances[this.index]
+        const item = this.frame.next?.instances[this.index]
+        return item?.itemName==this.itemName ? item : undefined
     }
 
 

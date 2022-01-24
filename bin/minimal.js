@@ -88,11 +88,13 @@
     }
     get prev() {
       var _a;
-      return (_a = this.frame.prev) == null ? void 0 : _a.instances[this.index];
+      const item = (_a = this.frame.prev) == null ? void 0 : _a.instances[this.index];
+      return (item == null ? void 0 : item.itemName) == this.itemName ? item : void 0;
     }
     get next() {
       var _a;
-      return (_a = this.frame.next) == null ? void 0 : _a.instances[this.index];
+      const item = (_a = this.frame.next) == null ? void 0 : _a.instances[this.index];
+      return (item == null ? void 0 : item.itemName) == this.itemName ? item : void 0;
     }
     get item() {
       throw "Override item getter in base class";
@@ -206,10 +208,6 @@
         this.labels.push(frame2);
       }
       this.clip.addFrame(frame2);
-      if (this.firstFrame) {
-        this.firstFrame.prev = frame2;
-        frame2.next = this.firstFrame;
-      }
       if (this.lastFrame) {
         this.lastFrame.next = frame2;
         frame2.prev = this.lastFrame;
@@ -762,9 +760,9 @@
     ctx.save();
     ctx.translate(canvas.width / 2, canvas.height / 2);
     ctx.scale(dpr, dpr);
-    testLibrary.symbol("Scene").draw(frame);
+    testLibrary.symbol("Scene").draw(frame, void 0, true);
     ctx.restore();
-    frame++;
+    frame += 0.2;
     requestAnimationFrame(update);
   }
   init();

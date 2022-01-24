@@ -57,10 +57,12 @@ export class Layer extends Drawable{
             this.labels.push(frame);
         }
         this.clip.addFrame(frame);
+        /*
         if(this.firstFrame){
             this.firstFrame.prev = frame
             frame.next = this.firstFrame
         }
+        */
         if(this.lastFrame){
             this.lastFrame.next = frame
             frame.prev = this.lastFrame
