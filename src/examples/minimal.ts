@@ -1,5 +1,5 @@
 import { setupCanvas } from "./example-utils";
-import { Canvas2dAnimationContext } from "../Canvas2dAnimationContext";
+import { Canvas2dAnimationContext } from "../Canvas2dScene";
 
 // Set up canvas
 const canvas = document.getElementById("canvas") as HTMLCanvasElement

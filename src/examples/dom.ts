@@ -1,9 +1,9 @@
 import { Layer } from "..";
 import { Drawable } from "../core/Drawable";
-import { DomAnimationContext } from "../DomAnimationContext";
+import { DomScene } from "../DomScene";
 
 // Set up animation context and animation libraries
-const animContext = new DomAnimationContext('anim')
+const animContext = new DomScene('anim')
 const testLibrary = animContext.createLibrary('test', './test')
 
 

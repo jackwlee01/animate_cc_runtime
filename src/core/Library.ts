@@ -10,7 +10,7 @@ import { DrawableProps } from "./Drawable";
 import { Sprite, SpriteProps } from "./Sprite";
 import { Atlas, AtlasProps } from "./Atlas";
 import { normaliseJson } from "./json/utilJson";
-import { AnimationContext } from "./AnimationContext";
+import { Scene } from "./Scene";
 import { Matrix3d } from "./geom/Matrix3d";
 
 
@@ -23,14 +23,14 @@ export class Library{
     spritesByName:Record<string, Sprite> = {};
     atlases:Array<Atlas> = [];
     atlasesBySpriteName:Record<string, Atlas> = {}
-    context:AnimationContext;
+    scene:Scene;
     
     
-    constructor(name:string, path:string, context:AnimationContext){
+    constructor(name:string, path:string, scene:Scene){
         this.name = name;
         this.path = path;
         this.atlases = [];
-        this.context = context;
+        this.scene = scene;
     }
 
 

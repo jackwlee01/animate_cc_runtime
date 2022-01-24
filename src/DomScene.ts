@@ -1,5 +1,5 @@
 import { Layer } from ".";
-import { AnimationContext } from "./core/AnimationContext"
+import { Scene } from "./core/Scene"
 import { ClipInstance } from "./core/ClipInstance";
 import { Drawable } from "./core/Drawable"
 import { Frame } from "./core/Frame";
@@ -9,7 +9,7 @@ import { SpriteInstance } from "./core/SpriteInstance";
 import { modWrap } from "./core/util/math";
 
 
-export class DomAnimationContext extends AnimationContext{
+export class DomScene extends Scene{
     
     elemId:string
     elems:Array<HTMLElement>

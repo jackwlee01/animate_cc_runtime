@@ -44,7 +44,7 @@ export class ClipInstance extends Instance{
         if(this.behaviour.type == 'graphic'){
             frame = this.behaviour.firstFrame + modWrap(frame, 1);
         }
-        this.library.context.draw(this.item, frame, lerp, callback)
+        this.library.scene.draw(this.item, frame, lerp, callback)
     }
 
 

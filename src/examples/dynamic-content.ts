@@ -1,5 +1,5 @@
 import { setupCanvas } from "./example-utils";
-import { Canvas2dAnimationContext } from "../Canvas2dAnimationContext";
+import { Canvas2dAnimationContext } from "../Canvas2dScene";
 import { Drawable } from "../core/Drawable";
 import { Clip } from "../core/Clip";
 import { Layer } from "../core/Layer";

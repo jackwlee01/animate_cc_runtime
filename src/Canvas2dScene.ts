@@ -1,4 +1,4 @@
-import { AnimationContext } from "./core/AnimationContext"
+import { Scene } from "./core/Scene"
 import { ClipInstance } from "./core/ClipInstance";
 import { Drawable } from "./core/Drawable"
 import { Frame } from "./core/Frame";
@@ -14,7 +14,7 @@ import { modWrap } from "./core/util/math";
 // This could easily be ported to any immediate mode rendering context, ie WebGL.
 // This could also be ported to scene graph based libraries like PixiJS, or event the DOM,
 // with a few modification to faciliate mapping to a scene graph.
-export class Canvas2dAnimationContext extends AnimationContext{
+export class Canvas2dAnimationContext extends Scene{
     
     stack:CanvasRenderingContext2D[]
     pool:CanvasRenderingContext2D[];
@@ -119,7 +119,7 @@ export class Canvas2dAnimationContext extends AnimationContext{
         this.pushRenderTarget();
     }
 
-    
+
     popDropShadow(){
         this.popRenderTarget();
     }

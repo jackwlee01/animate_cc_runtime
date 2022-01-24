@@ -96,7 +96,7 @@ export class Layer extends Drawable{
     public draw(frame:Float, lerp?:boolean, callback?:(item:Drawable, frame:Float, lerp?:boolean)=>void):void{
         var keyframe = this.keyframeAt(frame)
         if(keyframe!=null){
-            this.library.context.draw(keyframe, frame, lerp, callback);
+            this.library.scene.draw(keyframe, frame, lerp, callback);
         }
     }
 

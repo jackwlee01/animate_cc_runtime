@@ -137,7 +137,7 @@
       throw "Override item getter in base class";
     }
     draw(frame2, lerp, callback) {
-      this.library.context.draw(this.item, frame2, lerp, callback);
+      this.library.scene.draw(this.item, frame2, lerp, callback);
     }
     visit(frame2, callback) {
       callback(this, frame2);
@@ -163,7 +163,7 @@
       if (this.behaviour.type == "graphic") {
         frame2 = this.behaviour.firstFrame + modWrap(frame2, 1);
       }
-      this.library.context.draw(this.item, frame2, lerp, callback);
+      this.library.scene.draw(this.item, frame2, lerp, callback);
     }
     visit(frame2, callback) {
       if (this.behaviour.type == "graphic") {
@@ -207,7 +207,7 @@
     }
     draw(frame2, lerp, callback) {
       for (const instance of this.instances) {
-        this.library.context.draw(instance, frame2, lerp, callback);
+        this.library.scene.draw(instance, frame2, lerp, callback);
       }
     }
     visit(frame2, callback) {
@@ -269,7 +269,7 @@
     draw(frame2, lerp, callback) {
       var keyframe = this.keyframeAt(frame2);
       if (keyframe != null) {
-        this.library.context.draw(keyframe, frame2, lerp, callback);
+        this.library.scene.draw(keyframe, frame2, lerp, callback);
       }
     }
     visit(frame2, callback) {
@@ -313,7 +313,7 @@
           continue;
         var f = modWrap(frame2, layer.totalFrames);
         if (layer.totalFrames >= f) {
-          this.library.context.draw(layer, frame2, lerp, callback);
+          this.library.scene.draw(layer, frame2, lerp, callback);
         }
       }
     }
@@ -519,7 +519,7 @@
 
   // src/core/Library.ts
   var Library = class {
-    constructor(name, path, context) {
+    constructor(name, path, scene) {
       this.clips = [];
       this.clipsByName = {};
       this.spritesByName = {};
@@ -528,7 +528,7 @@
       this.name = name;
       this.path = path;
       this.atlases = [];
-      this.context = context;
+      this.scene = scene;
     }
     symbol(name) {
       if (this.clipsByName[name])
@@ -661,8 +661,8 @@
     }
   };
 
-  // src/core/AnimationContext.ts
-  var AnimationContext = class {
+  // src/core/Scene.ts
+  var Scene = class {
     constructor() {
       this.draw = null;
     }
@@ -672,8 +672,8 @@
     }
   };
 
-  // src/Canvas2dAnimationContext.ts
-  var Canvas2dAnimationContext = class extends AnimationContext {
+  // src/Canvas2dScene.ts
+  var Canvas2dAnimationContext = class extends Scene {
     constructor(ctx2) {
       super();
       this.draw = (item, frame2, lerp, callback) => {

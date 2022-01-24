@@ -2,7 +2,7 @@ import { Drawable } from "./Drawable";
 import { Library } from "./Library";
 
 
-export abstract class AnimationContext{
+export abstract class Scene{
 
     draw: (item:Drawable, frame:Float, lerp?:boolean, callback?:(item:Drawable, frame:Float, lerp?:boolean)=>void) => void
 

@@ -52,7 +52,7 @@ export class Clip extends Drawable{
             if(layer.totalFrames==0) continue;
             var f = modWrap(frame, layer.totalFrames);
             if(layer.totalFrames>=f){
-                this.library.context.draw(layer, frame, lerp, callback);
+                this.library.scene.draw(layer, frame, lerp, callback);
             }
         }
     }

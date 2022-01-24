@@ -1,5 +1,5 @@
 import { addExampleButtons, setupCanvas } from "./example-utils";
-import { Canvas2dAnimationContext } from "../Canvas2dAnimationContext";
+import { Canvas2dAnimationContext } from "../Canvas2dScene";
 import { Clip } from "../core/Clip";
 import { Library } from "../core/Library";
 
