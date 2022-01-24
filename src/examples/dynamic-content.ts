@@ -98,16 +98,39 @@ function drawWithLogic(item:Drawable, frame:number, lerp?:boolean){
         // If the instance's layer name is "layer_hat", choose the hat clip
         if(item.frame.layer.name=="layer_hat"){
             hatsLibrary.symbol("Hat_"+hatIndex).draw(frame, lerp, drawWithLogic)
+            const coord = scene.getLocal(scene.mouseX, scene.mouseY)
+
+            scene.ctx.strokeRect(-5, -5, 10, 10)
+            scene.ctx.beginPath()
+            scene.ctx.moveTo(0, 0)
+            scene.ctx.lineTo(coord.x, coord.y)
+            scene.ctx.stroke()
         }else{
             item.draw(frame, lerp, drawWithLogic)
         }
     }else if(item instanceof Sprite){
         item.draw(frame) // Note: leaf node, so don't supply drawWithLogic as an argument
+
+        
         // Draw a red border over any sprite
         if(showSpriteBorders){
             scene.ctx.strokeStyle = '#CC0000'
             scene.ctx.strokeRect(0, 0, item.width, item.height)
         }
+
+        //if(item.name =='0078'){
+            // Draw a blue rectangle around sprites under mouse
+            //if(item.name=="0001"){
+                const pixel = item.getPixel(scene.mouseX, scene.mouseY, scene.ctx.getTransform())
+                if(pixel) console.log(pixel)
+                if((pixel && pixel[3]>0)){ // If there is a pixel under the mouse, and the alpha channel has a value greater than 1
+                    scene.ctx.strokeStyle = '#FF00FF'
+                    scene.ctx.strokeRect(0, 0, item.width, item.height)     
+                }
+            //}
+          //  scene.ctx.fillRect(0, 0, item.width, item.height)
+        //}
+
     }
 }
 
@@ -143,12 +166,19 @@ function update(){
 
         scene.ctx.save();
             scene.ctx.translate(200, -50)
+            scene.ctx.scale(3, 3)
             hatsLibrary.symbol("StarDude").draw(frame, lerp, drawWithLogic)
+        scene.ctx.restore()
+
+        scene.ctx.save()
+            const coord = scene.getLocal(scene.mouseX, scene.mouseY)
+            scene.ctx.translate(coord.x, coord.y)
+            scene.ctx.strokeRect(-10, -10, 20, 20)
         scene.ctx.restore()
     
     scene.ctx.restore()
-    
-    frame += reverse ? -playSpeed : playSpeed;
+
+    //frame += reverse ? -playSpeed : playSpeed;
     requestAnimationFrame(update)
 }
 

@@ -18,7 +18,9 @@ export class Canvas2dScene extends Scene{
     
     canvas:HTMLCanvasElement
     stack:CanvasRenderingContext2D[]
-    pool:CanvasRenderingContext2D[];
+    pool:CanvasRenderingContext2D[]
+
+    //imageData:Record<string, 
 
     private _mouseX:number;
     private _mouseY:number;
@@ -42,17 +44,24 @@ export class Canvas2dScene extends Scene{
         const scaleY = this.canvas.height / rect.height
         this._mouseX = (e.clientX - rect.left) * scaleX
         this._mouseY = (e.clientY - rect.top) * scaleY
-        console.log(this._mouseX, this._mouseY)
     }
 
 
     get mouseX(){
-        return 0
+        return this._mouseX
     }
 
 
     get mouseY(){
-        return 0
+        return this._mouseY
+    }
+
+
+    getLocal(x:number, y:number){
+        const point = new DOMPoint(x, y)
+        const matrix = this.ctx.getTransform()
+        const imatrix = matrix.inverse()
+        return point.matrixTransform(imatrix)
     }
 
 

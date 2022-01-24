@@ -9,6 +9,7 @@ import { Color, Filters } from "./json/AnimationJson";
 
 export type InstanceProps = Omit<DrawableProps, 'id' | 'library'> & {
     itemName:string,
+    // TODO: Use DOMMatrix instead of custom matrix
     matrix2d:Matrix2d,
     matrix3d:Matrix3d,
     frame:Frame,

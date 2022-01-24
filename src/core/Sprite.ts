@@ -40,6 +40,20 @@ export class Sprite extends Drawable{
     }
 
 
+    public getPixel(x:Float, y:Float, transform:DOMMatrix){
+        const point = new DOMPoint(x, y)
+        const imatrix = transform.inverse()
+        const local = point.matrixTransform(imatrix)
+
+        if(local.x<0 || local.x>=this.width) return null;
+        if(local.y<0 || local.y>=this.height) return null;
+
+        console.log(local.x, local.y)
+        
+        return this.atlas.getPixel(this.x + local.x, this.y + local.y)
+    }
+
+
     public draw(frame:Float, lerp?:boolean, callback?:(item:Drawable, frame:Float, lerp?:boolean)=>void){
         // Override in base class
     }

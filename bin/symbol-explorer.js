@@ -369,6 +369,17 @@
       this.rotated = props.rotated;
       this.atlas = props.atlas;
     }
+    getPixel(x, y, transform) {
+      const point = new DOMPoint(x, y);
+      const imatrix = transform.inverse();
+      const local = point.matrixTransform(imatrix);
+      if (local.x < 0 || local.x >= this.width)
+        return null;
+      if (local.y < 0 || local.y >= this.height)
+        return null;
+      console.log(local.x, local.y);
+      return this.atlas.getPixel(this.x + local.x, this.y + local.y);
+    }
     draw(frame2, lerp, callback) {
     }
     visit(frame2, callback) {
@@ -388,6 +399,31 @@
       this.format = props.format;
       this.size = props.size;
       this.resolution = props.resolution;
+      if (this.image.complete == false)
+        throw "Image has not loaded!";
+      const canvas2 = document.createElement("canvas");
+      canvas2.width = this.image.width;
+      canvas2.height = this.image.height;
+      const ctx = document.createElement("canvas").getContext("2d");
+      ctx.drawImage(this.image, 0, 0);
+      const imageData = ctx.getImageData(0, 0, canvas2.width, canvas2.height);
+      this.pixelData = {
+        ctx,
+        imageData
+      };
+    }
+    getPixel(x, y) {
+      x = Math.floor(x);
+      y = Math.floor(y);
+      const data = this.pixelData.imageData.data;
+      console.log("Global", x, y);
+      let i = x + y * this.pixelData.imageData.width;
+      return [
+        data[i * 4 + 0],
+        data[i * 4 + 1],
+        data[i * 4 + 2],
+        data[i * 4 + 3]
+      ];
     }
   };
 
@@ -520,6 +556,16 @@
     }
   };
 
+  // src/core/util/createImage.ts
+  var createImage = (src) => new Promise((resolve) => {
+    const img = new Image();
+    img.src = src;
+    img.onload = () => resolve(img);
+    img.onerror = () => {
+      throw "Image did not load: " + img.src;
+    };
+  });
+
   // src/core/Library.ts
   var Library = class {
     constructor(name, path, scene2) {
@@ -634,8 +680,8 @@
             const altasFetch = yield fetch(spriteJsonPath);
             const dataRaw2 = yield altasFetch.json();
             const data2 = normaliseJson(dataRaw2);
-            const image = new Image(data2.meta.size.w, data2.meta.size.h);
-            image.src = this.path + `/spritemap${pendingAtlasIndex}.png`;
+            const imagePath = this.path + `/spritemap${pendingAtlasIndex}.png`;
+            const image = yield createImage(imagePath);
             const atlas = this.createAtlas({
               image,
               app: data2.meta.app,
@@ -740,13 +786,18 @@
       const scaleY = this.canvas.height / rect.height;
       this._mouseX = (e.clientX - rect.left) * scaleX;
       this._mouseY = (e.clientY - rect.top) * scaleY;
-      console.log(this._mouseX, this._mouseY);
     }
     get mouseX() {
-      return 0;
+      return this._mouseX;
     }
     get mouseY() {
-      return 0;
+      return this._mouseY;
+    }
+    getLocal(x, y) {
+      const point = new DOMPoint(x, y);
+      const matrix = this.ctx.getTransform();
+      const imatrix = matrix.inverse();
+      return point.matrixTransform(imatrix);
     }
     get ctx() {
       return this.stack[this.stack.length - 1];

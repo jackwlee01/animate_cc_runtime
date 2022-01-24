@@ -332,6 +332,17 @@
       this.rotated = props.rotated;
       this.atlas = props.atlas;
     }
+    getPixel(x, y, transform) {
+      const point = new DOMPoint(x, y);
+      const imatrix = transform.inverse();
+      const local = point.matrixTransform(imatrix);
+      if (local.x < 0 || local.x >= this.width)
+        return null;
+      if (local.y < 0 || local.y >= this.height)
+        return null;
+      console.log(local.x, local.y);
+      return this.atlas.getPixel(this.x + local.x, this.y + local.y);
+    }
     draw(frame2, lerp2, callback) {
     }
     visit(frame2, callback) {
@@ -351,6 +362,31 @@
       this.format = props.format;
       this.size = props.size;
       this.resolution = props.resolution;
+      if (this.image.complete == false)
+        throw "Image has not loaded!";
+      const canvas2 = document.createElement("canvas");
+      canvas2.width = this.image.width;
+      canvas2.height = this.image.height;
+      const ctx = document.createElement("canvas").getContext("2d");
+      ctx.drawImage(this.image, 0, 0);
+      const imageData = ctx.getImageData(0, 0, canvas2.width, canvas2.height);
+      this.pixelData = {
+        ctx,
+        imageData
+      };
+    }
+    getPixel(x, y) {
+      x = Math.floor(x);
+      y = Math.floor(y);
+      const data = this.pixelData.imageData.data;
+      console.log("Global", x, y);
+      let i = x + y * this.pixelData.imageData.width;
+      return [
+        data[i * 4 + 0],
+        data[i * 4 + 1],
+        data[i * 4 + 2],
+        data[i * 4 + 3]
+      ];
     }
   };
 
@@ -483,6 +519,16 @@
     }
   };
 
+  // src/core/util/createImage.ts
+  var createImage = (src) => new Promise((resolve) => {
+    const img = new Image();
+    img.src = src;
+    img.onload = () => resolve(img);
+    img.onerror = () => {
+      throw "Image did not load: " + img.src;
+    };
+  });
+
   // src/core/Library.ts
   var Library = class {
     constructor(name, path, scene2) {
@@ -597,8 +643,8 @@
             const altasFetch = yield fetch(spriteJsonPath);
             const dataRaw2 = yield altasFetch.json();
             const data2 = normaliseJson(dataRaw2);
-            const image = new Image(data2.meta.size.w, data2.meta.size.h);
-            image.src = this.path + `/spritemap${pendingAtlasIndex}.png`;
+            const imagePath = this.path + `/spritemap${pendingAtlasIndex}.png`;
+            const image = yield createImage(imagePath);
             const atlas = this.createAtlas({
               image,
               app: data2.meta.app,
@@ -703,13 +749,18 @@
       const scaleY = this.canvas.height / rect.height;
       this._mouseX = (e.clientX - rect.left) * scaleX;
       this._mouseY = (e.clientY - rect.top) * scaleY;
-      console.log(this._mouseX, this._mouseY);
     }
     get mouseX() {
-      return 0;
+      return this._mouseX;
     }
     get mouseY() {
-      return 0;
+      return this._mouseY;
+    }
+    getLocal(x, y) {
+      const point = new DOMPoint(x, y);
+      const matrix = this.ctx.getTransform();
+      const imatrix = matrix.inverse();
+      return point.matrixTransform(imatrix);
     }
     get ctx() {
       return this.stack[this.stack.length - 1];
@@ -856,6 +907,12 @@
     } else if (item instanceof Instance) {
       if (item.frame.layer.name == "layer_hat") {
         hatsLibrary.symbol("Hat_" + hatIndex).draw(frame2, lerp2, drawWithLogic);
+        const coord = scene.getLocal(scene.mouseX, scene.mouseY);
+        scene.ctx.strokeRect(-5, -5, 10, 10);
+        scene.ctx.beginPath();
+        scene.ctx.moveTo(0, 0);
+        scene.ctx.lineTo(coord.x, coord.y);
+        scene.ctx.stroke();
       } else {
         item.draw(frame2, lerp2, drawWithLogic);
       }
@@ -863,6 +920,13 @@
       item.draw(frame2);
       if (showSpriteBorders) {
         scene.ctx.strokeStyle = "#CC0000";
+        scene.ctx.strokeRect(0, 0, item.width, item.height);
+      }
+      const pixel = item.getPixel(scene.mouseX, scene.mouseY, scene.ctx.getTransform());
+      if (pixel)
+        console.log(pixel);
+      if (pixel && pixel[3] > 0) {
+        scene.ctx.strokeStyle = "#FF00FF";
         scene.ctx.strokeRect(0, 0, item.width, item.height);
       }
     }
@@ -892,10 +956,15 @@
     scene.ctx.restore();
     scene.ctx.save();
     scene.ctx.translate(200, -50);
+    scene.ctx.scale(3, 3);
     hatsLibrary.symbol("StarDude").draw(frame, lerp, drawWithLogic);
     scene.ctx.restore();
+    scene.ctx.save();
+    const coord = scene.getLocal(scene.mouseX, scene.mouseY);
+    scene.ctx.translate(coord.x, coord.y);
+    scene.ctx.strokeRect(-10, -10, 20, 20);
     scene.ctx.restore();
-    frame += reverse ? -playSpeed : playSpeed;
+    scene.ctx.restore();
     requestAnimationFrame(update);
   }
   init();

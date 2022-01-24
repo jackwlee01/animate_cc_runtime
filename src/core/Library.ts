@@ -12,6 +12,7 @@ import { Atlas, AtlasProps } from "./Atlas";
 import { normaliseJson } from "./json/utilJson";
 import { Scene } from "./Scene";
 import { Matrix3d } from "./geom/Matrix3d";
+import { createImage } from "./util/createImage";
 
 
 export class Library{
@@ -189,8 +190,8 @@ export class Library{
                 const dataRaw:SpriteMapJson = await altasFetch.json();
                 const data = normaliseJson(dataRaw) as SpriteMapJson;
 
-                const image = new Image(data.meta.size.w, data.meta.size.h);
-                image.src = this.path + `/spritemap${pendingAtlasIndex}.png`;
+                const imagePath = this.path + `/spritemap${pendingAtlasIndex}.png`;
+                const image = await createImage(imagePath) // TODO: This will impact load times. Find a way to make this load parallel. Workers?
 
                 
                 const atlas = this.createAtlas({
