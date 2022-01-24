@@ -127,13 +127,14 @@ function update(){
 
         scene.ctx.fillStyle = '#333333'
         scene.ctx.font = '36px sans-serif';
-        scene.ctx.fillText('1,2,3,4: Change hat', 20, 50);
-        scene.ctx.fillText('Up/Down: Change eyes', 20, 100);
-        scene.ctx.fillText('Left/Right: Rotate nose', 20, 150);
-        scene.ctx.fillText('Spacebar: Toggle debug border', 20, 200);
-        scene.ctx.fillText('l: Toggle lerp', 20, 250);
-        scene.ctx.fillText('r: Reverse play speed', 20, 300);
-        scene.ctx.fillText('+ and -: Change play speed', 20, 350);
+        scene.ctx.fillText('Mouse over: Highlight spites under cursor', 20, 50);
+        scene.ctx.fillText('1,2,3,4: Change hat', 20, 100);
+        scene.ctx.fillText('Up/Down: Change eyes', 20, 150);
+        scene.ctx.fillText('Left/Right: Rotate nose', 20, 200);
+        scene.ctx.fillText('Spacebar: Toggle debug border', 20, 250);
+        scene.ctx.fillText('l: Toggle lerp', 20, 300);
+        scene.ctx.fillText('r: Reverse play speed', 20, 350);
+        scene.ctx.fillText('+ and -: Change play speed', 20, 400);
         
         scene.ctx.translate(canvas.width/2, canvas.height/2)
         scene.ctx.scale(dpr, dpr)
@@ -156,7 +157,9 @@ function update(){
         scene.ctx.save()
             const coord = scene.getLocal(scene.mouseX, scene.mouseY)
             scene.ctx.translate(coord.x, coord.y)
-            scene.ctx.strokeRect(-10, -10, 20, 20)
+            scene.ctx.beginPath()
+            scene.ctx.arc(0, 0, 6, 0, 2*Math.PI)
+            scene.ctx.stroke()
         scene.ctx.restore()
     
     scene.ctx.restore()
