@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Scene" itemID="61ea53fb-00000652" lastModified="1642748931" lastUniqueIdentifier="2">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Scene" itemID="61ea53fb-00000652" lastModified="1642985141" lastUniqueIdentifier="2">
   <timeline>
     <DOMTimeline name="Scene" layerDepthEnabled="true">
       <layers>
@@ -37,7 +37,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer_3" color="#FF800A" layerType="mask">
+        <DOMLayer name="Layer_3" color="#FF800A" locked="true" layerType="mask">
           <frames>
             <DOMFrame index="0" duration="163" keyMode="9728">
               <elements>
@@ -53,7 +53,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer_4" color="#FF4FFF" parentLayerIndex="1">
+        <DOMLayer name="Layer_4" color="#FF4FFF" parentLayerIndex="1" locked="true">
           <frames>
             <DOMFrame index="0" duration="78" tweenType="motion" motionTweenSnap="true" keyMode="22017" rigPropagationMatrix='{"a":277098,"b":0,"c":0,"d":177835,"tx":0,"ty":0}'>
               <elements>

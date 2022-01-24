@@ -165,7 +165,7 @@
           <Include href="PentagonAnim.xml" loadImmediate="false" itemID="61ea365d-000008b8" lastModified="1642739870"/>
           <Include href="placeholders/win.xml" itemID="561338b4-00000144" lastModified="1641874656"/>
           <Include href="placeholders/win_background.xml" itemID="56133bde-0000015a" lastModified="1529030890"/>
-          <Include href="Scene.xml" loadImmediate="false" itemID="61ea53fb-00000652" lastModified="1642748931"/>
+          <Include href="Scene.xml" loadImmediate="false" itemID="61ea53fb-00000652" lastModified="1642985141"/>
           <Include href="Shell.xml" loadImmediate="false" itemID="61e772d9-000006f6" lastModified="1642558169"/>
           <Include href="ShellBounce.xml" itemIcon="1" loadImmediate="false" itemID="61e7736c-00000703" lastModified="1642558671"/>
           <Include href="ShellSpin.xml" itemIcon="1" loadImmediate="false" itemID="61e7734d-000006fe" lastModified="1642558301"/>
@@ -222,7 +222,7 @@
           <Include href="win.xml" itemID="61dd06c0-0000053c" lastModified="1641879311"/>
      </symbols>
      <timelines>
-          <DOMTimeline name="Scene 1" currentFrame="146" layerDepthEnabled="true">
+          <DOMTimeline name="Scene 1" layerDepthEnabled="true">
                <layers>
                     <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
                          <frames>

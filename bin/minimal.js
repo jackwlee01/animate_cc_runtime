@@ -760,9 +760,9 @@
     ctx.save();
     ctx.translate(canvas.width / 2, canvas.height / 2);
     ctx.scale(dpr, dpr);
-    testLibrary.symbol("Scene").draw(frame, void 0, true);
+    testLibrary.symbol("Scene").draw(frame, void 0, false);
     ctx.restore();
-    frame += 0.2;
+    frame += 1;
     requestAnimationFrame(update);
   }
   init();

@@ -27,11 +27,11 @@ function update(){
         ctx.translate(canvas.width/2, canvas.height/2)
         ctx.scale(dpr, dpr)
 
-        testLibrary.symbol("Scene").draw(frame, undefined, true)
+        testLibrary.symbol("Scene").draw(frame, undefined, false)
 
     ctx.restore()
     
-    frame+=0.2;
+    frame+=1;
     requestAnimationFrame(update)
 }
 
