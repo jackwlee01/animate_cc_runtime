@@ -5,14 +5,14 @@ import { Library } from "../core/Library";
 
 
 const canvas = document.getElementById("canvas") as HTMLCanvasElement
-const ctx = canvas.getContext('2d')!
+const ctx2d = canvas.getContext('2d')!
 var dpr = setupCanvas(canvas) // Device pixel ratio
 
 // Set up animation context and libraries
-const animContext = new Canvas2dScene(ctx)
+const scene = new Canvas2dScene(ctx2d)
 const libraries = {
-    test: animContext.createLibrary('test', './test'),
-    monsters: animContext.createLibrary('monsters', './monsters'),
+    test: scene.createLibrary('test', './test'),
+    monsters: scene.createLibrary('monsters', './monsters'),
 }
 
 
@@ -43,13 +43,13 @@ addExampleButtons(Object.keys(libraries)[0], libraries, onLibrarySeleced, onSymb
 
 
 function update(){
-    ctx.fillStyle = '#cccccc'
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    scene.ctx.fillStyle = '#cccccc'
+    scene.ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    ctx.save();
+    scene.ctx.save();
     
-        ctx.translate(canvas.width/2, canvas.height/2)
-        ctx.scale(dpr, dpr)
+        scene.ctx.translate(canvas.width/2, canvas.height/2)
+        scene.ctx.scale(dpr, dpr)
 
         const num = colsAndRows+1;
         var xo = canvas.width/num/2;
@@ -57,14 +57,14 @@ function update(){
     
         for(var x = 1; x < num; x++){
             for(var y = 1; y < num; y++){
-                ctx.save();
-                    ctx.translate(-(num*xo/2)+x*xo, -(num*yo/2)+y*xo)
+                scene.ctx.save();
+                    scene.ctx.translate(-(num*xo/2)+x*xo, -(num*yo/2)+y*xo)
                     symbol.draw(frame)
-                ctx.restore();
+                scene.ctx.restore();
             }
         }
     
-    ctx.restore()
+    scene.ctx.restore()
     
     frame++;
     requestAnimationFrame(update)

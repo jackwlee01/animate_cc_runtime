@@ -75,25 +75,19 @@ document.onkeydown = e => {
 //     - How you can apply state base transformations
 //
 function drawWithLogic(item:Drawable, frame:number, lerp?:boolean){
-    // We should refer the the scene.ctx instead of ctx2d, as the scene
-    // may dynamically switch the context in order to perform compositing
-    // functionality (ie: masking, drop shadows)
-    const ctx = scene.ctx
-
     if(item instanceof Clip){
         // Rotate any clip named game/Walker_Nose_Nose
         if(item.name == "game/Walker_Nose_Nose"){
-            ctx.save();
-                ctx.rotate(noseRotation)
+            scene.ctx.save();
+                scene.ctx.rotate(noseRotation)
                 item.draw(frame, lerp, drawWithLogic)
-            ctx.restore();
+            scene.ctx.restore();
         }else{
             item.draw(frame, lerp, drawWithLogic)
         }
     }else if(item instanceof Layer){
         // If the layer name is "layer_eye", choose the frame
         if(item.name=="layer_eye"){
-            console.log("Laser eye")
             item.draw(eyesFrame, lerp, drawWithLogic)
         }else{
             item.draw(frame, lerp, drawWithLogic)
@@ -111,50 +105,48 @@ function drawWithLogic(item:Drawable, frame:number, lerp?:boolean){
         item.draw(frame) // Note: leaf node, so don't supply drawWithLogic as an argument
         // Draw a red border over any sprite
         if(showSpriteBorders){
-            ctx.strokeStyle = '#CC0000'
-            ctx.strokeRect(0, 0, item.width, item.height)
+            scene.ctx.strokeStyle = '#CC0000'
+            scene.ctx.strokeRect(0, 0, item.width, item.height)
         }
     }
 }
 
 
 function update(){
-    const ctx = scene.ctx
-
-    ctx.fillStyle = '#cccccc'
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    scene.ctx.fillStyle = '#cccccc'
+    scene.ctx.fillRect(0, 0, canvas.width, canvas.height);
     
-    ctx.save();
+    scene.ctx.save();
 
-        ctx.fillStyle = '#333333'
-        ctx.font = '36px sans-serif';
-        ctx.fillText('1,2,3,4: Change hat', 20, 50);
-        ctx.fillText('Up/Down: Change eyes', 20, 100);
-        ctx.fillText('Left/Right: Rotate nose', 20, 150);
-        ctx.fillText('Spacebar: Toggle debug border', 20, 200);
-        ctx.fillText('l: Toggle lerp', 20, 250);
-        ctx.fillText('r: Reverse play speed', 20, 300);
-        ctx.fillText('+ and -: Change play speed', 20, 350);
+        scene.ctx.fillStyle = '#333333'
+        scene.ctx.font = '36px sans-serif';
+        scene.ctx.fillText('1,2,3,4: Change hat', 20, 50);
+        scene.ctx.fillText('Up/Down: Change eyes', 20, 100);
+        scene.ctx.fillText('Left/Right: Rotate nose', 20, 150);
+        scene.ctx.fillText('Spacebar: Toggle debug border', 20, 200);
+        scene.ctx.fillText('l: Toggle lerp', 20, 250);
+        scene.ctx.fillText('r: Reverse play speed', 20, 300);
+        scene.ctx.fillText('+ and -: Change play speed', 20, 350);
         
-        ctx.translate(canvas.width/2, canvas.height/2)
-        ctx.scale(dpr, dpr)
+        scene.ctx.translate(canvas.width/2, canvas.height/2)
+        scene.ctx.scale(dpr, dpr)
 
-        ctx.save();
-            ctx.translate(-200, 0)
+        scene.ctx.save();
+            scene.ctx.translate(-200, 0)
             hatsLibrary.symbol("Walker_Laser").draw(frame, lerp, drawWithLogic)
-        ctx.restore()
+        scene.ctx.restore()
 
-        ctx.save()
-            ctx.translate(0, 0)
+        scene.ctx.save()
+            scene.ctx.translate(0, 0)
             hatsLibrary.symbol("Walker_Nose").draw(frame, lerp, drawWithLogic)
-        ctx.restore()
+        scene.ctx.restore()
 
-        ctx.save();
-            ctx.translate(200, -50)
+        scene.ctx.save();
+            scene.ctx.translate(200, -50)
             hatsLibrary.symbol("StarDude").draw(frame, lerp, drawWithLogic)
-        ctx.restore()
+        scene.ctx.restore()
     
-    ctx.restore()
+    scene.ctx.restore()
     
     frame += reverse ? -playSpeed : playSpeed;
     requestAnimationFrame(update)

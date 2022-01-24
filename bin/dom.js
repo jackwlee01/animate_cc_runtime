@@ -48,6 +48,9 @@
       this.totalFrames = props.totalFrames;
       this.library = props.library;
     }
+    get scene() {
+      return this.library.scene;
+    }
     visit(frame2, callback) {
     }
     draw(frame2, lerp, callback) {
@@ -465,7 +468,7 @@
 
   // src/core/Library.ts
   var Library = class {
-    constructor(name, path, scene) {
+    constructor(name, path, scene2) {
       this.clips = [];
       this.clipsByName = {};
       this.spritesByName = {};
@@ -474,7 +477,7 @@
       this.name = name;
       this.path = path;
       this.atlases = [];
-      this.scene = scene;
+      this.scene = scene2;
     }
     symbol(name) {
       if (this.clipsByName[name])
@@ -720,8 +723,8 @@
   };
 
   // src/examples/dom.ts
-  var animContext = new DomScene("anim");
-  var testLibrary = animContext.createLibrary("test", "./test");
+  var scene = new DomScene("anim");
+  var testLibrary = scene.createLibrary("test", "./test");
   function init() {
     return __async(this, null, function* () {
       yield testLibrary.loadData();
@@ -763,30 +766,30 @@
   shellInput.checked = true;
   function drawWithLogic(item, frame2, lerp) {
     if (swap && item.name == "Shell") {
-      animContext.current.appendChild(shellInput);
+      scene.current.appendChild(shellInput);
     } else if (swap && item.name == "stardude_assets/StarGuyGun") {
-      animContext.current.appendChild(gunInput);
+      scene.current.appendChild(gunInput);
     } else {
       item.draw(frame2, lerp, drawWithLogic);
     }
   }
   function update() {
     if (play) {
-      animContext.clear();
-      animContext.pushTranslate("0px", "10px");
-      animContext.pushScale("1", "1");
-      animContext.pushRotation("0deg");
+      scene.clear();
+      scene.pushTranslate("0px", "10px");
+      scene.pushScale("1", "1");
+      scene.pushRotation("0deg");
       testLibrary.symbol("StarDude").draw(frame, false, drawWithLogic);
-      animContext.pop();
-      animContext.pop();
-      animContext.pop();
-      animContext.pushTranslate("100px", "10px");
-      animContext.pushScale("1", "1");
-      animContext.pushRotation("0deg");
+      scene.pop();
+      scene.pop();
+      scene.pop();
+      scene.pushTranslate("100px", "10px");
+      scene.pushScale("1", "1");
+      scene.pushRotation("0deg");
       testLibrary.symbol("Walker_Laser_Rotating").draw(frame, false, drawWithLogic);
-      animContext.pop();
-      animContext.pop();
-      animContext.pop();
+      scene.pop();
+      scene.pop();
+      scene.pop();
       frame += 1;
     }
     requestAnimationFrame(update);

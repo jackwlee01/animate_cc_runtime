@@ -3,12 +3,12 @@ import { Canvas2dScene } from "../Canvas2dScene";
 
 // Set up canvas
 const canvas = document.getElementById("canvas") as HTMLCanvasElement
-const ctx = canvas.getContext('2d')!
+const ctx2d = canvas.getContext('2d')!
 var dpr = setupCanvas(canvas) // Device pixel ratio
 
 // Set up animation context and animation libraries
-const animContext = new Canvas2dScene(ctx)
-const testLibrary = animContext.createLibrary('test', './test')
+const scene = new Canvas2dScene(ctx2d)
+const testLibrary = scene.createLibrary('test', './test')
 
 
 async function init(){
@@ -20,16 +20,16 @@ async function init(){
 let frame = 0;
     
 function update(){
-    ctx.clearRect(0, 0, canvas.width, canvas.height)
+    scene.ctx.clearRect(0, 0, canvas.width, canvas.height)
 
-    ctx.save();
+    scene.ctx.save();
     
-        ctx.translate(canvas.width/2, canvas.height/2)
-        ctx.scale(dpr, dpr)
+        scene.ctx.translate(canvas.width/2, canvas.height/2)
+        scene.ctx.scale(dpr, dpr)
 
         testLibrary.symbol("Scene").draw(frame)
 
-    ctx.restore()
+    scene.ctx.restore()
     
     frame+=1;
     requestAnimationFrame(update)

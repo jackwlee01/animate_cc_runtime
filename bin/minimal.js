@@ -41,9 +41,9 @@
 
   // src/examples/example-utils.ts
   function setupCanvas(canvas2) {
-    const ctx2 = canvas2.getContext("2d");
-    ctx2.imageSmoothingEnabled = true;
-    ctx2.imageSmoothingQuality = "high";
+    const ctx = canvas2.getContext("2d");
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = "high";
     var bodyRec = document.body.getBoundingClientRect();
     canvas2.width = Math.min(1e3, bodyRec.width - 8);
     canvas2.height = canvas2.width;
@@ -64,6 +64,9 @@
       this.id = props.id;
       this.totalFrames = props.totalFrames;
       this.library = props.library;
+    }
+    get scene() {
+      return this.library.scene;
     }
     visit(frame2, callback) {
     }
@@ -482,7 +485,7 @@
 
   // src/core/Library.ts
   var Library = class {
-    constructor(name, path, scene) {
+    constructor(name, path, scene2) {
       this.clips = [];
       this.clipsByName = {};
       this.spritesByName = {};
@@ -491,7 +494,7 @@
       this.name = name;
       this.path = path;
       this.atlases = [];
-      this.scene = scene;
+      this.scene = scene2;
     }
     symbol(name) {
       if (this.clipsByName[name])
@@ -636,8 +639,8 @@
   };
 
   // src/Canvas2dScene.ts
-  var Canvas2dAnimationContext = class extends Scene {
-    constructor(ctx2) {
+  var Canvas2dScene = class extends Scene {
+    constructor(ctx) {
       super();
       this.draw = (item, frame2, lerp, callback) => {
         if (item instanceof Layer) {
@@ -681,28 +684,28 @@
             item.draw(frame2, lerp, callback);
         }
       };
-      this.stack = [ctx2];
+      this.stack = [ctx];
       this.pool = [];
     }
     get ctx() {
       return this.stack[this.stack.length - 1];
     }
     pushRenderTarget() {
-      const ctx2 = this.pool.length == 0 ? document.createElement("canvas").getContext("2d") : this.pool.pop();
-      ctx2.canvas.width = this.ctx.canvas.width;
-      ctx2.canvas.height = this.ctx.canvas.height;
-      ctx2.setTransform(this.ctx.getTransform());
-      this.stack.push(ctx2);
+      const ctx = this.pool.length == 0 ? document.createElement("canvas").getContext("2d") : this.pool.pop();
+      ctx.canvas.width = this.ctx.canvas.width;
+      ctx.canvas.height = this.ctx.canvas.height;
+      ctx.setTransform(this.ctx.getTransform());
+      this.stack.push(ctx);
     }
     popRenderTarget() {
       if (this.stack.length <= 1)
         throw "Cannot pop stack";
-      const ctx2 = this.stack.pop();
+      const ctx = this.stack.pop();
       this.ctx.save();
       this.ctx.resetTransform();
-      this.ctx.drawImage(ctx2.canvas, 0, 0);
+      this.ctx.drawImage(ctx.canvas, 0, 0);
       this.ctx.restore();
-      this.pool.push(ctx2);
+      this.pool.push(ctx);
     }
     handleColor(item, frame2, lerp) {
       var _a, _b, _c, _d;
@@ -745,10 +748,10 @@
 
   // src/examples/minimal.ts
   var canvas = document.getElementById("canvas");
-  var ctx = canvas.getContext("2d");
+  var ctx2d = canvas.getContext("2d");
   var dpr = setupCanvas(canvas);
-  var animContext = new Canvas2dAnimationContext(ctx);
-  var testLibrary = animContext.createLibrary("test", "./test");
+  var scene = new Canvas2dScene(ctx2d);
+  var testLibrary = scene.createLibrary("test", "./test");
   function init() {
     return __async(this, null, function* () {
       yield testLibrary.loadData();
@@ -757,12 +760,12 @@
   }
   var frame = 0;
   function update() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.save();
-    ctx.translate(canvas.width / 2, canvas.height / 2);
-    ctx.scale(dpr, dpr);
+    scene.ctx.clearRect(0, 0, canvas.width, canvas.height);
+    scene.ctx.save();
+    scene.ctx.translate(canvas.width / 2, canvas.height / 2);
+    scene.ctx.scale(dpr, dpr);
     testLibrary.symbol("Scene").draw(frame);
-    ctx.restore();
+    scene.ctx.restore();
     frame += 1;
     requestAnimationFrame(update);
   }

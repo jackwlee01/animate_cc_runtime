@@ -3,8 +3,8 @@ import { Drawable } from "../core/Drawable";
 import { DomScene } from "../DomScene";
 
 // Set up animation context and animation libraries
-const animContext = new DomScene('anim')
-const testLibrary = animContext.createLibrary('test', './test')
+const scene = new DomScene('anim')
+const testLibrary = scene.createLibrary('test', './test')
 
 
 async function init(){
@@ -52,9 +52,9 @@ shellInput.checked = true;
 
 function drawWithLogic(item:Drawable, frame:number, lerp?:boolean){
     if(swap && item.name=="Shell"){
-        animContext.current.appendChild(shellInput)
+        scene.current.appendChild(shellInput)
     }else if(swap && item.name=="stardude_assets/StarGuyGun"){
-        animContext.current.appendChild(gunInput)
+        scene.current.appendChild(gunInput)
     }else{
         item.draw(frame, lerp, drawWithLogic)
     }
@@ -62,23 +62,23 @@ function drawWithLogic(item:Drawable, frame:number, lerp?:boolean){
 
 function update(){
     if(play){
-        animContext.clear();
+        scene.clear();
 
-        animContext.pushTranslate('0px', '10px')
-        animContext.pushScale('1', '1')
-        animContext.pushRotation('0deg')
+        scene.pushTranslate('0px', '10px')
+        scene.pushScale('1', '1')
+        scene.pushRotation('0deg')
         testLibrary.symbol("StarDude").draw(frame, false, drawWithLogic)
-        animContext.pop();
-        animContext.pop();
-        animContext.pop();
+        scene.pop();
+        scene.pop();
+        scene.pop();
 
-        animContext.pushTranslate('100px', '10px')
-        animContext.pushScale('1', '1')
-        animContext.pushRotation('0deg')
+        scene.pushTranslate('100px', '10px')
+        scene.pushScale('1', '1')
+        scene.pushRotation('0deg')
         testLibrary.symbol("Walker_Laser_Rotating").draw(frame, false, drawWithLogic)
-        animContext.pop();
-        animContext.pop();
-        animContext.pop();
+        scene.pop();
+        scene.pop();
+        scene.pop();
 
         frame += 1;
     }
