@@ -27,6 +27,11 @@ export abstract class Drawable{
     }
 
 
+    public get scene(){
+        return this.library.scene;
+    }
+
+
     public visit(frame:Float, callback:(item:Drawable, frame:Float)=>void):void{
         // Override in base class
     }

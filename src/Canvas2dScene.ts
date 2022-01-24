@@ -14,7 +14,7 @@ import { modWrap } from "./core/util/math";
 // This could easily be ported to any immediate mode rendering context, ie WebGL.
 // This could also be ported to scene graph based libraries like PixiJS, or event the DOM,
 // with a few modification to faciliate mapping to a scene graph.
-export class Canvas2dAnimationContext extends Scene{
+export class Canvas2dScene extends Scene{
     
     stack:CanvasRenderingContext2D[]
     pool:CanvasRenderingContext2D[];

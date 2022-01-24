@@ -1,5 +1,5 @@
 import { addExampleButtons, setupCanvas } from "./example-utils";
-import { Canvas2dAnimationContext } from "../Canvas2dScene";
+import { Canvas2dScene } from "../Canvas2dScene";
 import { Clip } from "../core/Clip";
 import { Library } from "../core/Library";
 
@@ -9,7 +9,7 @@ const ctx = canvas.getContext('2d')!
 var dpr = setupCanvas(canvas) // Device pixel ratio
 
 // Set up animation context and libraries
-const animContext = new Canvas2dAnimationContext(ctx)
+const animContext = new Canvas2dScene(ctx)
 const libraries = {
     test: animContext.createLibrary('test', './test'),
     monsters: animContext.createLibrary('monsters', './monsters'),

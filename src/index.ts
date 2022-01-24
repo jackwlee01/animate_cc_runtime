@@ -5,7 +5,7 @@ import { Instance as InstanceBase } from './core/Instance'
 import { SpriteInstance as SpriteInstanceBase } from './core/SpriteInstance'
 import { ClipInstance as ClipInstanceBase } from './core/ClipInstance'
 import { Sprite as SpriteBase } from './core/Sprite'
-import { Canvas2dAnimationContext as Canvas2dAnimationContextBase } from './Canvas2dScene'
+import { Canvas2dScene as Canvas2dAnimationContextBase } from './Canvas2dScene'
 
 export const Clip = ClipBase
 export const Layer = LayerBase

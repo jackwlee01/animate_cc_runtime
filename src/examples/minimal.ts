@@ -1,5 +1,5 @@
 import { setupCanvas } from "./example-utils";
-import { Canvas2dAnimationContext } from "../Canvas2dScene";
+import { Canvas2dScene } from "../Canvas2dScene";
 
 // Set up canvas
 const canvas = document.getElementById("canvas") as HTMLCanvasElement
@@ -7,7 +7,7 @@ const ctx = canvas.getContext('2d')!
 var dpr = setupCanvas(canvas) // Device pixel ratio
 
 // Set up animation context and animation libraries
-const animContext = new Canvas2dAnimationContext(ctx)
+const animContext = new Canvas2dScene(ctx)
 const testLibrary = animContext.createLibrary('test', './test')
 
 

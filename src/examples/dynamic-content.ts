@@ -1,5 +1,5 @@
 import { setupCanvas } from "./example-utils";
-import { Canvas2dAnimationContext } from "../Canvas2dScene";
+import { Canvas2dScene } from "../Canvas2dScene";
 import { Drawable } from "../core/Drawable";
 import { Clip } from "../core/Clip";
 import { Layer } from "../core/Layer";
@@ -10,12 +10,12 @@ import { modWrap } from "../core/util/math";
 
 // Set up canvas
 const canvas = document.getElementById("canvas") as HTMLCanvasElement
-const ctx = canvas.getContext('2d')!
+const ctx2d = canvas.getContext('2d')!
 var dpr = setupCanvas(canvas) // Device pixel ratio
 
 // Set up animation context and animation libraries
-const animContext = new Canvas2dAnimationContext(ctx)
-const hatsLibrary = animContext.createLibrary('hats', './hats')
+const scene = new Canvas2dScene(ctx2d)
+const hatsLibrary = scene.createLibrary('hats', './hats')
 
 
 async function init(){
@@ -75,6 +75,11 @@ document.onkeydown = e => {
 //     - How you can apply state base transformations
 //
 function drawWithLogic(item:Drawable, frame:number, lerp?:boolean){
+    // We should refer the the scene.ctx instead of ctx2d, as the scene
+    // may dynamically switch the context in order to perform compositing
+    // functionality (ie: masking, drop shadows)
+    const ctx = scene.ctx
+
     if(item instanceof Clip){
         // Rotate any clip named game/Walker_Nose_Nose
         if(item.name == "game/Walker_Nose_Nose"){
@@ -114,6 +119,8 @@ function drawWithLogic(item:Drawable, frame:number, lerp?:boolean){
 
 
 function update(){
+    const ctx = scene.ctx
+
     ctx.fillStyle = '#cccccc'
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     
