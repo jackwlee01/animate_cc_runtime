@@ -829,8 +829,17 @@
   var dpr = setupCanvas(canvas);
   var scene = new Canvas2dScene(ctx2d);
   var hatsLibrary = scene.createLibrary("hats", "./hats");
+  function init() {
+    return __async(this, null, function* () {
+      yield hatsLibrary.loadData();
+      update();
+    });
+  }
   var mouseDown = false;
   var mousePressed = false;
+  var frame = 0;
+  var offsets = {};
+  var selection = null;
   canvas.onmousedown = () => {
     mousePressed = true;
     mouseDown = true;
@@ -838,19 +847,45 @@
   canvas.onmouseup = () => {
     mouseDown = false;
   };
-  function init() {
-    return __async(this, null, function* () {
-      yield hatsLibrary.loadData();
-      update();
-    });
+  function drawWithLogic(item, frame2, lerp) {
+    if (mouseDown == false)
+      selection = null;
+    if (item instanceof SpriteInstance) {
+      const offset = offsets[item.item.name];
+      const offsetX = offset ? offset.x : 0;
+      const offsetY = offset ? offset.y : 0;
+      scene.ctx.save();
+      scene.ctx.translate(offsetX, offsetY);
+      if (mousePressed) {
+        if (item.item.isSolidPixelAt(scene.mouseX, scene.mouseY, scene.ctx.getTransform())) {
+          selection = {
+            item,
+            offset: scene.getLocal(scene.mouseX, scene.mouseY)
+          };
+          if (offsets[selection.item.itemName] == null)
+            offsets[selection.item.itemName] = new DOMPoint(0, 0);
+        }
+      }
+      if (selection && selection.item == item) {
+        scene.ctx.strokeStyle = "#CC0000";
+        scene.ctx.strokeRect(0, 0, item.item.width, item.item.height);
+        const offset2 = scene.getLocal(scene.mouseX, scene.mouseY);
+        offsets[selection.item.itemName].x += offset2.x - selection.offset.x;
+        offsets[selection.item.itemName].y += offset2.y - selection.offset.y;
+        selection.offset = offset2;
+      }
+      item.draw(frame2, lerp, drawWithLogic);
+      scene.ctx.restore();
+    } else {
+      item.draw(frame2, lerp, drawWithLogic);
+    }
   }
-  var frame = 0;
   function update() {
     scene.ctx.clearRect(0, 0, canvas.width, canvas.height);
     scene.ctx.save();
     scene.ctx.translate(canvas.width / 2, canvas.height / 2);
     scene.ctx.scale(dpr, dpr);
-    hatsLibrary.symbol("StarDude").draw(frame);
+    hatsLibrary.symbol("StarDude").draw(frame, true, drawWithLogic);
     scene.ctx.restore();
     if (mouseDown == false)
       frame += 1;
