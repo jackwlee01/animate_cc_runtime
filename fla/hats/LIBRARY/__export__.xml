@@ -14,7 +14,7 @@
                     <Point x="0.05" y="0.05"/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="Walker_Nose" selected="true">
+                <DOMSymbolInstance libraryItemName="Walker_Nose">
                   <matrix>
                     <Matrix tx="110.35" ty="344.3"/>
                   </matrix>

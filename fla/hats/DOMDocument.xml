@@ -195,11 +195,11 @@
           <Include href="Walker_Mine.xml" loadImmediate="false" itemID="6195a93d-000010e3" lastModified="1637565475"/>
           <Include href="Walker_Minigun.xml" loadImmediate="false" itemID="6195a74c-00000a57" lastModified="1637640281"/>
           <Include href="Walker_Missile.xml" loadImmediate="false" itemID="6195a72c-00000a56" lastModified="1637639960"/>
-          <Include href="Walker_Nose.xml" loadImmediate="false" itemID="6195a70a-00000a55" lastModified="1642488608"/>
+          <Include href="Walker_Nose.xml" loadImmediate="false" itemID="6195a70a-00000a55" lastModified="1642985938"/>
           <Include href="win.xml" itemID="61dd06c0-0000053c" lastModified="1641879311"/>
      </symbols>
      <timelines>
-          <DOMTimeline name="Scene 1" currentFrame="29" layerDepthEnabled="true">
+          <DOMTimeline name="Scene 1" layerDepthEnabled="true">
                <layers>
                     <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
                          <frames>

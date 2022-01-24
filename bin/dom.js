@@ -301,8 +301,11 @@
         return null;
       if (local.y < 0 || local.y >= this.height)
         return null;
-      console.log(local.x, local.y);
       return this.atlas.getPixel(this.x + local.x, this.y + local.y);
+    }
+    isSolidPixelAt(x, y, transform, alphaThreshold = 1) {
+      const pixel = this.getPixel(x, y, transform);
+      return pixel && pixel[3] > alphaThreshold;
     }
     draw(frame2, lerp, callback) {
     }
@@ -362,7 +365,6 @@
       x = Math.floor(x);
       y = Math.floor(y);
       const data = this.pixelData.imageData.data;
-      console.log("Global", x, y);
       let i = x + y * this.pixelData.imageData.width;
       return [
         data[i * 4 + 0],

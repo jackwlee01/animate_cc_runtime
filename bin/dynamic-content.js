@@ -340,8 +340,11 @@
         return null;
       if (local.y < 0 || local.y >= this.height)
         return null;
-      console.log(local.x, local.y);
       return this.atlas.getPixel(this.x + local.x, this.y + local.y);
+    }
+    isSolidPixelAt(x, y, transform, alphaThreshold = 1) {
+      const pixel = this.getPixel(x, y, transform);
+      return pixel && pixel[3] > alphaThreshold;
     }
     draw(frame2, lerp2, callback) {
     }
@@ -379,7 +382,6 @@
       x = Math.floor(x);
       y = Math.floor(y);
       const data = this.pixelData.imageData.data;
-      console.log("Global", x, y);
       let i = x + y * this.pixelData.imageData.width;
       return [
         data[i * 4 + 0],
@@ -907,12 +909,6 @@
     } else if (item instanceof Instance) {
       if (item.frame.layer.name == "layer_hat") {
         hatsLibrary.symbol("Hat_" + hatIndex).draw(frame2, lerp2, drawWithLogic);
-        const coord = scene.getLocal(scene.mouseX, scene.mouseY);
-        scene.ctx.strokeRect(-5, -5, 10, 10);
-        scene.ctx.beginPath();
-        scene.ctx.moveTo(0, 0);
-        scene.ctx.lineTo(coord.x, coord.y);
-        scene.ctx.stroke();
       } else {
         item.draw(frame2, lerp2, drawWithLogic);
       }
@@ -922,10 +918,7 @@
         scene.ctx.strokeStyle = "#CC0000";
         scene.ctx.strokeRect(0, 0, item.width, item.height);
       }
-      const pixel = item.getPixel(scene.mouseX, scene.mouseY, scene.ctx.getTransform());
-      if (pixel)
-        console.log(pixel);
-      if (pixel && pixel[3] > 0) {
+      if (item.isSolidPixelAt(scene.mouseX, scene.mouseY, scene.ctx.getTransform())) {
         scene.ctx.strokeStyle = "#FF00FF";
         scene.ctx.strokeRect(0, 0, item.width, item.height);
       }
@@ -956,7 +949,6 @@
     scene.ctx.restore();
     scene.ctx.save();
     scene.ctx.translate(200, -50);
-    scene.ctx.scale(3, 3);
     hatsLibrary.symbol("StarDude").draw(frame, lerp, drawWithLogic);
     scene.ctx.restore();
     scene.ctx.save();
@@ -965,6 +957,7 @@
     scene.ctx.strokeRect(-10, -10, 20, 20);
     scene.ctx.restore();
     scene.ctx.restore();
+    frame = 130;
     requestAnimationFrame(update);
   }
   init();

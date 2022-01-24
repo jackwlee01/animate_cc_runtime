@@ -48,9 +48,13 @@ export class Sprite extends Drawable{
         if(local.x<0 || local.x>=this.width) return null;
         if(local.y<0 || local.y>=this.height) return null;
 
-        console.log(local.x, local.y)
-        
         return this.atlas.getPixel(this.x + local.x, this.y + local.y)
+    }
+
+
+    public isSolidPixelAt(x:Float, y:Float, transform:DOMMatrix, alphaThreshold:number = 1){
+        const pixel = this.getPixel(x, y, transform)
+        return pixel && pixel[3] > alphaThreshold
     }
 
 

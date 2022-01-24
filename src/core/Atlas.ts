@@ -63,16 +63,7 @@ export class Atlas{
         x = Math.floor(x)
         y = Math.floor(y)
         const data = this.pixelData.imageData.data
-
-
-
-        //if(x<0 || x>=this.pixelData.ctx.canvas.width) return null;
-        //if(y<0 || y>=this.pixelData.ctx.canvas.height) return null;
-
-        console.log("Global", x, y)
-
-        //let i = (x*4) + (y*this.pixelData.imageData.width*4)
-        //let i = (x*4) * this.pixelData.imageData.width * (y*4)
+        
         let i = x + (y*this.pixelData.imageData.width)
 
         return [
