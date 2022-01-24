@@ -681,14 +681,14 @@
           if (item.type == "Clipper") {
           } else if (item.clippedBy) {
             const clipLayer = item.clip.layersByName[item.clippedBy];
-            this.pushContext();
+            this.pushRenderTarget();
             clipLayer.draw(frame2, lerp, callback);
             this.ctx.globalCompositeOperation = "source-in";
             if (callback)
               callback(item, frame2, lerp);
             else
               item.draw(frame2, lerp, callback);
-            this.popContext();
+            this.popRenderTarget();
           } else {
             if (callback)
               callback(item, frame2, lerp);
@@ -705,7 +705,7 @@
           else
             item.draw(frame2, lerp, callback);
           if (didPushContext)
-            this.popContext();
+            this.popRenderTarget();
           this.ctx.restore();
         } else if (item instanceof Sprite) {
           if (callback)
@@ -724,16 +724,14 @@
     get ctx() {
       return this.stack[this.stack.length - 1];
     }
-    pushContext() {
-      if (this.pool.length == 0)
-        console.log("Create");
+    pushRenderTarget() {
       const ctx2 = this.pool.length == 0 ? document.createElement("canvas").getContext("2d") : this.pool.pop();
       ctx2.canvas.width = this.ctx.canvas.width;
       ctx2.canvas.height = this.ctx.canvas.height;
       ctx2.setTransform(this.ctx.getTransform());
       this.stack.push(ctx2);
     }
-    popContext() {
+    popRenderTarget() {
       if (this.stack.length <= 1)
         throw "Cannot pop stack";
       const ctx2 = this.stack.pop();
@@ -765,7 +763,10 @@
       this.ctx.shadowBlur = blur;
       this.ctx.shadowOffsetX = offsetX;
       this.ctx.shadowOffsetY = offsetY;
-      this.pushContext();
+      this.pushRenderTarget();
+    }
+    popDropShadow() {
+      this.popRenderTarget();
     }
     transformInstance(item, frame2, lerp) {
       if (lerp && item.next) {

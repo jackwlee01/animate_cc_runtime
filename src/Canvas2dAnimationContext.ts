@@ -31,8 +31,7 @@ export class Canvas2dAnimationContext extends AnimationContext{
     }
 
 
-    pushContext(){
-        if(this.pool.length==0) console.log("Create")
+    pushRenderTarget(){
         const ctx = this.pool.length==0 ? document.createElement('canvas').getContext('2d')! : this.pool.pop()!
         ctx.canvas.width = this.ctx.canvas.width
         ctx.canvas.height = this.ctx.canvas.height
@@ -41,7 +40,7 @@ export class Canvas2dAnimationContext extends AnimationContext{
     }
 
 
-    popContext(){
+    popRenderTarget(){
         if(this.stack.length<=1) throw("Cannot pop stack")
         const ctx = this.stack.pop()!;
         this.ctx.save();
@@ -57,12 +56,12 @@ export class Canvas2dAnimationContext extends AnimationContext{
            if(item.type=='Clipper'){
            }else if(item.clippedBy){
                 const clipLayer = item.clip.layersByName[item.clippedBy]
-                this.pushContext()
+                this.pushRenderTarget()
                 clipLayer.draw(frame, lerp, callback)
                 this.ctx.globalCompositeOperation = 'source-in'
                 if(callback) callback(item, frame, lerp)
                 else item.draw(frame, lerp, callback)
-                this.popContext()
+                this.popRenderTarget()
             }else{
                 if(callback) callback(item, frame, lerp)
                 else item.draw(frame, lerp, callback)
@@ -74,7 +73,7 @@ export class Canvas2dAnimationContext extends AnimationContext{
             this.handleColor(item, frame, lerp)
             if(callback) callback(item, frame, lerp)
             else item.draw(frame, lerp, callback)
-            if(didPushContext) this.popContext()
+            if(didPushContext) this.popRenderTarget()
             this.ctx.restore()
         }else if(item instanceof Sprite){
             if(callback) callback(item, frame, lerp)
@@ -117,7 +116,12 @@ export class Canvas2dAnimationContext extends AnimationContext{
         this.ctx.shadowBlur = blur;
         this.ctx.shadowOffsetX = offsetX;
         this.ctx.shadowOffsetY = offsetY;
-        this.pushContext();
+        this.pushRenderTarget();
+    }
+
+    
+    popDropShadow(){
+        this.popRenderTarget();
     }
 
 
