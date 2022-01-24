@@ -639,24 +639,24 @@
   var Canvas2dAnimationContext = class extends AnimationContext {
     constructor(ctx2) {
       super();
-      this.draw = (item, frame2, callback, lerp2) => {
+      this.draw = (item, frame2, lerp2, callback) => {
         if (item instanceof Layer) {
           if (item.type == "Clipper") {
           } else if (item.clippedBy) {
             const clipLayer = item.clip.layersByName[item.clippedBy];
             this.pushContext();
-            clipLayer.draw(frame2, callback, lerp2);
+            clipLayer.draw(frame2, lerp2, callback);
             this.ctx.globalCompositeOperation = "source-in";
             if (callback)
               callback(item, frame2, lerp2);
             else
-              item.draw(frame2, callback, lerp2);
+              item.draw(frame2, lerp2, callback);
             this.popContext();
           } else {
             if (callback)
               callback(item, frame2, lerp2);
             else
-              item.draw(frame2, callback, lerp2);
+              item.draw(frame2, lerp2, callback);
           }
         } else if (item instanceof Instance) {
           this.ctx.save();
@@ -666,7 +666,7 @@
           if (callback)
             callback(item, frame2, lerp2);
           else
-            item.draw(frame2, callback, lerp2);
+            item.draw(frame2, lerp2, callback);
           if (didPushContext)
             this.popContext();
           this.ctx.restore();
@@ -678,7 +678,7 @@
           if (callback)
             callback(item, frame2, lerp2);
           else
-            item.draw(frame2, callback, lerp2);
+            item.draw(frame2, lerp2, callback);
         }
       };
       this.stack = [ctx2];
@@ -819,6 +819,7 @@
       }
     } else if (item instanceof Layer) {
       if (item.name == "layer_eye") {
+        console.log("Laser eye");
         item.draw(eyesFrame, lerp2, drawWithLogic);
       } else {
         item.draw(frame2, lerp2, drawWithLogic);

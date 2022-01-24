@@ -52,20 +52,20 @@ export class Canvas2dAnimationContext extends AnimationContext{
     }
 
 
-    draw = (item:Drawable, frame:Float, callback?:(item:Drawable, frame:Float, lerp?:boolean)=>void, lerp?:boolean) => {
+    draw = (item:Drawable, frame:Float, lerp?:boolean, callback?:(item:Drawable, frame:Float, lerp?:boolean)=>void) => {
         if(item instanceof Layer){
            if(item.type=='Clipper'){
            }else if(item.clippedBy){
                 const clipLayer = item.clip.layersByName[item.clippedBy]
                 this.pushContext()
-                clipLayer.draw(frame, callback, lerp)
+                clipLayer.draw(frame, lerp, callback)
                 this.ctx.globalCompositeOperation = 'source-in'
                 if(callback) callback(item, frame, lerp)
-                else item.draw(frame, callback, lerp)
+                else item.draw(frame, lerp, callback)
                 this.popContext()
             }else{
                 if(callback) callback(item, frame, lerp)
-                else item.draw(frame, callback, lerp)
+                else item.draw(frame, lerp, callback)
             }
         }else if(item instanceof Instance){
             this.ctx.save()
@@ -73,7 +73,7 @@ export class Canvas2dAnimationContext extends AnimationContext{
             const didPushContext = this.handleFilters(item, frame, lerp)
             this.handleColor(item, frame, lerp)
             if(callback) callback(item, frame, lerp)
-            else item.draw(frame, callback, lerp)
+            else item.draw(frame, lerp, callback)
             if(didPushContext) this.popContext()
             this.ctx.restore()
         }else if(item instanceof Sprite){
@@ -81,7 +81,7 @@ export class Canvas2dAnimationContext extends AnimationContext{
             this.ctx.drawImage(item.atlas.image, item.x, item.y, item.width, item.height, 0, 0, item.width, item.height)
         }else{
             if(callback) callback(item, frame, lerp)
-            else item.draw(frame, callback, lerp)
+            else item.draw(frame, lerp, callback)
         }
     }
 

@@ -88,6 +88,7 @@ function drawWithLogic(item:Drawable, frame:number, lerp?:boolean){
     }else if(item instanceof Layer){
         // If the layer name is "layer_eye", choose the frame
         if(item.name=="layer_eye"){
+            console.log("Laser eye")
             item.draw(eyesFrame, lerp, drawWithLogic)
         }else{
             item.draw(frame, lerp, drawWithLogic)

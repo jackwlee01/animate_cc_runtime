@@ -639,24 +639,24 @@
   var Canvas2dAnimationContext = class extends AnimationContext {
     constructor(ctx2) {
       super();
-      this.draw = (item, frame2, callback, lerp) => {
+      this.draw = (item, frame2, lerp, callback) => {
         if (item instanceof Layer) {
           if (item.type == "Clipper") {
           } else if (item.clippedBy) {
             const clipLayer = item.clip.layersByName[item.clippedBy];
             this.pushContext();
-            clipLayer.draw(frame2, callback, lerp);
+            clipLayer.draw(frame2, lerp, callback);
             this.ctx.globalCompositeOperation = "source-in";
             if (callback)
               callback(item, frame2, lerp);
             else
-              item.draw(frame2, callback, lerp);
+              item.draw(frame2, lerp, callback);
             this.popContext();
           } else {
             if (callback)
               callback(item, frame2, lerp);
             else
-              item.draw(frame2, callback, lerp);
+              item.draw(frame2, lerp, callback);
           }
         } else if (item instanceof Instance) {
           this.ctx.save();
@@ -666,7 +666,7 @@
           if (callback)
             callback(item, frame2, lerp);
           else
-            item.draw(frame2, callback, lerp);
+            item.draw(frame2, lerp, callback);
           if (didPushContext)
             this.popContext();
           this.ctx.restore();
@@ -678,7 +678,7 @@
           if (callback)
             callback(item, frame2, lerp);
           else
-            item.draw(frame2, callback, lerp);
+            item.draw(frame2, lerp, callback);
         }
       };
       this.stack = [ctx2];
