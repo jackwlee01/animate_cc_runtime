@@ -39,7 +39,7 @@ canvas.onmouseup = () => {
     mouseDown = false
 }
 
-// This library shouldn't focus on interaction, but it should provide a few rudimentary methods
+// Experimental: This library shouldn't focus on interaction, but it can provide a few rudimentary methods
 // to faciliate users to build out thier own interaction functionality. This example shows how 
 // coordinates can be attained in a local space, and how pixels can be queried to faciliate
 // mouse interaction.
@@ -90,6 +90,11 @@ function update(){
     
         scene.ctx.translate(canvas.width/2, canvas.height/2)
         scene.ctx.scale(dpr, dpr)
+
+        scene.ctx.translate(-100, 0);
+        hatsLibrary.symbol("StarDude").draw(frame, true, drawWithLogic)
+
+        scene.ctx.translate(200, 0);
         hatsLibrary.symbol("StarDude").draw(frame, true, drawWithLogic)
 
     scene.ctx.restore()

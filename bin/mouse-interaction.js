@@ -887,6 +887,9 @@
     scene.ctx.fillText("Click and drag sprites on the animation", 20, 50);
     scene.ctx.translate(canvas.width / 2, canvas.height / 2);
     scene.ctx.scale(dpr, dpr);
+    scene.ctx.translate(-100, 0);
+    hatsLibrary.symbol("StarDude").draw(frame, true, drawWithLogic);
+    scene.ctx.translate(200, 0);
     hatsLibrary.symbol("StarDude").draw(frame, true, drawWithLogic);
     scene.ctx.restore();
     if (mouseDown == false)
