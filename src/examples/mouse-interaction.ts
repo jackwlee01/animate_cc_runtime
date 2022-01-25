@@ -39,7 +39,10 @@ canvas.onmouseup = () => {
     mouseDown = false
 }
 
-
+// This library shouldn't focus on interaction, but it should provide a few rudimentary methods
+// to faciliate users to build out thier own interaction functionality. This example shows how 
+// coordinates can be attained in a local space, and how pixels can be queried to faciliate
+// mouse interaction.
 function drawWithLogic(item:Drawable, frame:number, lerp?:boolean){
     if(mouseDown==false) selection = null
 
@@ -49,27 +52,27 @@ function drawWithLogic(item:Drawable, frame:number, lerp?:boolean){
         const offsetY = offset ? offset.y : 0
 
         scene.ctx.save()
-        scene.ctx.translate(offsetX, offsetY)
+            scene.ctx.translate(offsetX, offsetY)
 
-        if(mousePressed){
-            if(item.item.isSolidPixelAt(scene.mouseX, scene.mouseY, scene.ctx.getTransform())){
-                selection = {
-                    item: item,
-                    offset: scene.getLocal(scene.mouseX, scene.mouseY)
+            if(mousePressed){
+                if(item.item.isSolidPixelAt(scene.mouseX, scene.mouseY, scene.ctx.getTransform())){
+                    selection = {
+                        item: item,
+                        offset: scene.getLocal(scene.mouseX, scene.mouseY)
+                    }
+                    if(offsets[selection.item.itemName]==null) offsets[selection.item.itemName] = new DOMPoint(0, 0);
                 }
-                if(offsets[selection.item.itemName]==null) offsets[selection.item.itemName] = new DOMPoint(0, 0);
             }
-        }
 
-        if(selection&&selection.item==item){
-            scene.ctx.strokeStyle = '#CC0000'
-            scene.ctx.strokeRect(0, 0, item.item.width, item.item.height)
-            const offset = scene.getLocal(scene.mouseX, scene.mouseY)
-            offsets[selection.item.itemName].x += offset.x - selection.offset.x
-            offsets[selection.item.itemName].y += offset.y - selection.offset.y
-            selection.offset = offset
-        }
-        item.draw(frame, lerp, drawWithLogic)
+            if(selection&&selection.item==item){
+                scene.ctx.strokeStyle = '#CC0000'
+                scene.ctx.strokeRect(0, 0, item.item.width, item.item.height)
+                const offset = scene.getLocal(scene.mouseX, scene.mouseY)
+                offsets[selection.item.itemName].x += offset.x - selection.offset.x
+                offsets[selection.item.itemName].y += offset.y - selection.offset.y
+                selection.offset = offset
+            }
+            item.draw(frame, lerp, drawWithLogic)
         scene.ctx.restore()
     }else{
         item.draw(frame, lerp, drawWithLogic)
@@ -80,8 +83,10 @@ function drawWithLogic(item:Drawable, frame:number, lerp?:boolean){
 function update(){
     scene.ctx.clearRect(0, 0, canvas.width, canvas.height)
 
-
     scene.ctx.save();
+
+        scene.ctx.font = '36px sans-serif';
+        scene.ctx.fillText('Click and drag sprites on the animation', 20, 50);
     
         scene.ctx.translate(canvas.width/2, canvas.height/2)
         scene.ctx.scale(dpr, dpr)

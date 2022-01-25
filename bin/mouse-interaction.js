@@ -883,6 +883,8 @@
   function update() {
     scene.ctx.clearRect(0, 0, canvas.width, canvas.height);
     scene.ctx.save();
+    scene.ctx.font = "36px sans-serif";
+    scene.ctx.fillText("Click and drag sprites on the animation", 20, 50);
     scene.ctx.translate(canvas.width / 2, canvas.height / 2);
     scene.ctx.scale(dpr, dpr);
     hatsLibrary.symbol("StarDude").draw(frame, true, drawWithLogic);
