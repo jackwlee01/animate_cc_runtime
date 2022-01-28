@@ -1,0 +1,359 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="GunnerFall" itemID="6141af45-00004009" lastModified="1631694795" lastUniqueIdentifier="17">
+  <timeline>
+    <DOMTimeline name="GunnerFall" guides='&lt;guidelines&gt;&lt;guideline direction="h"&gt;-135&lt;/guideline&gt;&lt;/guidelines&gt;' layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="rm" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="rp" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="r" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-99">
+              <tweens>
+                <Ease target="all" intensity="-99"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="fromJames/Symbol 67" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="6.95" ty="-77.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="12.05" y="7.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="r" color="#009999" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-99">
+              <tweens>
+                <Ease target="all" intensity="-99"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="fromJames/Symbol 66" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="17" ty="-72.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="9.25" y="6.45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="r" color="#FF4F4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-99">
+              <tweens>
+                <Ease target="all" intensity="-99"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="r" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-99">
+              <tweens>
+                <Ease target="all" intensity="-99"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="fromJames/Symbol 64" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.548385620117188" b="-0.836212158203125" c="0.836212158203125" d="0.548385620117188" tx="-23.5" ty="-8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="75.7" y="12.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="r" color="#00FFFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-99">
+              <tweens>
+                <Ease target="all" intensity="-99"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="fromJames/Symbol 63" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.897216796875" b="0.44158935546875" c="-0.44158935546875" d="0.897216796875" tx="-11.9" ty="-153.85"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="47.9" y="65.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_13" color="#009999">
+          <frames>
+            <DOMFrame index="0" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-99">
+              <tweens>
+                <Ease target="all" intensity="-99"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="fromJames/Symbol 62" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="5.65" ty="-17.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="8.7" y="1.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_12" color="#FF4FFF">
+          <frames>
+            <DOMFrame index="0" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-99">
+              <tweens>
+                <Ease target="all" intensity="-99"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="fromJames/Symbol 61" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.865997314453125" b="-0.499984741210938" c="0.499984741210938" d="0.865997314453125" tx="-8.35" ty="-25.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="14.15" y="16.9"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_11" color="#FF800A">
+          <frames>
+            <DOMFrame index="0" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-99">
+              <tweens>
+                <Ease target="all" intensity="-99"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="fromJames/Symbol 60" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.70709228515625" b="0.70709228515625" c="-0.70709228515625" d="0.70709228515625" tx="12.3" ty="-47.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="9.85" y="2.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_10" color="#9933CC">
+          <frames>
+            <DOMFrame index="0" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-99">
+              <tweens>
+                <Ease target="all" intensity="-99"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="fromJames/Symbol 59" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-8.35" ty="-46"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="14.55" y="9.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="r" color="#669900" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-99">
+              <tweens>
+                <Ease target="all" intensity="-99"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="fromJames/Symbol 58" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-9.25" ty="-74.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="14" y="24.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="r" color="#FF0000" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-99">
+              <tweens>
+                <Ease target="all" intensity="-99"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="fromJames/Symbol 57" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.5" b="0.866012573242188" c="-0.866012573242188" d="0.5" tx="-8.3" ty="-81.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="11" y="6.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="r" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-99">
+              <tweens>
+                <Ease target="all" intensity="-99"/>
+              </tweens>
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_15" color="#669900">
+          <frames>
+            <DOMFrame index="0" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-99">
+              <tweens>
+                <Ease target="all" intensity="-99"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="fromJames/Symbol 55" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-28.6" ty="-19.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="9.3" y="1.4"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_3" color="#FF800A" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="fromJames/Symbol 65" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="-0.70709228515625" b="0.70709228515625" c="-0.70709228515625" d="-0.70709228515625" tx="-4.9" ty="-51.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="10.3" y="11.8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_2" color="#9933CC">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="fromJames/Symbol 66" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="-1" tx="-16.5" ty="-66.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="9.25" y="6.45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="r" color="#FF4F4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-99">
+              <tweens>
+                <Ease target="all" intensity="-99"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="fromJames/Symbol 54" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-23.5" ty="-73.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="9.3" y="9.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_18" color="#9933CC">
+          <frames>
+            <DOMFrame index="0" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-99">
+              <tweens>
+                <Ease target="all" intensity="-99"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="fromJames/Symbol 53" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-31.95" ty="-43.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="10.2" y="24.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_17" color="#00FFFF">
+          <frames>
+            <DOMFrame index="0" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-99">
+              <tweens>
+                <Ease target="all" intensity="-99"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="fromJames/Symbol 52" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.5" b="0.866012573242188" c="-0.866012573242188" d="0.5" tx="-8.9" ty="-54.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="17.9" y="2.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_9" color="#00FFFF">
+          <frames>
+            <DOMFrame index="0" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-99">
+              <tweens>
+                <Ease target="all" intensity="-99"/>
+              </tweens>
+              <elements>
+                <DOMSymbolInstance libraryItemName="fromJames/Symbol 51" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-0.6" ty="-56.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="7.1" y="11.8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

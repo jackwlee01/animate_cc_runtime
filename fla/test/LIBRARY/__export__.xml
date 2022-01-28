@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="__export__" itemID="6195a546-00000910" lastModified="1642747736" lastUniqueIdentifier="3">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="__export__" itemID="6195a546-00000910" lastModified="1643352013" lastUniqueIdentifier="3">
   <timeline>
     <DOMTimeline name="__export__" layerDepthEnabled="true">
       <layers>
@@ -54,7 +54,7 @@
                     <Point/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="Scene" selected="true">
+                <DOMSymbolInstance libraryItemName="Scene">
                   <matrix>
                     <Matrix tx="1018.95" ty="553.5"/>
                   </matrix>
@@ -68,6 +68,14 @@
                   </matrix>
                   <transformationPoint>
                     <Point x="-149.55" y="-79.65"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="GunnerOld" selected="true">
+                  <matrix>
+                    <Matrix tx="688.4" ty="483.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
                   </transformationPoint>
                 </DOMSymbolInstance>
               </elements>

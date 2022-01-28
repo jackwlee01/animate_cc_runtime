@@ -234,6 +234,7 @@
       this.layersById = {};
       this.layersByName = {};
       this.framesById = {};
+      this.framesByLabel = {};
     }
     createLayer(props) {
       const layer = new Layer(__spreadProps(__spreadValues({}, props), { clip: this }));
@@ -248,6 +249,8 @@
       this.framesById[frame2.id] = frame2;
       if (frame2.layer.totalFrames > this.totalFrames)
         this.totalFrames = frame2.layer.totalFrames;
+      if (frame2.labelName)
+        this.framesByLabel[frame2.labelName] = frame2;
     }
     draw(frame2, lerp, callback) {
       for (const layer of this.layers) {

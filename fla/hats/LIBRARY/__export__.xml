@@ -30,7 +30,7 @@
                     <Point/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="StarDude">
+                <DOMSymbolInstance libraryItemName="StarDude" selected="true">
                   <matrix>
                     <Matrix tx="210.45" ty="587.9"/>
                   </matrix>
@@ -62,7 +62,7 @@
                     <Point x="-0.85" y="-19.3"/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="Hat_3" selected="true">
+                <DOMSymbolInstance libraryItemName="Hat_3">
                   <matrix>
                     <Matrix tx="679.75" ty="364.35"/>
                   </matrix>

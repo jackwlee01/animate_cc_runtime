@@ -1,0 +1,24 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Symbol 21" itemID="612f08c8-00000097" lastModified="1630472392">
+  <timeline>
+    <DOMTimeline name="Symbol 21" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="fromJames/Symbol 69" selected="true" symbolType="graphic" centerPoint3DX="-0.05" centerPoint3DY="0.05" loop="loop">
+                  <matrix>
+                    <Matrix a="0.532333374023438" d="0.532333374023438" tx="-6.25" ty="-7.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="19.45" y="6.65"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

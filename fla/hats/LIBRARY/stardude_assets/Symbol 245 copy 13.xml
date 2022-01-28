@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="stardude_assets/Symbol 195 copy" selected="true" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="stardude_assets/Symbol 195 copy" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="20.55" ty="28.55"/>
                   </matrix>

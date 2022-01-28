@@ -30,12 +30,12 @@
 !456 36S3[447 52 435 67!435 67[415 93 391 109!391 109[352 132 289 134!289 134[144 141 46 77"/>
                     <Edge fillStyle0="2" edges="
 !716 92S1[590 57 456 36"/>
-                    <Edge fillStyle0="3" fillStyle1="1" edges="
-!271 15S3[270 18 266 20"/>
-                    <Edge fillStyle0="4" fillStyle1="1" edges="
-!266 20S3[262 23 253 23!253 23[143 27 33 58!33 58[37 67 43 76"/>
                     <Edge fillStyle0="3" fillStyle1="4" edges="
 !266 20S3|267 20!267 20[266 22 264 25!264 25[255 38 234 44!234 44|198 47!198 47[141 49 59 73!59 73[51 75 46 77"/>
+                    <Edge fillStyle0="4" fillStyle1="1" edges="
+!266 20S3[262 23 253 23!253 23[143 27 33 58!33 58[37 67 43 76"/>
+                    <Edge fillStyle0="3" fillStyle1="1" edges="
+!271 15S3[270 18 266 20"/>
                     <Edge fillStyle0="2" fillStyle1="4" edges="
 !46 77S3[44 76 43 76"/>
                     <Edge fillStyle0="3" edges="
