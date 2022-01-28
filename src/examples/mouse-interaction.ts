@@ -55,36 +55,6 @@ function createState(){
             if(highlight) scene.pushDropShadow('#009900', 10, 0, 0);
             item.draw(frame, lerp, drawWithLogic)
             if(highlight) scene.popDropShadow()
-            /*
-        }else if(item instanceof SpriteInstance){
-            const offset = offsets[item.item.name];
-            const offsetX = offset ? offset.x : 0
-            const offsetY = offset ? offset.y : 0
-
-            scene.ctx.save()
-                scene.ctx.translate(offsetX, offsetY)
-
-                if(mousePressed){
-                    if(item.item.isSolidPixelAt(scene.mouseX, scene.mouseY, scene.ctx.getTransform())){
-                        selection = {
-                            item: item,
-                            offset: scene.getLocal(scene.mouseX, scene.mouseY)
-                        }
-                        if(offsets[selection.item.itemName]==null) offsets[selection.item.itemName] = new DOMPoint(0, 0);
-                    }
-                }
-
-                if(selection&&selection.item==item){
-                    scene.ctx.strokeStyle = '#CC0000'
-                    scene.ctx.strokeRect(0, 0, item.item.width, item.item.height)
-                    const offset = scene.getLocal(scene.mouseX, scene.mouseY)
-                    offsets[selection.item.itemName].x += offset.x - selection.offset.x
-                    offsets[selection.item.itemName].y += offset.y - selection.offset.y
-                    selection.offset = offset
-                }
-                item.draw(frame, lerp, drawWithLogic)
-            scene.ctx.restore()
-        }*/
         }else if(item instanceof Sprite){
             const offset = offsets[item.name];
             const offsetX = offset ? offset.x : 0
