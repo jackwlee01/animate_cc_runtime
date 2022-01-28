@@ -5,10 +5,12 @@ import { Library } from "./Library";
 export abstract class Scene{
 
     draw: (item:Drawable, frame:Float, lerp?:boolean, callback?:(item:Drawable, frame:Float, lerp?:boolean)=>void) => void
+    drawImage: (image:HTMLImageElement, sx:number, sy:number, sw:number, sh:number, rx:number, ry:number, rw:number, rh:number) => void
 
 
     constructor(){
         this.draw = null! // OVERRIDE THIS IN THE BASE CLASS!
+        this.drawImage = null!
     }
 
 

@@ -313,6 +313,7 @@
       return pixel && pixel[3] > alphaThreshold;
     }
     draw(frame2, lerp, callback) {
+      this.scene.drawImage(this.atlas.image, this.x, this.y, this.width, this.height, 0, 0, this.width, this.height);
     }
   };
 
@@ -642,6 +643,7 @@
   var Scene = class {
     constructor() {
       this.draw = null;
+      this.drawImage = null;
     }
     get mouseX() {
       throw "Override mouseX in base class";
@@ -693,13 +695,17 @@
         } else if (item instanceof Sprite) {
           if (callback)
             callback(item, frame2, lerp);
-          this.ctx.drawImage(item.atlas.image, item.x, item.y, item.width, item.height, 0, 0, item.width, item.height);
+          else
+            item.draw(frame2, lerp, callback);
         } else {
           if (callback)
             callback(item, frame2, lerp);
           else
             item.draw(frame2, lerp, callback);
         }
+      };
+      this.drawImage = (image, sx, sy, sw, sh, rx, ry, rw, rh) => {
+        this.ctx.drawImage(image, sx, sy, sw, sh, rx, ry, rw, rh);
       };
       this.canvas = ctx.canvas;
       this.stack = [ctx];
@@ -765,6 +771,7 @@
       }
     }
     pushDropShadow(color, blur, offsetX = 0, offsetY = 0) {
+      this.ctx.save();
       this.ctx.shadowColor = color;
       this.ctx.shadowBlur = blur;
       this.ctx.shadowOffsetX = offsetX;
@@ -773,6 +780,7 @@
     }
     popDropShadow() {
       this.popRenderTarget();
+      this.ctx.restore();
     }
     transformInstance(item, frame2, lerp) {
       if (lerp && item.next) {

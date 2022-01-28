@@ -274,6 +274,7 @@
       return pixel && pixel[3] > alphaThreshold;
     }
     draw(frame2, lerp, callback) {
+      this.scene.drawImage(this.atlas.image, this.x, this.y, this.width, this.height, 0, 0, this.width, this.height);
     }
   };
 
@@ -625,6 +626,7 @@
   var Scene = class {
     constructor() {
       this.draw = null;
+      this.drawImage = null;
     }
     get mouseX() {
       throw "Override mouseX in base class";

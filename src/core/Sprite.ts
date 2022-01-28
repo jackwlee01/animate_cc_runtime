@@ -59,7 +59,7 @@ export class Sprite extends Drawable{
 
 
     public draw(frame:Float, lerp?:boolean, callback?:(item:Drawable, frame:Float, lerp?:boolean)=>void){
-        // Override in base class
+        this.scene.drawImage(this.atlas.image, this.x, this.y, this.width, this.height, 0, 0, this.width, this.height)
     }
 
 }

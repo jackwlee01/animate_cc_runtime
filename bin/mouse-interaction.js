@@ -313,6 +313,7 @@
       return pixel && pixel[3] > alphaThreshold;
     }
     draw(frame2, lerp, callback) {
+      this.scene.drawImage(this.atlas.image, this.x, this.y, this.width, this.height, 0, 0, this.width, this.height);
     }
   };
 
@@ -642,6 +643,7 @@
   var Scene = class {
     constructor() {
       this.draw = null;
+      this.drawImage = null;
     }
     get mouseX() {
       throw "Override mouseX in base class";
@@ -693,13 +695,17 @@
         } else if (item instanceof Sprite) {
           if (callback)
             callback(item, frame2, lerp);
-          this.ctx.drawImage(item.atlas.image, item.x, item.y, item.width, item.height, 0, 0, item.width, item.height);
+          else
+            item.draw(frame2, lerp, callback);
         } else {
           if (callback)
             callback(item, frame2, lerp);
           else
             item.draw(frame2, lerp, callback);
         }
+      };
+      this.drawImage = (image, sx, sy, sw, sh, rx, ry, rw, rh) => {
+        this.ctx.drawImage(image, sx, sy, sw, sh, rx, ry, rw, rh);
       };
       this.canvas = ctx.canvas;
       this.stack = [ctx];
@@ -765,6 +771,7 @@
       }
     }
     pushDropShadow(color, blur, offsetX = 0, offsetY = 0) {
+      this.ctx.save();
       this.ctx.shadowColor = color;
       this.ctx.shadowBlur = blur;
       this.ctx.shadowOffsetX = offsetX;
@@ -773,6 +780,7 @@
     }
     popDropShadow() {
       this.popRenderTarget();
+      this.ctx.restore();
     }
     transformInstance(item, frame2, lerp) {
       if (lerp && item.next) {
@@ -786,6 +794,9 @@
     }
   };
 
+  // src/index.ts
+  var Clip2 = Clip;
+
   // src/examples/mouse-interaction.ts
   var canvas = document.getElementById("canvas");
   var ctx2d = canvas.getContext("2d");
@@ -798,11 +809,9 @@
       update();
     });
   }
+  var frame = 0;
   var mouseDown = false;
   var mousePressed = false;
-  var frame = 0;
-  var offsets = {};
-  var selection = null;
   canvas.onmousedown = () => {
     mousePressed = true;
     mouseDown = true;
@@ -810,39 +819,50 @@
   canvas.onmouseup = () => {
     mouseDown = false;
   };
-  function drawWithLogic(item, frame2, lerp) {
-    if (mouseDown == false)
-      selection = null;
-    if (item instanceof SpriteInstance) {
-      const offset = offsets[item.item.name];
-      const offsetX = offset ? offset.x : 0;
-      const offsetY = offset ? offset.y : 0;
-      scene.ctx.save();
-      scene.ctx.translate(offsetX, offsetY);
-      if (mousePressed) {
-        if (item.item.isSolidPixelAt(scene.mouseX, scene.mouseY, scene.ctx.getTransform())) {
+  function createState() {
+    let offsets = {};
+    let selection = null;
+    return function drawWithLogic(item, frame2, lerp) {
+      if (mouseDown == false)
+        selection = null;
+      if (item instanceof Clip2) {
+        const highlight = selection && item.name == "StarDude";
+        if (highlight)
+          scene.pushDropShadow("#009900", 10, 0, 0);
+        item.draw(frame2, lerp, drawWithLogic);
+        if (highlight)
+          scene.popDropShadow();
+      } else if (item instanceof Sprite) {
+        const offset = offsets[item.name];
+        const offsetX = offset ? offset.x : 0;
+        const offsetY = offset ? offset.y : 0;
+        scene.ctx.save();
+        scene.ctx.translate(offsetX, offsetY);
+        if (!selection && mousePressed && item.isSolidPixelAt(scene.mouseX, scene.mouseY, scene.ctx.getTransform())) {
           selection = {
             item,
             offset: scene.getLocal(scene.mouseX, scene.mouseY)
           };
-          if (offsets[selection.item.itemName] == null)
-            offsets[selection.item.itemName] = new DOMPoint(0, 0);
+          if (offsets[item.name] == null)
+            offsets[item.name] = new DOMPoint(0, 0);
         }
+        scene.ctx.restore();
+        if (selection && selection.item == item) {
+          const local = scene.getLocal(scene.mouseX, scene.mouseY);
+          offsets[item.name].x = local.x - selection.offset.x;
+          offsets[item.name].y = local.y - selection.offset.y;
+        }
+        scene.ctx.save();
+        scene.ctx.translate(offsetX, offsetY);
+        item.draw(frame2, lerp, drawWithLogic);
+        scene.ctx.restore();
+      } else {
+        item.draw(frame2, lerp, drawWithLogic);
       }
-      if (selection && selection.item == item) {
-        scene.ctx.strokeStyle = "#CC0000";
-        scene.ctx.strokeRect(0, 0, item.item.width, item.item.height);
-        const offset2 = scene.getLocal(scene.mouseX, scene.mouseY);
-        offsets[selection.item.itemName].x += offset2.x - selection.offset.x;
-        offsets[selection.item.itemName].y += offset2.y - selection.offset.y;
-        selection.offset = offset2;
-      }
-      item.draw(frame2, lerp, drawWithLogic);
-      scene.ctx.restore();
-    } else {
-      item.draw(frame2, lerp, drawWithLogic);
-    }
+    };
   }
+  var callbackA = createState();
+  var callbackB = createState();
   function update() {
     scene.ctx.clearRect(0, 0, canvas.width, canvas.height);
     scene.ctx.save();
@@ -851,9 +871,9 @@
     scene.ctx.translate(canvas.width / 2, canvas.height / 2);
     scene.ctx.scale(dpr, dpr);
     scene.ctx.translate(-100, 0);
-    hatsLibrary.symbol("StarDude").draw(frame, true, drawWithLogic);
+    scene.draw(hatsLibrary.symbol("StarDude"), frame, true, callbackA);
     scene.ctx.translate(200, 0);
-    hatsLibrary.symbol("StarDude").draw(frame, true, drawWithLogic);
+    scene.draw(hatsLibrary.symbol("StarDude"), frame, true, callbackB);
     scene.ctx.restore();
     if (mouseDown == false)
       frame += 1;

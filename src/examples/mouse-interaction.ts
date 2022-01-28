@@ -3,6 +3,7 @@ import { Canvas2dScene } from "../Canvas2dScene";
 import { Drawable } from "../core/Drawable";
 import { Sprite } from "../core/Sprite";
 import { SpriteInstance } from "../core/SpriteInstance";
+import { Clip, ClipInstance } from "..";
 
 // Set up canvas
 const canvas = document.getElementById("canvas") as HTMLCanvasElement
@@ -20,15 +21,10 @@ async function init(){
 }
 
 
-// Example state
+// App State
+let frame = 0
 let mouseDown = false
 let mousePressed = false
-let frame = 0
-let offsets = {} as Record<string, DOMPoint>
-let selection = null as null | {
-    item:SpriteInstance,
-    offset:DOMPoint,
-};
 
 // Handlers
 canvas.onmousedown = () => {
@@ -42,43 +38,86 @@ canvas.onmouseup = () => {
 // Experimental: This library shouldn't focus on interaction, but it can provide a few rudimentary methods
 // to faciliate users to build out thier own interaction functionality. This example shows how 
 // coordinates can be attained in a local space, and how pixels can be queried to faciliate
-// mouse interaction.
-function drawWithLogic(item:Drawable, frame:number, lerp?:boolean){
-    if(mouseDown==false) selection = null
+// mouse interaction. A closure is used to faciliate local state.
+function createState(){
+    // Item state
+    let offsets = {} as Record<string, DOMPoint>
+    let selection = null as null | {
+        item:Sprite,
+        offset:DOMPoint,
+    };
 
-    if(item instanceof SpriteInstance){
-        const offset = offsets[item.item.name];
-        const offsetX = offset ? offset.x : 0
-        const offsetY = offset ? offset.y : 0
+    return function drawWithLogic(item:Drawable, frame:number, lerp?:boolean){
+        if(mouseDown==false) selection = null
 
-        scene.ctx.save()
-            scene.ctx.translate(offsetX, offsetY)
+        if(item instanceof Clip){
+            const highlight = selection && item.name=="StarDude";
+            if(highlight) scene.pushDropShadow('#009900', 10, 0, 0);
+            item.draw(frame, lerp, drawWithLogic)
+            if(highlight) scene.popDropShadow()
+            /*
+        }else if(item instanceof SpriteInstance){
+            const offset = offsets[item.item.name];
+            const offsetX = offset ? offset.x : 0
+            const offsetY = offset ? offset.y : 0
 
-            if(mousePressed){
-                if(item.item.isSolidPixelAt(scene.mouseX, scene.mouseY, scene.ctx.getTransform())){
+            scene.ctx.save()
+                scene.ctx.translate(offsetX, offsetY)
+
+                if(mousePressed){
+                    if(item.item.isSolidPixelAt(scene.mouseX, scene.mouseY, scene.ctx.getTransform())){
+                        selection = {
+                            item: item,
+                            offset: scene.getLocal(scene.mouseX, scene.mouseY)
+                        }
+                        if(offsets[selection.item.itemName]==null) offsets[selection.item.itemName] = new DOMPoint(0, 0);
+                    }
+                }
+
+                if(selection&&selection.item==item){
+                    scene.ctx.strokeStyle = '#CC0000'
+                    scene.ctx.strokeRect(0, 0, item.item.width, item.item.height)
+                    const offset = scene.getLocal(scene.mouseX, scene.mouseY)
+                    offsets[selection.item.itemName].x += offset.x - selection.offset.x
+                    offsets[selection.item.itemName].y += offset.y - selection.offset.y
+                    selection.offset = offset
+                }
+                item.draw(frame, lerp, drawWithLogic)
+            scene.ctx.restore()
+        }*/
+        }else if(item instanceof Sprite){
+            const offset = offsets[item.name];
+            const offsetX = offset ? offset.x : 0
+            const offsetY = offset ? offset.y : 0
+            scene.ctx.save()
+                scene.ctx.translate(offsetX, offsetY)
+                if(!selection && mousePressed && item.isSolidPixelAt(scene.mouseX, scene.mouseY, scene.ctx.getTransform())){
                     selection = {
-                        item: item,
+                        item,
                         offset: scene.getLocal(scene.mouseX, scene.mouseY)
                     }
-                    if(offsets[selection.item.itemName]==null) offsets[selection.item.itemName] = new DOMPoint(0, 0);
+                   if(offsets[item.name]==null) offsets[item.name] = new DOMPoint(0, 0)
                 }
+            scene.ctx.restore()
+            if(selection && selection.item==item){
+                const local = scene.getLocal(scene.mouseX, scene.mouseY)
+                offsets[item.name].x = local.x - selection.offset.x
+                offsets[item.name].y = local.y - selection.offset.y
             }
-
-            if(selection&&selection.item==item){
-                scene.ctx.strokeStyle = '#CC0000'
-                scene.ctx.strokeRect(0, 0, item.item.width, item.item.height)
-                const offset = scene.getLocal(scene.mouseX, scene.mouseY)
-                offsets[selection.item.itemName].x += offset.x - selection.offset.x
-                offsets[selection.item.itemName].y += offset.y - selection.offset.y
-                selection.offset = offset
-            }
+            scene.ctx.save()
+                scene.ctx.translate(offsetX, offsetY)
+                item.draw(frame, lerp, drawWithLogic)
+            scene.ctx.restore()
+            
+        }else{
             item.draw(frame, lerp, drawWithLogic)
-        scene.ctx.restore()
-    }else{
-        item.draw(frame, lerp, drawWithLogic)
+        
+        }
     }
 }
 
+const callbackA = createState()
+const callbackB = createState()
 
 function update(){
     scene.ctx.clearRect(0, 0, canvas.width, canvas.height)
@@ -92,10 +131,10 @@ function update(){
         scene.ctx.scale(dpr, dpr)
 
         scene.ctx.translate(-100, 0);
-        hatsLibrary.symbol("StarDude").draw(frame, true, drawWithLogic)
+        scene.draw(hatsLibrary.symbol("StarDude"), frame, true, callbackA)
 
         scene.ctx.translate(200, 0);
-        hatsLibrary.symbol("StarDude").draw(frame, true, drawWithLogic)
+        scene.draw(hatsLibrary.symbol("StarDude"), frame, true, callbackB)
 
     scene.ctx.restore()
     

@@ -116,11 +116,17 @@ export class Canvas2dScene extends Scene{
             this.ctx.restore()
         }else if(item instanceof Sprite){
             if(callback) callback(item, frame, lerp)
-            this.ctx.drawImage(item.atlas.image, item.x, item.y, item.width, item.height, 0, 0, item.width, item.height)
+            else item.draw(frame, lerp, callback)
         }else{
             if(callback) callback(item, frame, lerp)
             else item.draw(frame, lerp, callback)
         }
+    }
+
+
+
+    drawImage = (image:HTMLImageElement, sx:number, sy:number, sw:number, sh:number, rx:number, ry:number, rw:number, rh:number) => {
+        this.ctx.drawImage(image, sx, sy, sw, sh, rx, ry, rw, rh)
     }
 
     
