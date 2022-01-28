@@ -151,6 +151,7 @@ export class Canvas2dScene extends Scene{
 
 
     pushDropShadow(color:string, blur:number, offsetX:Float=0, offsetY:Float=0){
+        this.ctx.save();
         this.ctx.shadowColor = color;
         this.ctx.shadowBlur = blur;
         this.ctx.shadowOffsetX = offsetX;
@@ -161,6 +162,7 @@ export class Canvas2dScene extends Scene{
 
     popDropShadow(){
         this.popRenderTarget();
+        this.ctx.restore()
     }
 
 
