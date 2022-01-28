@@ -62,10 +62,7 @@ function createState(){
             scene.ctx.save()
                 scene.ctx.translate(offsetX, offsetY)
                 if(!selection && mousePressed && item.isSolidPixelAt(scene.mouseX, scene.mouseY, scene.ctx.getTransform())){
-                    selection = {
-                        item,
-                        offset: scene.getLocal(scene.mouseX, scene.mouseY)
-                    }
+                    selection = { item, offset: scene.getLocal(scene.mouseX, scene.mouseY) }
                    if(offsets[item.name]==null) offsets[item.name] = new DOMPoint(0, 0)
                 }
             scene.ctx.restore()
