@@ -32,11 +32,6 @@ export abstract class Drawable{
     }
 
 
-    public visit(frame:Float, callback:(item:Drawable, frame:Float)=>void):void{
-        // Override in base class
-    }
-
-
     public draw(frame:Float, lerp?:boolean, callback?:(item:Drawable, frame:Float, lerp?:boolean)=>void){
         // Override in base class
     }

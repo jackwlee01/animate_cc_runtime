@@ -62,9 +62,4 @@ export class Sprite extends Drawable{
         // Override in base class
     }
 
-
-    public visit(frame:Float, callback:(item:Drawable, frame:Float)=>void):void{
-        callback(this, frame)
-    }
-   
 }

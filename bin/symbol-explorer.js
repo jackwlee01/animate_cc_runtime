@@ -105,8 +105,6 @@
     get scene() {
       return this.library.scene;
     }
-    visit(frame2, callback) {
-    }
     draw(frame2, lerp, callback) {
     }
   };
@@ -142,9 +140,6 @@
     draw(frame2, lerp, callback) {
       this.library.scene.draw(this.item, frame2, lerp, callback);
     }
-    visit(frame2, callback) {
-      callback(this, frame2);
-    }
   };
 
   // src/core/util/math.ts
@@ -167,12 +162,6 @@
         frame2 = this.behaviour.firstFrame + modWrap(frame2, 1);
       }
       this.library.scene.draw(this.item, frame2, lerp, callback);
-    }
-    visit(frame2, callback) {
-      if (this.behaviour.type == "graphic") {
-        frame2 = this.behaviour.firstFrame + modWrap(frame2, 1);
-      }
-      callback(this, frame2);
     }
   };
 
@@ -211,12 +200,6 @@
     draw(frame2, lerp, callback) {
       for (const instance of this.instances) {
         this.library.scene.draw(instance, frame2, lerp, callback);
-      }
-    }
-    visit(frame2, callback) {
-      callback(this, frame2);
-      for (const instance of this.instances) {
-        instance.visit(frame2, callback);
       }
     }
   };
@@ -275,13 +258,6 @@
         this.library.scene.draw(keyframe, frame2, lerp, callback);
       }
     }
-    visit(frame2, callback) {
-      callback(this, frame2);
-      var keyframe = this.keyframeAt(frame2);
-      if (keyframe != null) {
-        keyframe.visit(frame2, callback);
-      }
-    }
   };
 
   // src/core/Clip.ts
@@ -318,16 +294,6 @@
         if (layer.totalFrames >= f) {
           this.library.scene.draw(layer, frame2, lerp, callback);
         }
-      }
-    }
-    visit(frame2, callback) {
-      callback(this, frame2);
-      for (const layer of this.layers) {
-        if (layer.totalFrames == 0)
-          continue;
-        var f = modWrap(frame2, layer.totalFrames);
-        if (layer.totalFrames >= f)
-          layer.visit(frame2, callback);
       }
     }
   };
@@ -384,9 +350,6 @@
       return pixel && pixel[3] > alphaThreshold;
     }
     draw(frame2, lerp, callback) {
-    }
-    visit(frame2, callback) {
-      callback(this, frame2);
     }
   };
 

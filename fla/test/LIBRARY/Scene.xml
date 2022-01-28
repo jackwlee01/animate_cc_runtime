@@ -22,7 +22,7 @@
                     <Point/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="StarDude" selected="true">
+                <DOMSymbolInstance libraryItemName="StarDude">
                   <matrix>
                     <Matrix tx="10.45" ty="-20.75"/>
                   </matrix>

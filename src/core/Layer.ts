@@ -100,13 +100,4 @@ export class Layer extends Drawable{
         }
     }
 
-
-    public visit(frame:Float, callback:(item:Drawable, frame:Float)=>void):void{
-        callback(this, frame);
-        var keyframe = this.keyframeAt(frame)
-        if(keyframe!=null){
-            keyframe.visit(frame, callback)
-        }
-    }
-
 }

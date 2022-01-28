@@ -62,7 +62,7 @@
                     <Point x="-0.85" y="-19.3"/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="Hat_3">
+                <DOMSymbolInstance libraryItemName="Hat_3" selected="true">
                   <matrix>
                     <Matrix tx="679.75" ty="364.35"/>
                   </matrix>

@@ -1,6 +1,6 @@
 <DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="StarDude" itemID="61dd0c1a-00000ff6" lastModified="1641876690">
   <timeline>
-    <DOMTimeline name="StarDude" layerDepthEnabled="true">
+    <DOMTimeline name="StarDude" currentFrame="131" layerDepthEnabled="true">
       <layers>
         <DOMLayer name="Layer_2" color="#9933CC">
           <frames>
@@ -22,7 +22,7 @@
                 <Ease target="all" intensity="100"/>
               </tweens>
               <elements>
-                <DOMSymbolInstance libraryItemName="stardude_assets/Symbol 257" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="stardude_assets/Symbol 257" selected="true" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix a="0.757797241210938" b="0.0857391357421875" c="-0.101318359375" d="0.895355224609375" tx="3.35" ty="-15.75"/>
                   </matrix>
@@ -134,7 +134,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer_6" color="#FF0000">
+        <DOMLayer name="Layer_6" color="#FF0000" current="true" isSelected="true">
           <frames>
             <DOMFrame index="0" duration="123" keyMode="9728">
               <elements/>
@@ -159,7 +159,7 @@
                 <Ease target="all" intensity="-100"/>
               </tweens>
               <elements>
-                <DOMSymbolInstance libraryItemName="stardude_assets/Symbol 259" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="stardude_assets/Symbol 259" selected="true" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix a="0.908309936523438" b="-0.418182373046875" c="0.418182373046875" d="0.908309936523438" tx="2.5" ty="-12.9"/>
                   </matrix>
@@ -1101,7 +1101,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="right_arm" color="#FF0000" current="true" isSelected="true" autoNamed="false">
+        <DOMLayer name="right_arm" color="#FF0000" autoNamed="false">
           <frames>
             <DOMFrame index="0" duration="58" tweenType="motion" motionTweenSnap="true" hasCustomEase="true" keyMode="22017">
               <tweens>
