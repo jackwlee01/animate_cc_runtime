@@ -1,5 +1,5 @@
-import { Clip } from "../core/Clip";
-import { Library } from "../core/Library";
+import { Clip } from "animcc";
+import { Library } from "animcc";
 
 
 export function setupCanvas(canvas:HTMLCanvasElement) {

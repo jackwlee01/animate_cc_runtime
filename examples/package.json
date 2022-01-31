@@ -1,0 +1,21 @@
+{
+  "name": "animcc-examples",
+  "version": "0.0.1",
+  "description": "Examples for the Animate CC runtime",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "author": "Jack Lee",
+  "dependencies": {
+    "animcc": "file:../package",
+    "parcel-reporter-static-files-copy": "^1.3.4"
+  },
+  "devDependencies": {
+    "parcel": "^2.2.1"
+  },
+  "staticFiles": {
+    "staticPath": "src/assets",
+    "staticOutPath": "assets"
+  }
+}

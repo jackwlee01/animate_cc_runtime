@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.8.0/mvp.css"/> 
+        <style>
+            body{
+                padding: 0;
+                margin: 0;
+            }
+            #container{
+                width:100vw;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+            #anim{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                filter: drop-shadow(0px 12px 5px rgba(0, 0, 0, 0.5));
+            }
+            form{
+                background-color: rgba(255, 255, 255, 0.4);
+                box-shadow: none;
+            }
+            form input, form button{
+                width: 100%;
+            }
+            #controls{
+                position: fixed;
+                bottom: 0;
+                left: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <form>
+                <label>Name</label>
+                <input type="text"/>
+                <label>Address</label>
+                <input type="text"/>
+                <button>Submit</button>
+            </form>
+            <div id="anim" />
+        </div>
+        <div id="controls">
+            <button id="btn-swap">Swap Gun</button>
+            <button id="btn-pause">Pause</button>
+        </div>
+        <script src="./dom.ts" type="module"></script>
+    </body>
+</html>
