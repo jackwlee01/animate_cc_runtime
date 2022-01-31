@@ -12,7 +12,7 @@ type Int = number;
 export type FrameProps = Omit<DrawableProps, 'id' | 'library'> & {
     index:Int,
     layer:Layer,
-    labelName:string|undefined,
+    labelName?:string|undefined|null,
 }
 
 
