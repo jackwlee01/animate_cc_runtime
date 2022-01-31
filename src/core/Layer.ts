@@ -57,7 +57,7 @@ export class Layer extends Drawable{
             this.labels.push(frame);
         }
         this.clip.__addFrame(frame);
-        /*
+        /* TODO: Determine if this should be nessessary
         if(this.firstFrame){
             this.firstFrame.prev = frame
             frame.next = this.firstFrame

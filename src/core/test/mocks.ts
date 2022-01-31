@@ -9,7 +9,7 @@ export const mockLib = () => mockScene().createLibrary('lib', './xxx')
 export const mockClip = (name?:string) => mockLib().createClip({name:name||"ClipA"})
 export const mockLayer = (name?:string) => mockClip().createLayer({ name: name||'Layer', type: 'Normal', clippedBy:null})
 export const mockFrame = () => mockLayer().createFrame({ name:"layer_0", labelName:undefined, index:0, totalFrames:10, })
-export const mockAtlas = (library:Library) => (library || mockLib()).createAtlas({
+export const mockAtlas = (library?:Library) => (library || mockLib()).createAtlas({
     image: mockImage(), // Just mock the image
     app: "My App",
     version: "0.0.1",
