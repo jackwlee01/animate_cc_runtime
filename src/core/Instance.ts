@@ -1,7 +1,5 @@
 import { Drawable } from "./Drawable";
 import { Frame } from "./Frame";
-import { Matrix2d } from "./geom/Matrix2d";
-import { Vec3 } from "./geom/Vec3";
 import { DrawableProps } from './Drawable'
 import { Matrix } from "./geom/Matrix";
 import { Color, Filters } from "./json/AnimationJson";
@@ -9,7 +7,7 @@ import { Color, Filters } from "./json/AnimationJson";
 
 export type InstanceProps = Omit<DrawableProps, 'id' | 'library'> & {
     itemName:string,
-    matrix3d:Matrix,
+    matrix:Matrix,
     frame:Frame,
     filters?:Filters|null,
     color?:Color|null,
@@ -41,7 +39,7 @@ export class Instance extends Drawable{
         });
 
         this.itemName = props.itemName;
-        this.matrix3d = props.matrix3d;
+        this.matrix3d = props.matrix;
         this.filters = props.filters || null;
         this.color = props.color || null;
         //this.position = props.position;
