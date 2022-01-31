@@ -12,7 +12,7 @@ type Float = number;
 export type LayerProps = Omit<DrawableProps, 'totalFrames'|'id'|'library'> & {
     clip:Clip
     type: 'Normal'|'Clipper',
-    clippedBy:null|string
+    clippedBy?:string|null,
 }
 
 
@@ -37,7 +37,7 @@ export class Layer extends Drawable{
         
         this.clip = props.clip;
         this.type = props.type;
-        this.clippedBy = props.clippedBy;
+        this.clippedBy = props.clippedBy || null;
         this.index = this.clip.layers.length;
         this.frames = [];
         this.framesByName = {};
@@ -56,7 +56,7 @@ export class Layer extends Drawable{
         if(frame.labelName){
             this.labels.push(frame);
         }
-        this.clip.addFrame(frame);
+        this.clip.__addFrame(frame);
         /*
         if(this.firstFrame){
             this.firstFrame.prev = frame

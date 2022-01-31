@@ -43,7 +43,7 @@ export class Clip extends Drawable{
     }
 
 
-    public addFrame(frame:Frame){
+    __addFrame(frame:Frame){
         this.framesById[frame.id] = frame;
         if(frame.layer.totalFrames > this.totalFrames) this.totalFrames = frame.layer.totalFrames;
         if(frame.labelName) this.framesByLabel[frame.labelName] = frame;
