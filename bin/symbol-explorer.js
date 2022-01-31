@@ -126,7 +126,7 @@
         id: `${props.frame.id}.${props.frame.instances.length}`
       }));
       this.itemName = props.itemName;
-      this.matrix3d = props.matrix3d;
+      this.matrix3d = props.matrix;
       this.filters = props.filters || null;
       this.color = props.color || null;
       this.frame = props.frame;
@@ -581,7 +581,7 @@
                     frame: frame2,
                     name: frame2.name,
                     filters: elemData.filters || null,
-                    matrix3d: "m00" in m ? new Matrix(m.m00, m.m01, m.m02, m.m03, m.m10, m.m11, m.m12, m.m13, m.m20, m.m21, m.m22, m.m23, m.m30, m.m31, m.m32, m.m33) : new Matrix(m[0], m[1], m[2], m[3], m[4], m[5], m[6], m[7], m[8], m[9], m[10], m[11], m[12], m[13], m[14], m[15]),
+                    matrix: "m00" in m ? new Matrix(m.m00, m.m01, m.m02, m.m03, m.m10, m.m11, m.m12, m.m13, m.m20, m.m21, m.m22, m.m23, m.m30, m.m31, m.m32, m.m33) : new Matrix(m[0], m[1], m[2], m[3], m[4], m[5], m[6], m[7], m[8], m[9], m[10], m[11], m[12], m[13], m[14], m[15]),
                     itemName: elemData.symbolName,
                     color: elemData.color || null
                   };
@@ -596,7 +596,7 @@
                     name: frame2.name,
                     filters: elemData.filters || null,
                     color: null,
-                    matrix3d: "m00" in m ? new Matrix(m.m00, m.m01, m.m02, m.m03, m.m10, m.m11, m.m12, m.m13, m.m20, m.m21, m.m22, m.m23, m.m30, m.m31, m.m32, m.m33) : new Matrix(m[0], m[1], m[2], m[3], m[4], m[5], m[6], m[7], m[8], m[9], m[10], m[11], m[12], m[13], m[14], m[15]),
+                    matrix: "m00" in m ? new Matrix(m.m00, m.m01, m.m02, m.m03, m.m10, m.m11, m.m12, m.m13, m.m20, m.m21, m.m22, m.m23, m.m30, m.m31, m.m32, m.m33) : new Matrix(m[0], m[1], m[2], m[3], m[4], m[5], m[6], m[7], m[8], m[9], m[10], m[11], m[12], m[13], m[14], m[15]),
                     itemName: elemData.name
                   });
                   if (spriteNames.indexOf(spriteInstance.itemName) == -1)

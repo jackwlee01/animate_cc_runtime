@@ -102,7 +102,7 @@ export class Library{
                                 frame,
                                 name: frame.name,
                                 filters: elemData.filters || null,
-                                matrix3d: 'm00' in m ? new Matrix(m.m00, m.m01, m.m02, m.m03,
+                                matrix: 'm00' in m ? new Matrix(m.m00, m.m01, m.m02, m.m03,
                                                                     m.m10, m.m11, m.m12, m.m13,
                                                                     m.m20, m.m21, m.m22, m.m23,
                                                                     m.m30, m.m31, m.m32, m.m33)
@@ -132,7 +132,7 @@ export class Library{
                                 name: frame.name,
                                 filters: elemData.filters || null,
                                 color: null,
-                                matrix3d: 'm00' in m ? new Matrix(m.m00, m.m01, m.m02, m.m03,
+                                matrix: 'm00' in m ? new Matrix(m.m00, m.m01, m.m02, m.m03,
                                                                     m.m10, m.m11, m.m12, m.m13,
                                                                     m.m20, m.m21, m.m22, m.m23,
                                                                     m.m30, m.m31, m.m32, m.m33)
