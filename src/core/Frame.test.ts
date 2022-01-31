@@ -11,6 +11,7 @@ test('createClipInstance', () => {
 
     expect(instanceA.next).toBeUndefined()
     expect(instanceA.prev).toBeUndefined()
+    expect(instanceA.item).toBe(clip)
 
     const frameB = frameA.layer.createFrame({index:frameA.totalFrames, totalFrames: 10, name:'0'})
     const instanceB = frameB.createClipInstance({
@@ -44,6 +45,7 @@ test('createClipInstance', () => {
     })
     expect(instanceC.next).toBeUndefined()
     expect(instanceD.prev).toBeUndefined()
+    expect(instanceD.item).toBe(otherClip)
 })
 
 
