@@ -1,6 +1,6 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Gunner" itemID="6142a091-00003094" lastModified="1643352078" lastUniqueIdentifier="17">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Gunner" itemID="6142a091-00003094" lastModified="1643354122" lastUniqueIdentifier="17">
   <timeline>
-    <DOMTimeline name="Gunner" currentFrame="40" guides='&lt;guidelines&gt;&lt;guideline direction="h"&gt;-135&lt;/guideline&gt;&lt;/guidelines&gt;' layerDepthEnabled="true">
+    <DOMTimeline name="Gunner" guides='&lt;guidelines&gt;&lt;guideline direction="h"&gt;-135&lt;/guideline&gt;&lt;/guidelines&gt;' layerDepthEnabled="true">
       <layers>
         <DOMLayer name="rm" color="#FF800A" autoNamed="false" layerType="guide">
           <frames>
@@ -41,7 +41,7 @@
                 <Ease target="all" intensity="-99"/>
               </tweens>
               <elements>
-                <DOMSymbolInstance libraryItemName="fromJames/Symbol 67" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="fromJames/Symbol 67" selected="true" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="6.95" ty="-24.7"/>
                   </matrix>
@@ -87,7 +87,7 @@
                 <Ease target="all" intensity="-99"/>
               </tweens>
               <elements>
-                <DOMSymbolInstance libraryItemName="fromJames/Symbol 66" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="fromJames/Symbol 66" selected="true" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="17" ty="-19.75"/>
                   </matrix>
@@ -133,9 +133,9 @@
                 <Ease target="all" intensity="-99"/>
               </tweens>
               <elements>
-                <DOMSymbolInstance libraryItemName="fromJames/Symbol 65" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="fromJames/Symbol 65" selected="true" symbolType="graphic" loop="loop">
                   <matrix>
-                    <Matrix tx="-27.55" ty="-8.6"/>
+                    <Matrix tx="-25.7" ty="-9.6"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="10.35" y="11.8"/>
@@ -172,14 +172,14 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="rotate" color="#9933CC" autoNamed="false">
+        <DOMLayer name="rotate" color="#9933CC" current="true" isSelected="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" duration="20" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-99">
               <tweens>
                 <Ease target="all" intensity="-99"/>
               </tweens>
               <elements>
-                <DOMSymbolInstance libraryItemName="fromJames/Symbol 64" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="fromJames/Symbol 64" selected="true" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-55.35" ty="-16.05"/>
                   </matrix>
@@ -546,16 +546,7 @@
               <tweens>
                 <Ease target="all" intensity="-99"/>
               </tweens>
-              <elements>
-                <DOMSymbolInstance libraryItemName="fromJames/Symbol 56" symbolType="graphic" loop="loop">
-                  <matrix>
-                    <Matrix tx="-27.95" ty="-9.6"/>
-                  </matrix>
-                  <transformationPoint>
-                    <Point x="9.65" y="6.9"/>
-                  </transformationPoint>
-                </DOMSymbolInstance>
-              </elements>
+              <elements/>
             </DOMFrame>
             <DOMFrame index="20" duration="20" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-99">
               <tweens>
@@ -632,7 +623,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="rotate" color="#FF4F4F" current="true" isSelected="true" autoNamed="false">
+        <DOMLayer name="rotate" color="#FF4F4F" autoNamed="false">
           <frames>
             <DOMFrame index="0" duration="20" tweenType="motion" motionTweenSnap="true" keyMode="22017" acceleration="-99">
               <tweens>

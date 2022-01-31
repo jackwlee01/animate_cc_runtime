@@ -1,6 +1,6 @@
 <DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="GunnerOld" itemID="6142a08d-00003093" lastModified="1643353727" lastUniqueIdentifier="37">
   <timeline>
-    <DOMTimeline name="GunnerOld" currentFrame="98" layerDepthEnabled="true">
+    <DOMTimeline name="GunnerOld" layerDepthEnabled="true">
       <layers>
         <DOMLayer name="Layer_2" color="#9933CC">
           <frames>

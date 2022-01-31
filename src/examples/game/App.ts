@@ -12,17 +12,15 @@ export class App{
     scene:Canvas2dScene
     libs:Libs
     input:Input
-    game?:Game
+    game:Game|null
 
 
-    constructor(){
-        const canvas = document.getElementById("canvas") as HTMLCanvasElement
-        const ctx2d = canvas.getContext('2d')!
-
-        this.dpr = setupCanvas(canvas) // Device pixel ratio
+    constructor(ctx2d:CanvasRenderingContext2D){
+        this.dpr = setupCanvas(ctx2d.canvas) // Device pixel ratio
         this.scene = new Canvas2dScene(ctx2d)
         this.libs = new Libs(this, this.scene)
         this.input = new Input(this)
+        this.game = null
 
         this.load()
         this.update()
@@ -50,12 +48,9 @@ export class App{
         if(this.game) this.game.draw(this.scene)
     }
 
-    
+
     get canvas(){
         return this.scene.ctx.canvas
     }
 
 }
-
-
-const app = new App();

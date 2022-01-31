@@ -196,7 +196,7 @@
           <Include href="game/Walker_Nose_Head.xml" itemIcon="1" loadImmediate="false" itemID="61973aad-00000a76" lastModified="1641876226"/>
           <Include href="game/Walker_Nose_Nose.xml" itemIcon="1" loadImmediate="false" itemID="61973ec9-00001ae2" lastModified="1641876239"/>
           <Include href="game/Walker_Nose_Siren.xml" itemIcon="1" loadImmediate="false" itemID="61973de1-00001794" lastModified="1637301729"/>
-          <Include href="Gunner.xml" loadImmediate="false" itemID="6142a091-00003094" lastModified="1643352078"/>
+          <Include href="Gunner.xml" loadImmediate="false" itemID="6142a091-00003094" lastModified="1643354122"/>
           <Include href="GunnerFall.xml" loadImmediate="false" itemID="6141af45-00004009" lastModified="1631694795"/>
           <Include href="GunnerOld.xml" loadImmediate="false" itemID="6142a08d-00003093" lastModified="1643353727"/>
           <Include href="GunnerParts.xml" loadImmediate="false" itemID="61413e98-000000ab" lastModified="1631862566"/>
@@ -283,7 +283,7 @@
           <Include href="win.xml" itemID="61dd06c0-0000053c" lastModified="1641879311"/>
      </symbols>
      <timelines>
-          <DOMTimeline name="Scene 1" currentFrame="98" layerDepthEnabled="true">
+          <DOMTimeline name="Scene 1" layerDepthEnabled="true">
                <layers>
                     <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
                          <frames>

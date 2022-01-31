@@ -15,7 +15,7 @@
     "build-dynamic-content": "esbuild src/examples/dynamic-content.ts --bundle --outfile=bin/dynamic-content.js --sourcemap",
     "build-mouse-interaction": "esbuild src/examples/mouse-interaction.ts --bundle --outfile=bin/mouse-interaction.js --sourcemap",
     "build-functional-composition": "esbuild src/examples/functional-composition.ts --bundle --outfile=bin/functional-composition.js --sourcemap",
-    "build-game": "esbuild src/examples/game/App.ts --bundle --outfile=bin/game.js --sourcemap",
+    "build-game": "esbuild src/examples/game/Main.ts --bundle --outfile=bin/game.js --sourcemap",
     "build-dom": "esbuild src/examples/dom.ts --bundle --outfile=bin/dom.js --sourcemap",
     "build-page": "npm run build-symbol-explorer && npm run build-minimal && npm run build-dynamic-content && npm run build-dom && npm run build-mouse-interaction && npm run build-functional-composition && npm run build-game",
     "test": "echo \"Error: no test specified\" && exit 1",
