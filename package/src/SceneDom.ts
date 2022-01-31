@@ -1,4 +1,4 @@
-import { Layer } from ".";
+import { Layer } from "./Layer";
 import { Scene } from "./Scene"
 import { ClipInstance } from "./ClipInstance";
 import { Drawable } from "./Drawable"
