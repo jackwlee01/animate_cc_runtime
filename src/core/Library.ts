@@ -42,8 +42,8 @@ export class Library{
     }
 
 
-    createAtlas(props:Omit<AtlasProps, 'library'>){
-        const atlas = new Atlas({...props, library:this});
+    createAtlas(props:Omit<AtlasProps, 'library'|'pixelData'>, pixelData:ReturnType<Scene['getPixelData']>){
+        const atlas = new Atlas({...props, library:this, pixelData});
         this.atlases.push(atlas);
         return atlas;
     }
@@ -201,8 +201,8 @@ export class Library{
                     imagePath: data.meta.image,
                     format: data.meta.format,
                     size: data.meta.size,
-                    resolution: data.meta.resolution 
-                })
+                    resolution: data.meta.resolution ,
+                }, this.scene.getPixelData(image),)
                 for(const spriteSpriteData of data.atlas.sprites){
                     const spriteData = spriteSpriteData.sprite;
                     const sprite = this.createSprite(atlas, {

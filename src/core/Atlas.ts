@@ -1,4 +1,5 @@
 import { Library } from "./Library";
+import { Scene } from "./Scene";
 import { Sprite } from "./Sprite";
 
 
@@ -11,6 +12,7 @@ export type AtlasProps = {
     format:string,
     size:{w:Float, h:Float},
     resolution:string,
+    pixelData: ReturnType<Scene['getPixelData']>,
 }
 
 
@@ -25,10 +27,7 @@ export class Atlas{
     format:string;
     size:{w:Float, h:Float};
     resolution:string;
-    pixelData:{
-        ctx:CanvasRenderingContext2D,
-        imageData:ImageData,
-    }
+    pixelData: ReturnType<Scene['getPixelData']>;
 
     
     constructor(props:AtlasProps){
@@ -41,31 +40,20 @@ export class Atlas{
         this.format = props.format;
         this.size = props.size;
         this.resolution = props.resolution;
+        this.pixelData = props.pixelData;
 
-        if(this.image.complete==false) throw("Image has not loaded!")
-
-        const canvas = document.createElement('canvas')
-        canvas.width = this.image.width
-        canvas.height = this.image.height
-        const ctx = document.createElement('canvas').getContext('2d')!
-        ctx.drawImage(this.image, 0, 0);
-
-        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height)
-
-        this.pixelData = {
-            ctx,
-            imageData,
-        }
+        // this.library.scene.getPixelData(this.image) // TODO: Determine is this should be a lazy operation
     }
 
 
-    public getPixel(x:Float, y:Float){
+
+    getPixel(x:Float, y:Float){
         x = Math.floor(x)
         y = Math.floor(y)
-        const data = this.pixelData.imageData.data
         
         let i = x + (y*this.pixelData.imageData.width)
 
+        const data = this.pixelData.imageData.data
         return [
             data[(i*4) + 0],
             data[(i*4) + 1],
