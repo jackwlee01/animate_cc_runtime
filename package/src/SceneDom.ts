@@ -1,15 +1,16 @@
 import { Layer } from ".";
-import { Scene } from "./core/Scene"
-import { ClipInstance } from "./core/ClipInstance";
-import { Drawable } from "./core/Drawable"
-import { Frame } from "./core/Frame";
-import { Instance } from "./core/Instance"
-import { Sprite } from "./core/Sprite"
-import { SpriteInstance } from "./core/SpriteInstance";
-import { modWrap } from "./core/util/math";
+import { Scene } from "./Scene"
+import { ClipInstance } from "./ClipInstance";
+import { Drawable } from "./Drawable"
+import { Frame } from "./Frame";
+import { Instance } from "./Instance"
+import { Sprite } from "./Sprite"
+import { SpriteInstance } from "./SpriteInstance";
+import { modWrap } from "./util/math";
+import { Float } from "./types/Float";
 
 
-export class DomScene extends Scene{
+export class SceneDom extends Scene{
     
     elemId:string
     elems:Array<HTMLElement>

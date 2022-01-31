@@ -1,9 +1,7 @@
 import { Drawable } from "./Drawable";
 import { Atlas } from "./Atlas";
 import { DrawableProps } from "./Drawable"
-
-type Int = number;
-type Float = number;
+import { Float } from "./types/Float";
 
 
 export type SpriteProps = Omit<DrawableProps, 'totalFrames'|'library'|'id'> & {

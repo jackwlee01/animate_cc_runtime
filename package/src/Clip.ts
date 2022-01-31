@@ -3,8 +3,8 @@ import { Frame } from "./Frame";
 import { Layer, LayerProps } from "./Layer";
 import { DrawableProps } from './Drawable'
 import { modWrap } from "./util/math";
+import { Float } from "./types/Float";
 
-type Float = number;
 export type ClipProps = Omit<DrawableProps, 'totalFrames'|'id'>
 
 

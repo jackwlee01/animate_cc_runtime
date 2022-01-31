@@ -12,6 +12,7 @@ build({
 
 
 new Generator({
-  entry: 'src/index.ts',
-  output: 'dist/index.d.ts',
-}).generate()
+    entry: 'src/index.ts',
+    output: 'dist/index.d.ts',
+    root: 'src/', 
+  }).generate()

@@ -7,6 +7,7 @@ import { Atlas, AtlasProps } from "./Atlas";
 import { normaliseJson } from "./json/utilJson";
 import { Scene } from "./Scene";
 import { Matrix } from "./geom/Matrix";
+import { SpriteMapJson } from "./json/SpritemapJson"
 import { createImage } from "./util/createImage";
 
 

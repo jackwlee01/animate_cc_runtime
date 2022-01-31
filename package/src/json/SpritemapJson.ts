@@ -1,6 +1,4 @@
-type Float = number;
-type Int = number;
-
+import { Float } from "../types/Float"
 
 type Sprite = {
     name:string,
@@ -34,7 +32,7 @@ type Meta = {
 }
 
 
-type SpriteMapJson = {
+export type SpriteMapJson = {
     atlas:Atlas;
     meta:Meta;
 }

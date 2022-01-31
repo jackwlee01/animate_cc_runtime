@@ -3,6 +3,7 @@ import { Frame } from "./Frame";
 import { DrawableProps } from './Drawable'
 import { Matrix } from "./geom/Matrix";
 import { Color, Filters } from "./json/AnimationJson";
+import { Float } from "./types/Float";
 
 
 export type InstanceProps = Omit<DrawableProps, 'id' | 'library'> & {

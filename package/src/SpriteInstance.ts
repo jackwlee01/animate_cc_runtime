@@ -1,6 +1,5 @@
 import { Instance, InstanceProps } from "./Instance";
 
-type Float = number;
 
 export type SpriteInstanceProps = InstanceProps & {
 

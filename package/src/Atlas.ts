@@ -1,6 +1,7 @@
 import { Library } from "./Library";
 import { Scene } from "./Scene";
 import { Sprite } from "./Sprite";
+import { Float } from "./types/Float";
 
 
 export type AtlasProps = {

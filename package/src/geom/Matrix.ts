@@ -1,19 +1,20 @@
+import { Float } from "../types/Float";
 
 export class Matrix{
 
-    _00:number; _01:number; _02:number; _03:number;
-    _10:number; _11:number; _12:number; _13:number;
-    _20:number; _21:number; _22:number; _23:number;
-    _30:number; _31:number; _32:number; _33:number;
+    _00:Float; _01:Float; _02:Float; _03:Float;
+    _10:Float; _11:Float; _12:Float; _13:Float;
+    _20:Float; _21:Float; _22:Float; _23:Float;
+    _30:Float; _31:Float; _32:Float; _33:Float;
 
     data:Float32Array
 
 
     constructor(
-        _00:number, _01:number, _02:number, _03:number,
-        _10:number, _11:number, _12:number, _13:number,
-        _20:number, _21:number, _22:number, _23:number,
-        _30:number, _31:number, _32:number, _33:number,
+        _00:Float, _01:Float, _02:Float, _03:Float,
+        _10:Float, _11:Float, _12:Float, _13:Float,
+        _20:Float, _21:Float, _22:Float, _23:Float,
+        _30:Float, _31:Float, _32:Float, _33:Float,
     ){
         this._00=_00; this._01=_01; this._02=_02; this._03=_03; 
         this._10=_10; this._11=_11; this._12=_12; this._13=_13; 

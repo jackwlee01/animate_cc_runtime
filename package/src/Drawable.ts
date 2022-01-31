@@ -1,7 +1,6 @@
 import { Library } from "./Library";
-
-type Int = number;
-type Float = number;
+import { Float } from "./types/Float";
+import { Int } from "./types/Int";
 
 
 export type DrawableProps = {

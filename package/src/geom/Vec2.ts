@@ -1,5 +1,4 @@
-type Float = number;
-
+import { Float } from "../types/Float"
 
 export class Vec2 {
 

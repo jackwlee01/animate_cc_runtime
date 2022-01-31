@@ -1,3 +1,5 @@
+import { Float } from "../types/Float"
+
 export class Vec3{
 
     x:Float

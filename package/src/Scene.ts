@@ -1,5 +1,6 @@
 import { Drawable } from "./Drawable";
 import { Library } from "./Library";
+import { Float } from "./types/Float";
 
 
 export class Scene{

@@ -3,10 +3,9 @@ import { Drawable } from "./Drawable";
 import { Frame, FrameProps } from "./Frame";
 import { DrawableProps } from "./Drawable"
 import { modWrap } from "./util/math";
+import { Int } from "./types/Int";
+import { Float } from "./types/Float";
 
-
-type Int = number;
-type Float = number;
 
 
 export type LayerProps = Omit<DrawableProps, 'totalFrames'|'id'|'library'> & {

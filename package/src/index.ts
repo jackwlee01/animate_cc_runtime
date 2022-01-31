@@ -1,13 +1,13 @@
-import { Library as LibraryBase } from './core/Library'
-import { Clip as ClipBase } from './core/Clip'
-import { Layer as LayerBase } from './core/Layer'
-import { Frame as FrameBase } from './core/Frame'
-import { Instance as InstanceBase } from './core/Instance'
-import { SpriteInstance as SpriteInstanceBase } from './core/SpriteInstance'
-import { ClipInstance as ClipInstanceBase } from './core/ClipInstance'
-import { Sprite as SpriteBase } from './core/Sprite'
-import { Canvas2dScene as Canvas2dSceneBase } from './Canvas2dScene'
-import { DomScene as DomSceneBase } from './DomScene'
+import { Library as LibraryBase } from './Library'
+import { Clip as ClipBase } from './Clip'
+import { Layer as LayerBase } from './Layer'
+import { Frame as FrameBase } from './Frame'
+import { Instance as InstanceBase } from './Instance'
+import { SpriteInstance as SpriteInstanceBase } from './SpriteInstance'
+import { ClipInstance as ClipInstanceBase } from './ClipInstance'
+import { Sprite as SpriteBase } from './Sprite'
+import { SceneCanvas2d as Canvas2dSceneBase } from './SceneCanvas2d'
+import { SceneDom as DomSceneBase } from './SceneDom'
 
 export const Library = LibraryBase
 export const Clip = ClipBase

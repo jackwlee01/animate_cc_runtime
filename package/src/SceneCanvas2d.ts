@@ -1,20 +1,21 @@
-import { Scene } from "./core/Scene"
-import { ClipInstance } from "./core/ClipInstance";
-import { Drawable } from "./core/Drawable"
-import { Frame } from "./core/Frame";
-import { Instance } from "./core/Instance"
-import { FilterDropShadow, FilterType } from "./core/json/AnimationJson";
-import { Layer } from "./core/Layer";
-import { Sprite } from "./core/Sprite"
-import { SpriteInstance } from "./core/SpriteInstance";
-import { modWrap } from "./core/util/math";
+import { Scene } from "./Scene"
+import { ClipInstance } from "./ClipInstance";
+import { Drawable } from "./Drawable"
+import { Frame } from "./Frame";
+import { Instance } from "./Instance"
+import { FilterDropShadow, FilterType } from "./json/AnimationJson";
+import { Layer } from "./Layer";
+import { Sprite } from "./Sprite"
+import { SpriteInstance } from "./SpriteInstance";
+import { modWrap } from "./util/math";
+import { Float } from "./types/Float";
 
 
 // This is all of the library's rendering code required to draw into a canvas 2d context.
 // This could easily be ported to any immediate mode rendering context, ie WebGL.
 // This could also be ported to scene graph based libraries like PixiJS, or event the DOM,
 // with a few modification to faciliate mapping to a scene graph.
-export class Canvas2dScene extends Scene{
+export class SceneCanvas2d extends Scene{
     
     canvas:HTMLCanvasElement
     stack:CanvasRenderingContext2D[]

@@ -2,6 +2,7 @@ import { Drawable } from "./Drawable";
 import { Vec2 } from "./geom/Vec2";
 import { Instance } from "./Instance";
 import { InstanceProps } from "./Instance"
+import { Float } from "./types/Float";
 import { modWrap } from "./util/math";
 
 type LoopKind = 'loop' // TODO: HANDLE OTHER LOOP KINDS | 'PlayOnce' | 'SingleFrame' | 'PlayOnceReverse' | 'LoopReverse'

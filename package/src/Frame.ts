@@ -3,10 +3,9 @@ import { Drawable } from "./Drawable";
 import { Layer } from "./Layer";
 import { SpriteInstance, SpriteInstanceProps } from "./SpriteInstance";
 import { DrawableProps } from "./Drawable";
-import { Instance } from "./Instance";
+import { Int } from "./types/Int";
+import { Float } from "./types/Float";
 
-
-type Int = number;
 
 
 export type FrameProps = Omit<DrawableProps, 'id' | 'library'> & {

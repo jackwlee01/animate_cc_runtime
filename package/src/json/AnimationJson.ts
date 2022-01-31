@@ -1,7 +1,6 @@
-type Float = number;
-type Int = number;
-type StringColor = string;
-
+import { Float } from "../types/Float"
+import { Int } from "../types/Int"
+import { StringColor } from "../types/StringColor"
 
 export type Matrix3D = Float[] | {
     m00:Float;
