@@ -1,4 +1,3 @@
-import { Matrix } from "./geom/Matrix"
 import { mockAtlas, mockFrame, mockSprite } from "./test/mocks"
 
 test('createClipInstance', () => {
