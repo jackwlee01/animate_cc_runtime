@@ -24,6 +24,7 @@
   "author": "",
   "devDependencies": {
     "@types/jest": "^27.4.0",
+    "axios": "^0.25.0",
     "esbuild": "^0.14.5",
     "esbuild-runner": "^2.2.1",
     "jest": "^27.4.7",

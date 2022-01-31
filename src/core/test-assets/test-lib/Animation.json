@@ -1,0 +1,1604 @@
+{
+    "ANIMATION": {
+        "name": "test-lib",
+        "SYMBOL_name": "__export__",
+        "TIMELINE": {
+            "LAYERS": [
+                {
+                    "Layer_name": "Layer_1",
+                    "Frames": [
+                        {
+                            "index": 0,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "MCSquare",
+                                        "Instance_Name": "",
+                                        "symbolType": "movieclip",
+                                        "transformationPoint": {
+                                            "x": 0.0,
+                                            "y": 0.0
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 1.0,
+                                            "m01": 0.0,
+                                            "m02": 0.0,
+                                            "m03": 0.0,
+                                            "m10": 0.0,
+                                            "m11": 1.0,
+                                            "m12": 0.0,
+                                            "m13": 0.0,
+                                            "m20": 0.0,
+                                            "m21": 0.0,
+                                            "m22": 1.0,
+                                            "m23": 0.0,
+                                            "m30": 257.5,
+                                            "m31": 177.5,
+                                            "m32": 0.0,
+                                            "m33": 1.0
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": 257.5,
+                                                "y": 177.5,
+                                                "z": 0.0
+                                            },
+                                            "Rotation": {
+                                                "x": 0.0,
+                                                "y": -0.0,
+                                                "z": 0.0
+                                            },
+                                            "Scaling": {
+                                                "x": 1.0,
+                                                "y": 1.0,
+                                                "z": 1.0
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "MCNested",
+                                        "Instance_Name": "",
+                                        "symbolType": "movieclip",
+                                        "transformationPoint": {
+                                            "x": -0.15,
+                                            "y": 0.0
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 1.0,
+                                            "m01": 0.0,
+                                            "m02": 0.0,
+                                            "m03": 0.0,
+                                            "m10": 0.0,
+                                            "m11": 1.0,
+                                            "m12": 0.0,
+                                            "m13": 0.0,
+                                            "m20": 0.0,
+                                            "m21": 0.0,
+                                            "m22": 1.0,
+                                            "m23": 0.0,
+                                            "m30": 805.0,
+                                            "m31": 170.0,
+                                            "m32": 0.0,
+                                            "m33": 1.0
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": 805.0,
+                                                "y": 170.0,
+                                                "z": 0.0
+                                            },
+                                            "Rotation": {
+                                                "x": 0.0,
+                                                "y": -0.0,
+                                                "z": 0.0
+                                            },
+                                            "Scaling": {
+                                                "x": 1.0,
+                                                "y": 1.0,
+                                                "z": 1.0
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "SYMBOL_DICTIONARY": {
+        "Symbols": [
+            {
+                "SYMBOL_name": "MCSquare",
+                "TIMELINE": {
+                    "LAYERS": [
+                        {
+                            "Layer_name": "labels",
+                            "Frames": [
+                                {
+                                    "name": "first",
+                                    "index": 0,
+                                    "duration": 1,
+                                    "elements": []
+                                },
+                                {
+                                    "name": "second",
+                                    "index": 1,
+                                    "duration": 8,
+                                    "elements": []
+                                },
+                                {
+                                    "name": "third",
+                                    "index": 9,
+                                    "duration": 11,
+                                    "elements": []
+                                }
+                            ]
+                        },
+                        {
+                            "Layer_name": "Layer_3",
+                            "Frames": [
+                                {
+                                    "index": 0,
+                                    "duration": 4,
+                                    "elements": []
+                                },
+                                {
+                                    "index": 4,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "SYMBOL_Instance": {
+                                                "SYMBOL_name": "GNumber",
+                                                "Instance_Name": "",
+                                                "symbolType": "graphic",
+                                                "firstFrame": 0,
+                                                "loop": "loop",
+                                                "transformationPoint": {
+                                                    "x": 0.0,
+                                                    "y": 0.0
+                                                },
+                                                "Matrix3D": {
+                                                    "m00": 1.0,
+                                                    "m01": 0.0,
+                                                    "m02": 0.0,
+                                                    "m03": 0.0,
+                                                    "m10": 0.0,
+                                                    "m11": 1.0,
+                                                    "m12": 0.0,
+                                                    "m13": 0.0,
+                                                    "m20": 0.0,
+                                                    "m21": 0.0,
+                                                    "m22": 1.0,
+                                                    "m23": 0.0,
+                                                    "m30": 170.0,
+                                                    "m31": -10.0,
+                                                    "m32": 0.0,
+                                                    "m33": 1.0
+                                                },
+                                                "DecomposedMatrix": {
+                                                    "Position": {
+                                                        "x": 170.0,
+                                                        "y": -10.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Rotation": {
+                                                        "x": 0.0,
+                                                        "y": -0.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Scaling": {
+                                                        "x": 1.0,
+                                                        "y": 1.0,
+                                                        "z": 1.0
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 5,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "SYMBOL_Instance": {
+                                                "SYMBOL_name": "GNumber",
+                                                "Instance_Name": "",
+                                                "symbolType": "graphic",
+                                                "firstFrame": 1,
+                                                "loop": "loop",
+                                                "transformationPoint": {
+                                                    "x": 0.0,
+                                                    "y": 0.0
+                                                },
+                                                "Matrix3D": {
+                                                    "m00": 1.0,
+                                                    "m01": 0.0,
+                                                    "m02": 0.0,
+                                                    "m03": 0.0,
+                                                    "m10": 0.0,
+                                                    "m11": 1.0,
+                                                    "m12": 0.0,
+                                                    "m13": 0.0,
+                                                    "m20": 0.0,
+                                                    "m21": 0.0,
+                                                    "m22": 1.0,
+                                                    "m23": 0.0,
+                                                    "m30": 170.0,
+                                                    "m31": -10.0,
+                                                    "m32": 0.0,
+                                                    "m33": 1.0
+                                                },
+                                                "DecomposedMatrix": {
+                                                    "Position": {
+                                                        "x": 170.0,
+                                                        "y": -10.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Rotation": {
+                                                        "x": 0.0,
+                                                        "y": -0.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Scaling": {
+                                                        "x": 1.0,
+                                                        "y": 1.0,
+                                                        "z": 1.0
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 6,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "SYMBOL_Instance": {
+                                                "SYMBOL_name": "GNumber",
+                                                "Instance_Name": "",
+                                                "symbolType": "graphic",
+                                                "firstFrame": 2,
+                                                "loop": "loop",
+                                                "transformationPoint": {
+                                                    "x": 0.0,
+                                                    "y": 0.0
+                                                },
+                                                "Matrix3D": {
+                                                    "m00": 1.0,
+                                                    "m01": 0.0,
+                                                    "m02": 0.0,
+                                                    "m03": 0.0,
+                                                    "m10": 0.0,
+                                                    "m11": 1.0,
+                                                    "m12": 0.0,
+                                                    "m13": 0.0,
+                                                    "m20": 0.0,
+                                                    "m21": 0.0,
+                                                    "m22": 1.0,
+                                                    "m23": 0.0,
+                                                    "m30": 170.0,
+                                                    "m31": -10.0,
+                                                    "m32": 0.0,
+                                                    "m33": 1.0
+                                                },
+                                                "DecomposedMatrix": {
+                                                    "Position": {
+                                                        "x": 170.0,
+                                                        "y": -10.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Rotation": {
+                                                        "x": 0.0,
+                                                        "y": -0.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Scaling": {
+                                                        "x": 1.0,
+                                                        "y": 1.0,
+                                                        "z": 1.0
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 7,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "SYMBOL_Instance": {
+                                                "SYMBOL_name": "GNumber",
+                                                "Instance_Name": "",
+                                                "symbolType": "graphic",
+                                                "firstFrame": 3,
+                                                "loop": "loop",
+                                                "transformationPoint": {
+                                                    "x": 0.0,
+                                                    "y": 0.0
+                                                },
+                                                "Matrix3D": {
+                                                    "m00": 1.0,
+                                                    "m01": 0.0,
+                                                    "m02": 0.0,
+                                                    "m03": 0.0,
+                                                    "m10": 0.0,
+                                                    "m11": 1.0,
+                                                    "m12": 0.0,
+                                                    "m13": 0.0,
+                                                    "m20": 0.0,
+                                                    "m21": 0.0,
+                                                    "m22": 1.0,
+                                                    "m23": 0.0,
+                                                    "m30": 170.0,
+                                                    "m31": -10.0,
+                                                    "m32": 0.0,
+                                                    "m33": 1.0
+                                                },
+                                                "DecomposedMatrix": {
+                                                    "Position": {
+                                                        "x": 170.0,
+                                                        "y": -10.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Rotation": {
+                                                        "x": 0.0,
+                                                        "y": -0.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Scaling": {
+                                                        "x": 1.0,
+                                                        "y": 1.0,
+                                                        "z": 1.0
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 8,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "SYMBOL_Instance": {
+                                                "SYMBOL_name": "GNumber",
+                                                "Instance_Name": "",
+                                                "symbolType": "graphic",
+                                                "firstFrame": 4,
+                                                "loop": "loop",
+                                                "transformationPoint": {
+                                                    "x": 0.0,
+                                                    "y": 0.0
+                                                },
+                                                "Matrix3D": {
+                                                    "m00": 1.0,
+                                                    "m01": 0.0,
+                                                    "m02": 0.0,
+                                                    "m03": 0.0,
+                                                    "m10": 0.0,
+                                                    "m11": 1.0,
+                                                    "m12": 0.0,
+                                                    "m13": 0.0,
+                                                    "m20": 0.0,
+                                                    "m21": 0.0,
+                                                    "m22": 1.0,
+                                                    "m23": 0.0,
+                                                    "m30": 170.0,
+                                                    "m31": -10.0,
+                                                    "m32": 0.0,
+                                                    "m33": 1.0
+                                                },
+                                                "DecomposedMatrix": {
+                                                    "Position": {
+                                                        "x": 170.0,
+                                                        "y": -10.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Rotation": {
+                                                        "x": 0.0,
+                                                        "y": -0.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Scaling": {
+                                                        "x": 1.0,
+                                                        "y": 1.0,
+                                                        "z": 1.0
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 9,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "SYMBOL_Instance": {
+                                                "SYMBOL_name": "GNumber",
+                                                "Instance_Name": "",
+                                                "symbolType": "graphic",
+                                                "firstFrame": 5,
+                                                "loop": "loop",
+                                                "transformationPoint": {
+                                                    "x": 0.0,
+                                                    "y": 0.0
+                                                },
+                                                "Matrix3D": {
+                                                    "m00": 1.0,
+                                                    "m01": 0.0,
+                                                    "m02": 0.0,
+                                                    "m03": 0.0,
+                                                    "m10": 0.0,
+                                                    "m11": 1.0,
+                                                    "m12": 0.0,
+                                                    "m13": 0.0,
+                                                    "m20": 0.0,
+                                                    "m21": 0.0,
+                                                    "m22": 1.0,
+                                                    "m23": 0.0,
+                                                    "m30": 170.0,
+                                                    "m31": -10.0,
+                                                    "m32": 0.0,
+                                                    "m33": 1.0
+                                                },
+                                                "DecomposedMatrix": {
+                                                    "Position": {
+                                                        "x": 170.0,
+                                                        "y": -10.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Rotation": {
+                                                        "x": 0.0,
+                                                        "y": -0.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Scaling": {
+                                                        "x": 1.0,
+                                                        "y": 1.0,
+                                                        "z": 1.0
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 10,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "SYMBOL_Instance": {
+                                                "SYMBOL_name": "GNumber",
+                                                "Instance_Name": "",
+                                                "symbolType": "graphic",
+                                                "firstFrame": 0,
+                                                "loop": "loop",
+                                                "transformationPoint": {
+                                                    "x": 0.0,
+                                                    "y": 0.0
+                                                },
+                                                "Matrix3D": {
+                                                    "m00": 1.0,
+                                                    "m01": 0.0,
+                                                    "m02": 0.0,
+                                                    "m03": 0.0,
+                                                    "m10": 0.0,
+                                                    "m11": 1.0,
+                                                    "m12": 0.0,
+                                                    "m13": 0.0,
+                                                    "m20": 0.0,
+                                                    "m21": 0.0,
+                                                    "m22": 1.0,
+                                                    "m23": 0.0,
+                                                    "m30": 170.0,
+                                                    "m31": -10.0,
+                                                    "m32": 0.0,
+                                                    "m33": 1.0
+                                                },
+                                                "DecomposedMatrix": {
+                                                    "Position": {
+                                                        "x": 170.0,
+                                                        "y": -10.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Rotation": {
+                                                        "x": 0.0,
+                                                        "y": -0.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Scaling": {
+                                                        "x": 1.0,
+                                                        "y": 1.0,
+                                                        "z": 1.0
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 11,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "SYMBOL_Instance": {
+                                                "SYMBOL_name": "GNumber",
+                                                "Instance_Name": "",
+                                                "symbolType": "graphic",
+                                                "firstFrame": 1,
+                                                "loop": "loop",
+                                                "transformationPoint": {
+                                                    "x": 0.0,
+                                                    "y": 0.0
+                                                },
+                                                "Matrix3D": {
+                                                    "m00": 1.0,
+                                                    "m01": 0.0,
+                                                    "m02": 0.0,
+                                                    "m03": 0.0,
+                                                    "m10": 0.0,
+                                                    "m11": 1.0,
+                                                    "m12": 0.0,
+                                                    "m13": 0.0,
+                                                    "m20": 0.0,
+                                                    "m21": 0.0,
+                                                    "m22": 1.0,
+                                                    "m23": 0.0,
+                                                    "m30": 170.0,
+                                                    "m31": -10.0,
+                                                    "m32": 0.0,
+                                                    "m33": 1.0
+                                                },
+                                                "DecomposedMatrix": {
+                                                    "Position": {
+                                                        "x": 170.0,
+                                                        "y": -10.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Rotation": {
+                                                        "x": 0.0,
+                                                        "y": -0.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Scaling": {
+                                                        "x": 1.0,
+                                                        "y": 1.0,
+                                                        "z": 1.0
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 12,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "SYMBOL_Instance": {
+                                                "SYMBOL_name": "GNumber",
+                                                "Instance_Name": "",
+                                                "symbolType": "graphic",
+                                                "firstFrame": 2,
+                                                "loop": "loop",
+                                                "transformationPoint": {
+                                                    "x": 0.0,
+                                                    "y": 0.0
+                                                },
+                                                "Matrix3D": {
+                                                    "m00": 1.0,
+                                                    "m01": 0.0,
+                                                    "m02": 0.0,
+                                                    "m03": 0.0,
+                                                    "m10": 0.0,
+                                                    "m11": 1.0,
+                                                    "m12": 0.0,
+                                                    "m13": 0.0,
+                                                    "m20": 0.0,
+                                                    "m21": 0.0,
+                                                    "m22": 1.0,
+                                                    "m23": 0.0,
+                                                    "m30": 170.0,
+                                                    "m31": -10.0,
+                                                    "m32": 0.0,
+                                                    "m33": 1.0
+                                                },
+                                                "DecomposedMatrix": {
+                                                    "Position": {
+                                                        "x": 170.0,
+                                                        "y": -10.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Rotation": {
+                                                        "x": 0.0,
+                                                        "y": -0.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Scaling": {
+                                                        "x": 1.0,
+                                                        "y": 1.0,
+                                                        "z": 1.0
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 13,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "SYMBOL_Instance": {
+                                                "SYMBOL_name": "GNumber",
+                                                "Instance_Name": "",
+                                                "symbolType": "graphic",
+                                                "firstFrame": 3,
+                                                "loop": "loop",
+                                                "transformationPoint": {
+                                                    "x": 0.0,
+                                                    "y": 0.0
+                                                },
+                                                "Matrix3D": {
+                                                    "m00": 1.0,
+                                                    "m01": 0.0,
+                                                    "m02": 0.0,
+                                                    "m03": 0.0,
+                                                    "m10": 0.0,
+                                                    "m11": 1.0,
+                                                    "m12": 0.0,
+                                                    "m13": 0.0,
+                                                    "m20": 0.0,
+                                                    "m21": 0.0,
+                                                    "m22": 1.0,
+                                                    "m23": 0.0,
+                                                    "m30": 170.0,
+                                                    "m31": -10.0,
+                                                    "m32": 0.0,
+                                                    "m33": 1.0
+                                                },
+                                                "DecomposedMatrix": {
+                                                    "Position": {
+                                                        "x": 170.0,
+                                                        "y": -10.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Rotation": {
+                                                        "x": 0.0,
+                                                        "y": -0.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Scaling": {
+                                                        "x": 1.0,
+                                                        "y": 1.0,
+                                                        "z": 1.0
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 14,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "SYMBOL_Instance": {
+                                                "SYMBOL_name": "GNumber",
+                                                "Instance_Name": "",
+                                                "symbolType": "graphic",
+                                                "firstFrame": 4,
+                                                "loop": "loop",
+                                                "transformationPoint": {
+                                                    "x": 0.0,
+                                                    "y": 0.0
+                                                },
+                                                "Matrix3D": {
+                                                    "m00": 1.0,
+                                                    "m01": 0.0,
+                                                    "m02": 0.0,
+                                                    "m03": 0.0,
+                                                    "m10": 0.0,
+                                                    "m11": 1.0,
+                                                    "m12": 0.0,
+                                                    "m13": 0.0,
+                                                    "m20": 0.0,
+                                                    "m21": 0.0,
+                                                    "m22": 1.0,
+                                                    "m23": 0.0,
+                                                    "m30": 170.0,
+                                                    "m31": -10.0,
+                                                    "m32": 0.0,
+                                                    "m33": 1.0
+                                                },
+                                                "DecomposedMatrix": {
+                                                    "Position": {
+                                                        "x": 170.0,
+                                                        "y": -10.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Rotation": {
+                                                        "x": 0.0,
+                                                        "y": -0.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Scaling": {
+                                                        "x": 1.0,
+                                                        "y": 1.0,
+                                                        "z": 1.0
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 15,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "SYMBOL_Instance": {
+                                                "SYMBOL_name": "GNumber",
+                                                "Instance_Name": "",
+                                                "symbolType": "graphic",
+                                                "firstFrame": 5,
+                                                "loop": "loop",
+                                                "transformationPoint": {
+                                                    "x": 0.0,
+                                                    "y": 0.0
+                                                },
+                                                "Matrix3D": {
+                                                    "m00": 1.0,
+                                                    "m01": 0.0,
+                                                    "m02": 0.0,
+                                                    "m03": 0.0,
+                                                    "m10": 0.0,
+                                                    "m11": 1.0,
+                                                    "m12": 0.0,
+                                                    "m13": 0.0,
+                                                    "m20": 0.0,
+                                                    "m21": 0.0,
+                                                    "m22": 1.0,
+                                                    "m23": 0.0,
+                                                    "m30": 170.0,
+                                                    "m31": -10.0,
+                                                    "m32": 0.0,
+                                                    "m33": 1.0
+                                                },
+                                                "DecomposedMatrix": {
+                                                    "Position": {
+                                                        "x": 170.0,
+                                                        "y": -10.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Rotation": {
+                                                        "x": 0.0,
+                                                        "y": -0.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Scaling": {
+                                                        "x": 1.0,
+                                                        "y": 1.0,
+                                                        "z": 1.0
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 16,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "SYMBOL_Instance": {
+                                                "SYMBOL_name": "GNumber",
+                                                "Instance_Name": "",
+                                                "symbolType": "graphic",
+                                                "firstFrame": 0,
+                                                "loop": "loop",
+                                                "transformationPoint": {
+                                                    "x": 0.0,
+                                                    "y": 0.0
+                                                },
+                                                "Matrix3D": {
+                                                    "m00": 1.0,
+                                                    "m01": 0.0,
+                                                    "m02": 0.0,
+                                                    "m03": 0.0,
+                                                    "m10": 0.0,
+                                                    "m11": 1.0,
+                                                    "m12": 0.0,
+                                                    "m13": 0.0,
+                                                    "m20": 0.0,
+                                                    "m21": 0.0,
+                                                    "m22": 1.0,
+                                                    "m23": 0.0,
+                                                    "m30": 170.0,
+                                                    "m31": -10.0,
+                                                    "m32": 0.0,
+                                                    "m33": 1.0
+                                                },
+                                                "DecomposedMatrix": {
+                                                    "Position": {
+                                                        "x": 170.0,
+                                                        "y": -10.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Rotation": {
+                                                        "x": 0.0,
+                                                        "y": -0.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Scaling": {
+                                                        "x": 1.0,
+                                                        "y": 1.0,
+                                                        "z": 1.0
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 17,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "SYMBOL_Instance": {
+                                                "SYMBOL_name": "GNumber",
+                                                "Instance_Name": "",
+                                                "symbolType": "graphic",
+                                                "firstFrame": 1,
+                                                "loop": "loop",
+                                                "transformationPoint": {
+                                                    "x": 0.0,
+                                                    "y": 0.0
+                                                },
+                                                "Matrix3D": {
+                                                    "m00": 1.0,
+                                                    "m01": 0.0,
+                                                    "m02": 0.0,
+                                                    "m03": 0.0,
+                                                    "m10": 0.0,
+                                                    "m11": 1.0,
+                                                    "m12": 0.0,
+                                                    "m13": 0.0,
+                                                    "m20": 0.0,
+                                                    "m21": 0.0,
+                                                    "m22": 1.0,
+                                                    "m23": 0.0,
+                                                    "m30": 170.0,
+                                                    "m31": -10.0,
+                                                    "m32": 0.0,
+                                                    "m33": 1.0
+                                                },
+                                                "DecomposedMatrix": {
+                                                    "Position": {
+                                                        "x": 170.0,
+                                                        "y": -10.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Rotation": {
+                                                        "x": 0.0,
+                                                        "y": -0.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Scaling": {
+                                                        "x": 1.0,
+                                                        "y": 1.0,
+                                                        "z": 1.0
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 18,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "SYMBOL_Instance": {
+                                                "SYMBOL_name": "GNumber",
+                                                "Instance_Name": "",
+                                                "symbolType": "graphic",
+                                                "firstFrame": 2,
+                                                "loop": "loop",
+                                                "transformationPoint": {
+                                                    "x": 0.0,
+                                                    "y": 0.0
+                                                },
+                                                "Matrix3D": {
+                                                    "m00": 1.0,
+                                                    "m01": 0.0,
+                                                    "m02": 0.0,
+                                                    "m03": 0.0,
+                                                    "m10": 0.0,
+                                                    "m11": 1.0,
+                                                    "m12": 0.0,
+                                                    "m13": 0.0,
+                                                    "m20": 0.0,
+                                                    "m21": 0.0,
+                                                    "m22": 1.0,
+                                                    "m23": 0.0,
+                                                    "m30": 170.0,
+                                                    "m31": -10.0,
+                                                    "m32": 0.0,
+                                                    "m33": 1.0
+                                                },
+                                                "DecomposedMatrix": {
+                                                    "Position": {
+                                                        "x": 170.0,
+                                                        "y": -10.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Rotation": {
+                                                        "x": 0.0,
+                                                        "y": -0.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Scaling": {
+                                                        "x": 1.0,
+                                                        "y": 1.0,
+                                                        "z": 1.0
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 19,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "SYMBOL_Instance": {
+                                                "SYMBOL_name": "GNumber",
+                                                "Instance_Name": "",
+                                                "symbolType": "graphic",
+                                                "firstFrame": 3,
+                                                "loop": "loop",
+                                                "transformationPoint": {
+                                                    "x": 0.0,
+                                                    "y": 0.0
+                                                },
+                                                "Matrix3D": {
+                                                    "m00": 1.0,
+                                                    "m01": 0.0,
+                                                    "m02": 0.0,
+                                                    "m03": 0.0,
+                                                    "m10": 0.0,
+                                                    "m11": 1.0,
+                                                    "m12": 0.0,
+                                                    "m13": 0.0,
+                                                    "m20": 0.0,
+                                                    "m21": 0.0,
+                                                    "m22": 1.0,
+                                                    "m23": 0.0,
+                                                    "m30": 170.0,
+                                                    "m31": -10.0,
+                                                    "m32": 0.0,
+                                                    "m33": 1.0
+                                                },
+                                                "DecomposedMatrix": {
+                                                    "Position": {
+                                                        "x": 170.0,
+                                                        "y": -10.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Rotation": {
+                                                        "x": 0.0,
+                                                        "y": -0.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Scaling": {
+                                                        "x": 1.0,
+                                                        "y": 1.0,
+                                                        "z": 1.0
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "Layer_name": "Layer_2",
+                            "Frames": [
+                                {
+                                    "index": 0,
+                                    "duration": 9,
+                                    "elements": [
+                                        {
+                                            "SYMBOL_Instance": {
+                                                "SYMBOL_name": "MCCircle",
+                                                "Instance_Name": "",
+                                                "symbolType": "movieclip",
+                                                "transformationPoint": {
+                                                    "x": 0.0,
+                                                    "y": 0.0
+                                                },
+                                                "Matrix3D": {
+                                                    "m00": 1.0,
+                                                    "m01": 0.0,
+                                                    "m02": 0.0,
+                                                    "m03": 0.0,
+                                                    "m10": 0.0,
+                                                    "m11": 1.0,
+                                                    "m12": 0.0,
+                                                    "m13": 0.0,
+                                                    "m20": 0.0,
+                                                    "m21": 0.0,
+                                                    "m22": 1.0,
+                                                    "m23": 0.0,
+                                                    "m30": -90.0,
+                                                    "m31": 10.0,
+                                                    "m32": 0.0,
+                                                    "m33": 1.0
+                                                },
+                                                "DecomposedMatrix": {
+                                                    "Position": {
+                                                        "x": -90.0,
+                                                        "y": 10.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Rotation": {
+                                                        "x": 0.0,
+                                                        "y": -0.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Scaling": {
+                                                        "x": 1.0,
+                                                        "y": 1.0,
+                                                        "z": 1.0
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 9,
+                                    "duration": 11,
+                                    "elements": []
+                                }
+                            ]
+                        },
+                        {
+                            "Layer_name": "Layer_1",
+                            "Frames": [
+                                {
+                                    "index": 0,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0001",
+                                                "Matrix3D": {
+                                                    "m00": 0.916656494140625,
+                                                    "m01": 0.0,
+                                                    "m02": 0.0,
+                                                    "m03": 0.0,
+                                                    "m10": 0.0,
+                                                    "m11": 0.916656494140625,
+                                                    "m12": 0.0,
+                                                    "m13": 0.0,
+                                                    "m20": 0.0,
+                                                    "m21": 0.0,
+                                                    "m22": 1.0,
+                                                    "m23": 0.0,
+                                                    "m30": -78.8,
+                                                    "m31": -78.8,
+                                                    "m32": 0.0,
+                                                    "m33": 1.0
+                                                },
+                                                "DecomposedMatrix": {
+                                                    "Position": {
+                                                        "x": -78.8,
+                                                        "y": -78.8,
+                                                        "z": 0.0
+                                                    },
+                                                    "Rotation": {
+                                                        "x": 0.0,
+                                                        "y": -0.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Scaling": {
+                                                        "x": 0.916656494140625,
+                                                        "y": 0.916656494140625,
+                                                        "z": 1.0
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 1,
+                                    "duration": 8,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0002",
+                                                "Matrix3D": {
+                                                    "m00": 0.916656494140625,
+                                                    "m01": 0.0,
+                                                    "m02": 0.0,
+                                                    "m03": 0.0,
+                                                    "m10": 0.0,
+                                                    "m11": 0.916656494140625,
+                                                    "m12": 0.0,
+                                                    "m13": 0.0,
+                                                    "m20": 0.0,
+                                                    "m21": 0.0,
+                                                    "m22": 1.0,
+                                                    "m23": 0.0,
+                                                    "m30": -106.3,
+                                                    "m31": -106.3,
+                                                    "m32": 0.0,
+                                                    "m33": 1.0
+                                                },
+                                                "DecomposedMatrix": {
+                                                    "Position": {
+                                                        "x": -106.3,
+                                                        "y": -106.3,
+                                                        "z": 0.0
+                                                    },
+                                                    "Rotation": {
+                                                        "x": 0.0,
+                                                        "y": -0.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Scaling": {
+                                                        "x": 0.916656494140625,
+                                                        "y": 0.916656494140625,
+                                                        "z": 1.0
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 9,
+                                    "duration": 11,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0003",
+                                                "Matrix3D": {
+                                                    "m00": 0.916656494140625,
+                                                    "m01": 0.0,
+                                                    "m02": 0.0,
+                                                    "m03": 0.0,
+                                                    "m10": 0.0,
+                                                    "m11": 0.916656494140625,
+                                                    "m12": 0.0,
+                                                    "m13": 0.0,
+                                                    "m20": 0.0,
+                                                    "m21": 0.0,
+                                                    "m22": 1.0,
+                                                    "m23": 0.0,
+                                                    "m30": -96.2,
+                                                    "m31": -96.2,
+                                                    "m32": 0.0,
+                                                    "m33": 1.0
+                                                },
+                                                "DecomposedMatrix": {
+                                                    "Position": {
+                                                        "x": -96.2,
+                                                        "y": -96.2,
+                                                        "z": 0.0
+                                                    },
+                                                    "Rotation": {
+                                                        "x": 0.0,
+                                                        "y": -0.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Scaling": {
+                                                        "x": 0.916656494140625,
+                                                        "y": 0.916656494140625,
+                                                        "z": 1.0
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "SYMBOL_name": "GNumber",
+                "TIMELINE": {
+                    "LAYERS": [
+                        {
+                            "Layer_name": "Layer_1",
+                            "Frames": [
+                                {
+                                    "index": 0,
+                                    "duration": 2,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0004",
+                                                "Matrix3D": {
+                                                    "m00": 0.916656494140625,
+                                                    "m01": 0.0,
+                                                    "m02": 0.0,
+                                                    "m03": 0.0,
+                                                    "m10": 0.0,
+                                                    "m11": 0.916656494140625,
+                                                    "m12": 0.0,
+                                                    "m13": 0.0,
+                                                    "m20": 0.0,
+                                                    "m21": 0.0,
+                                                    "m22": 1.0,
+                                                    "m23": 0.0,
+                                                    "m30": -26.55,
+                                                    "m31": -34.8,
+                                                    "m32": 0.0,
+                                                    "m33": 1.0
+                                                },
+                                                "DecomposedMatrix": {
+                                                    "Position": {
+                                                        "x": -26.55,
+                                                        "y": -34.8,
+                                                        "z": 0.0
+                                                    },
+                                                    "Rotation": {
+                                                        "x": 0.0,
+                                                        "y": -0.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Scaling": {
+                                                        "x": 0.916656494140625,
+                                                        "y": 0.916656494140625,
+                                                        "z": 1.0
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 2,
+                                    "duration": 2,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0005",
+                                                "Matrix3D": {
+                                                    "m00": 0.916656494140625,
+                                                    "m01": 0.0,
+                                                    "m02": 0.0,
+                                                    "m03": 0.0,
+                                                    "m10": 0.0,
+                                                    "m11": 0.916656494140625,
+                                                    "m12": 0.0,
+                                                    "m13": 0.0,
+                                                    "m20": 0.0,
+                                                    "m21": 0.0,
+                                                    "m22": 1.0,
+                                                    "m23": 0.0,
+                                                    "m30": -23.8,
+                                                    "m31": -34.8,
+                                                    "m32": 0.0,
+                                                    "m33": 1.0
+                                                },
+                                                "DecomposedMatrix": {
+                                                    "Position": {
+                                                        "x": -23.8,
+                                                        "y": -34.8,
+                                                        "z": 0.0
+                                                    },
+                                                    "Rotation": {
+                                                        "x": 0.0,
+                                                        "y": -0.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Scaling": {
+                                                        "x": 0.916656494140625,
+                                                        "y": 0.916656494140625,
+                                                        "z": 1.0
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 4,
+                                    "duration": 2,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0006",
+                                                "Matrix3D": {
+                                                    "m00": 0.916656494140625,
+                                                    "m01": 0.0,
+                                                    "m02": 0.0,
+                                                    "m03": 0.0,
+                                                    "m10": 0.0,
+                                                    "m11": 0.916656494140625,
+                                                    "m12": 0.0,
+                                                    "m13": 0.0,
+                                                    "m20": 0.0,
+                                                    "m21": 0.0,
+                                                    "m22": 1.0,
+                                                    "m23": 0.0,
+                                                    "m30": -25.65,
+                                                    "m31": -34.8,
+                                                    "m32": 0.0,
+                                                    "m33": 1.0
+                                                },
+                                                "DecomposedMatrix": {
+                                                    "Position": {
+                                                        "x": -25.65,
+                                                        "y": -34.8,
+                                                        "z": 0.0
+                                                    },
+                                                    "Rotation": {
+                                                        "x": 0.0,
+                                                        "y": -0.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Scaling": {
+                                                        "x": 0.916656494140625,
+                                                        "y": 0.916656494140625,
+                                                        "z": 1.0
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "SYMBOL_name": "MCCircle",
+                "TIMELINE": {
+                    "LAYERS": [
+                        {
+                            "Layer_name": "Layer_2",
+                            "Frames": [
+                                {
+                                    "index": 0,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "ATLAS_SPRITE_instance": {
+                                                "name": "0000",
+                                                "Matrix3D": {
+                                                    "m00": 0.916656494140625,
+                                                    "m01": 0.0,
+                                                    "m02": 0.0,
+                                                    "m03": 0.0,
+                                                    "m10": 0.0,
+                                                    "m11": 0.916656494140625,
+                                                    "m12": 0.0,
+                                                    "m13": 0.0,
+                                                    "m20": 0.0,
+                                                    "m21": 0.0,
+                                                    "m22": 1.0,
+                                                    "m23": 0.0,
+                                                    "m30": -48.55,
+                                                    "m31": -48.55,
+                                                    "m32": 0.0,
+                                                    "m33": 1.0
+                                                },
+                                                "DecomposedMatrix": {
+                                                    "Position": {
+                                                        "x": -48.55,
+                                                        "y": -48.55,
+                                                        "z": 0.0
+                                                    },
+                                                    "Rotation": {
+                                                        "x": 0.0,
+                                                        "y": -0.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Scaling": {
+                                                        "x": 0.916656494140625,
+                                                        "y": 0.916656494140625,
+                                                        "z": 1.0
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "SYMBOL_name": "MCNested",
+                "TIMELINE": {
+                    "LAYERS": [
+                        {
+                            "Layer_name": "Layer_2",
+                            "Frames": [
+                                {
+                                    "index": 0,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "SYMBOL_Instance": {
+                                                "SYMBOL_name": "MCSquare",
+                                                "Instance_Name": "",
+                                                "symbolType": "movieclip",
+                                                "transformationPoint": {
+                                                    "x": 0.0,
+                                                    "y": 0.0
+                                                },
+                                                "Matrix3D": {
+                                                    "m00": 0.6451416015625,
+                                                    "m01": 0.0,
+                                                    "m02": 0.0,
+                                                    "m03": 0.0,
+                                                    "m10": 0.0,
+                                                    "m11": 0.6451416015625,
+                                                    "m12": 0.0,
+                                                    "m13": 0.0,
+                                                    "m20": 0.0,
+                                                    "m21": 0.0,
+                                                    "m22": 1.0,
+                                                    "m23": 0.0,
+                                                    "m30": 150.0,
+                                                    "m31": -160.0,
+                                                    "m32": 0.0,
+                                                    "m33": 1.0
+                                                },
+                                                "DecomposedMatrix": {
+                                                    "Position": {
+                                                        "x": 150.0,
+                                                        "y": -160.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Rotation": {
+                                                        "x": 0.0,
+                                                        "y": -0.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Scaling": {
+                                                        "x": 0.6451416015625,
+                                                        "y": 0.6451416015625,
+                                                        "z": 1.0
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "Layer_name": "Layer_1",
+                            "Frames": [
+                                {
+                                    "index": 0,
+                                    "duration": 1,
+                                    "elements": [
+                                        {
+                                            "SYMBOL_Instance": {
+                                                "SYMBOL_name": "MCSquare",
+                                                "Instance_Name": "",
+                                                "symbolType": "movieclip",
+                                                "transformationPoint": {
+                                                    "x": 0.05,
+                                                    "y": 0.05
+                                                },
+                                                "Matrix3D": {
+                                                    "m00": 1.090911865234375,
+                                                    "m01": 0.0,
+                                                    "m02": 0.0,
+                                                    "m03": 0.0,
+                                                    "m10": 0.0,
+                                                    "m11": 1.090911865234375,
+                                                    "m12": 0.0,
+                                                    "m13": 0.0,
+                                                    "m20": 0.0,
+                                                    "m21": 0.0,
+                                                    "m22": 1.0,
+                                                    "m23": 0.0,
+                                                    "m30": -35.0,
+                                                    "m31": 0.0,
+                                                    "m32": 0.0,
+                                                    "m33": 1.0
+                                                },
+                                                "DecomposedMatrix": {
+                                                    "Position": {
+                                                        "x": -35.0,
+                                                        "y": 0.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Rotation": {
+                                                        "x": 0.0,
+                                                        "y": -0.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Scaling": {
+                                                        "x": 1.090911865234375,
+                                                        "y": 1.090911865234375,
+                                                        "z": 1.0
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "SYMBOL_Instance": {
+                                                "SYMBOL_name": "MCCircle",
+                                                "Instance_Name": "",
+                                                "symbolType": "movieclip",
+                                                "transformationPoint": {
+                                                    "x": 0.05,
+                                                    "y": -0.05
+                                                },
+                                                "Matrix3D": {
+                                                    "m00": 0.79998779296875,
+                                                    "m01": 0.0,
+                                                    "m02": 0.0,
+                                                    "m03": 0.0,
+                                                    "m10": 0.0,
+                                                    "m11": 0.79998779296875,
+                                                    "m12": 0.0,
+                                                    "m13": 0.0,
+                                                    "m20": 0.0,
+                                                    "m21": 0.0,
+                                                    "m22": 1.0,
+                                                    "m23": 0.0,
+                                                    "m30": 189.95,
+                                                    "m31": -19.95,
+                                                    "m32": 0.0,
+                                                    "m33": 1.0
+                                                },
+                                                "DecomposedMatrix": {
+                                                    "Position": {
+                                                        "x": 189.95,
+                                                        "y": -19.95,
+                                                        "z": 0.0
+                                                    },
+                                                    "Rotation": {
+                                                        "x": 0.0,
+                                                        "y": -0.0,
+                                                        "z": 0.0
+                                                    },
+                                                    "Scaling": {
+                                                        "x": 0.79998779296875,
+                                                        "y": 0.79998779296875,
+                                                        "z": 1.0
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "metadata": {
+        "framerate": 60.0
+    }
+}
