@@ -7,7 +7,6 @@ test('createClipInstance', () => {
     const instance = frame.createClipInstance({
         itemName: clip.name,
         name: '0001',
-        matrix: new Matrix(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1),
     })
 
 })

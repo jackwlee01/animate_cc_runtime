@@ -7,7 +7,7 @@ import { Color, Filters } from "./json/AnimationJson";
 
 export type InstanceProps = Omit<DrawableProps, 'id' | 'library'> & {
     itemName:string,
-    matrix:Matrix,
+    matrix?:Matrix,
     frame:Frame,
     filters?:Filters|null,
     color?:Color|null,
@@ -39,7 +39,7 @@ export class Instance extends Drawable{
         });
 
         this.itemName = props.itemName;
-        this.matrix3d = props.matrix;
+        this.matrix3d = props.matrix || new Matrix(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
         this.filters = props.filters || null;
         this.color = props.color || null;
         //this.position = props.position;
