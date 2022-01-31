@@ -2,7 +2,7 @@ import { Float } from "../types/Float"
 import { Int } from "../types/Int"
 import { StringColor } from "../types/StringColor"
 
-export type Matrix3D = Float[] | {
+export type JsonMatrix3D = Float[] | {
     m00:Float;
     m01:Float;
     m02:Float;
@@ -22,48 +22,48 @@ export type Matrix3D = Float[] | {
 }
 
 
-export type Point2D = {
+export type JsonPoint2D = {
     x:Float;
     y:Float;
 }
 
 
-export type Position = {
-    x:Float;
-    y:Float;
-    z:Float;
-}
-
-
-export type Rotation = {
+export type JsonPosition = {
     x:Float;
     y:Float;
     z:Float;
 }
 
 
-export type Scaling = {
+export type JsonRotation = {
     x:Float;
     y:Float;
     z:Float;
 }
 
 
-export type DecomposedMatrix = {
-    position:Position;
-    rotation:Rotation;
-    scaling:Scaling;
+export type JsonScaling = {
+    x:Float;
+    y:Float;
+    z:Float;
+}
+
+
+export type JsonDecomposedMatrix = {
+    position:JsonPosition;
+    rotation:JsonRotation;
+    scaling:JsonScaling;
 }
 
 
 
-export type TransformationPoint = {
+export type JsonTransformationPoint = {
     x:Float;
     y:Float;
 }
 
 
-export type Color = {
+export type JsonColor = {
     mode:'Alpha'|'CA',
     alphaMultiplier:Float,
 } | {
@@ -86,9 +86,9 @@ export type Color = {
 }
 
 
-export type FilterType = 'DropShadowFilter' | 'BlurFilter' | 'GlowFilter' | 'GradientGlowFilter' | 'GradientBevelFilter' | 'AdjustColorFilter'
-export type Filter = FilterDropShadow|FilterBlur|FilterGlow|FilterGradientGlow|FilterGradientBevel;
-export type FilterDropShadow = {
+export type JsonFilterType = 'DropShadowFilter' | 'BlurFilter' | 'GlowFilter' | 'GradientGlowFilter' | 'GradientBevelFilter' | 'AdjustColorFilter'
+export type JsonFilter = JsonFilterDropShadow|JsonFilterBlur|JsonFilterGlow|JsonFilterGradientGlow|JsonFilterGradientBevel;
+export type JsonFilterDropShadow = {
     angle: Float,
     blurX: Float,
     blurY: Float,
@@ -101,12 +101,12 @@ export type FilterDropShadow = {
     quality: Int,
     strength: Float,
 }
-export type FilterBlur = {
+export type JsonFilterBlur = {
     blurX: Float,
     blurY: Float,
     quality: Int,
 }
-export type FilterGlow = {
+export type JsonFilterGlow = {
     blurX: Float,
     blurY: Float,
     color: StringColor,
@@ -116,7 +116,7 @@ export type FilterGlow = {
     knockout: boolean,
     inner: boolean,
 }
-export type FilterGradientGlow = {
+export type JsonFilterGradientGlow = {
     angle: Float,
     blurX: Float,
     blurY: Float,
@@ -132,7 +132,7 @@ export type FilterGradientGlow = {
     }>
 }
 
-export type FilterGradientBevel = {
+export type JsonFilterGradientBevel = {
     angle: Float,
     blurX: Float,
     blurY: Float,
@@ -148,7 +148,7 @@ export type FilterGradientBevel = {
     }>
 }
 
-export type FilterAdjustColor = {
+export type JsonFilterAdjustColor = {
     brightness: Float,
     contrast: Float,
     saturation: Float,
@@ -156,32 +156,32 @@ export type FilterAdjustColor = {
 }
 
 // WARNING: DUPLICATE KEYS MAY EXIST IN JSON!!!! WHY THE HECK ISN'T THIS AN ARRAY??!!
-export type Filters = {
-    DropShadowFilter?:FilterDropShadow,
-    BlurFilter?:FilterBlur,
-    GlowFilter?:FilterGlow,
-    GradientGlow?:FilterGradientGlow,
-    GradientBevel?:FilterGradientBevel,
-    AdjustColor?:FilterAdjustColor,
+export type JsonFilters = {
+    DropShadowFilter?:JsonFilterDropShadow,
+    BlurFilter?:JsonFilterBlur,
+    GlowFilter?:JsonFilterGlow,
+    GradientGlow?:JsonFilterGradientGlow,
+    GradientBevel?:JsonFilterGradientBevel,
+    AdjustColor?:JsonFilterAdjustColor,
 }
 
-export type AtlasSpriteInstance = {
+export type JsonAtlasSpriteInstance = {
     name:string;
-    matrix3D:Matrix3D;
-    decomposedMatrix:DecomposedMatrix;
-    filters?:Filters;
+    matrix3D:JsonMatrix3D;
+    decomposedMatrix:JsonDecomposedMatrix;
+    filters?:JsonFilters;
 }
 
 
-export type SymbolInstance = {
+export type JsonSymbolInstance = {
     symbolName:string;
     instanceName:string;
-    transformationPoint:Point2D;
-    matrix3D:Matrix3D;
-    decomposedMatrix:DecomposedMatrix;
-    filters?:Filters;
+    transformationPoint:JsonPoint2D;
+    matrix3D:JsonMatrix3D;
+    decomposedMatrix:JsonDecomposedMatrix;
+    filters?:JsonFilters;
     firstFrame?:Int;
-    color?:Color;
+    color?:JsonColor;
 } & ({
     symbolType: "graphic",
     firstFrame: number,
@@ -191,59 +191,59 @@ export type SymbolInstance = {
 })
 
 
-export type ElementInstance = {
-    atlasSpriteInstance:AtlasSpriteInstance;
+export type JsonElementInstance = {
+    atlasSpriteInstance:JsonAtlasSpriteInstance;
 } | {
-    symbolInstance:SymbolInstance;
+    symbolInstance:JsonSymbolInstance;
 }
 
 
-export type Keyframe = {
+export type JsonKeyframe = {
     index:Int;
     duration:Int;
-    elements:Array<ElementInstance>;
+    elements:Array<JsonElementInstance>;
     name?:string;
 }
 
 
-export type Layer = {
+export type JsonLayer = {
     layerName:string;
     layerType?: "Clipper";
     clippedBy?: string;
-    frames:Array<Keyframe>;
+    frames:Array<JsonKeyframe>;
 }
 
 
-export type Timeline = {
-    layers:Array<Layer>;
+export type JsonTimeline = {
+    layers:Array<JsonLayer>;
 }
 
 
-export type AnimationRoot = {
+export type JsonAnimationRoot = {
     name:string;
     symbolName:string;
-    timeline:Timeline;
+    timeline:JsonTimeline;
 }
 
 
-export type LibrarySymbol = {
+export type JsonLibrarySymbol = {
     symbolName:string;
-    timeline:Timeline;
+    timeline:JsonTimeline;
 }
 
 
-export type SymbolDictionary = {
-    symbols:Array<LibrarySymbol>;
+export type JsonSymbolDictionary = {
+    symbols:Array<JsonLibrarySymbol>;
 }
 
 
-export type Metadata = {
+export type JsonMetadata = {
     framerate:Float;
 }
 
 
-export type AnimationJson = {
-    animation:AnimationRoot;
-    symbolDictionary:SymbolDictionary;
-    metadata:Metadata;
+export type JsonAnimationData = {
+    animation:JsonAnimationRoot;
+    symbolDictionary:JsonSymbolDictionary;
+    metadata:JsonMetadata;
 }

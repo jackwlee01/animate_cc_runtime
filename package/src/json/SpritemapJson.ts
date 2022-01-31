@@ -1,6 +1,6 @@
 import { Float } from "../types/Float"
 
-type Sprite = {
+type JsonSprite = {
     name:string,
     x:Float,
     y:Float,
@@ -11,29 +11,29 @@ type Sprite = {
 
 
 
-type Atlas = {
-    sprites:Array<{sprite:Sprite}>;
+type JsonAtlas = {
+    sprites:Array<{sprite:JsonSprite}>;
 }
 
 
-type Size = {
+type JsonSize = {
     w:Float;
     h:Float;
 }
 
 
-type Meta = {
+type JsonMeta = {
     app:string;
     version:string;
     image:string;
     format:string;
-    size:Size;
+    size:JsonSize;
     resolution:string;
 }
 
 
-export type SpriteMapJson = {
-    atlas:Atlas;
-    meta:Meta;
+export type JsonSpriteMap = {
+    atlas:JsonAtlas;
+    meta:JsonMeta;
 }
 

@@ -3,7 +3,7 @@ import { ClipInstance } from "./ClipInstance";
 import { Drawable } from "./Drawable"
 import { Frame } from "./Frame";
 import { Instance } from "./Instance"
-import { FilterDropShadow, FilterType } from "./json/AnimationJson";
+import { JsonFilterDropShadow, JsonFilterType } from "./json/AnimationJson";
 import { Layer } from "./Layer";
 import { Sprite } from "./Sprite"
 import { SpriteInstance } from "./SpriteInstance";
@@ -141,9 +141,9 @@ export class SceneCanvas2d extends Scene{
         // TODO: Handle lerp on filters
         if(item.filters){
             for(let k of Object.keys(item.filters)){
-                const key = k as FilterType;
+                const key = k as JsonFilterType;
                 if(key=='DropShadowFilter'){
-                    const filter = item.filters[key] as FilterDropShadow;
+                    const filter = item.filters[key] as JsonFilterDropShadow;
                     this.pushDropShadow(
                         filter.color + (Math.round(filter.strength*255)).toString(16),
                         filter.blurX,

@@ -2,7 +2,7 @@ import { Drawable } from "./Drawable";
 import { Frame } from "./Frame";
 import { DrawableProps } from './Drawable'
 import { Matrix } from "./geom/Matrix";
-import { Color, Filters } from "./json/AnimationJson";
+import { JsonColor, JsonFilters } from "./json/AnimationJson";
 import { Float } from "./types/Float";
 
 
@@ -10,8 +10,8 @@ export type InstanceProps = Omit<DrawableProps, 'id' | 'library'> & {
     itemName:string,
     matrix?:Matrix,
     frame:Frame,
-    filters?:Filters|null,
-    color?:Color|null,
+    filters?:JsonFilters|null,
+    color?:JsonColor|null,
     //position:Vec3,
     //scale:Vec3,
     //rotation:Vec3,
@@ -24,8 +24,8 @@ export class Instance extends Drawable{
     frame:Frame;
     index:number;
     itemName:string;
-    filters:Filters|null;
-    color:Color|null;
+    filters:JsonFilters|null;
+    color:JsonColor|null;
     //position:Vec3;
     //scale:Vec3;
     //rotation:Vec3;

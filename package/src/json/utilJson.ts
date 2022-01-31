@@ -1,4 +1,4 @@
-import { AnimationJson } from "./AnimationJson";
+import { JsonAnimationData } from "./AnimationJson";
 
 const keys:Record<string, string> = {
     // Fix inconsistent names

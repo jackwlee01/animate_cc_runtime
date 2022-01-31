@@ -1,4 +1,4 @@
-import { AnimationJson } from "./json/AnimationJson";
+import { JsonAnimationData } from "./json/AnimationJson";
 import { Clip, ClipProps } from "./Clip";
 import { Vec2 } from "./geom/Vec2";
 import { InstanceProps } from "./Instance";
@@ -7,7 +7,7 @@ import { Atlas, AtlasProps } from "./Atlas";
 import { normaliseJson } from "./json/utilJson";
 import { Scene } from "./Scene";
 import { Matrix } from "./geom/Matrix";
-import { SpriteMapJson } from "./json/SpritemapJson"
+import { JsonSpriteMap } from "./json/SpritemapJson"
 import { createImage } from "./util/createImage";
 
 
@@ -65,8 +65,8 @@ export class Library{
     public async loadData(){
         const animJsonPath = this.path + "/Animation.json";
         const animFetchResult = await fetch(animJsonPath);
-        const dataRaw:AnimationJson = await animFetchResult.json();
-        const data = normaliseJson(dataRaw) as AnimationJson;
+        const dataRaw:JsonAnimationData = await animFetchResult.json();
+        const data = normaliseJson(dataRaw) as JsonAnimationData;
         const spriteNames:Array<string> = [];
 
         // Clip
@@ -160,8 +160,8 @@ export class Library{
             if(this.atlasesBySpriteName[spriteName]==null){
                 const spriteJsonPath = this.path + `/spritemap${pendingAtlasIndex}.json`;
                 const altasFetch = await fetch(spriteJsonPath);
-                const dataRaw:SpriteMapJson = await altasFetch.json();
-                const data = normaliseJson(dataRaw) as SpriteMapJson;
+                const dataRaw:JsonSpriteMap = await altasFetch.json();
+                const data = normaliseJson(dataRaw) as JsonSpriteMap;
 
                 const imagePath = this.path + `/spritemap${pendingAtlasIndex}.png`;
                 const image = await createImage(imagePath) // TODO: This will impact load times. Find a way to make this load parallel. Workers?
