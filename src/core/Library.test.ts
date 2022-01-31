@@ -1,8 +1,9 @@
-import { mockAtlas, mockLib } from "./test/mocks"
+import { mockAtlas, mockImage, mockLib, mockPixelData, mockScene } from "./test/mocks"
 
 
 test("new Library", () => {
-    const lib = mockLib()
+    const scene = mockScene();
+    const lib = scene.createLibrary('lib', './xxx')
     
     expect(lib.atlases).not.toBeNull()
     expect(lib.atlasesBySpriteName).not.toBeNull()
@@ -14,7 +15,17 @@ test("new Library", () => {
 
 
 test("createAtlas", () => {
-    const atlas = mockAtlas()
+    const lib = mockLib()
+    const atlas = lib.createAtlas({
+        image: mockImage(), // Just mock the image
+        app: "My App",
+        version: "0.0.1",
+        imagePath: './xxx',
+        format: "png",
+        size: { w:1920, h:1080 },
+        resolution: '1x'
+    }, mockPixelData())
+    
     expect(atlas).not.toBeNull()
     expect(atlas.library).not.toBeNull()
 })
