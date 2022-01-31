@@ -8,5 +8,5 @@ test('createClipInstance', () => {
         itemName: clip.name,
         name: '0001',
     })
-
+    expect(frame.instances[0]).toBe(instance)
 })

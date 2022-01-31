@@ -175,8 +175,8 @@ export class Canvas2dScene extends Scene{
     private transformInstance(item:Instance, frame:Float, lerp?:boolean){
         if(lerp && item.next){
             const t = (modWrap(frame, item.totalFrames)-item.index) / item.frame.totalFrames;
-            const m1 = item.matrix3d
-            const m2 = item.next.matrix3d 
+            const m1 = item.matrix
+            const m2 = item.next.matrix 
             
             this.ctx.transform(
                 m1._00 + (m2._00-m1._00)*t,
@@ -187,7 +187,7 @@ export class Canvas2dScene extends Scene{
                 m1._31 + (m2._31-m1._31)*t,
             )
         }else{
-            this.ctx.transform(item.matrix3d._00, item.matrix3d._01, item.matrix3d._10, item.matrix3d._11, item.matrix3d._30, item.matrix3d._31)
+            this.ctx.transform(item.matrix._00, item.matrix._01, item.matrix._10, item.matrix._11, item.matrix._30, item.matrix._31)
         }
     }
     

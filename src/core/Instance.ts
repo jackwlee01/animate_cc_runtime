@@ -19,7 +19,7 @@ export type InstanceProps = Omit<DrawableProps, 'id' | 'library'> & {
 
 export class Instance extends Drawable{
 
-    matrix3d:Matrix;
+    matrix:Matrix;
     frame:Frame;
     index:number;
     itemName:string;
@@ -39,7 +39,7 @@ export class Instance extends Drawable{
         });
 
         this.itemName = props.itemName;
-        this.matrix3d = props.matrix || new Matrix(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        this.matrix = props.matrix || new Matrix(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
         this.filters = props.filters || null;
         this.color = props.color || null;
         //this.position = props.position;
