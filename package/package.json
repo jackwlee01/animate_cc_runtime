@@ -8,8 +8,8 @@
     "dist"
   ],
   "scripts": {
-    "prepare": "npm run build",
-    "build": "rimraf dist && tsc --project tsconfig.prod.json",
+    "prebuild": "rimraf dist",
+    "build": "tsc --project tsconfig.prod.json",
     "test": "jest",
     "dev": "live-server bin"
   },
