@@ -1,4 +1,7 @@
 {
     "extends": "./tsconfig",
-    "exclude": ["**/*.test.ts", "**/*.mock.ts", "./dist/**/*", "./examples/**/*"]
+    "exclude": ["**/*.test.ts", "**/*.mock.ts", "./dist/**/*", "./examples/**/*"],
+    "compilerOptions": {
+        "rootDirs": ["src"]
+    }
 }

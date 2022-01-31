@@ -10,7 +10,7 @@
     "build": "tsc --project tsconfig.prod.json",
     "postbuild": "copy package.json dist",
     "build-examples": "parcel build examples/index.html --dist-dir dist-examples/",
-    "start-examples": "parcel examples/index.html",
+    "start-examples": "parcel examples/index.html --dist-dir dist-examples/",
     "test": "jest"
   },
   "alias": {
