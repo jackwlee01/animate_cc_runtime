@@ -64,6 +64,46 @@
     }
   };
 
+  // src/core/geom/Matrix.ts
+  var Matrix = class {
+    constructor(_00, _01, _02, _03, _10, _11, _12, _13, _20, _21, _22, _23, _30, _31, _32, _33) {
+      this._00 = _00;
+      this._01 = _01;
+      this._02 = _02;
+      this._03 = _03;
+      this._10 = _10;
+      this._11 = _11;
+      this._12 = _12;
+      this._13 = _13;
+      this._20 = _20;
+      this._21 = _21;
+      this._22 = _22;
+      this._23 = _23;
+      this._30 = _30;
+      this._31 = _31;
+      this._32 = _32;
+      this._33 = _33;
+      this.data = new Float32Array([
+        _00,
+        _01,
+        _02,
+        _03,
+        _10,
+        _11,
+        _12,
+        _13,
+        _20,
+        _21,
+        _22,
+        _23,
+        _30,
+        _31,
+        _32,
+        _33
+      ]);
+    }
+  };
+
   // src/core/Instance.ts
   var Instance = class extends Drawable {
     constructor(props) {
@@ -72,7 +112,7 @@
         id: `${props.frame.id}.${props.frame.instances.length}`
       }));
       this.itemName = props.itemName;
-      this.matrix3d = props.matrix;
+      this.matrix = props.matrix || new Matrix(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
       this.filters = props.filters || null;
       this.color = props.color || null;
       this.frame = props.frame;
@@ -406,46 +446,6 @@
     }
   }
 
-  // src/core/geom/Matrix.ts
-  var Matrix = class {
-    constructor(_00, _01, _02, _03, _10, _11, _12, _13, _20, _21, _22, _23, _30, _31, _32, _33) {
-      this._00 = _00;
-      this._01 = _01;
-      this._02 = _02;
-      this._03 = _03;
-      this._10 = _10;
-      this._11 = _11;
-      this._12 = _12;
-      this._13 = _13;
-      this._20 = _20;
-      this._21 = _21;
-      this._22 = _22;
-      this._23 = _23;
-      this._30 = _30;
-      this._31 = _31;
-      this._32 = _32;
-      this._33 = _33;
-      this.data = new Float32Array([
-        _00,
-        _01,
-        _02,
-        _03,
-        _10,
-        _11,
-        _12,
-        _13,
-        _20,
-        _21,
-        _22,
-        _23,
-        _30,
-        _31,
-        _32,
-        _33
-      ]);
-    }
-  };
-
   // src/core/util/createImage.ts
   var createImage = (src) => new Promise((resolve) => {
     const img = new Image();
@@ -720,7 +720,7 @@
       this.current.style.transform = `rotate(${z})`;
     }
     transformInstance(item, frame2, lerp) {
-      const m = item.matrix3d;
+      const m = item.matrix;
       this.current.style.transform = `matrix3d(${m._00}, ${m._01}, ${m._02}, ${m._03}, ${m._10}, ${m._11}, ${m._12}, ${m._13}, ${m._20}, ${m._21}, ${m._22}, ${m._23}, ${m._30}, ${m._31}, ${m._32}, ${m._33})`;
     }
   };

@@ -81,6 +81,46 @@
     }
   };
 
+  // src/core/geom/Matrix.ts
+  var Matrix = class {
+    constructor(_00, _01, _02, _03, _10, _11, _12, _13, _20, _21, _22, _23, _30, _31, _32, _33) {
+      this._00 = _00;
+      this._01 = _01;
+      this._02 = _02;
+      this._03 = _03;
+      this._10 = _10;
+      this._11 = _11;
+      this._12 = _12;
+      this._13 = _13;
+      this._20 = _20;
+      this._21 = _21;
+      this._22 = _22;
+      this._23 = _23;
+      this._30 = _30;
+      this._31 = _31;
+      this._32 = _32;
+      this._33 = _33;
+      this.data = new Float32Array([
+        _00,
+        _01,
+        _02,
+        _03,
+        _10,
+        _11,
+        _12,
+        _13,
+        _20,
+        _21,
+        _22,
+        _23,
+        _30,
+        _31,
+        _32,
+        _33
+      ]);
+    }
+  };
+
   // src/core/Instance.ts
   var Instance = class extends Drawable {
     constructor(props) {
@@ -89,7 +129,7 @@
         id: `${props.frame.id}.${props.frame.instances.length}`
       }));
       this.itemName = props.itemName;
-      this.matrix3d = props.matrix;
+      this.matrix = props.matrix || new Matrix(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
       this.filters = props.filters || null;
       this.color = props.color || null;
       this.frame = props.frame;
@@ -423,46 +463,6 @@
     }
   }
 
-  // src/core/geom/Matrix.ts
-  var Matrix = class {
-    constructor(_00, _01, _02, _03, _10, _11, _12, _13, _20, _21, _22, _23, _30, _31, _32, _33) {
-      this._00 = _00;
-      this._01 = _01;
-      this._02 = _02;
-      this._03 = _03;
-      this._10 = _10;
-      this._11 = _11;
-      this._12 = _12;
-      this._13 = _13;
-      this._20 = _20;
-      this._21 = _21;
-      this._22 = _22;
-      this._23 = _23;
-      this._30 = _30;
-      this._31 = _31;
-      this._32 = _32;
-      this._33 = _33;
-      this.data = new Float32Array([
-        _00,
-        _01,
-        _02,
-        _03,
-        _10,
-        _11,
-        _12,
-        _13,
-        _20,
-        _21,
-        _22,
-        _23,
-        _30,
-        _31,
-        _32,
-        _33
-      ]);
-    }
-  };
-
   // src/core/util/createImage.ts
   var createImage = (src) => new Promise((resolve) => {
     const img = new Image();
@@ -769,11 +769,11 @@
     transformInstance(item, frame2, lerp) {
       if (lerp && item.next) {
         const t = (modWrap(frame2, item.totalFrames) - item.index) / item.frame.totalFrames;
-        const m1 = item.matrix3d;
-        const m2 = item.next.matrix3d;
+        const m1 = item.matrix;
+        const m2 = item.next.matrix;
         this.ctx.transform(m1._00 + (m2._00 - m1._00) * t, m1._01 + (m2._01 - m1._01) * t, m1._10 + (m2._10 - m1._10) * t, m1._11 + (m2._11 - m1._11) * t, m1._30 + (m2._30 - m1._30) * t, m1._31 + (m2._31 - m1._31) * t);
       } else {
-        this.ctx.transform(item.matrix3d._00, item.matrix3d._01, item.matrix3d._10, item.matrix3d._11, item.matrix3d._30, item.matrix3d._31);
+        this.ctx.transform(item.matrix._00, item.matrix._01, item.matrix._10, item.matrix._11, item.matrix._30, item.matrix._31);
       }
     }
   };
