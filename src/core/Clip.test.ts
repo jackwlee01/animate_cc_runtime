@@ -1,5 +1,4 @@
-import { Clip, Frame } from ".."
-import { mockClip, mockLayer, mockLib } from "./test/mocks"
+import { mockClip } from "./test/mocks"
 
 
 test('createLayer', () => {
