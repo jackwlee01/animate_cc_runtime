@@ -164,8 +164,8 @@ function update(){
     
     scene.ctx.restore()
 
-    frame = 130
-    //frame += reverse ? -playSpeed : playSpeed;
+    //frame = 130
+    frame += reverse ? -playSpeed : playSpeed;
     requestAnimationFrame(update)
 }
 

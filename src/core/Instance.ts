@@ -3,18 +3,16 @@ import { Frame } from "./Frame";
 import { Matrix2d } from "./geom/Matrix2d";
 import { Vec3 } from "./geom/Vec3";
 import { DrawableProps } from './Drawable'
-import { Matrix3d } from "./geom/Matrix3d";
+import { Matrix } from "./geom/Matrix";
 import { Color, Filters } from "./json/AnimationJson";
 
 
 export type InstanceProps = Omit<DrawableProps, 'id' | 'library'> & {
     itemName:string,
-    // TODO: Use DOMMatrix instead of custom matrix
-    matrix2d:Matrix2d,
-    matrix3d:Matrix3d,
+    matrix3d:Matrix,
     frame:Frame,
-    filters:Filters|null,
-    color:Color|null,
+    filters?:Filters|null,
+    color?:Color|null,
     //position:Vec3,
     //scale:Vec3,
     //rotation:Vec3,
@@ -23,8 +21,7 @@ export type InstanceProps = Omit<DrawableProps, 'id' | 'library'> & {
 
 export class Instance extends Drawable{
 
-    matrix2d:Matrix2d;
-    matrix3d:Matrix3d;
+    matrix3d:Matrix;
     frame:Frame;
     index:number;
     itemName:string;
@@ -44,10 +41,9 @@ export class Instance extends Drawable{
         });
 
         this.itemName = props.itemName;
-        this.matrix2d = props.matrix2d;
         this.matrix3d = props.matrix3d;
-        this.filters = props.filters;
-        this.color = props.color;
+        this.filters = props.filters || null;
+        this.color = props.color || null;
         //this.position = props.position;
         //this.scale = props.scale;
         //this.rotation = props.rotation;

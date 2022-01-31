@@ -39,15 +39,15 @@ export class Frame extends Drawable{
     }
 
 
-    public createClipInstance(props:Omit<ClipInstanceProps, 'frame'>){
-        const clipInstance = new ClipInstance({...props, frame:this})
+    public createClipInstance(props:Omit<ClipInstanceProps, 'frame'|'totalFrames'>){
+        const clipInstance = new ClipInstance({...props, frame:this, totalFrames:this.totalFrames})
         this.instances.push(clipInstance)
         return clipInstance;
     }
 
 
-    public createSpriteInstance(props:Omit<SpriteInstanceProps, 'frame'>){
-        const spriteInstance = new SpriteInstance({...props, frame:this})
+    public createSpriteInstance(props:Omit<SpriteInstanceProps, 'frame'|'totalFrames'>){
+        const spriteInstance = new SpriteInstance({...props, frame:this, totalFrames:this.totalFrames})
         this.instances.push(spriteInstance)
         return spriteInstance
     }

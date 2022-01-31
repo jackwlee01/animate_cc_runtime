@@ -1,5 +1,5 @@
 
-export class Matrix3d{
+export class Matrix{
 
     _00:number; _01:number; _02:number; _03:number;
     _10:number; _11:number; _12:number; _13:number;

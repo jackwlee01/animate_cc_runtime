@@ -175,18 +175,19 @@ export class Canvas2dScene extends Scene{
     private transformInstance(item:Instance, frame:Float, lerp?:boolean){
         if(lerp && item.next){
             const t = (modWrap(frame, item.totalFrames)-item.index) / item.frame.totalFrames;
-            const m1 = item.matrix2d
-            const m2 = item.next.matrix2d 
+            const m1 = item.matrix3d
+            const m2 = item.next.matrix3d 
+            
             this.ctx.transform(
-                m1.a + (m2.a-m1.a)*t,
-                m1.b + (m2.b-m1.b)*t,
-                m1.c + (m2.c-m1.c)*t,
-                m1.d + (m2.d-m1.d)*t,
-                m1.e + (m2.e-m1.e)*t,
-                m1.f + (m2.f-m1.f)*t,
+                m1._00 + (m2._00-m1._00)*t,
+                m1._01 + (m2._01-m1._01)*t,
+                m1._10 + (m2._10-m1._10)*t,
+                m1._11 + (m2._11-m1._11)*t,
+                m1._30 + (m2._30-m1._30)*t,
+                m1._31 + (m2._31-m1._31)*t,
             )
         }else{
-            this.ctx.transform(item.matrix2d.a, item.matrix2d.b, item.matrix2d.c, item.matrix2d.d, item.matrix2d.e, item.matrix2d.f)
+            this.ctx.transform(item.matrix3d._00, item.matrix3d._01, item.matrix3d._10, item.matrix3d._11, item.matrix3d._30, item.matrix3d._31)
         }
     }
     

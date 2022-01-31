@@ -55,6 +55,15 @@
     }
   };
 
+  // src/core/geom/Vec2.ts
+  var Vec2 = class {
+    constructor(props) {
+      this.x = props.x;
+      this.y = props.y;
+      this.data = new Float32Array([this.x, this.y]);
+    }
+  };
+
   // src/core/Instance.ts
   var Instance = class extends Drawable {
     constructor(props) {
@@ -63,10 +72,9 @@
         id: `${props.frame.id}.${props.frame.instances.length}`
       }));
       this.itemName = props.itemName;
-      this.matrix2d = props.matrix2d;
       this.matrix3d = props.matrix3d;
-      this.filters = props.filters;
-      this.color = props.color;
+      this.filters = props.filters || null;
+      this.color = props.color || null;
       this.frame = props.frame;
       this.index = this.frame.instances.length;
     }
@@ -97,8 +105,8 @@
   var ClipInstance = class extends Instance {
     constructor(props) {
       super(props);
-      this.behaviour = props.behaviour;
-      this.transformationPoint = props.transformationPoint;
+      this.behaviour = props.behaviour || { type: "movieclip" };
+      this.transformationPoint = props.transformationPoint || new Vec2({ x: 0, y: 0 });
     }
     get item() {
       return this.library.clipsByName[this.itemName];
@@ -134,12 +142,12 @@
       this.labelName = props.labelName || null;
     }
     createClipInstance(props) {
-      const clipInstance = new ClipInstance(__spreadProps(__spreadValues({}, props), { frame: this }));
+      const clipInstance = new ClipInstance(__spreadProps(__spreadValues({}, props), { frame: this, totalFrames: this.totalFrames }));
       this.instances.push(clipInstance);
       return clipInstance;
     }
     createSpriteInstance(props) {
-      const spriteInstance = new SpriteInstance(__spreadProps(__spreadValues({}, props), { frame: this }));
+      const spriteInstance = new SpriteInstance(__spreadProps(__spreadValues({}, props), { frame: this, totalFrames: this.totalFrames }));
       this.instances.push(spriteInstance);
       return spriteInstance;
     }
@@ -160,7 +168,7 @@
       }));
       this.clip = props.clip;
       this.type = props.type;
-      this.clippedBy = props.clippedBy;
+      this.clippedBy = props.clippedBy || null;
       this.index = this.clip.layers.length;
       this.frames = [];
       this.framesByName = {};
@@ -176,7 +184,7 @@
       if (frame2.labelName) {
         this.labels.push(frame2);
       }
-      this.clip.addFrame(frame2);
+      this.clip.__addFrame(frame2);
       if (this.lastFrame) {
         this.lastFrame.next = frame2;
         frame2.prev = this.lastFrame;
@@ -228,7 +236,7 @@
         this.totalFrames = layer.totalFrames;
       return layer;
     }
-    addFrame(frame2) {
+    __addFrame(frame2) {
       this.framesById[frame2.id] = frame2;
       if (frame2.layer.totalFrames > this.totalFrames)
         this.totalFrames = frame2.layer.totalFrames;
@@ -281,28 +289,6 @@
     }
   };
 
-  // src/core/geom/Vec2.ts
-  var Vec2 = class {
-    constructor(props) {
-      this.x = props.x;
-      this.y = props.y;
-      this.data = new Float32Array([this.x, this.y]);
-    }
-  };
-
-  // src/core/geom/Matrix2d.ts
-  var Matrix2d = class {
-    constructor(a, b, c, d, e, f) {
-      this.a = a;
-      this.b = b;
-      this.c = c;
-      this.d = d;
-      this.e = e;
-      this.f = f;
-      this.data = new Float32Array([this.a, this.b, this.c, this.d, this.e, this.f]);
-    }
-  };
-
   // src/core/Atlas.ts
   var Atlas = class {
     constructor(props) {
@@ -315,24 +301,13 @@
       this.format = props.format;
       this.size = props.size;
       this.resolution = props.resolution;
-      if (this.image.complete == false)
-        throw "Image has not loaded!";
-      const canvas = document.createElement("canvas");
-      canvas.width = this.image.width;
-      canvas.height = this.image.height;
-      const ctx = document.createElement("canvas").getContext("2d");
-      ctx.drawImage(this.image, 0, 0);
-      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-      this.pixelData = {
-        ctx,
-        imageData
-      };
+      this.pixelData = props.pixelData;
     }
     getPixel(x, y) {
       x = Math.floor(x);
       y = Math.floor(y);
-      const data = this.pixelData.imageData.data;
       let i = x + y * this.pixelData.imageData.width;
+      const data = this.pixelData.imageData.data;
       return [
         data[i * 4 + 0],
         data[i * 4 + 1],
@@ -431,8 +406,8 @@
     }
   }
 
-  // src/core/geom/Matrix3d.ts
-  var Matrix3d = class {
+  // src/core/geom/Matrix.ts
+  var Matrix = class {
     constructor(_00, _01, _02, _03, _10, _11, _12, _13, _20, _21, _22, _23, _30, _31, _32, _33) {
       this._00 = _00;
       this._01 = _01;
@@ -501,8 +476,8 @@
         return this.spritesByName[name];
       throw "Cannot find symbol: " + name + " for library: " + this.path;
     }
-    createAtlas(props) {
-      const atlas = new Atlas(__spreadProps(__spreadValues({}, props), { library: this }));
+    createAtlas(props, pixelData) {
+      const atlas = new Atlas(__spreadProps(__spreadValues({}, props), { library: this, pixelData }));
       this.atlases.push(atlas);
       return atlas;
     }
@@ -548,38 +523,28 @@
                 if ("symbolInstance" in elemInstanceData) {
                   const elemData = elemInstanceData.symbolInstance;
                   const m = elemData.matrix3D;
-                  const drawableProps = {
-                    name: frame2.name,
-                    totalFrames: frame2.totalFrames
-                  };
                   const instanceProps = {
                     frame: frame2,
+                    name: frame2.name,
                     filters: elemData.filters || null,
-                    matrix2d: "m00" in m ? new Matrix2d(m.m00, m.m01, m.m10, m.m11, m.m30, m.m31) : new Matrix2d(m[0], m[1], m[4], m[5], m[12], m[13]),
-                    matrix3d: "m00" in m ? new Matrix3d(m.m00, m.m01, m.m02, m.m03, m.m10, m.m11, m.m12, m.m13, m.m20, m.m21, m.m22, m.m23, m.m30, m.m31, m.m32, m.m33) : new Matrix3d(m[0], m[1], m[2], m[3], m[4], m[5], m[6], m[7], m[8], m[9], m[10], m[11], m[12], m[13], m[14], m[15]),
+                    matrix3d: "m00" in m ? new Matrix(m.m00, m.m01, m.m02, m.m03, m.m10, m.m11, m.m12, m.m13, m.m20, m.m21, m.m22, m.m23, m.m30, m.m31, m.m32, m.m33) : new Matrix(m[0], m[1], m[2], m[3], m[4], m[5], m[6], m[7], m[8], m[9], m[10], m[11], m[12], m[13], m[14], m[15]),
                     itemName: elemData.symbolName,
                     color: elemData.color || null
                   };
-                  const clipInstance = frame2.createClipInstance(__spreadProps(__spreadValues(__spreadValues({}, drawableProps), instanceProps), {
+                  const clipInstance = frame2.createClipInstance(__spreadProps(__spreadValues({}, instanceProps), {
                     transformationPoint: new Vec2(elemData.transformationPoint),
                     behaviour: elemData.symbolType == "graphic" ? { type: "graphic", loop: elemData.loop, firstFrame: elemData.firstFrame } : { type: "movieclip" }
                   }));
                 } else {
                   const elemData = elemInstanceData.atlasSpriteInstance;
                   const m = elemData.matrix3D;
-                  const drawableProps = {
+                  const spriteInstance = frame2.createSpriteInstance({
                     name: frame2.name,
-                    totalFrames: frame2.totalFrames
-                  };
-                  const instanceProps = {
-                    frame: frame2,
                     filters: elemData.filters || null,
                     color: null,
-                    matrix2d: "m00" in m ? new Matrix2d(m.m00, m.m01, m.m10, m.m11, m.m30, m.m31) : new Matrix2d(m[0], m[1], m[4], m[5], m[12], m[13]),
-                    matrix3d: "m00" in m ? new Matrix3d(m.m00, m.m01, m.m02, m.m03, m.m10, m.m11, m.m12, m.m13, m.m20, m.m21, m.m22, m.m23, m.m30, m.m31, m.m32, m.m33) : new Matrix3d(m[0], m[1], m[2], m[3], m[4], m[5], m[6], m[7], m[8], m[9], m[10], m[11], m[12], m[13], m[14], m[15]),
+                    matrix3d: "m00" in m ? new Matrix(m.m00, m.m01, m.m02, m.m03, m.m10, m.m11, m.m12, m.m13, m.m20, m.m21, m.m22, m.m23, m.m30, m.m31, m.m32, m.m33) : new Matrix(m[0], m[1], m[2], m[3], m[4], m[5], m[6], m[7], m[8], m[9], m[10], m[11], m[12], m[13], m[14], m[15]),
                     itemName: elemData.name
-                  };
-                  const spriteInstance = frame2.createSpriteInstance(__spreadValues(__spreadValues({}, drawableProps), instanceProps));
+                  });
                   if (spriteNames.indexOf(spriteInstance.itemName) == -1)
                     spriteNames.push(spriteInstance.itemName);
                 }
@@ -605,7 +570,7 @@
               format: data2.meta.format,
               size: data2.meta.size,
               resolution: data2.meta.resolution
-            });
+            }, this.scene.getPixelData(image));
             for (const spriteSpriteData of data2.atlas.sprites) {
               const spriteData = spriteSpriteData.sprite;
               const sprite = this.createSprite(atlas, {
@@ -630,6 +595,7 @@
     constructor() {
       this.draw = null;
       this.drawImage = null;
+      this.pixelData = {};
     }
     get mouseX() {
       throw "Override mouseX in base class";
@@ -640,6 +606,21 @@
     createLibrary(name, path) {
       const library = new Library(name, path, this);
       return library;
+    }
+    getPixelData(image) {
+      if (image.complete == false)
+        throw "Image has not loaded!";
+      const canvas = document.createElement("canvas");
+      canvas.width = image.width;
+      canvas.height = image.height;
+      const ctx = document.createElement("canvas").getContext("2d");
+      ctx.drawImage(image, 0, 0);
+      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      return {
+        ctx,
+        imageData,
+        image
+      };
     }
   };
 

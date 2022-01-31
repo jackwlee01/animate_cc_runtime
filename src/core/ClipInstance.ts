@@ -17,8 +17,8 @@ type ClipInstanceBehavior = {
 
 
 export type ClipInstanceProps = InstanceProps & { 
-    transformationPoint:Vec2,   
-    behaviour:ClipInstanceBehavior
+    transformationPoint?:Vec2,   
+    behaviour?:ClipInstanceBehavior
 }
 
 
@@ -30,8 +30,8 @@ export class ClipInstance extends Instance{
     
     constructor(props:ClipInstanceProps){
         super(props);
-        this.behaviour = props.behaviour;
-        this.transformationPoint = props.transformationPoint;
+        this.behaviour = props.behaviour || { type: 'movieclip' };
+        this.transformationPoint = props.transformationPoint || new Vec2({x:0, y:0});
     }
 
 
