@@ -317,12 +317,12 @@
       this.resolution = props.resolution;
       if (this.image.complete == false)
         throw "Image has not loaded!";
-      const canvas = document.createElement("canvas");
-      canvas.width = this.image.width;
-      canvas.height = this.image.height;
+      const canvas2 = document.createElement("canvas");
+      canvas2.width = this.image.width;
+      canvas2.height = this.image.height;
       const ctx = document.createElement("canvas").getContext("2d");
       ctx.drawImage(this.image, 0, 0);
-      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      const imageData = ctx.getImageData(0, 0, canvas2.width, canvas2.height);
       this.pixelData = {
         ctx,
         imageData
@@ -781,19 +781,19 @@
   };
 
   // src/examples/example-utils.ts
-  function setupCanvas(canvas) {
-    const ctx = canvas.getContext("2d");
+  function setupCanvas(canvas2) {
+    const ctx = canvas2.getContext("2d");
     ctx.imageSmoothingEnabled = true;
     ctx.imageSmoothingQuality = "high";
     var bodyRec = document.body.getBoundingClientRect();
-    canvas.width = Math.min(1e3, bodyRec.width - 8);
-    canvas.height = canvas.width;
+    canvas2.width = Math.min(1e3, bodyRec.width - 8);
+    canvas2.height = canvas2.width;
     let dpr = window.devicePixelRatio || 1;
-    let rect = canvas.getBoundingClientRect();
-    canvas.style.width = "" + canvas.width + "px";
-    canvas.style.height = "" + canvas.height + "px";
-    canvas.width = rect.width * dpr;
-    canvas.height = rect.height * dpr;
+    let rect = canvas2.getBoundingClientRect();
+    canvas2.style.width = "" + canvas2.width + "px";
+    canvas2.style.height = "" + canvas2.height + "px";
+    canvas2.width = rect.width * dpr;
+    canvas2.height = rect.height * dpr;
     return dpr;
   }
 
@@ -954,7 +954,7 @@
 
   // src/examples/game/App.ts
   var App = class {
-    constructor() {
+    constructor(ctx2d2) {
       this.load = () => __async(this, null, function* () {
         yield this.libs.load();
         this.game = new Game(this);
@@ -971,12 +971,11 @@
         if (this.game)
           this.game.draw(this.scene);
       };
-      const canvas = document.getElementById("canvas");
-      const ctx2d = canvas.getContext("2d");
-      this.dpr = setupCanvas(canvas);
-      this.scene = new Canvas2dScene(ctx2d);
+      this.dpr = setupCanvas(ctx2d2.canvas);
+      this.scene = new Canvas2dScene(ctx2d2);
       this.libs = new Libs(this, this.scene);
       this.input = new Input(this);
+      this.game = null;
       this.load();
       this.update();
     }
@@ -984,6 +983,14 @@
       return this.scene.ctx.canvas;
     }
   };
-  var app = new App();
+
+  // src/examples/game/Main.ts
+  var canvas = document.getElementById("canvas");
+  if (!canvas)
+    throw "A canvas element is id #canvas is required";
+  var ctx2d = canvas.getContext("2d");
+  if (!ctx2d)
+    throw "Could not get 2d canvas context";
+  var app = new App(ctx2d);
 })();
 //# sourceMappingURL=game.js.map
