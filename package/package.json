@@ -1,7 +1,7 @@
 {
   "name": "animcc",
   "version": "0.0.1",
-  "description": "",
+  "description": "Animate CC runtime for Canvas 2d",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
