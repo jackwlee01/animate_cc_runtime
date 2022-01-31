@@ -42,7 +42,7 @@ export class Atlas{
         this.resolution = props.resolution;
         this.pixelData = props.pixelData;
 
-        // this.library.scene.getPixelData(this.image) // TODO: Determine is this should be a lazy operation
+        // this.library.scene.getPixelData(this.image) // TODO: Determine if this should be a lazy operation
     }
 
 
