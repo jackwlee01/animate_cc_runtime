@@ -1,4 +1,4 @@
-import { setupCanvas } from "../example-utils";
+import { setupCanvas } from "../example-utils"
 import { SceneCanvas2d } from "animcc/SceneCanvas2d";
 import { Drawable } from "animcc/Drawable";
 import { Clip } from "animcc/Clip";

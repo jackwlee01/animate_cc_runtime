@@ -2,8 +2,6 @@
   "name": "animcc",
   "version": "0.0.6",
   "description": "Animate CC runtime for Canvas 2d",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -11,8 +9,13 @@
     "prebuild": "rimraf dist",
     "build": "tsc --project tsconfig.prod.json",
     "postbuild": "copy package.json dist",
+    "build-examples": "parcel build examples/index.html --dist-dir dist-examples/",
+    "start-examples": "parcel examples/index.html",
     "test": "jest",
     "dev": "live-server bin"
+  },
+  "alias": {
+    "animcc": "./src"
   },
   "author": "",
   "devDependencies": {
@@ -23,8 +26,16 @@
     "esbuild-runner": "^2.2.1",
     "jest": "^27.4.7",
     "npm-dts": "^1.3.11",
+    "parcel-reporter-static-files-copy": "^1.3.4",
     "rimraf": "^3.0.2",
     "tsup": "^5.11.13",
     "typescript": "^4.5.5"
+  },
+  "staticFiles": {
+    "staticPath": "examples/assets",
+    "staticOutPath": "assets"
+  },
+  "dependencies": {
+    "parcel": "^2.2.1"
   }
 }
