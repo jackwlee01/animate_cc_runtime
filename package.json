@@ -11,8 +11,7 @@
     "postbuild": "copy package.json dist",
     "build-examples": "parcel build examples/index.html --dist-dir dist-examples/",
     "start-examples": "parcel examples/index.html",
-    "test": "jest",
-    "dev": "live-server bin"
+    "test": "jest"
   },
   "alias": {
     "animcc": "./src"
@@ -20,15 +19,10 @@
   "author": "",
   "devDependencies": {
     "@types/jest": "^27.4.0",
-    "axios": "^0.25.0",
     "copy": "^0.3.2",
-    "esbuild": "^0.14.14",
-    "esbuild-runner": "^2.2.1",
     "jest": "^27.4.7",
-    "npm-dts": "^1.3.11",
     "parcel-reporter-static-files-copy": "^1.3.4",
     "rimraf": "^3.0.2",
-    "tsup": "^5.11.13",
     "typescript": "^4.5.5"
   },
   "staticFiles": {
