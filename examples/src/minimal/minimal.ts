@@ -1,5 +1,5 @@
 import { setupCanvas } from "../example-utils";
-import { SceneCanvas2d } from "animcc";
+import { SceneCanvas2d } from "animcc/SceneCanvas2d";
 
 // Set up canvas
 const canvas = document.getElementById("canvas") as HTMLCanvasElement

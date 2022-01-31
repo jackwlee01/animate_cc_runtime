@@ -1,5 +1,5 @@
-import { SceneDom } from "animcc";
-import { Drawable } from "animcc";
+import { SceneDom } from "animcc/SceneDom";
+import { Drawable } from "animcc/Drawable";
 
 
 // Set up animation context and animation libraries

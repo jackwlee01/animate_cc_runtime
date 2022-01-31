@@ -1,12 +1,12 @@
 import { setupCanvas } from "../example-utils";
-import { SceneCanvas2d } from "animcc";
-import { Drawable } from "animcc";
-import { Clip } from "animcc";
-import { Layer } from "animcc";
-import { Frame } from "animcc";
-import { Instance } from "animcc";
-import { Sprite } from "animcc";
-import { modWrap } from "animcc";
+import { SceneCanvas2d } from "animcc/SceneCanvas2d";
+import { Drawable } from "animcc/Drawable";
+import { Clip } from "animcc/Clip";
+import { Layer } from "animcc/Layer";
+import { Frame } from "animcc/Frame";
+import { Instance } from "animcc/Instance";
+import { Sprite } from "animcc/Sprite";
+import { modWrap } from "animcc/util/math";
 
 // Set up canvas
 const canvas = document.getElementById("canvas") as HTMLCanvasElement

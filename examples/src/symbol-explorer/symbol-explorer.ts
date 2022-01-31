@@ -1,7 +1,7 @@
 import { addExampleButtons, setupCanvas } from "../example-utils";
-import { SceneCanvas2d } from "animcc";
-import { Clip } from "animcc";
-import { Library } from "animcc";
+import { SceneCanvas2d } from "animcc/SceneCanvas2d";
+import { Clip } from "animcc/Clip";
+import { Library } from "animcc/Library";
 
 
 const canvas = document.getElementById("canvas") as HTMLCanvasElement
