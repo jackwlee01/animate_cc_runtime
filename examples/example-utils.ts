@@ -2,7 +2,7 @@ import { Clip } from "animcc";
 import { Library } from "animcc";
 
 
-export function setupCanvas(canvas:HTMLCanvasElement) {
+export function setupCanvas(canvas:HTMLCanvasElement, width:number=-1, height:number=-1) {
     // Set the context quality and smoothing
     const ctx = canvas.getContext('2d')!
     ctx.imageSmoothingEnabled = true;
@@ -10,8 +10,8 @@ export function setupCanvas(canvas:HTMLCanvasElement) {
 
     // Set the canvas according to window width
     var bodyRec = document.body.getBoundingClientRect();
-    canvas.width = Math.min(1000, bodyRec.width - 8);
-    canvas.height = canvas.width;
+    canvas.width = width==-1 ? Math.min(1000, bodyRec.width - 8) : width;
+    canvas.height = height==-1 ? canvas.width : height;
 
     // Get the device pixel ratio, falling back to 1.
     let dpr = window.devicePixelRatio || 1;

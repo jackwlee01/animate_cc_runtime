@@ -54,7 +54,7 @@
                     <Point/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="Scene">
+                <DOMSymbolInstance libraryItemName="Scene" selected="true">
                   <matrix>
                     <Matrix tx="1018.95" ty="553.5"/>
                   </matrix>
@@ -70,7 +70,7 @@
                     <Point x="-149.55" y="-79.65"/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="GunnerOld" selected="true">
+                <DOMSymbolInstance libraryItemName="GunnerOld">
                   <matrix>
                     <Matrix tx="688.4" ty="483.1"/>
                   </matrix>

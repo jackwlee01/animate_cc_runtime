@@ -1,22 +1,14 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Scene" itemID="61ea53fb-00000652" lastModified="1642985141" lastUniqueIdentifier="2">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Scene" itemID="61ea53fb-00000652" lastModified="1643862981" lastUniqueIdentifier="3">
   <timeline>
     <DOMTimeline name="Scene" layerDepthEnabled="true">
       <layers>
         <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
           <frames>
-            <DOMFrame index="0" duration="163" keyMode="9728">
+            <DOMFrame index="0" duration="441" keyMode="9728">
               <elements>
                 <DOMSymbolInstance libraryItemName="Walker_Nose">
                   <matrix>
-                    <Matrix tx="-147.65" ty="33.95"/>
-                  </matrix>
-                  <transformationPoint>
-                    <Point/>
-                  </transformationPoint>
-                </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="Walker_Laser">
-                  <matrix>
-                    <Matrix tx="159.2" ty="35.95"/>
+                    <Matrix tx="-147.65" ty="43.95"/>
                   </matrix>
                   <transformationPoint>
                     <Point/>
@@ -24,71 +16,36 @@
                 </DOMSymbolInstance>
                 <DOMSymbolInstance libraryItemName="StarDude">
                   <matrix>
-                    <Matrix tx="10.45" ty="-20.75"/>
+                    <Matrix tx="5.65" ty="9.25"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="5" y="2"/>
                   </transformationPoint>
-                  <filters>
-                    <DropShadowFilter blurX="27" blurY="27" distance="15"/>
-                  </filters>
                 </DOMSymbolInstance>
-              </elements>
-            </DOMFrame>
-          </frames>
-        </DOMLayer>
-        <DOMLayer name="Layer_3" color="#FF800A" locked="true" layerType="mask">
-          <frames>
-            <DOMFrame index="0" duration="163" keyMode="9728">
-              <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 5">
+                <DOMSymbolInstance libraryItemName="SkullGuy" selected="true">
                   <matrix>
-                    <Matrix tx="2.05" ty="-1"/>
+                    <Matrix a="1.2171630859375" d="1.2171630859375" tx="161.25" ty="11.35"/>
                   </matrix>
                   <transformationPoint>
-                    <Point/>
+                    <Point x="0.05" y="0.05"/>
                   </transformationPoint>
                 </DOMSymbolInstance>
               </elements>
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer_4" color="#FF4FFF" parentLayerIndex="1" locked="true">
+        <DOMLayer name="Layer_4" color="#FF4FFF">
           <frames>
-            <DOMFrame index="0" duration="78" tweenType="motion" motionTweenSnap="true" keyMode="22017" rigPropagationMatrix='{"a":277098,"b":0,"c":0,"d":177835,"tx":0,"ty":0}'>
+            <DOMFrame index="0" duration="441" tweenType="motion" motionTweenSnap="true" keyMode="22017" rigPropagationMatrix='{"a":277098,"b":0,"c":0,"d":177835,"tx":0,"ty":0}'>
               <elements>
                 <DOMSymbolInstance libraryItemName="Tween 3" symbolType="graphic" loop="loop">
                   <matrix>
-                    <Matrix tx="11.05" ty="0.65"/>
+                    <Matrix a="0.2938232421875" d="0.2938232421875"/>
                   </matrix>
                   <transformationPoint>
-                    <Point/>
+                    <Point x="0.15"/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-              </elements>
-            </DOMFrame>
-            <DOMFrame index="78" duration="84" tweenType="motion" motionTweenSnap="true" keyMode="22017" rigPropagationMatrix='{"a":277098,"b":0,"c":0,"d":177835,"tx":0,"ty":0}'>
-              <elements>
-                <DOMSymbolInstance libraryItemName="Tween 6" symbolType="graphic" loop="loop">
-                  <matrix>
-                    <Matrix tx="11.05" ty="30.65"/>
-                  </matrix>
-                  <transformationPoint>
-                    <Point/>
-                  </transformationPoint>
-                </DOMSymbolInstance>
-              </elements>
-            </DOMFrame>
-            <DOMFrame index="162" keyMode="9728" rigPropagationMatrix='{"a":277098,"b":0,"c":0,"d":177835,"tx":0,"ty":0}'>
-              <elements>
-                <DOMBitmapInstance libraryItemName="back.png">
-                  <matrix>
-                    <Matrix d="0.999984741210938" tx="-948.95" ty="-539.35"/>
-                  </matrix>
-                  <transformationPoint>
-                    <Point x="959.95" y="539.85"/>
-                  </transformationPoint>
-                </DOMBitmapInstance>
               </elements>
             </DOMFrame>
           </frames>

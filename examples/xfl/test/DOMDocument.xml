@@ -195,7 +195,7 @@
           <Include href="game/Walker_Missile_Head.xml" itemIcon="1" loadImmediate="false" itemID="619747f7-00000bc2" lastModified="1637304955"/>
           <Include href="game/Walker_Nose_Head.xml" itemIcon="1" loadImmediate="false" itemID="61973aad-00000a76" lastModified="1641876226"/>
           <Include href="game/Walker_Nose_Nose.xml" itemIcon="1" loadImmediate="false" itemID="61973ec9-00001ae2" lastModified="1641876239"/>
-          <Include href="game/Walker_Nose_Siren.xml" itemIcon="1" loadImmediate="false" itemID="61973de1-00001794" lastModified="1637301729"/>
+          <Include href="game/Walker_Nose_Siren.xml" itemIcon="1" loadImmediate="false" itemID="61973de1-00001794" lastModified="1643862749"/>
           <Include href="Gunner.xml" loadImmediate="false" itemID="6142a091-00003094" lastModified="1643354122"/>
           <Include href="GunnerFall.xml" loadImmediate="false" itemID="6141af45-00004009" lastModified="1631694795"/>
           <Include href="GunnerOld.xml" loadImmediate="false" itemID="6142a08d-00003093" lastModified="1643353727"/>
@@ -209,7 +209,7 @@
           <Include href="Pivot.xml" loadImmediate="false" itemID="614148ed-00002107" lastModified="1631772096"/>
           <Include href="placeholders/win.xml" itemID="561338b4-00000144" lastModified="1641874656"/>
           <Include href="placeholders/win_background.xml" itemID="56133bde-0000015a" lastModified="1529030890"/>
-          <Include href="Scene.xml" loadImmediate="false" itemID="61ea53fb-00000652" lastModified="1642985141"/>
+          <Include href="Scene.xml" loadImmediate="false" itemID="61ea53fb-00000652" lastModified="1643862981"/>
           <Include href="Shell.xml" loadImmediate="false" itemID="61e772d9-000006f6" lastModified="1642558169"/>
           <Include href="ShellBounce.xml" itemIcon="1" loadImmediate="false" itemID="61e7736c-00000703" lastModified="1642558671"/>
           <Include href="ShellSpin.xml" itemIcon="1" loadImmediate="false" itemID="61e7734d-000006fe" lastModified="1642558301"/>
@@ -252,6 +252,7 @@
           <Include href="Symbol 3.xml" loadImmediate="false" itemID="61ea52f7-00001877" lastModified="1642746682"/>
           <Include href="Symbol 4.xml" loadImmediate="false" itemID="61ea537d-000000d5" lastModified="1642746749"/>
           <Include href="Symbol 5.xml" loadImmediate="false" itemID="61ea54f9-000006c2" lastModified="1642748268"/>
+          <Include href="Symbol 6.xml" loadImmediate="false" itemID="61fb5755-0000154a" lastModified="1643861994"/>
           <Include href="Symbol 15.xml" loadImmediate="false" itemID="612f089e-0000006e" lastModified="1630472350"/>
           <Include href="Symbol 16.xml" loadImmediate="false" itemID="612f08a2-00000074" lastModified="1630551366"/>
           <Include href="Symbol 17.xml" loadImmediate="false" itemID="612f08ac-0000007a" lastModified="1630472364"/>

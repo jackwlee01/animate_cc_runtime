@@ -4,7 +4,7 @@ import { SceneCanvas2d } from "animcc/SceneCanvas2d";
 // Set up canvas
 const canvas = document.getElementById("canvas") as HTMLCanvasElement
 const ctx2d = canvas.getContext('2d')!
-var dpr = setupCanvas(canvas) // Device pixel ratio
+var dpr = setupCanvas(canvas, 564, 317) // Device pixel ratio
 
 // Set up animation context and animation libraries
 const scene = new SceneCanvas2d(ctx2d)

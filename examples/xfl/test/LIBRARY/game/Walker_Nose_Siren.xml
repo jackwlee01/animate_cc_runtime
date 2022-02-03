@@ -1,20 +1,20 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="game/Walker_Nose_Siren" itemID="61973de1-00001794" symbolType="graphic" lastModified="1637301729">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="game/Walker_Nose_Siren" itemID="61973de1-00001794" symbolType="graphic" lastModified="1643862749">
   <timeline>
-    <DOMTimeline name="Walker_Nose_Siren" currentFrame="11" layerDepthEnabled="true">
+    <DOMTimeline name="Walker_Nose_Siren" currentFrame="22" layerDepthEnabled="true">
       <layers>
         <DOMLayer name="Layer_4" color="#FF4FFF">
           <frames>
-            <DOMFrame index="0" duration="6" keyMode="9728">
+            <DOMFrame index="0" duration="12" keyMode="9728">
               <elements/>
             </DOMFrame>
-            <DOMFrame index="6" duration="6" keyMode="9728">
+            <DOMFrame index="12" duration="11" keyMode="9728">
               <elements/>
             </DOMFrame>
           </frames>
         </DOMLayer>
         <DOMLayer name="Layer_2" color="#9933CC">
           <frames>
-            <DOMFrame index="0" duration="3" keyMode="9728">
+            <DOMFrame index="0" duration="6" keyMode="9728">
               <elements>
                 <DOMSymbolInstance libraryItemName="game/Symbol 537" symbolType="graphic" loop="loop">
                   <matrix>
@@ -26,7 +26,7 @@
                 </DOMSymbolInstance>
               </elements>
             </DOMFrame>
-            <DOMFrame index="3" duration="3" keyMode="9728">
+            <DOMFrame index="6" duration="6" keyMode="9728">
               <elements>
                 <DOMSymbolInstance libraryItemName="game/Symbol 538" symbolType="graphic" loop="loop">
                   <matrix>
@@ -38,7 +38,7 @@
                 </DOMSymbolInstance>
               </elements>
             </DOMFrame>
-            <DOMFrame index="6" duration="3" keyMode="9728">
+            <DOMFrame index="12" duration="6" keyMode="9728">
               <elements>
                 <DOMShape>
                   <fills>
@@ -86,7 +86,7 @@
                 </DOMShape>
               </elements>
             </DOMFrame>
-            <DOMFrame index="9" duration="3" keyMode="9728">
+            <DOMFrame index="18" duration="5" keyMode="9728">
               <elements>
                 <DOMSymbolInstance libraryItemName="game/Symbol 539" symbolType="graphic" loop="loop">
                   <matrix>
@@ -102,7 +102,7 @@
         </DOMLayer>
         <DOMLayer name="Layer_3" color="#FF800A">
           <frames>
-            <DOMFrame index="0" duration="12" keyMode="9728">
+            <DOMFrame index="0" duration="23" keyMode="9728">
               <elements>
                 <DOMSymbolInstance libraryItemName="game/Symbol 541" symbolType="graphic" loop="loop">
                   <matrix>
@@ -118,7 +118,7 @@
         </DOMLayer>
         <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
           <frames>
-            <DOMFrame index="0" duration="12" keyMode="9728">
+            <DOMFrame index="0" duration="23" keyMode="9728">
               <elements>
                 <DOMSymbolInstance libraryItemName="game/Symbol 540" symbolType="graphic" loop="loop">
                   <transformationPoint>
