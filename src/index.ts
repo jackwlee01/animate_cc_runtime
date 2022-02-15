@@ -1,4 +1,5 @@
-import { LitElement, html, property, customElement, query, PropertyValues } from 'lit-element';
+import { LitElement, html,  PropertyValues, css } from 'lit';
+import {property, customElement, query} from 'lit/decorators.js';
 import { Library } from './Library';
 import { Scene } from './Scene';
 import { SceneCanvas2d } from './SceneCanvas2d';
@@ -10,11 +11,11 @@ export class AnimCC extends LitElement {
     @property({type: String})
     path:string = ''
 
-    @property({type: String})
-    width:string = ''
+    @property({type: Number})
+    width:number = 300
 
-    @property({type: String})
-    height:string = ''
+    @property({type: Number})
+    height:number = 150
 
     @property({type: String, attribute:"object-fit"})
     objectFit:'none'|'contain'|'cover'|'fill'|'scale-down' = 'none'
@@ -37,7 +38,22 @@ export class AnimCC extends LitElement {
     currentFrame = 0;
 
     private shouldRenderToContext = false
-    
+
+
+    static styles = css`
+        #anim-cc-container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #anim-cc-canvas{
+            transform-origin = top left;
+            transform: scale(var(--scaleX), var(--scaleY));
+        }
+    `
+
 
     constructor(){
         super();
@@ -50,8 +66,8 @@ export class AnimCC extends LitElement {
 
         switch(name){
             case 'path': this.reset(); break;
-            case 'width': if(this.canvas) this.canvas.setAttribute('width', newVal); break;
-            case 'height': if(this.canvas) this.canvas.setAttribute('height', newVal); break;
+            case 'width': if(this.canvas) this.canvas.setAttribute('width', newVal+"px"); break;
+            case 'height': if(this.canvas) this.canvas.setAttribute('height', newVal+"px"); break;
         }
     }
 
@@ -61,8 +77,14 @@ export class AnimCC extends LitElement {
         if(this.scene==null) this.initCanvas()
     }
 
+
     get canvas(){
         return this.renderRoot?.querySelector('#anim-cc-canvas') as HTMLCanvasElement|null
+    }
+
+
+    get container(){
+        return this.renderRoot?.querySelector('#anim-cc-container') as HTMLCanvasElement|null
     }
 
 
@@ -97,9 +119,43 @@ export class AnimCC extends LitElement {
         super.disconnectedCallback()
     }
 
+    set scaleX(value:number){ this.setVar('--scaleX', ""+digits(4, value)) } 
+    set scaleY(value:number){ this.setVar('--scaleY', ""+digits(4, value)) } 
+    setVar(name:string, value:string){
+        if(this.style.getPropertyValue(name) != value){
+            this.style.setProperty(name, value)
+        }
+    }
+    
+    /*
+    private scale(x:number, y:number){
+        //this.canvas!.style.transformOrigin = 'top left'
+        //this.canvas!.style.transform = `scale(${x}, ${y})`
+        this.style.setProperty('')
+    }
+    */
+
+
+    private scaleToParent(){
+        switch(this.objectFit){
+            case 'none': break;
+            case 'contain':
+                const sx = this.container?.clientWidth! / this.width
+                const sy = this.container?.clientHeight! / this.height
+                const scale = sx<sy ? sx : sy
+                this.scaleX = scale;
+                this.scaleY = scale;
+                break;
+            case 'cover': break;
+            case 'fill': break;
+            case 'scale-down': break;
+        }
+    }
 
     private drawToContext(){
         if(!this.canvas || !this.ctx) return
+        this.scaleToParent()
+
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
 
         if(!this.scene || !this.library || !this.library.loaded) return
@@ -124,7 +180,18 @@ export class AnimCC extends LitElement {
 
     render() {
         return html`
-            <canvas id="anim-cc-canvas" width=${this.width} height=${this.height} background-color=${this.backgroundColor}></canvas>
+            <div id="anim-cc-container">
+                <canvas id="anim-cc-canvas" width=${this.width} height=${this.height} background-color=${this.backgroundColor}></canvas>
+            </div>
         `;
     }
+}
+
+
+// Utils
+function digits(num:number, value:number){
+    value *= Math.pow(10, num)
+    value = Math.round(value)
+    value /= Math.pow(10, num)
+    return value;
 }
