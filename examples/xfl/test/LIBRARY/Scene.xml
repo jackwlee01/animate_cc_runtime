@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Scene" itemID="61ea53fb-00000652" lastModified="1643862981" lastUniqueIdentifier="3">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Scene" itemID="61ea53fb-00000652" lastModified="1643864376" lastUniqueIdentifier="3">
   <timeline>
     <DOMTimeline name="Scene" layerDepthEnabled="true">
       <layers>
@@ -8,7 +8,7 @@
               <elements>
                 <DOMSymbolInstance libraryItemName="Walker_Nose">
                   <matrix>
-                    <Matrix tx="-147.65" ty="43.95"/>
+                    <Matrix tx="-122.65" ty="43.95"/>
                   </matrix>
                   <transformationPoint>
                     <Point/>
@@ -24,7 +24,7 @@
                 </DOMSymbolInstance>
                 <DOMSymbolInstance libraryItemName="SkullGuy" selected="true">
                   <matrix>
-                    <Matrix a="1.2171630859375" d="1.2171630859375" tx="161.25" ty="11.35"/>
+                    <Matrix a="1.2171630859375" d="1.2171630859375" tx="121.25" ty="11.35"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="0.05" y="0.05"/>

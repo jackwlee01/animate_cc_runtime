@@ -21,6 +21,7 @@ export class Library{
     atlases:Array<Atlas> = [];
     atlasesBySpriteName:Record<string, Atlas> = {}
     scene:Scene;
+    exported:Clip|null;
     
     
     constructor(name:string, path:string, scene:Scene){
@@ -28,6 +29,7 @@ export class Library{
         this.path = path;
         this.atlases = [];
         this.scene = scene;
+        this.exported = null;
     }
 
 
@@ -194,6 +196,8 @@ export class Library{
             }
         }
 
+        // Exported
+        this.exported = this.clipsByName[data.animation.symbolName]
     }
 
 

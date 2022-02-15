@@ -209,7 +209,7 @@
           <Include href="Pivot.xml" loadImmediate="false" itemID="614148ed-00002107" lastModified="1631772096"/>
           <Include href="placeholders/win.xml" itemID="561338b4-00000144" lastModified="1641874656"/>
           <Include href="placeholders/win_background.xml" itemID="56133bde-0000015a" lastModified="1529030890"/>
-          <Include href="Scene.xml" loadImmediate="false" itemID="61ea53fb-00000652" lastModified="1643862981"/>
+          <Include href="Scene.xml" loadImmediate="false" itemID="61ea53fb-00000652" lastModified="1643864376"/>
           <Include href="Shell.xml" loadImmediate="false" itemID="61e772d9-000006f6" lastModified="1642558169"/>
           <Include href="ShellBounce.xml" itemIcon="1" loadImmediate="false" itemID="61e7736c-00000703" lastModified="1642558671"/>
           <Include href="ShellSpin.xml" itemIcon="1" loadImmediate="false" itemID="61e7734d-000006fe" lastModified="1642558301"/>
@@ -290,9 +290,9 @@
                          <frames>
                               <DOMFrame index="0" duration="278" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="__export__" selected="true">
+                                        <DOMSymbolInstance libraryItemName="__export__">
                                              <matrix>
-                                                  <Matrix tx="-0.5" ty="-2.4"/>
+                                                  <Matrix tx="50.5" ty="-16.4"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point x="281.5" y="225.45"/>
