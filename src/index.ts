@@ -32,6 +32,9 @@ export class AnimCC extends LitElement {
     @property({type: Boolean})
     lerp:boolean = false
 
+    @property({type: String})
+    overflow:string = 'hidden'
+
     
     scene:Scene|null = null
     library:Library|null = null
@@ -47,6 +50,7 @@ export class AnimCC extends LitElement {
             display: flex;
             justify-content: center;
             align-items: center;
+            overflow: var(--overflow);
         }
         #anim-cc-canvas{
             transform-origin = top left;
@@ -58,6 +62,8 @@ export class AnimCC extends LitElement {
     constructor(){
         super();
         this.onAnimationFrame();
+
+        this.setVar('--overflow', this.overflow)
     }
 
 
@@ -68,6 +74,7 @@ export class AnimCC extends LitElement {
             case 'path': this.reset(); break;
             case 'width': if(this.canvas) this.canvas.setAttribute('width', newVal+"px"); break;
             case 'height': if(this.canvas) this.canvas.setAttribute('height', newVal+"px"); break;
+            case 'overflow': this.setVar('--overflow', newVal)
         }
     }
 
@@ -138,17 +145,36 @@ export class AnimCC extends LitElement {
 
     private scaleToParent(){
         switch(this.objectFit){
-            case 'none': break;
+            case 'none':
+                this.scaleX = 1;
+                this.scaleY = 1;
+                break;
             case 'contain':
-                const sx = this.container?.clientWidth! / this.width
-                const sy = this.container?.clientHeight! / this.height
-                const scale = sx<sy ? sx : sy
+                var sx = this.container?.clientWidth! / this.width
+                var sy = this.container?.clientHeight! / this.height
+                var scale = sx<sy ? sx : sy
                 this.scaleX = scale;
                 this.scaleY = scale;
                 break;
-            case 'cover': break;
-            case 'fill': break;
-            case 'scale-down': break;
+            case 'cover':
+                var sx = this.container?.clientWidth! / this.width
+                var sy = this.container?.clientHeight! / this.height
+                var scale = sx>sy ? sx : sy
+                this.scaleX = scale;
+                this.scaleY = scale;
+                break;
+            case 'fill':
+                this.scaleX = this.container?.clientWidth! / this.width
+                this.scaleY = this.container?.clientHeight! / this.height
+                break;
+            case 'scale-down':
+                var sx = this.container?.clientWidth! / this.width
+                var sy = this.container?.clientHeight! / this.height
+                var scale = sx<sy ? sx : sy
+                scale = scale < 1 ? scale : 1
+                this.scaleX = scale
+                this.scaleY = scale
+            break;
         }
     }
 
