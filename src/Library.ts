@@ -21,7 +21,7 @@ export class Library{
     atlases:Array<Atlas> = [];
     atlasesBySpriteName:Record<string, Atlas> = {}
     scene:Scene;
-    exported:Clip|null;
+    exportedName:string|null;
     loaded = false;
     
     
@@ -30,8 +30,14 @@ export class Library{
         this.path = path
         this.atlases = []
         this.scene = scene
-        this.exported = null
+        this.exportedName = null
         this.loaded = false
+    }
+
+
+    get exported(){
+        if(!this.exportedName) throw("Not yet loaded")
+        return this.clipsByName[this.exportedName]
     }
 
 
@@ -76,6 +82,8 @@ export class Library{
         const dataRaw:JsonAnimationData = await animFetchResult.json();
         const data = normaliseJson(dataRaw) as JsonAnimationData;
         const spriteNames:Array<string> = [];
+        this.exportedName = data.animation.symbolName
+
 
         const generateClip =(symbolData:JsonLibrarySymbol) => {
             const clip = this.createClip({
@@ -208,9 +216,6 @@ export class Library{
                 pendingAtlasIndex++;
             }
         }
-
-        // Exported
-        this.exported = this.clipsByName[data.animation.symbolName]
 
         this.loaded = true
     }

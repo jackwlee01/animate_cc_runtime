@@ -11,11 +11,11 @@ export class AnimCC extends LitElement {
     @property({type: String})
     path:string = ''
 
-    @property({type: Number})
-    width:number = 300
+    @property({type: Number, attribute:"stage-width"})
+    stageWidth:number = 300
 
-    @property({type: Number})
-    height:number = 150
+    @property({type: Number, attribute:"stage-height"})
+    stageHeight:number = 150
 
     @property({type: String, attribute:"object-fit"})
     objectFit:'none'|'contain'|'cover'|'fill'|'scale-down' = 'none'
@@ -28,6 +28,15 @@ export class AnimCC extends LitElement {
 
     @property({type: Number, attribute:"frame"})
     frame?:number
+
+    @property({type: String})
+    clip?:string
+
+    @property({type: Number, attribute:"origin-x"})
+    originX:number = 0
+
+    @property({type: Number, attribute:"origin-y"})
+    originY:number = 0
 
     @property({type: Boolean})
     lerp:boolean = false
@@ -72,8 +81,8 @@ export class AnimCC extends LitElement {
 
         switch(name){
             case 'path': this.reset(); break;
-            case 'width': if(this.canvas) this.canvas.setAttribute('width', newVal+"px"); break;
-            case 'height': if(this.canvas) this.canvas.setAttribute('height', newVal+"px"); break;
+            case 'stageWidth': if(this.canvas) this.canvas.setAttribute('width', newVal+"px"); break;
+            case 'stageHeight': if(this.canvas) this.canvas.setAttribute('height', newVal+"px"); break;
             case 'overflow': this.setVar('--overflow', newVal)
         }
     }
@@ -126,54 +135,46 @@ export class AnimCC extends LitElement {
         super.disconnectedCallback()
     }
 
-    set scaleX(value:number){ this.setVar('--scaleX', ""+digits(4, value)) } 
-    set scaleY(value:number){ this.setVar('--scaleY', ""+digits(4, value)) } 
+    set canvasScaleX(value:number){ this.setVar('--scaleX', ""+digits(4, value)) } 
+    set canvasScaleY(value:number){ this.setVar('--scaleY', ""+digits(4, value)) } 
     setVar(name:string, value:string){
         if(this.style.getPropertyValue(name) != value){
             this.style.setProperty(name, value)
         }
     }
     
-    /*
-    private scale(x:number, y:number){
-        //this.canvas!.style.transformOrigin = 'top left'
-        //this.canvas!.style.transform = `scale(${x}, ${y})`
-        this.style.setProperty('')
-    }
-    */
-
 
     private scaleToParent(){
         switch(this.objectFit){
             case 'none':
-                this.scaleX = 1;
-                this.scaleY = 1;
+                this.canvasScaleX = 1;
+                this.canvasScaleY = 1;
                 break;
             case 'contain':
-                var sx = this.container?.clientWidth! / this.width
-                var sy = this.container?.clientHeight! / this.height
+                var sx = this.container?.clientWidth! / this.stageWidth
+                var sy = this.container?.clientHeight! / this.stageHeight
                 var scale = sx<sy ? sx : sy
-                this.scaleX = scale;
-                this.scaleY = scale;
+                this.canvasScaleX = scale;
+                this.canvasScaleY = scale;
                 break;
             case 'cover':
-                var sx = this.container?.clientWidth! / this.width
-                var sy = this.container?.clientHeight! / this.height
+                var sx = this.container?.clientWidth! / this.stageWidth
+                var sy = this.container?.clientHeight! / this.stageHeight
                 var scale = sx>sy ? sx : sy
-                this.scaleX = scale;
-                this.scaleY = scale;
+                this.canvasScaleX = scale;
+                this.canvasScaleY = scale;
                 break;
             case 'fill':
-                this.scaleX = this.container?.clientWidth! / this.width
-                this.scaleY = this.container?.clientHeight! / this.height
+                this.canvasScaleX = this.container?.clientWidth! / this.stageWidth
+                this.canvasScaleY = this.container?.clientHeight! / this.stageHeight
                 break;
             case 'scale-down':
-                var sx = this.container?.clientWidth! / this.width
-                var sy = this.container?.clientHeight! / this.height
+                var sx = this.container?.clientWidth! / this.stageWidth
+                var sy = this.container?.clientHeight! / this.stageHeight
                 var scale = sx<sy ? sx : sy
                 scale = scale < 1 ? scale : 1
-                this.scaleX = scale
-                this.scaleY = scale
+                this.canvasScaleX = scale
+                this.canvasScaleY = scale
             break;
         }
     }
@@ -191,8 +192,16 @@ export class AnimCC extends LitElement {
             this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height)
         }
 
-        
-        this.library.exported?.draw(this.frame!=undefined ? this.frame : this.currentFrame, this.lerp)
+        this.ctx.save()
+        this.ctx.translate(this.stageWidth*this.originX, this.stageHeight*this.originY)
+        if(this.clip){
+            this.library.symbol(this.clip).draw(this.frame!=undefined ? this.frame : this.currentFrame, this.lerp)
+        }else{
+            this.library.exported.draw(this.frame!=undefined ? this.frame : this.currentFrame, this.lerp)
+        }
+
+        this.ctx.restore()
+
         this.currentFrame += this.speed;
     }
 
@@ -207,7 +216,7 @@ export class AnimCC extends LitElement {
     render() {
         return html`
             <div id="anim-cc-container">
-                <canvas id="anim-cc-canvas" width=${this.width} height=${this.height} background-color=${this.backgroundColor}></canvas>
+                <canvas id="anim-cc-canvas" width=${this.stageWidth} height=${this.stageHeight} background-color=${this.backgroundColor}></canvas>
             </div>
         `;
     }
