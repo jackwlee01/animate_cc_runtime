@@ -47,6 +47,12 @@ export class AnimCC extends LitElement {
     @property({type: String})
     overflow:string = 'hidden'
 
+    @property({type: Number})
+    resolution?:number;
+
+    @property({type: Number, attribute:"device-pixel-ratio"})
+    devicePixelRatio?:number;
+
     
     scene:Scene|null = null
     library:Library|null = null
@@ -123,6 +129,10 @@ export class AnimCC extends LitElement {
         this.scene = new SceneCanvas2d(this.ctx)
         this.library = this.scene.createLibrary('anim-cc-library', this.path)
         this.library.loadData()
+        this.ctx.imageSmoothingEnabled = true
+        this.ctx.imageSmoothingQuality = 'high'
+        this.canvas!.style.width = this.stageWidth + "px"
+        this.canvas!.style.height = this.stageHeight + "px"
     }
 
 
@@ -145,6 +155,7 @@ export class AnimCC extends LitElement {
             this.style.setProperty(name, value)
         }
     }
+
     
 
     private scaleToParent(){
@@ -182,8 +193,22 @@ export class AnimCC extends LitElement {
         }
     }
 
+
+    get dpr(){
+        return window.devicePixelRatio || 1
+    }
+
+
+    private get resultResolution(){
+        return (this.devicePixelRatio||this.dpr) * (this.resolution||1)
+    }
+
+
     private drawToContext(){
         if(!this.canvas || !this.ctx) return
+        //this.ctx.imageSmoothingEnabled = true;
+        //this.ctx.imageSmoothingQuality = 'high'
+        
         this.scaleToParent()
 
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
@@ -196,6 +221,7 @@ export class AnimCC extends LitElement {
         }
 
         this.ctx.save()
+            this.ctx.scale(this.resultResolution, this.resultResolution)
             this.ctx.translate(this.stageWidth*this.originX, this.stageHeight*this.originY)
             this.ctx.scale(this.scale, this.scale)
             if(this.clip){
@@ -219,7 +245,7 @@ export class AnimCC extends LitElement {
     render() {
         return html`
             <div id="anim-cc-container">
-                <canvas id="anim-cc-canvas" width=${this.stageWidth} height=${this.stageHeight} background-color=${this.backgroundColor}></canvas>
+                <canvas id="anim-cc-canvas" width=${this.stageWidth*this.resultResolution} height=${this.stageHeight*this.resultResolution} background-color=${this.backgroundColor}></canvas>
             </div>
         `;
     }
@@ -233,3 +259,34 @@ function digits(num:number, value:number){
     value /= Math.pow(10, num)
     return value;
 }
+
+
+/*
+export function getDPR(canvas:HTMLCanvasElement, width:number=-1, height:number=-1) {
+    // Set the context quality and smoothing
+    const ctx = canvas.getContext('2d')!
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high'
+
+    // Set the canvas according to window width
+    var bodyRec = document.body.getBoundingClientRect();
+    canvas.width = width==-1 ? Math.min(1000, bodyRec.width - 8) : width;
+    canvas.height = height==-1 ? canvas.width : height;
+
+    // Get the device pixel ratio, falling back to 1.
+    let dpr = window.devicePixelRatio || 1;
+
+    // Get the size of the canvas in CSS pixels.
+    let rect = canvas.getBoundingClientRect();
+    
+    // Give the canvas pixel dimensions of their CSS
+    // size * the device pixel ratio.
+    //canvas.style.border = "2px solid gray";
+    canvas.style.width = "" + canvas.width + "px";
+    canvas.style.height = "" + canvas.height + "px";
+    canvas.width = rect.width * dpr;
+    canvas.height = rect.height * dpr;
+
+    return dpr;
+}
+*/
