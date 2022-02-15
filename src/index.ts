@@ -38,6 +38,9 @@ export class AnimCC extends LitElement {
     @property({type: Number, attribute:"origin-y"})
     originY:number = 0
 
+    @property({type: Number, attribute:"scale"})
+    scale:number = 1
+
     @property({type: Boolean})
     lerp:boolean = false
 
@@ -193,13 +196,13 @@ export class AnimCC extends LitElement {
         }
 
         this.ctx.save()
-        this.ctx.translate(this.stageWidth*this.originX, this.stageHeight*this.originY)
-        if(this.clip){
-            this.library.symbol(this.clip).draw(this.frame!=undefined ? this.frame : this.currentFrame, this.lerp)
-        }else{
-            this.library.exported.draw(this.frame!=undefined ? this.frame : this.currentFrame, this.lerp)
-        }
-
+            this.ctx.translate(this.stageWidth*this.originX, this.stageHeight*this.originY)
+            this.ctx.scale(this.scale, this.scale)
+            if(this.clip){
+                this.library.symbol(this.clip).draw(this.frame!=undefined ? this.frame : this.currentFrame, this.lerp)
+            }else{
+                this.library.exported.draw(this.frame!=undefined ? this.frame : this.currentFrame, this.lerp)
+            }
         this.ctx.restore()
 
         this.currentFrame += this.speed;
