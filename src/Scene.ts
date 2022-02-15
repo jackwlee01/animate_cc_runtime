@@ -8,12 +8,14 @@ export class Scene{
     draw: (item:Drawable, frame:Float, lerp?:boolean, callback?:(item:Drawable, frame:Float, lerp?:boolean)=>void) => void
     drawImage: (image:HTMLImageElement, sx:number, sy:number, sw:number, sh:number, rx:number, ry:number, rw:number, rh:number) => void
     pixelData:Record<string, { ctx:CanvasRenderingContext2D, imageData:ImageData, image:HTMLImageElement }>
+    libraries:Record<string, Library>
 
 
     constructor(){
         this.draw = null! // OVERRIDE THIS IN THE BASE CLASS!
         this.drawImage = null!
         this.pixelData = {}
+        this.libraries = {}
     }
 
 
@@ -29,7 +31,14 @@ export class Scene{
   
     createLibrary(name:string, path:string){
         const library = new Library(name, path, this);
+        this.libraries[name] = library;
         return library;
+    }
+
+
+    library(name:string){
+        if(!this.libraries[name]) throw("Library does not exist: " + name)
+        return this.libraries[name]
     }
 
 

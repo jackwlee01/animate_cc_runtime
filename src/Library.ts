@@ -1,4 +1,4 @@
-import { JsonAnimationData } from "./json/AnimationJson";
+import { JsonAnimationData, JsonLibrarySymbol } from "./json/AnimationJson";
 import { Clip, ClipProps } from "./Clip";
 import { Vec2 } from "./geom/Vec2";
 import { InstanceProps } from "./Instance";
@@ -22,14 +22,16 @@ export class Library{
     atlasesBySpriteName:Record<string, Atlas> = {}
     scene:Scene;
     exported:Clip|null;
+    loaded = false;
     
     
     constructor(name:string, path:string, scene:Scene){
-        this.name = name;
-        this.path = path;
-        this.atlases = [];
-        this.scene = scene;
-        this.exported = null;
+        this.name = name
+        this.path = path
+        this.atlases = []
+        this.scene = scene
+        this.exported = null
+        this.loaded = false
     }
 
 
@@ -64,19 +66,22 @@ export class Library{
     }
 
 
+
+
     public async loadData(){
+        if(this.loaded) throw("Already loaded: " + this.name + " " + this.path)
+
         const animJsonPath = this.path + "/Animation.json";
         const animFetchResult = await fetch(animJsonPath);
         const dataRaw:JsonAnimationData = await animFetchResult.json();
         const data = normaliseJson(dataRaw) as JsonAnimationData;
         const spriteNames:Array<string> = [];
 
-        // Clip
-        for(const symbolData of data.symbolDictionary.symbols){
+        const generateClip =(symbolData:JsonLibrarySymbol) => {
             const clip = this.createClip({
                 name: symbolData.symbolName,
             })
-
+    
             // Layer
             for(let l=symbolData.timeline.layers.length-1; l>=0; l--){
                 const layerData = symbolData.timeline.layers[l]
@@ -85,7 +90,7 @@ export class Library{
                     type: layerData.layerType || 'Normal',
                     clippedBy: layerData.clippedBy || null,
                 })
-
+    
                 // Frame
                 for(const frameData of layerData.frames){
                     const frame = layer.createFrame({
@@ -94,13 +99,13 @@ export class Library{
                         labelName: frameData.name,
                         index: frameData.index,
                     })
-
+    
                     // Element
                     for(const elemInstanceData of  frameData.elements){
                         if("symbolInstance" in elemInstanceData){
                             const elemData = elemInstanceData.symbolInstance;
                             const m = elemData.matrix3D;
-
+    
                             const instanceProps:Omit<InstanceProps, 'totalFrames'>  = {
                                 frame,
                                 name: frame.name,
@@ -119,7 +124,7 @@ export class Library{
                                 //scale: new Vec3(elemData.decomposedMatrix.scaling),
                                 //rotation: new Vec3(elemData.decomposedMatrix.rotation),
                             }
-
+    
                             const clipInstance = frame.createClipInstance({
                                 ...instanceProps,
                                 transformationPoint: new Vec2(elemData.transformationPoint),
@@ -130,7 +135,7 @@ export class Library{
                         }else{
                             const elemData = elemInstanceData.atlasSpriteInstance;
                             const m = elemData.matrix3D;
-
+    
                             const spriteInstance = frame.createSpriteInstance({
                                 name: frame.name,
                                 filters: elemData.filters || null,
@@ -148,12 +153,20 @@ export class Library{
                                 //scale: new Vec3(elemData.decomposedMatrix.scaling),
                                 //rotation: new Vec3(elemData.decomposedMatrix.rotation),
                             })
-
+    
                             if(spriteNames.indexOf(spriteInstance.itemName)==-1) spriteNames.push(spriteInstance.itemName)
                         }
                     }
                 }
             }
+        }
+
+        // Export Clip
+        generateClip(data.animation)
+
+        // Clip
+        for(const symbolData of data.symbolDictionary.symbols){
+            generateClip(symbolData)
         };
 
         // Sprites
@@ -198,6 +211,8 @@ export class Library{
 
         // Exported
         this.exported = this.clipsByName[data.animation.symbolName]
+
+        this.loaded = true
     }
 
 

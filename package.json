@@ -30,6 +30,7 @@
     "staticOutPath": "assets"
   },
   "dependencies": {
+    "lit-element": "^3.1.2",
     "parcel": "^2.2.1"
   }
 }
