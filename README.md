@@ -1,33 +1,25 @@
 # Canvas 2d runtime for Animate CC Texture Atlas format
 
 ## Examples
+- [Web Component](./bin/web-component.html)
 - [Minimal](./bin/minimal.html)
 - [Dynamic content](./bin/dynamic-content.html)
 - [Symbol explorer](./bin/symbol-explorer.html)
 
-## Building examples
+## Web Component usage
+Import the library somewhere in your index.js file:
+
+```import "animcc"```
+
+You can now utilise the web component in your HTML/JSX:
 
 ```
-npm install
-npm run build-page
+<anim-cc path='../assets/test/' clip="Scene" stage-width="550" stage-height="310" origin-x="0.5" origin-y="0.5" />
 ```
 
-## Dev
-Sets up a simple live server with
+See the [web component example](examples/web-component/index.html) for optional attributes.
 
-```
-npm install
-npm run dev
-```
-
-## Instructions to export atlas
-1. Open any XLF file in the fla folder
-2. Put any symbols you wish to export into the \_\_export\_\_ symbol in the library
-3. Right click on \_\_export\_\_ and then Generate Texture Atlas
-4. Select ../bin/${LIBRARY_NAME} as the path (just browse to the bin folder)
-5. Hit export
-
-## General library usage
+## Advanced library usage
 
 ### First initialise the animation context with a Canvas Context 2d
 ```
@@ -60,3 +52,25 @@ See the [dynamic-content.ts example](./src/examples/dynamic-content.ts)
 - Tints
 - Filters
 - Brightness
+
+## Building examples
+
+```
+npm install
+npm run build-page
+```
+
+## Dev
+Set up a simple live server with
+
+```
+npm install
+npm run dev
+```
+
+## Instructions to export atlas
+1. Open any XLF file in the fla folder
+2. Put any symbols you wish to export into the \_\_export\_\_ symbol in the library
+3. Right click on \_\_export\_\_ and then Generate Texture Atlas
+4. Select ../bin/${LIBRARY_NAME} as the path (just browse to the bin folder)
+5. Hit export
