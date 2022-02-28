@@ -17,7 +17,7 @@ You can now utilise the web component in your HTML/JSX:
 <anim-cc path='../assets/test/' clip="Scene" stage-width="550" stage-height="310" origin-x="0.5" origin-y="0.5" />
 ```
 
-See the [web component example](examples/web-component/) for optional attributes.
+See the [web component example](examples/web-component/index.html) for optional attributes.
 
 ## Advanced library usage
 
@@ -45,7 +45,7 @@ monsterLibrary.symbol("win").draw(frame)
 ```
 
 ## Dynamically rendered content
-See the [dynamic-content.ts example](./src/examples/dynamic-content.ts)
+See the [dynamic-content.ts example](/examples/dynamic-content.ts)
 
 ## Not yet supported
 - The 'rotate' export option
