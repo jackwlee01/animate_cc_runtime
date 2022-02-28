@@ -1,0 +1,45 @@
+import { LitElement } from 'lit';
+import { Library } from './Library';
+import { Scene } from './Scene';
+export declare class AnimCC extends LitElement {
+    path: string;
+    stageWidth: number;
+    stageHeight: number;
+    objectFit: 'none' | 'contain' | 'cover' | 'fill' | 'scale-down';
+    backgroundColor?: string;
+    speed: number;
+    frame?: number;
+    clip?: string;
+    originX: number;
+    originY: number;
+    scale: number;
+    lerp: boolean;
+    overflow: string;
+    resolution?: number;
+    scene: Scene | null;
+    library: Library | null;
+    currentFrame: number;
+    private shouldRenderToContext;
+    static styles: import("lit").CSSResult;
+    constructor();
+    attributeChangedCallback(name: keyof AnimCC, oldVal: any, newVal: any): void;
+    get canvas(): HTMLCanvasElement | null;
+    get container(): HTMLCanvasElement | null;
+    get ctx(): CanvasRenderingContext2D;
+    private reset;
+    private initCanvas;
+    connectedCallback(): void;
+    disconnectedCallback(): void;
+    set canvasScaleX(value: number);
+    set canvasScaleY(value: number);
+    setVar(name: string, value: string): void;
+    private scaleToParent;
+    get dpr(): number;
+    private get resultResolution();
+    private get resultWidth();
+    private get resultHeight();
+    private drawToContext;
+    private onAnimationFrame;
+    render(): import("lit-html").TemplateResult<1>;
+}
+//# sourceMappingURL=index.d.ts.map
