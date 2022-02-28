@@ -67,10 +67,3 @@ Set up a simple live server with
 npm install
 npm run dev
 ```
-
-## Instructions to export atlas
-1. Open any XLF file in the fla folder
-2. Put any symbols you wish to export into the \_\_export\_\_ symbol in the library
-3. Right click on \_\_export\_\_ and then Generate Texture Atlas
-4. Select ../bin/${LIBRARY_NAME} as the path (just browse to the bin folder)
-5. Hit export
