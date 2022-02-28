@@ -4,6 +4,12 @@ import { Library } from './Library';
 import { Scene } from './Scene';
 import { SceneCanvas2d } from './SceneCanvas2d';
 
+declare namespace JSX {
+    interface IntrinsicElements {
+        "anim-cc": any;
+    }
+}
+
 
 @customElement('anim-cc')
 export class AnimCC extends LitElement {
@@ -18,7 +24,7 @@ export class AnimCC extends LitElement {
     stageHeight:number = 150
 
     @property({type: String, attribute:"object-fit"})
-    objectFit:'none'|'contain'|'cover'|'fill'|'scale-down' = 'none'
+    objectFit:'none'|'contain'|'cover'|'fill'|'scale-down' = 'contain'
 
     @property({type: String, attribute:"background-color"})
     backgroundColor?:string
@@ -49,9 +55,6 @@ export class AnimCC extends LitElement {
 
     @property({type: Number})
     resolution?:number;
-
-    @property({type: Number, attribute:"device-pixel-ratio"})
-    devicePixelRatio?:number;
 
     
     scene:Scene|null = null
@@ -90,16 +93,14 @@ export class AnimCC extends LitElement {
 
         switch(name){
             case 'path': this.reset(); break;
-            case 'stageWidth': if(this.canvas) this.canvas.setAttribute('width', newVal+"px"); break;
-            case 'stageHeight': if(this.canvas) this.canvas.setAttribute('height', newVal+"px"); break;
+            case 'resolution':
+                if(this.canvas) this.canvas.setAttribute('width', this.resultWidth+"px");
+                if(this.canvas) this.canvas.setAttribute('height', this.resultHeight+"px");
+            break;
+            case 'stageWidth': if(this.canvas) this.canvas.setAttribute('width', this.resultWidth+"px"); break;
+            case 'stageHeight': if(this.canvas) this.canvas.setAttribute('height', this.resultHeight+"px"); break;
             case 'overflow': this.setVar('--overflow', newVal)
         }
-    }
-
-
-    protected updated(_changedProperties: PropertyValues<any>): void {
-        super.updated(_changedProperties)
-        if(this.scene==null) this.initCanvas()
     }
 
 
@@ -200,11 +201,21 @@ export class AnimCC extends LitElement {
 
 
     private get resultResolution(){
-        return (this.devicePixelRatio||this.dpr) * (this.resolution||1)
+        return this.dpr * (this.resolution||1)
+    }
+
+
+    private get resultWidth(){
+        return this.stageWidth*this.resultResolution
+    }
+
+    private get resultHeight(){
+        return this.stageHeight*this.resultResolution
     }
 
 
     private drawToContext(){
+        if(this.scene==null && this.canvas) this.initCanvas()
         if(!this.canvas || !this.ctx) return
         //this.ctx.imageSmoothingEnabled = true;
         //this.ctx.imageSmoothingQuality = 'high'
@@ -245,7 +256,7 @@ export class AnimCC extends LitElement {
     render() {
         return html`
             <div id="anim-cc-container">
-                <canvas id="anim-cc-canvas" width=${this.stageWidth*this.resultResolution} height=${this.stageHeight*this.resultResolution} background-color=${this.backgroundColor}></canvas>
+                <canvas id="anim-cc-canvas" width=${this.resultWidth} height=${this.resultHeight} background-color=${this.backgroundColor}></canvas>
             </div>
         `;
     }
@@ -259,34 +270,3 @@ function digits(num:number, value:number){
     value /= Math.pow(10, num)
     return value;
 }
-
-
-/*
-export function getDPR(canvas:HTMLCanvasElement, width:number=-1, height:number=-1) {
-    // Set the context quality and smoothing
-    const ctx = canvas.getContext('2d')!
-    ctx.imageSmoothingEnabled = true;
-    ctx.imageSmoothingQuality = 'high'
-
-    // Set the canvas according to window width
-    var bodyRec = document.body.getBoundingClientRect();
-    canvas.width = width==-1 ? Math.min(1000, bodyRec.width - 8) : width;
-    canvas.height = height==-1 ? canvas.width : height;
-
-    // Get the device pixel ratio, falling back to 1.
-    let dpr = window.devicePixelRatio || 1;
-
-    // Get the size of the canvas in CSS pixels.
-    let rect = canvas.getBoundingClientRect();
-    
-    // Give the canvas pixel dimensions of their CSS
-    // size * the device pixel ratio.
-    //canvas.style.border = "2px solid gray";
-    canvas.style.width = "" + canvas.width + "px";
-    canvas.style.height = "" + canvas.height + "px";
-    canvas.width = rect.width * dpr;
-    canvas.height = rect.height * dpr;
-
-    return dpr;
-}
-*/

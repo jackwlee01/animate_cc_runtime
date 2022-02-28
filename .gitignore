@@ -2,3 +2,6 @@ node_modules
 **/RECOVER_*
 dist
 dist-examples
+
+# Local Netlify folder
+.netlify
