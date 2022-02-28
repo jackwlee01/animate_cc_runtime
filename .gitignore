@@ -5,3 +5,5 @@ dist-examples
 
 # Local Netlify folder
 .netlify
+
+.parcel-cache
