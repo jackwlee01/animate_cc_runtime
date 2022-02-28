@@ -14,7 +14,7 @@ async function init(){
 
 let frame = 0;
 let play = true;
-let swap = false;
+let swap = true;
 
 const btnPause = document.getElementById('btn-pause')!
 const btnSwap = document.getElementById('btn-swap')!
