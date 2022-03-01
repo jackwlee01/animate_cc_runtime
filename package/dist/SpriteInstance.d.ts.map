@@ -1,1 +1,0 @@
-{"version":3,"file":"SpriteInstance.d.ts","sourceRoot":"","sources":["../src/SpriteInstance.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,QAAQ,EAAE,aAAa,EAAE,MAAM,YAAY,CAAC;AAGrD,oBAAY,mBAAmB,GAAG,aAAa,GAAG,EAEjD,CAAA;AAGD,qBAAa,cAAe,SAAQ,QAAQ;gBAE5B,KAAK,EAAC,mBAAmB;IAKrC,IAAW,IAAI,8BAEd;CAGJ"}
