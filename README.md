@@ -1,10 +1,7 @@
 # Canvas 2d runtime for Animate CC Texture Atlas format
 
 ## Demos
-- [Web Component](https://621c5701d3eec8a32cc85587--animate-cc-runtime.netlify.app/web-component/index.html)
-- [Dynamic Content](https://621c5701d3eec8a32cc85587--animate-cc-runtime.netlify.app/dynamic-content/index.html)
-- [Symbol Explorer](https://621c5701d3eec8a32cc85587--animate-cc-runtime.netlify.app/symbol-explorer/index.html)
-- [DOM Renderer](https://621c580255eda7980812813d--animate-cc-runtime.netlify.app/dom/index.html)
+See example demos here (https://animate-cc-runtime.netlify.app/)[https://animate-cc-runtime.netlify.app/]
 
 ## Web Component usage
 Import the library somewhere in your index.js file:
