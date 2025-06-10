@@ -45,7 +45,7 @@ monsterLibrary.symbol("win").draw(frame)
 ```
 
 ## Dynamically rendered content
-See the [dynamic-content.ts example](/examples/dynamic-content.ts)
+See the [dynamic-content.ts example](examples/dynamic-content.ts)
 
 ## Not yet supported
 - The 'rotate' export option
